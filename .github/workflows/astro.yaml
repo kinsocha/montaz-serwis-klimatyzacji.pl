@@ -86,7 +86,7 @@ jobs:
           # dangerous-clean-slate: true
           server: h50.seohost.pl
           username: githubmontazklimatyzacji@srv78381.seohost.com.pl
-          password: iwvirJA6Ns8fTAAA
+          password: iwvirJA6Ns8fT
           local-dir: ${{ env.BUILD_PATH }}/dist/
           exclude: |
             **/.git*
