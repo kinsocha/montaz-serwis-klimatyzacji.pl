@@ -14,6 +14,7 @@ export default defineConfig({
   integrations: [
     mdx(),
     sitemap({
+      robots: false,
       changefreq: "daily",
       serialize(item) {
         try {
