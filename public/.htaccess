@@ -1,0 +1,37 @@
+# Wyłączenie listowania plików (bezpieczeństwo i brak 403)
+Options -Indexes
+# Wyłączenie automatycznego wymuszania slasha przez serwer
+DirectorySlash Off
+
+RewriteEngine On
+RewriteBase /
+
+######################################
+# 1. USUŃ .html Z URL (301)
+######################################
+# Jeśli ktoś wpisze .html, przekieruj na wersję bez rozszerzenia
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ %1 [R=301,L]
+
+######################################
+# 2. MAPOWANIE NA .html (OBSŁUGA /blog ORAZ /blog/)
+######################################
+# Reguła dla adresów BEZ slasha (np. /blog -> blog.html)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/]+)$ $1.html [L]
+
+# Reguła dla adresów ZE slashem (np. /blog/ -> blog.html)
+# Sprawdzamy czy plik o nazwie (folder).html istnieje
+RewriteCond %{REQUEST_URI} ^/(.+)/$
+RewriteCond %{DOCUMENT_ROOT}/%1.html -f
+RewriteRule ^(.+)/$ $1.html [L]
+
+######################################
+# 3. DODATKOWE ZABEZPIECZENIE DLA STRON TYPU /ku-przestrodze
+######################################
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L]
+
