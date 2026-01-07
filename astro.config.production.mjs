@@ -7,7 +7,7 @@ import fs from "fs";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://udraznianiekanalizacji.eu/",
+  site: "https://montaz-serwis-klimatyzacji.pl/",
   build: {
     format: "file",
   },
