@@ -12,7 +12,7 @@ npm create astro@latest -- --template blog
 
 ![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
 
-Features:
+Features new:
 
 - ✅ Minimal styling (make it your own!)
 - ✅ 100/100 Lighthouse performance
