@@ -1,0 +1,1612 @@
+ .company-name a,
+ .company-name a:hover,
+ .company-name a:focus,
+ .company-name a:active {
+     color: inherit;
+     text-decoration: none;
+ }
+
+ .buttons button a {
+     display: inline-block;
+     padding: 1em;
+     /*    color: #FFF;*/
+     text-decoration: none;
+ }
+
+ .buttons button+button {
+     margin-top: .5em;
+ }
+
+ .buttons button {
+     width: 80%;
+     text-align: left;
+     padding: 0;
+     height: auto;
+     white-space: normal;
+ }
+
+ .buttons {
+     margin-top: 2em;
+ }
+
+ .logo {
+     cursor: pointer;
+     margin: 0 auto;
+     background: -130px -28px url('images/menu.webp') no-repeat;
+     width: 262px;
+     height: 72px;
+     border: 0;
+     outline: none;
+ }
+
+ .phone {
+     margin: 5em auto 0 auto;
+     background: url('images/menu.webp') no-repeat -392px -28px;
+     width: 277px;
+     height: 278px;
+     border: 0;
+     outline: none;
+ }
+
+ #main-container {
+     padding: 1em;
+ }
+
+ #main-container>div {
+     padding: 1em;
+     -webkit-box-shadow: 0px 0px 41px 1px rgba(189, 164, 0, 1);
+     -moz-box-shadow: 0px 0px 41px 1px rgba(189, 164, 0, 1);
+     box-shadow: 0px 0px 41px 1px rgba(189, 164, 0, 1);
+     border-radius: 8px;
+     background: rgb(244, 242, 0);
+     background: linear-gradient(90deg, rgba(244, 242, 0, 1) 0%, rgba(255, 255, 255, 1) 21%);
+ }
+
+ .phone-button {
+     display: none;
+ }
+
+ #top-left {
+     text-align: center;
+ }
+
+ article {
+     background: rgba(0, 0, 0, 0.07);
+     padding: 10px 20px;
+     margin-bottom: 50px;
+     border-radius: 8px;
+     box-shadow: inset 0 0 6px -2px rgba(0, 0, 0, 0.15);
+     margin-bottom: 50px;
+ }
+
+/* Nagłówek główny w artykule */
+article h2 {
+  text-align: center !important;
+  margin-bottom: 30px !important;
+  color: rgb(0, 91, 239) !important;
+  font-size: 24px !important;
+  font-weight: bold !important;
+    line-height: 31px !important;
+}
+
+h2 {
+    text-align: center !important;
+    margin-bottom: 30px !important;
+    color: rgb(0, 91, 239) !important;
+    font-size: 24px !important;
+    font-weight: bold !important;
+    line-height: 31px !important;
+}
+
+/* Podnagłówki w liście */
+article h3 {
+  font-size: 20px !important;
+  color: #000 !important;
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
+      line-height: 28px !important;
+}
+
+/* Treść listy */
+article li {
+  line-height: 1.8 !important;
+  font-size: 17px !important;
+}
+
+.card li {
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+
+/* Dodatkowe wymuszenie na telefony */
+@media (max-width: 768px) {
+  article h2 {
+    font-size: 22px !important;
+    margin-bottom: 25px !important;
+  }
+
+  article h3 {
+    font-size: 19px !important;
+    margin-top: 12px !important;
+    margin-bottom: 8px !important;
+  }
+
+  article li {
+    font-size: 17px !important;
+    margin-bottom: 10px !important;
+  }
+
+
+.card li {
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+}
+
+
+ 
+
+/* Dla komórek */
+@media (max-width: 768px) {
+  article ul {
+    padding-left: 18px !important; /* ciaśniej na mobile */
+  }
+ 
+}
+
+
+
+
+/* ===== Pasek przezroczysty z ramką i przyciskiem ===== */
+.toolbar {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  margin: 10px 0 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  position: relative;
+  z-index: 10;
+}
+
+.toolbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 6px 12px;
+  min-height: 38px;
+}
+
+
+/* --- NAWIGACJA DESKOP --- */
+.toolbar-nav {
+  list-style: none;
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px 14px;
+  margin: 0;
+  padding: 0;
+  font-size: 14.5px;
+}
+
+.toolbar-nav a {
+  text-decoration: none;
+  color: #222;
+  padding: 7px 12px;
+  border-radius: 6px;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.toolbar-nav a:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* --- przycisk "Zadzwoń" --- */
+.toolbar-nav .call {
+  background: #ffe04a;
+  border: 2px solid #1b1b1b;
+  font-weight: 700;
+  padding: 7px 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+.toolbar-nav .call:hover {
+  background: #ffea70;
+  transform: translateY(-1px);
+}
+
+/* ===== HAMBURGER ===== */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* trzy kreski */
+.menu-toggle .bars,
+.menu-toggle .bars::before,
+.menu-toggle .bars::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.menu-toggle {
+  position: relative;
+  width: 44px;
+  height: 36px;
+}
+
+.menu-toggle .bars {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu-toggle .bars::before {
+  top: -9px;
+}
+
+.menu-toggle .bars::after {
+  top: 9px;
+}
+
+/* animacja do "X" po otwarciu */
+body.menu-open .menu-toggle .bars {
+  background: transparent;
+}
+
+body.menu-open .menu-toggle .bars::before {
+  transform: translate(-50%, 9px) rotate(45deg);
+}
+
+body.menu-open .menu-toggle .bars::after {
+  transform: translate(-50%, -9px) rotate(-45deg);
+}
+
+/* ===== WERSJA MOBILNA ===== */
+@media (max-width: 767px) {
+  .toolbar-inner {
+    justify-content: center;
+    min-height: 28px;
+    padding: 0px 12px;
+  }
+
+  /* hamburger na środku */
+  .menu-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    z-index: 2;
+  }
+
+  /* ukryj menu */
+  .toolbar-nav {
+    display: none !important;
+    position: absolute;
+    top: 100%;
+    right: 8px;
+    margin-top: 6px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 10px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    z-index: 3;
+  }
+
+  /* pokaż po kliknięciu */
+  body.menu-open .toolbar-nav {
+    display: flex !important;
+    animation: menuSlideDown 0.25s ease forwards;
+  }
+
+  /* animacja wysuwania */
+  @keyframes menuSlideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+
+h1 {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 30px !important;
+    line-height: 36px !important;
+  }
+
+  .contact-info ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .contact-info li + li {
+    margin-top: 0.4rem;
+  }
+
+  .contact-map {
+    margin-top: 2.5rem;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.18), 0 0 24px rgba(0, 0, 0, 0.12);
+    padding: 1.5rem 1.8rem;
+  }
+
+.content ol,
+.content ul {
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+
+
+
+
+
+/* ======================== FAQ – poprawka widoczności i działania ======================== */
+details {
+  margin: 10px 0 14px 0;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.08);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+details:hover {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+summary {
+  font-weight: 600;
+  font-size: 18px;
+  outline: none;
+  position: relative;
+  padding-right: 24px;
+  list-style: none;
+}
+
+/* usuwa strzałkę przeglądarki */
+summary::marker {
+  display: none;
+}
+
+/* niestandardowa ikonka +/− */
+summary::after {
+  content: "➕";
+  position: absolute;
+  right: 6px;
+  top: 0;
+  font-size: 17px;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+details[open] summary::after {
+  content: "➖";
+  transform: rotate(180deg);
+}
+
+/* treść po rozwinięciu */
+details p {
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px solid #ddd;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.55;
+}
+
+/* animacja rozwijania */
+details[open] p {
+  animation: fadeIn 0.35s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* poprawki dla telefonów */
+@media (max-width: 768px) {
+  details {
+    padding: 8px 10px;
+  }
+
+  summary {
+    font-size: 16px;
+  }
+
+  details p {
+    font-size: 15px;
+  }
+}
+
+
+
+
+/* ======================== STOPKA ======================== */
+footer {
+  background: rgba(255, 255, 255, 0.85); /* lekko przezroczyste tło */
+  border-top: 1px solid #dcdcdc;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15);
+  color: #333;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 18px 10px;
+  margin-top: 40px;
+  border-radius: 0 0 10px 10px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+footer strong {
+  color: #000;
+  font-weight: 600;
+}
+
+footer a {
+  color: #0056a3;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+footer a:hover {
+  color: #003c7a;
+  text-shadow: 0 0 2px rgba(0, 60, 122, 0.4);
+}
+
+/* wersja mobilna */
+@media (max-width: 768px) {
+  footer {
+    font-size: 13px;
+    padding: 14px 8px;
+    line-height: 1.5;
+    border-radius: 0;
+    margin-top: 24px;
+  }
+}
+
+
+
+
+
+
+.cta-call {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+  box-shadow:
+    0 0 12px rgba(0, 0, 0, 0.18),
+    0 0 24px rgba(0, 0, 0, 0.12);
+    padding: 28px 24px;
+    text-align: center;
+    margin: 40px auto;
+    max-width: 880px;
+  }
+
+  .cta-title {
+    font-size: 1.9rem;
+    line-height: 1.2;
+    margin: 0 0 10px;
+    color: #2b5bd7; /* poprzedni niebieski */
+  }
+
+  .cta-title strong {
+    color: #2b5bd7;
+    font-weight: 800;
+  }
+
+.cta-btn{
+  display: inline-flex;
+  align-items: center; 
+  justify-content: center;
+  margin-top: 17px;
+  gap: .6em;
+  background: #ffe04a;                 /* żółty */
+  color: #000;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: clamp(1rem, 2.2vw + .2rem, 1.6rem);
+  padding: .75em 6em;                   /* zamiast 106px */
+  border-radius: 8px;
+  border: 2px solid #1b1b1b;
+  box-shadow: 0 6px 16px rgba(0,0,0,.15);
+  transition: transform .06s ease, box-shadow .2s ease, background .2s ease;
+  white-space: nowrap;                  /* numer się nie łamie */
+}
+
+/* Mobile: pełna szerokość i mniejsze paddingi */
+@media (max-width: 768px){
+  .cta-btn{
+    width: 100%;
+    padding: .85em 1.2em;
+  }
+}
+
+/* Bardzo małe ekrany */
+@media (max-width: 400px){
+  .cta-btn{
+    font-size: clamp(.95rem, 4.2vw, 1.1rem);
+  }
+}
+
+  .cta-btn:hover {
+    background: #e5e500; /* ciemniejszy żółty przy hoverze */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(-1px);
+  }
+
+  .cta-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+  }
+
+  .cta-btn-icon {
+    font-size: 1.2em;
+    line-height: 1;
+  }
+
+  @media (max-width: 576px) {
+    .cta-call {
+      padding: 22px 18px;
+      margin: 28px auto;
+    }
+
+    .cta-title {
+      font-size: 1.5rem;
+    }
+  }
+
+   .service-card{
+    background:#fff;
+    border-radius:8px;
+    padding:1.5rem 1.8rem;
+    margin:1.5rem 0;
+    box-shadow: 0 0 12px rgba(0,0,0,.18), 0 0 24px rgba(0,0,0,.12);
+  }
+
+
+
+
+
+.site-footer {
+    background: rgba(255, 255, 255, 0.7); /* półprzezroczyste tło – jak pasek nawigacyjny */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 12px 16px;
+    position: relative;
+    z-index: 100;
+  }
+
+  .site-footer .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  @media (min-width: 992px) {
+    .site-footer .footer-inner {
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+  }
+
+  .site-footer a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .site-footer a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-inner span + span::before {
+    content: "•";
+    margin: 0 8px;
+    opacity: 0.6;
+  }        
+
+
+
+
+
+   .site-footer {
+    background: transparent;               /* w pełni przezroczysta */
+    backdrop-filter: blur(6px);            /* delikatne rozmycie tła */
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;                   /* zaokrąglenie wszystkich rogów */
+    padding: 12px 16px;
+    position: relative;
+    z-index: 100;
+    margin-top: 20px;
+  }
+
+  .site-footer .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 7px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: inherit;
+    text-align: center;
+  }
+
+  @media (min-width: 992px) {
+    .site-footer .footer-inner {
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+  }
+
+  .site-footer a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .site-footer a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-inner span + span::before {
+    content: "•";
+    margin: 0 8px;
+    opacity: 0.5;
+  }
+  /* ===== FIX: dropdown ma być ukryty domyślnie ===== */
+.toolbar .toolbar-nav,
+.toolbar .toolbar-nav ul {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* element z podmenu */
+.toolbar .toolbar-nav .has-dropdown { 
+  position: relative; 
+}
+
+/* PODMENU – domyślnie schowane */
+.toolbar .toolbar-nav .has-dropdown > .dropdown {
+  display: none !important;            /* nadpisuje stare reguły */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  margin-top: 6px;
+  background: rgba(255,255,255,.95);
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 8px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.12);
+  z-index: 9999;
+}
+
+/* linki w podmenu */
+.toolbar .toolbar-nav .dropdown li a {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 6px;
+  color: #222;
+  text-decoration: none;
+}
+.toolbar .toolbar-nav .dropdown li a:hover {
+  background: rgba(0,0,0,.06);
+}
+
+/* Desktop: pokaż TYLKO na hoverze */
+@media (min-width: 768px) {
+  .toolbar .toolbar-nav .has-dropdown:hover > .dropdown {
+    display: block !important;
+  }
+}
+
+/* Mobile: pokazuj po tapnięciu (klasa .open dodawana przez JS w top.php) */
+@media (max-width: 767px) {
+  .toolbar .toolbar-nav .has-dropdown > .dropdown {
+    position: static;
+    margin-top: 4px;
+    box-shadow: none;
+    border: 1px solid rgba(0,0,0,.08);
+  }
+  .toolbar .toolbar-nav .has-dropdown.open > .dropdown {
+    display: block !important;
+  }
+}
+
+/* Strzałka przy pozycji z podmenu (opcjonalnie) */
+.toolbar .toolbar-nav .has-dropdown > .dropdown-toggle::after {
+  content: "▾";
+  font-size: .85em;
+  opacity: .8;
+  margin-left: 6px;
+}
+/* Wtórny CTA – link w tekście (subtelny) */
+.call-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .4rem .6rem;            /* min. ~44-48px wysokości tap-target na mobile */
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Hover/focus – dostępność */
+.call-inline:hover,
+.call-inline:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0,0,0,.08);
+}
+
+/* Opcja: wtórny przycisk, jeśli chcesz guzik zamiast linku tekstowego */
+.call.call--secondary {
+  background: transparent;
+  color: inherit;
+  border: 1px solid rgba(0,0,0,.2);
+}
+.call.call--secondary:hover,
+.call.call--secondary:focus-visible {
+  background: rgba(0,0,0,.06);
+}
+/* ===== Opinie klientów ===== */
+.reviews-card h2 {
+  margin-top: 0;
+}
+
+.reviews-card p {
+  margin: 0 0 .9rem 0;
+}
+
+.reviews-cta {
+  display: flex;
+  gap: 2.4rem;
+  flex-wrap: wrap;
+  margin: .8rem 0 0 0;
+}
+
+/* przyciski zgodne z estetyką kart */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .6rem .9rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 1;
+  border: 1px solid rgba(0,0,0,.18);
+  margin-top: 20px;
+}
+
+.btn--primary {
+  background: #ffdb4d;            /* zbliżony do Twojego żółtego CTA */
+  border-color: rgba(0,0,0,.25);
+}
+
+.btn--primary:hover,
+.btn--primary:focus-visible {
+  filter: brightness(0.98);
+  box-shadow: 0 0 0 3px rgba(0,0,0,.08);
+}
+
+.btn--outline {
+  background: #ededed;
+}
+
+.btn--outline:hover,
+.btn--outline:focus-visible {
+  background: rgba(0,0,0,.04);
+  box-shadow: 0 0 0 3px rgba(0,0,0,.08);
+}
+
+/* link-CTA w tekście (subtelny) */
+.call-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .35rem .55rem;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.call-inline:hover,
+.call-inline:focus-visible {
+  box-shadow: 0 0 0 3px rgba(0,0,0,.08);
+}
+.reviews-card p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+
+
+
+
+
+
+  
+ .company-name {
+     margin: 20px auto 0;
+     font-weight: bold;
+     font-size: 2em;
+ }
+
+ .layout-left {
+     text-align: center;
+ }
+
+ .layout-right {
+     text-align: justify;
+ }
+
+ p.Template {
+     text-align: justify;
+     font-size: 18px;
+ }
+
+ .text-medium {
+     font-size: 18px;
+ }
+
+ p.Template-Center {
+     text-align: center !important;
+ }
+
+ .Template img.img-left {
+     float: left;
+     margin-right: 1em;
+     margin-bottom: 1em;
+ }
+
+ .Template img.img-right {
+     float: right;
+     margin-left: 1em;
+     margin-bottom: 1em;
+ }
+
+ .readmore+a {
+     background-color: transparent;
+     color: red;
+     margin-bottom: 10px;
+     text-align: right;
+     display: inline-block !important;
+ }
+
+
+
+ body {
+     background-color: #CCCCFF !important;
+     font-size: 17px;
+ }
+
+
+ .p-img {
+     display: block;
+     max-width: 100%;
+     height: auto;
+ }
+
+ .main-content ul {
+     margin: 0;
+     padding: 0;
+ }
+
+ .main-content li {
+     margin: 0;
+     padding: 0 0 0 30px;
+     list-style-type: none;
+     display: block;
+     position: relative;
+ }
+
+ .main-content li:before {
+     font-family: 'Glyphicons Halflings';
+     position: absolute;
+     left: 0px;
+     top: 0;
+     content: '\e013';
+ }
+
+ p {
+    text-align: justify;
+    font-size: 17px;
+ }
+
+ p.lead {
+      text-align: justify;
+    font-size: 17px  !important;
+ }
+
+ .street-pill {
+  font-size: 16px !important;
+  margin-top: 10px;
+ }
+
+
+
+
+ .intro-header .site-heading {
+     color: #F4C430;
+
+ }
+
+ .intro-header .site-heading .subheading {
+     font-size: 500%;
+ }
+
+ .intro-header .site-heading hr {
+     border-color: #F4C430;
+ }
+
+
+ a:link {
+     text-decoration: none;
+ }
+
+ article {
+    font-size: 18px;
+ }
+
+  .mt-10 {
+    padding-top: 15px;
+}
+
+.responsive-iframe {
+    width: 100%;
+    height: 360px;
+}
+.asa {
+    margin-bottom: 8px;
+}
+
+.responsive-iframe {
+    width: 100%;
+    height: 360px;  
+} 
+
+[itemscope][itemtype] {
+    max-width: 100%;
+    box-sizing: border-box;  
+}
+ 
+#map { height: 180px; } 
+
+ .reviews {
+    font-size: 18px; 
+}
+
+ .reviews2 {
+    font-size: 18px; 
+    line-height: 40px
+}
+
+ .reviews3 {
+    font-size: 18px; 
+    padding-bottom: 60px;
+}
+
+
+
+
+
+
+/* ===== LAZY LOADING - efekt ładowania obrazów ===== podstrona/udraznianie-kanalizacji-warszawa od 1119 do 1543 */
+img.lazy-load {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+  background: #f0f0f0;
+}
+
+img.lazy-loaded {
+  opacity: 1;
+}
+
+/* Placeholder podczas ładowania */
+img[data-src] {
+  min-height: 200px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ===== SEKCJA BLOGA - GRID LAYOUT ===== */
+.blog-section {
+  margin-top: 40px;
+}
+
+.blog-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(0, 91, 239);
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.blog-section .lead {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.blog-grid {
+/*  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;   */
+  margin-top: 30px;
+}
+
+/* ===== KARTA ARTYKUŁU BLOGOWEGO ===== */
+.blog-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+   
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.blog-card-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #f0f0f0;
+  position: relative;
+}
+
+.blog-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover .blog-card-image img {
+  transform: scale(1.05);
+}
+
+.blog-card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.blog-category {
+  display: inline-block;
+  background: #ffe04a;
+  color: #000;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  align-self: flex-start;
+}
+
+.blog-card h3 {
+  font-size: 20px;
+  line-height: 1.4;
+  margin: 0 0 12px 0;
+  color: #000;
+}
+
+.blog-card h3 a {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.blog-card h3 a:hover {
+  color: rgb(0, 91, 239);
+}
+
+.blog-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.blog-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.blog-meta span {
+  display: inline-flex;
+  align-items: center;
+}
+
+.blog-author {
+  font-weight: 600;
+  color: #333;
+}
+
+.blog-date {
+  color: #999;
+}
+
+.blog-read-time {
+  color: #999;
+}
+
+/* Separator między elementami meta */
+.blog-meta span + span::before {
+  content: "•";
+  margin: 0 8px;
+  color: #ccc;
+}
+
+/* Przycisk "Czytaj więcej" */
+.blog-card .btn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+
+/* ===== RESPONSYWNOŚĆ BLOGA ===== */
+@media (max-width: 768px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .blog-card-image {
+    height: 200px;
+  }
+
+  .blog-card h3 {
+    font-size: 18px;
+  }
+
+  .blog-card p {
+    font-size: 15px;
+  }
+}
+
+/* ===== ARTYKUŁ GŁÓWNY - dodatkowe style ===== */
+.main-article h3 {
+  color: rgb(0, 91, 239) !important;
+  font-size: 22px !important;
+  margin-top: 25px !important;
+  margin-bottom: 15px !important;
+}
+
+.main-article h4 {
+  color: #000 !important;
+  font-size: 19px !important;
+  margin-top: 20px !important;
+  margin-bottom: 12px !important;
+  font-weight: 600 !important;
+}
+
+.main-article p {
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.main-article ul {
+  margin: 15px 0;
+  padding-left: 25px;
+}
+
+.main-article ul li {
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+/* ===== FAQ SECTION - microdata styling ===== */
+.faq-section details {
+  margin: 15px 0;
+}
+
+.faq-section summary {
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faq-section details p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* ===== CTA SECTION wewnątrz artykułu ===== */
+.cta-section {
+  background: #f9f9f9;
+  border: 2px solid #ffe04a;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.cta-section h3 {
+  color: rgb(0, 91, 239) !important;
+  font-size: 22px !important;
+  margin-bottom: 15px !important;
+}
+
+.cta-section p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.cta-section .call-inline {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px 20px;
+  background: #ffe04a;
+  border: 2px solid #1b1b1b;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* ===== BREADCRUMBS (opcjonalnie) ===== */
+.breadcrumbs {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+.breadcrumbs a {
+  color: rgb(0, 91, 239);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs span {
+  margin: 0 5px;
+  color: #999;
+}
+
+/* ===== LOADING SPINNER dla lazy loading (opcjonalnie) ===== */
+.image-loading {
+  position: relative;
+}
+
+.image-loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid rgb(0, 91, 239);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===== RESPONSIVE IMAGES ===== */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== PRINT STYLES (opcjonalnie) ===== */
+@media print {
+  .carousel-wrapper,
+  .cta-call,
+  .blog-section,
+  .toolbar,
+  footer {
+    display: none;
+  }
+
+  .main-article {
+    box-shadow: none;
+    padding: 0;
+  }
+}
+
+/* ===== ACCESSIBILITY - Focus states ===== */
+a:focus,
+button:focus,
+summary:focus {
+  outline: 2px solid rgb(0, 91, 239);
+  outline-offset: 2px;
+}
+
+/* ===== SMOOTH SCROLL ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== BACK TO TOP button (opcjonalnie) ===== */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #ffe04a;
+  color: #000;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #1b1b1b;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.back-to-top.show {
+  display: flex;
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== MOBILE OPTIMIZATIONS ===== */
+@media (max-width: 480px) {
+  .main-article h2 {
+    font-size: 22px !important;
+  }
+
+  h2 {
+    font-size: 22px !important;
+  }
+
+  .main-article h3 {
+    font-size: 19px !important;
+  }
+
+  .main-article h4 {
+    font-size: 17px !important;
+  }
+
+  .main-article p,
+  .main-article li {
+    font-size: 17px;
+  }
+
+  .cta-section h3 {
+    font-size: 19px !important;
+  }
+
+  .blog-section h2 {
+    font-size: 24px;
+  }
+}
+
+/* ===== DARK MODE support (opcjonalnie) ===== */
+@media (prefers-color-scheme: dark) {
+  /* Możesz dodać style dla dark mode, jeśli chcesz */
+  /* Na razie zostawiam to jako opcjonalne */
+}
+
+.phone {
+  position: relative;
+}
+
+.phone-link {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+/* Sticky lewa kolumna na desktopie */
+@media (min-width: 992px) {
+  .layout-left {
+    position: sticky !important;
+    top: 20px !important;
+    height: fit-content;
+    z-index: 50;
+  }
+}
+
+
+/* Różne poprawki */
+section.service-card li {
+  font-size: 17px !important;
+  line-height: 1.75 !important;
+}
+
+/*Style do plików z podstronami hydraulicznymi */
+    .lead{font-size:1.05rem;line-height:1.6}
+    .cta{margin-top:12px;display:flex;justify-content:center}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 18px!important;border-radius:10px!important;text-decoration:none;border:1px solid rgba(0,0,0,.14)!important;font-weight:700!important}
+    .street-row{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 14px;align-items:center}
+    .street-pill{display:inline-flex;padding:6px 10px;border-radius:999px;border:1px solid rgba(0,0,0,.12);text-decoration:none;font-size:.92rem;line-height:1;color:inherit;background:rgba(0,0,0,.02)}
+    .street-pill:hover{background:rgba(0,0,0,.05)}
+    .map-wrap{border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,.10)}
+    .map-embed{width:100%;height:340px;border:0;display:block}
+    .note{margin-top:12px;opacity:.9}
+    .call{text-decoration:none;font-weight:700}
+
+
+/* ===== FIX 991px+: nie łam menu, tylko ściskaj odstępy ===== */
+@media (max-width: 999px) and (min-width: 767px) {
+  .toolbar-inner {
+    justify-content: flex-end;
+  }
+
+  .toolbar-nav {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 6px 8px !important;
+  }
+
+  .toolbar-nav a {
+    white-space: nowrap !important;
+    padding: 6px 8px !important;
+    font-size: 13px !important;
+  }
+
+  .toolbar-nav .call {
+    padding: 6px 10px !important;
+    font-size: 13px !important;
+  }
+}
+
+
+/* Pasek nawigacyjny ukrywa Warszawa i 510 733 300*/
+@media (max-width: 992px) and (min-width: 766px) {
+
+  .city {
+    display: none;
+  }
+
+  .phone {
+    display: none;
+  }
+}
+
+/* ===== 1199–1000: chowaj tylko "Warszawa" i numer ===== */
+@media (max-width: 1199px) and (min-width: 1000px) {
+  .city { display: none !important; }
+  .phone { display: none !important; }
+}
+
+/* 999–768px: chowamy "Udrażnianie WC", żeby pasek nie wychodził poza ekran */
+@media (max-width: 999px) and (min-width: 768px) {
+
+  /* zabezpieczenie przed wyjeżdżaniem paska w bok */
+  .toolbar,
+  .toolbar-inner {
+    overflow-x: hidden;
+  }
+
+  /* delikatnie ciaśniej, żeby się mieściło */
+  .toolbar-nav a {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+  }
+
+    /* ukryj link "Udrażnianie WC"
+  .toolbar-nav a[href="/udraznianie-toalety"]{
+    display: none !important;
+  }  */
+}
+
+
+@media (max-width: 1200px) and (min-width: 768px) {
+
+  .toolbar-inner {
+    max-width: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .toolbar-nav {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    gap: 4px !important;
+  }
+
+  .toolbar-nav > li > a {
+    white-space: nowrap !important;
+    padding: 4px 6px !important;
+    font-size: 13px !important;
+  }
+
+  .toolbar-nav .call {
+    padding: 4px 8px !important;
+    font-size: 13px !important;
+  }
+
+  .toolbar,
+  .toolbar-inner {
+    overflow-x: hidden;
+  }
+}
+
+
+
+
+
+ 
