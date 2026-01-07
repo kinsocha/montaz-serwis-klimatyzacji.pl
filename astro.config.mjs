@@ -6,7 +6,7 @@ import keystatic from "@keystatic/astro";
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: "https://udraznianiekanalizacji.eu/",
+  site: "https://montaz-serwis-klimatyzacji.pl/",
 
   integrations: [
     mdx(),
