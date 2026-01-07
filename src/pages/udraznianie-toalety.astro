@@ -1,0 +1,113 @@
+---
+import Default from "../layouts/Default.astro";
+
+const canonical = "https://udraznianiekanalizacji.eu/udraznianie-toalety";
+
+const title = "Udrażnianie toalety Warszawa – szybka pomoc | 510 733 300";
+
+const description =
+  "Profesjonalne udrażnianie toalety (WC) w Warszawie. Szybka diagnoza, skuteczne metody mechaniczne – sprężyna elektryczna. Zadzwoń: 510 733 300.";
+
+const keywords =
+  "udrażnianie toalety Warszawa, udrażnianie WC Warszawa, przepychanie toalety, hydraulik Warszawa WC";
+---
+
+<Default
+  title={title}
+  description={description}
+  keywords={keywords}
+  canonical={canonical}
+>
+  <!-- Opcjonalny breadcrumb pod SEO (nie było w PHP, ale nie psuje wyglądu) -->
+  <script slot="head" type="application/ld+json" is:inline>
+    {`{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Strona główna",
+      "item": "https://udraznianiekanalizacji.eu"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Udrażnianie toalety (WC) – Warszawa",
+      "item": "https://udraznianiekanalizacji.eu/udraznianie-toalety"
+    }
+  ]
+}`}
+  </script>
+
+  <h1>Udrażnianie toalety (WC) – Warszawa</h1>
+
+  <p class="lead">
+    Zatkana toaleta? Przyjadę, ocenię sytuację i skutecznie usunę zator.
+    Pracuję czysto i bezpiecznie dla instalacji.
+  </p>
+
+  <article class="service-card">
+    <h2>Jak działam</h2>
+    <ul class="service-list">
+      <li>
+        <strong>Szybka diagnoza</strong> – sprawdzam drożność i lokalizuję zator.
+      </li>
+      <li>
+        <strong>Metody mechaniczne lub inne</strong> – w zależności od sytuacji
+        używam m.in. <em>sprężyny elektrycznej</em> oraz odpowiednich końcówek
+        roboczych lub innych narzędzi.
+      </li>
+      <li>
+        <strong>Bez demontażu ceramiki</strong> – jeśli to możliwe, to nie
+        zdejmuję toalety.
+      </li>
+    </ul>
+  </article>
+
+  <article class="service-card">
+    <h2>Najczęstsze przyczyny zatorów w WC</h2>
+    <ul class="service-list">
+      <li>Zawieszki – kostki toaletowe.</li>
+      <li>
+        Higieniczne odpady wrzucane do muszli (ręczniki papierowe, chusteczki
+        nawilżane itp.).
+      </li>
+      <li>Koci żwirek.</li>
+      <li>
+        Zwężenia i „kolana” instalacji z czasem ograniczające przepływ.
+      </li>
+      <li>Źle wykonana instalacja kanalizacyjna.</li>
+    </ul>
+  </article>
+
+  <article class="service-card">
+    <h2>Jak zapobiegać</h2>
+    <ul class="service-list">
+      <li>Do WC wrzucaj tylko papier toaletowy.</li>
+      <li>
+        Jeśli do muszli klozetowej napływa za mało wody, wyreguluj pływak w
+        spłuczce, aby napełniał spłuczkę w większym stopniu.
+      </li>
+      <li>
+        Nie syp „Kreta” w granulkach do WC. Tak na marginesie – zatkanej
+        toalety i tak nie da się skutecznie udrożnić samą chemią.
+      </li>
+    </ul>
+  </article>
+
+  <article class="cta-call">
+    <h2 class="cta-title">
+      Masz zator? <strong>Zadzwoń teraz</strong>
+    </h2>
+    <p class="cta-desc">Szybka pomoc w Warszawie i okolicy.</p>
+    <a
+      class="cta-btn"
+      href="tel:+48510733300"
+      aria-label="Zadzwoń 510 733 300"
+    >
+      <span class="cta-btn-icon" aria-hidden="true">📞</span>
+      <span>510&nbsp;733&nbsp;300</span>
+    </a>
+  </article>
+</Default>

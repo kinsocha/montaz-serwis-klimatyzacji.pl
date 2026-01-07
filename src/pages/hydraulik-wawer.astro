@@ -1,0 +1,228 @@
+---
+import Carousel from "@components/Carousel.astro";
+import Default from "../layouts/Default.astro";
+
+const title = "Hydraulik Wawer - Pogotowie Hydrauliczne 24h - Tel. 510 733 300";
+const description =
+  "Potrzebujesz sprawdzonego hydraulika w Wawrze? Szybkie udrażnianie kanalizacji, naprawa cieknących spłuczek, montaż baterii i wymiana wodomierzy. Zadzwoń po fachowca 24/7!";
+const keywords =
+  "hydraulik Wawer, pogotowie hydrauliczne Wawer, udrażnianie rur Wawer, naprawa spłuczki Wawer, montaż baterii Wawer, cennik hydraulik Wawer";
+const canonical = "https://udraznianiekanalizacji.eu/hydraulik-wawer";
+---
+
+<Default
+  title={title}
+  description={description}
+  keywords={keywords}
+  canonical={canonical}
+>
+  <!-- JSON-LD dla strony Hydraulik Wawer (LocalBusiness) -->
+  <script
+    slot="head"
+    type="application/ld+json"
+    is:inline
+    set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: "Hydraulik Wawer - Pogotowie Hydrauliczne",
+      description:
+        "Tel. 510 733 300. Profesjonalne usługi hydrauliczne w dzielnicy Wawer: udrażnianie kanalizacji, naprawy awarii, montaż i wymiana instalacji.",
+      url: "https://udraznianiekanalizacji.eu/hydraulik-wawer",
+      telephone: "+48510733300",
+      email: "hydraulikwarszawanet@gmail.com",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Żegańska 24",
+        addressLocality: "Warszawa Wawer",
+        addressRegion: "mazowieckie",
+        postalCode: "04-713",
+        addressCountry: "PL",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 52.20622084386154,
+        longitude: 21.177645807681866,
+      },
+      openingHours: ["Mo-Fr 09:00-22:00", "Sa 09:00-16:00"],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: 5.0,
+        bestRating: 5,
+        ratingCount: 426,
+      },
+      areaServed: "Wawer i okolice",
+      image: "https://udraznianierur.eu/img/awaria.png",
+    })}
+  />
+
+  <h1>Hydraulik Wawer – Szybkie Udrażnianie Kanalizacji i Drobne Naprawy</h1>
+
+  <Carousel
+    slides={[
+      {
+        src: "/img/hydraulik-w-wawrze/udraznianie-rur-od-szamba.webp",
+        alt: "Hydraulik Wawer - udrażnianie rur od szamba",
+      },
+      {
+        src: "/img/hydraulik-w-wawrze/czy-udrazniac-rury-kretem.webp",
+        alt: "Czy udrażniać rury Kretem?",
+      },
+      {
+        src: "/img/hydraulik-w-wawrze/hydraulikwawer-wymiana-baterii2.webp",
+        alt: "Wymiana baterii kuchennej przez hydraulika z Wawra",
+      },
+      {
+        src: "/img/hydraulik-w-wawrze/uslugi-hydrauliczne-wawer.webp",
+        alt: "Usługi hydrauliczne na Wawrze",
+      },
+      {
+        src: "/img/hydraulik-w-wawrze/udraznianie-kanalizacji-wawer.webp",
+        alt: "Udrażnianie kanalizacji w Wawrze",
+      },
+    ]}
+  />
+
+  <article class="service-card">
+    <p class="lead">
+      Jeśli borykasz się z zatkanym zlewem, cieknącą spłuczką lub inną awarią
+      hydrauliczną, skontaktuj się z nami pod numerem <strong>510 733 300</strong>.
+      Od kilkunastu lat świadczymy kompleksowe <strong>usługi hydrauliczne w Wawrze</strong>,
+      szybko i skutecznie usuwając wszelkiego rodzaju usterki.
+    </p>
+    <p>
+      Nasza oferta obejmuje zarówno nagłe interwencje (pogotowie hydrauliczne),
+      jak i planowane prace montażowe czy konserwacyjne.
+    </p>
+  </article>
+
+  <article class="service-card">
+    <h2>Zakres Usług Hydraulicznych w Dzielnicy Wawer</h2>
+    <p>Jako doświadczony fachowiec, oferuję szeroki wachlarz usług, koncentrując się na szybkim przywracaniu sprawności Twojej instalacji:</p>
+    <ul>
+      <li><strong>Udrażnianie kanalizacji Wawer</strong>: zlewu, brodzika, umywalki – mechaniczne przepychanie rur.</li>
+      <li>Drobne naprawy hydrauliczne: naprawa cieknącej spłuczki, wymiana uszczelek.</li>
+      <li>Montaż i wymiana armatury: wymiana baterii, montaż zaworów, wymiana wodomierzy.</li>
+      <li>Konserwacja instalacji: odpowietrzenie grzejników, naprawa cieknących syfonów i kolanek.</li>
+      <li><strong>Pogotowie hydrauliczne Wawer</strong>: szybka pomoc w nagłych awariach.</li>
+      <li>Czyszczenie odpływów metodą WUKO (hydrodynamiczne) w Wawrze.</li>
+    </ul>
+  </article>
+
+  <article class="service-card">
+    <h2>Czy warto udrażniać rury środkami chemicznymi typu "Kret"?</h2>
+    <p>
+      Zanim zadzwonisz po <strong>hydraulika</strong>, możesz spróbować samodzielnie
+      rozwiązać problem z wolno spływającą wodą. Pamiętaj jednak, że niektóre
+      popularne metody mogą pogorszyć sytuację.
+    </p>
+    <p>
+      <strong>Nie polecamy</strong> stosowania zbyt dużej ilości proszku "Kret".
+      Może on utwardzić się w rurach, tworząc jeszcze trudniejszy do usunięcia
+      zator. Zdecydowanie lepszym wyborem są żele lub płyny do udrażniania, które
+      są łagodniejsze dla instalacji.
+    </p>
+    <p>
+      Jeśli domowe sposoby (jak czyszczenie syfonu czy użycie ręcznej sprężyny)
+      zawiodą, nie ryzykuj uszkodzenia rur. Zadzwoń do nas – obsługujemy cały
+      <strong>Wawer</strong> i okolicę, oferując profesjonalne udrażnianie
+      sprzętem mechanicznym.
+    </p>
+  </article>
+
+  <article class="service-card">
+    <h2>Poradnik: Jak samodzielnie wymienić baterię sztorcową w kuchni?</h2>
+    <p>
+      Wymiana baterii kuchennej to jedna z najczęstszych drobnych usług, o które
+      pytają mieszkańcy Wawra. Jeśli masz smykałkę do majsterkowania, możesz
+      spróbować zrobić to sam. Pamiętaj o kluczowych krokach:
+    </p>
+    <ol>
+      <li><strong>Przygotowanie</strong>: Zbierz narzędzia (klucz nastawny, wężyki, uszczelniacz) i upewnij się, że masz łatwy dostęp pod zlew.</li>
+      <li><strong>Zakręcenie wody</strong>: To najważniejszy krok! Zamknij główny zawór wody, aby uniknąć zalania.</li>
+      <li><strong>Demontaż starej baterii</strong>: Odkręć wężyki i śrubę mocującą. Usuń starą baterię.</li>
+      <li><strong>Montaż nowej</strong>: Umieść nową baterię w otworze, przykręć śrubę mocującą i podłącz wężyki doprowadzające wodę.</li>
+      <li><strong>Test szczelności</strong>: Powoli odkręć wodę i sprawdź, czy wszystkie połączenia są suche.</li>
+    </ol>
+    <p>
+      Jeśli jednak wolisz powierzyć to zadanie specjaliście, zadzwoń do nas.
+      Profesjonalny <strong>hydraulik z Wawra</strong> wykona montaż szybko i z
+      gwarancją szczelności. Tel. <strong>510 733 300</strong>.
+    </p>
+  </article>
+
+  <article class="service-card">
+    <h2>Opinie Klientów z Wawra</h2>
+    <div class="reviews">
+      <div class="reviews2"><strong>Kacper Wójcik</strong></div>
+      <p>
+        Wszystkie elementy zlewu zamontowane bez zarzutu, bez żadnych przecieków.
+        Pan hydraulik to rzetelny fachowiec, którego polecam innym klientom.
+        Jeśli będzie taka potrzeba, na pewno skorzystam z jego usług w przyszłości.
+        Zadowolony klient z Wawra.
+      </p>
+      <div class="reviews3"> <b>5,0</b> ⭐⭐⭐⭐⭐ <b></b></div>
+
+      <div class="reviews2"><strong>Aneta Sacharczuk</strong></div>
+      <p>
+        Świetna obsługa i profesjonalne podejście. Zdecydowanie warto skorzystać
+        z usług tego pogotowia hydraulicznego. Punktualny, konkretny, dobrze się
+        z nim dogaduje. Numer już mam zapisany na przyszłość. Cena w normie.
+      </p>
+      <div class="reviews3"> <b>5,0</b> ⭐⭐⭐⭐⭐ <b></b></div>
+
+      <div class="reviews2"><strong>Piotr Mroziński</strong></div>
+      <p>
+        Polecam z czystym sumieniem. Fachowy hydraulik, który zna się na rzeczy
+        i ma duże doświadczenie. Zator w rurach usunięty w parę minut.
+      </p>
+      <div class="reviews3"> <b>5,0</b> ⭐⭐⭐⭐⭐ <b>(426)</b></div>
+    </div>
+  </article>
+
+  <article class="service-card">
+    <h2>Profesjonalne Udrażnianie Kanalizacji Sprężyną Elektryczną</h2>
+    <p>
+      Jedną z naszych głównych specjalizacji jest <strong>udrażnianie kanalizacji
+      sprężyną elektryczną</strong>. Jest to najskuteczniejsza i bezpieczna metoda
+      usuwania <b>zatorów w rurach</b> odprowadzających wodę, szczególnie w
+      przypadku twardych osadów i długich odcinków.
+    </p>
+    <p>
+      Sprężyna elektryczna dociera głęboko w przewód, mechanicznie rozbijając
+      zanieczyszczenia. Zalety tej metody to:
+    </p>
+    <ul>
+      <li><strong>Szybkość i skuteczność</strong>: Usuwa nawet najtrudniejsze zatory (włosy, tłuszcz, kamień).</li>
+      <li><strong>Bezpieczeństwo dla rur</strong>: Nie wymaga użycia agresywnych chemikaliów.</li>
+      <li><strong>Wszechstronność</strong>: Może udrożnić zarówno małe rury, jak i duże przewody kanalizacyjne.</li>
+    </ul>
+  </article>
+
+  <article class="service-card">
+    <h2>Skontaktuj się z Pogotowiem Hydraulicznym Wawer</h2>
+    <p>
+      Masz problem z instalacją? Potrzebujesz szybkiej interwencji?
+      Nie czekaj, aż mały problem przerodzi się w poważną awarię.
+      Zadzwoń do nas, a my szybko dojedziemy na terenie całej dzielnicy Wawer.
+    </p>
+    <div class="cta-section">
+      <h3>Zadzwoń Teraz</h3>
+      <p>
+        <strong>Telefon:</strong>
+        <a
+          class="call-inline"
+          href="tel:+48510733300"
+          aria-label="Zadzwoń pod numer 510 733 300"
+        >
+          510&nbsp;733&nbsp;300
+        </a>
+      </p>
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:hydraulikwarszawanet@gmail.com"
+          >hydraulikwarszawanet@gmail.com</a
+        >
+      </p>
+    </div>
+  </article>
+</Default>

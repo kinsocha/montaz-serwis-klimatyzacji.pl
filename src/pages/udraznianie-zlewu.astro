@@ -1,0 +1,275 @@
+---
+import Default from "@layouts/Default.astro";
+import Carousel from "@components/Carousel.astro";
+
+const canonical = "https://udraznianiekanalizacji.eu/udraznianie-zlewu";
+const title =
+  "Udrażnianie zlewu Warszawa – szybkie przepychanie odpływu | 510 733 300";
+const description =
+  "Profesjonalne udrażnianie zlewu w Warszawie. Mechaniczne czyszcz...nu. Dojazd na terenie Warszawy i okolic. Zadzwoń: 510 733 300.";
+const keywords =
+  "udrażnianie zlewu Warszawa, przepychanie zlewu Warszawa, czyszczenie odpływu zlewu, zatkany zlew Warszawa";
+---
+
+<Default
+  title={title}
+  description={description}
+  keywords={keywords}
+  canonical={canonical}
+>
+  <script
+    slot="head"
+    type="application/ld+json"
+    is:inline
+    set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "@id":
+            "https://udraznianiekanalizacji.eu/udraznianie-zlewu#breadcrumbs",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Udrażnianie kanalizacji Warszawa",
+              item: "https://udraznianiekanalizacji.eu/",
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Udrażnianie zlewu",
+            },
+          ],
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://udraznianiekanalizacji.eu/udraznianie-zlewu#webpage",
+          url: "https://udraznianiekanalizacji.eu/udraznianie-zlewu",
+          name: "Udrażnianie zlewu Warszawa",
+          isPartOf: { "@id": "https://udraznianiekanalizacji.eu#website" },
+          inLanguage: "pl-PL",
+          description:
+            "Profesjonalne udrażnianie zlewu w Warszawi... mechaniczne czyszczenie odpływu sprężyną elektryczną. Szybko, czysto i bezpiecznie.",
+        },
+        {
+          "@type": "Service",
+          "@id": "https://udraznianiekanalizacji.eu/udraznianie-zlewu#service",
+          serviceType: "Udrażnianie zlewu",
+          areaServed: { "@type": "City", name: "Warszawa" },
+          provider: {
+            "@type": "LocalBusiness",
+            name: "Udrażnianie kanalizacji Warszawa",
+            telephone: "+48510733300",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Warszawa",
+              addressCountry: "PL",
+            },
+          },
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://udraznianiekanalizacji.eu/udraznianie-zlewu#faq",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "Czy rozkręcam syfon, a później skręcam go i sprawdzam czy nie kapie?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Tak, zazwyczaj rozkręcam, chyba że jest inn...o odpływu w ścianie. Potem wszystko skręcam tak, żeby nic nie ciekło.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Czy będzie bałagan?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Nie. Sprężyna wychodząca z odpływu w ścianie jest już czysta i nie brudzi podłogi.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Czy udrażniam też odpływy w łazience?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Tak, udrażniam też odpływy umywalek, wanien i brodzików, o ile jest dostęp do syfonu albo do rury odpływowej.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Czy muszę sam rozkręcać syfon przed przyjazdem?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Nie ma takiej potrzeby. Najczęściej to ja rozkręcam syfon na miejscu. Jeżeli syfon jest zabudowany i nie ma dostępu, proszę tylko przygotować dojście.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Czy warto próbować udrażniać zlew środkami chemicznymi, zanim zadzwonię po hydraulika?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Środki chemiczne często tylko przesuwają problem głębiej w rurę i mogą uszkodzić elementy instalacji, zwłaszcza plastikowe syfony i uszczelki. Bezpieczniejsze i skuteczniejsze jest użycie sprężyny mechanicznej.",
+              },
+            },
+          ],
+        },
+      ],
+    })}
+  />
+  <h1>Udrażnianie zlewu w Warszawie i okolicach</h1>
+
+  <p class="lead">
+    Zatkany zlew? Woda stoi lub spływa bardzo wolno? Wykonuję
+    <strong>mechaniczne udrażnianie odpływu sprężyną elektryczną</strong> – szybko,
+    czysto i bezpiecznie dla instalacji. Zadzwoń: <a href="tel:+48510733300"
+      ><b>510&nbsp;733&nbsp;300</b></a
+    >.
+  </p>
+
+  <Carousel
+    slides={[
+      {
+        src: "/img/udraznianiezlewu/udraznianie-zlewu.webp",
+        alt: "Udrażnianie zlewu – zdjęcie 1",
+      },
+      {
+        src: "/img/udraznianiezlewu/przepychanie-zlewu.webp",
+        alt: "Przepychanie zlewu – zdjęcie 2",
+      },
+      {
+        src: "/img/udraznianiezlewu/czyszczenie-rur-zlewu.webp",
+        alt: "Udrażnianie rur od zlewu – zdjęcie 3",
+      },
+      {
+        src: "/img/udraznianiezlewu/udroznianiezlewu.webp",
+        alt: "Udrożnianie zlewu – zdjęcie 4",
+      },
+    ]}
+  />
+
+  <article>
+    <h2>Jak przebiega udrażnianie zlewu</h2>
+    <ul class="lead">
+      <li>
+        <b>Diagnoza zapchania</b> – hydraulik po przybyciu na miejsce, lokalizuje
+        miejsce zatoru.
+      </li>
+      <li>
+        <b>Rozkręcenie syfonu</b> – jeśli jest taka potrzeba i dostęp, syfon jest
+        rozkręcany i dokładnie czyszczony.
+      </li>
+      <li>
+        <b>Wprowadzenie sprężyny do rury</b> – sprężyna napędzana elektrycznie rozdrabnia
+        i przepycha zator.
+      </li>
+      <li>
+        <b>Test drożności</b> – po zakończeniu prac sprawdzam, czy woda swobodnie
+        spływa.
+      </li>
+      <li>
+        <b>Porządek po pracy</b> – miejsce pracy jest pozostawiane w czystości.
+      </li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>Kiedy wzywać hydraulika</h2>
+    <ul>
+      <li>
+        gdy woda stoi w komorze zlewu lub przebija się syfonem do sąsiedniej
+        komory zlewu,
+      </li>
+      <li>
+        jeśli bez włączania zmywarki woda <i>sama</i> pojawia się w zmywarce,
+      </li>
+      <li>jak zator powraca mimo domowych prób,</li>
+      <li>kiedy woda ze zmywarki wybijha w zlewie,</li>
+      <li>
+        w momencie, gdy ze zlewu wydobywają się dźwięki, a wcześniej taki efekt
+        nie występował.
+      </li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>Dlaczego mechanicznie, a nie „chemią”</h2>
+    <p>
+      Środki żrące często działają tylko <i>na chwilę</i>. Ja nat...a pewno
+      mechaniczne czyszczenie przywraca pełną średnicę rury
+    </p> i jest neutralne dla instalacji.
+  </article>
+
+  <article>
+    <h2>Najczęstsze przyczyny zatkanego zlewu</h2>
+    <ul>
+      <li>tłuszcz i olej z patelni,</li>
+      <li>fusy, skórki i resztki jedzenia,</li>
+      <li>długie odcinki bez spadku lub z nieprawidłowym spadkiem,</li>
+      <li>za mała średnica rur.</li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>FAQ – najczęściej zadawane pytania</h2>
+    <details>
+      <summary
+        >Czy rozkręcam syfon, a później skręcam go i sprawdzam czy nie kapie?</summary
+      >
+      <p>
+        Tak, zazwyczaj rozkręcam, chyba że jest inn...o odpływu w ścianie. Potem
+        wszystko skręcam tak, żeby nic nie ciekło.
+      </p>
+    </details>
+    <details>
+      <summary>Czy będzie bałagan?</summary>
+      <p>
+        Nie. Sprężyna wychodząca z odpływu w ścianie jest już czysta i nie
+        brudzi podłogi.
+      </p>
+    </details>
+    <details>
+      <summary>Czy udrażniam też odpływy w łazience?</summary>
+      <p>
+        Tak, udrażniam też odpływy umywalek, wanien i brodzików, o ile jest
+        dostęp do syfonu albo do rury odpływowej.
+      </p>
+    </details>
+    <details>
+      <summary>Czy muszę sam rozkręcać syfon przed przyjazdem?</summary>
+      <p>
+        Nie ma takiej potrzeby. Najczęściej to ja rozkręcam syfon na miejscu.
+        Jeżeli syfon jest zabudowany i nie ma dostępu, proszę tylko przygotować
+        dojście.
+      </p>
+    </details>
+    <details>
+      <summary
+        >Czy warto próbować udrażniać zlew środkami chemicznymi, zanim zadzwonię
+        po hydraulika?</summary
+      >
+      <p>
+        Środki chemiczne często tylko przesuwają problem głębiej w rurę i mogą
+        uszkodzić elementy instalacji, zwłaszcza plastikowe syfony i uszczelki.
+        Bezpieczniejsze i skuteczniejsze jest użycie sprężyny mechanicznej.
+      </p>
+    </details>
+  </article>
+
+  <article class="cta-call">
+    <h2 class="cta-title">
+      Przywrócę drożność Twojemu zlewowi. <strong>Zadzwoń teraz</strong>
+    </h2>
+    <p class="cta-desc">
+      <b
+        >Na miejscu szybko ocenię sytuację i dobiorę właściwą metodę. Pracuję
+        czysto i skutecznie.</b
+      >
+    </p>
+
+    <a class="cta-btn" href="tel:+48510733300" aria-label="Zadzwoń 510 733 300">
+      <span class="cta-btn-icon" aria-hidden="true">📞</span>
+      <span>510&nbsp;733&nbsp;300</span>
+    </a>
+  </article>
+</Default>

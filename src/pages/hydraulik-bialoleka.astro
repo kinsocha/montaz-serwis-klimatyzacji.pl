@@ -1,0 +1,170 @@
+---
+import Default from "../layouts/Default.astro";
+import Carousel from "@components/Carousel.astro";
+
+const canonical = "https://udraznianiekanalizacji.eu/hydraulik-bialoleka";
+
+const title =
+  "Hydraulik Białołęka – naprawy i montaż armatury | 510 733 300";
+
+const description =
+  "Hydraulik na Białołęce: naprawy spłuczki, syfonu, cieknących podłączeń oraz montaż baterii i armatury. Zadzwoń: 510 733 300.";
+
+const keywords =
+  "hydraulik Białołęka, naprawa spłuczki Białołęka, wymiana baterii Białołęka, montaż syfonu Białołęka, cieknący kran Białołęka";
+
+const streets = [
+  "Światowida",
+  "Odkryta",
+  "Modlińska",
+  "Marywilska",
+  "Skarbka z Gór",
+  "Głębocka",
+  "Mehoffera",
+  "Klembowska",
+  "Myśliborska",
+  "Płochocińska",
+  "Kartograficzna",
+  "Aluzyjna",
+];
+
+const mapEmbedSrc =  "https://www.google.com/maps?q=Bia%C5%82o%C5%82%C4%99ka%2C%20Warszawa&output=embed";
+---
+
+<Default
+  title={title}
+  description={description}
+  keywords={keywords}
+  canonical={canonical}
+>
+  <script
+    slot="head"
+    type="application/ld+json"
+    is:inline
+    set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: "Hydraulik Białołęka",
+      url: canonical,
+      telephone: "+48510733300",
+      email: "hydraulikwarszawanet@gmail.com",
+      areaServed: "Białołęka",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Białołęka",
+        addressRegion: "mazowieckie",
+        addressCountry: "PL",
+      },
+      image: ["https://udraznianiekanalizacji.eu/img/awaria.png"],
+    })}
+  />
+
+  <h1>Hydraulik Białołęka</h1>
+
+  <Carousel
+    slides={[
+      { src: "/img/hydraulik-bialoleka/hydraulik-bialoleka-1.webp", alt: "Hydraulik Białołęka – naprawa instalacji w mieszkaniu" },
+      { src: "/img/hydraulik-bialoleka/hydraulik-bialoleka-2.webp", alt: "Wymiana baterii kuchennej – Białołęka" },
+      { src: "/img/hydraulik-bialoleka/hydraulik-bialoleka-3.webp", alt: "Naprawa spłuczki i zaworów – Białołęka" },
+      { src: "/img/hydraulik-bialoleka/hydraulik-bialoleka-4.webp", alt: "Montaż syfonu i uszczelnienie połączeń – Białołęka" },
+      { src: "/img/hydraulik-bialoleka/hydraulik-bialoleka-5.webp", alt: "Drobne naprawy hydrauliczne – Białołęka" },
+    ]}
+  />
+
+  <section class="card">
+    <p class="lead">
+      Cieknie syfon, kapie przy zaworze, spłuczka nie domyka się albo bateria ma luz?
+      W takich przypadkach zwykle da się szybko przywrócić szczelność i poprawne działanie instalacji.
+      Zadzwoń: <strong>510&nbsp;733&nbsp;300</strong>. Dojeżdżam na Białołękę i okolice.
+    </p>
+
+    <div class="cta">
+      <a class="btn" href="tel:+48510733300" aria-label="Zadzwoń 510 733 300">
+        Zadzwoń: 510&nbsp;733&nbsp;300
+      </a>
+    </div>
+  </section>
+
+  <section class="card" id="mapa">
+    <h2>Obszar działania – Białołęka</h2>
+
+    <div class="street-row" aria-label="Wybrane ulice na Białołęce">
+      {streets.map((s) => (
+        <a class="street-pill" href="#mapa" rel="nofollow">{s}</a>
+      ))}
+    </div>
+
+    <div class="map-wrap">
+      <iframe
+        class="map-embed"
+        src={mapEmbedSrc}
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        aria-label="Mapa – Białołęka, Warszawa"
+        allowfullscreen
+      />
+    </div>
+
+    <p class="note">
+      Jeśli nie widzisz ulicy na liście — powiedz lokalizację przez telefon i potwierdzę dojazd.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Zakres prac – naprawy i montaż</h2>
+    <ul>
+      <li>Naprawa spłuczki: napełnianie, zawór, regulacja, drobne nieszczelności.</li>
+      <li>Syfon i odpływ: wymiana syfonu, uszczelnienia, poprawa połączeń.</li>
+      <li>Wężyki i zawory: wymiana, dokręcenie, uszczelnienie podłączeń.</li>
+      <li>Montaż i wymiana: bateria kuchenna/łazienkowa, podstawowa armatura.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Co zrobić, gdy kapie spod zlewu</h2>
+    <p>
+      Najczęściej winny jest syfon (uszczelka, pęknięcie lub rozszczelnione połączenie) albo podłączenia do baterii.
+      Jeśli woda pojawia się tylko podczas spuszczania, problem bywa w samym syfonie.
+      Gdy kapie „ciągle”, warto sprawdzić zawory i wężyki doprowadzające.
+    </p>
+    <p>
+      Dokręcenie na siłę często pogarsza sprawę. Lepiej ustalić, czy cieknie na gwincie, uszczelce czy na pękniętej części,
+      i dobrać właściwe uszczelnienie albo element do wymiany.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Wymiana baterii – na co uważać w mieszkaniu</h2>
+    <p>
+      Przed wymianą baterii kluczowe jest odcięcie wody i sprawdzenie stanu zaworów. W starszych instalacjach zdarza się,
+      że zawór nie domyka w 100% i wtedy lepiej zabezpieczyć miejsce pracy.
+      Po montażu liczy się poprawne ułożenie wężyków, uszczelnienie i test pod ciśnieniem.
+    </p>
+    <p>
+      Jeśli po wymianie pojawia się wilgoć w szafce albo „poci się” na połączeniach, to zwykle kwestia uszczelnienia lub
+      niewłaściwego dokręcenia na stożku/gwincie.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Kontakt</h2>
+    <p>
+      Telefon: <a class="call" href="tel:+48510733300">510&nbsp;733&nbsp;300</a><br />
+      Email: <a href="mailto:hydraulikwarszawanet@gmail.com">hydraulikwarszawanet@gmail.com</a>
+    </p>
+  </section>
+
+  <style>
+    .card{max-width:980px;margin:24px auto;padding:18px 16px;background:#fff;border-radius:10px;box-shadow:0 10px 24px rgba(0,0,0,.06)}
+    .lead{font-size:1.05rem;line-height:1.6}
+    .cta{margin-top:12px;display:flex;justify-content:center}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:10px;text-decoration:none;border:1px solid rgba(0,0,0,.14);font-weight:700}
+    .street-row{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 14px;align-items:center}
+    .street-pill{display:inline-flex;padding:6px 10px;border-radius:999px;border:1px solid rgba(0,0,0,.12);text-decoration:none;font-size:.92rem;line-height:1;color:inherit;background:rgba(0,0,0,.02)}
+    .street-pill:hover{background:rgba(0,0,0,.05)}
+    .map-wrap{border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,.10)}
+    .map-embed{width:100%;height:340px;border:0;display:block}
+    .note{margin-top:12px;opacity:.9}
+    .call{text-decoration:none;font-weight:700}
+  </style>
+</Default>

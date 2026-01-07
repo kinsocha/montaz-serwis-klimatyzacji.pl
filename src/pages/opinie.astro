@@ -1,0 +1,193 @@
+---
+import Default from "../layouts/Default.astro";
+import { getCollection } from "astro:content";
+
+const canonical = "https://udraznianiekanalizacji.eu/opinie";
+
+const title = "Opinie klientów – Udrażnianie kanalizacji Warszawa";
+
+const description =
+  "Przeczytaj opinie klientów, u których usuwałem zatory w kanalizacji, zlewach i toaletach w Warszawie i okolicach.";
+
+const keywords =
+  "opinie udrażnianie kanalizacji, opinie hydraulik Warszawa, rekomendacje udrażnianie rur";
+
+const formatter = new Intl.DateTimeFormat("pl-PL", {
+  day: "2-digit",
+  month: "long",
+  year: "numeric",
+});
+
+const reviews = (await getCollection("reviews"))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .filter(({ data }) => data.date.valueOf() <= new Date().valueOf());
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Udrażnianie kanalizacji Warszawa",
+  "description":
+    "Profesjonalne udrażnianie rur kanalizacyjnych w Warszawie i okolicach.",
+  "url": canonical,
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": (
+      reviews.reduce((sum, o) => sum + (o.data.rating ?? 5), 0) /
+      reviews.length
+    ).toFixed(1),
+    "reviewCount": reviews.length,
+    "bestRating": 5,
+  },
+  "review": reviews.map((opinion) => ({
+    "@type": "Review",
+    "author": {
+      "@type": "Person",
+      "name": opinion.data.author,
+    },
+    "reviewBody": opinion.body,
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": opinion.data.rating ?? 5,
+      "bestRating": 5,
+    },
+    "datePublished": opinion.data.date,
+  })),
+};
+---
+
+<Default
+  title={title}
+  description={description}
+  keywords={keywords}
+  canonical={canonical}
+>
+  <h1>Opinie klientów</h1>
+
+  <p class="lead">
+    Poniżej znajdziesz opinie osób, u których usuwałem zatory w kanalizacji w
+    Warszawie i okolicy – od udrażniania zlewów po czyszczenie przykanalików.
+  </p>
+
+  <section class="service-card opinions-archive">
+    <div class="opinions-list">
+      {reviews.map(async (opinion) => {
+        const rating = opinion.data.rating ?? 5;
+        const dateFormatted = formatter.format(opinion.data.date);
+        const initials = opinion.data.author.trim().charAt(0).toUpperCase();
+        const { Content } = await opinion.render();
+        return (
+          <article class="opinion-row">
+            <div class="opinion-row-header">
+              <div class="opinion-avatar" aria-hidden="true">
+                {initials}
+              </div>
+              <div class="opinion-row-header-text">
+                <span class="opinion-row-author">{opinion.data.author}</span>
+                {opinion.data.location && (
+                  <span class="opinion-row-location">{opinion.data.location}</span>
+                )}
+              </div>
+            </div>
+
+            <div class="opinion-row-rating">
+              <span class="stars" aria-label={`${rating} na 5`}>
+                ★★★★★
+              </span>
+            </div>
+
+            <p class="opinion-row-content"><Content /></p>
+
+            <p class="opinion-row-meta">
+              <time class="opinion-row-date" datetime={opinion.data.date.toISOString()}>
+                {dateFormatted}
+              </time>
+            </p>
+          </article>
+        );
+      })}
+    </div>
+  </section>
+
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(structuredData)}>
+    
+  </script>
+
+  <style>
+    .opinions-archive {
+      margin-top: 1.5rem;
+    }
+
+    .opinions-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .opinion-row {
+      border-radius: 10px;
+      border: 1px solid #eee;
+      padding: 1.2rem 1.4rem 1rem 1.4rem;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    .opinion-row-header {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .opinion-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .opinion-row-header-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .opinion-row-author {
+      font-weight: 700;
+      color: #333;
+    }
+
+    .opinion-row-location {
+      color: #777;
+      font-size: 0.9em;
+    }
+
+    .opinion-row-rating {
+      margin: 0.2rem 0 0.5rem 0;
+      color: #ffb400;
+      font-size: 1rem;
+    }
+
+    .opinion-row-rating .stars {
+      letter-spacing: 1px;
+    }
+
+    .opinion-row-content {
+      margin: 0;
+      font-size: 0.98rem;
+      line-height: 1.7;
+      color: #444;
+    }
+
+    .opinion-row-meta {
+      margin: 0.7rem 0 0 0;
+      font-size: 0.88rem;
+      color: #777;
+      text-align: right;
+    }
+  </style>
+</Default>

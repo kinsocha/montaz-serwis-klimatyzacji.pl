@@ -1,0 +1,92 @@
+---
+import { Picture } from "astro:assets";
+import { getCollection } from "astro:content";
+import Default from "@layouts/Default.astro";
+
+const articles = (await getCollection("blog"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .filter(({ data }) => data.pubDate.valueOf() <= new Date().valueOf());
+
+const formatter = new Intl.DateTimeFormat("pl-PL", {
+  day: "2-digit",
+  month: "long",
+  year: "numeric",
+});
+---
+
+<Default
+  title="Poradnik – starsze artykuły"
+  description="Archiwum poradnika o udrażnianiu kanalizacji. Starsze artykuły o przepychaniu rur, udrażnianiu zlewów i innych problemach kanalizacyjnych."
+  keywords="poradnik kanalizacja, archiwum artykułów, czyszczenie rur, przepychanie kanalizacji"
+  canonical="https://udraznianiekanalizacji.eu/blog-index"
+>
+  <section class="service-card blog-section">
+    <h1>Poradnik – starsze artykuły</h1>
+
+    <div class="blog-grid">
+      {
+        articles.map((article) => (
+          <article
+            class="blog-card"
+            itemscope
+            itemtype="https://schema.org/BlogPosting"
+          >
+            <meta
+              itemprop="datePublished"
+              content={article.data.pubDate.toISOString()}
+            />
+            <meta itemprop="author" content="Hydraulik Warszawa" />
+
+            <div class="blog-card-image">
+              <Picture
+                loading="lazy"
+                width={400}
+                src={article.data.hero}
+                alt={article.data.heroAlt}
+                formats={["webp", "jpg"]}
+                itemprop="image"
+              />
+            </div>
+
+            <div class="blog-card-content">
+              <span class="blog-category">{article.data.category}</span>
+
+              <h2 itemprop="headline">
+                <a href={`/blog/${article.slug}`} itemprop="url">
+                  {article.data.title}
+                </a>
+              </h2>
+
+              <p itemprop="description">{article.data.description}</p>
+
+              <div class="blog-meta">
+                <span
+                  class="blog-author"
+                  itemprop="author"
+                  itemscope
+                  itemtype="https://schema.org/Person"
+                >
+                  <span itemprop="name">Hydraulik Warszawa</span>
+                </span>
+
+                <span class="blog-date">
+                  <span class="meta-icon">📅</span>
+                  <span>{formatter.format(article.data.pubDate)}</span>
+                </span>
+
+                <span class="blog-read-time">
+                  <span class="meta-icon">⏱</span>
+                  <span>{article.data.readingTime}</span>
+                </span>
+              </div>
+
+              <a href={`/blog/${article.slug}`} class="btn btn--outline">
+                Czytaj więcej
+              </a>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</Default>

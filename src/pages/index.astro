@@ -1,0 +1,524 @@
+---
+import Default from "@layouts/Default.astro";
+import Carousel from "@components/Carousel.astro";
+import KameraSection from "@components/KameraSection.astro";
+import OpinionsSection from "@components/OpinionsSection.astro";
+import PoradnikSection from "@components/PoradnikSection.astro";
+
+const title =
+  "Udrażnianie kanalizacji Warszawa Hydraulik Przepychanie rur 510733300";
+const description =
+  "Tel. 510 733 300 Pogotowie kanalizacyjne i hydrauliczne Warszawa. Szybka pomoc, nowoczesny sprzęt. Kamerujemy, czyścimy i przepychamy rur w w Warszawie i okolicy do 60km, zadzwoń - pomożemy!";
+const keywords =
+  "udrażnianie rur Warszawa, udrażnianie kanalizacji Warszawa, przepychanie rur Warszawa, przepychanie kanalizacji Warszawa";
+const canonical = "https://udraznianiekanalizacji.eu";
+---
+
+<Default
+  title={title}
+  description={description}
+  keywords={keywords}
+  canonical={canonical}
+>
+  <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://udraznianiekanalizacji.eu#localbusiness",
+      "additionalType": "https://schema.org/Plumber",
+      "name": "Udrażnianie kanalizacji Warszawa Hydraulik Przepychanie rur 510733300",
+      "description": "Tel. 510 733 300 Pogotowie kanalizacyjne i hydrauliczne Warszawa. Szybka pomoc, nowoczesny sprzęt. Kamerowanie, czyszczenie rur i przepychanie kanalizacji w Warszawie i okolicach do 50 km. Gwarancja.",
+      "url": "https://udraznianiekanalizacji.eu",
+      "telephone": "+48 510 733 300",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ul. Skarbka z Gór 155",
+        "postalCode": "03-287",
+        "addressLocality": "Warszawa",
+        "addressCountry": "PL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 52.32375904437635,
+        "longitude": 21.05633518503431
+      },
+      "email": "udraznianierurkanalizacyjnych@udraznianiekanalizacji.eu",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://udraznianiekanalizacji.eu/img/awaria.png",
+        "width": 277,
+        "height": 279
+      },
+      "image": {
+        "@id": "https://udraznianiekanalizacji.eu/img/udraznianiezlewu/udraznianie-zlewu.webp"
+      },
+      "sameAs": [
+        "https://twitter.com/udraznianierury",
+        "https://share.google/KT0mjJETRJqVyyubY",
+        "https://www.facebook.com/UdraznianieKanalizacjiWarszawa",
+        "https://maps.app.goo.gl/rToBGfwbummrajfa6"
+      ],
+      "openingHours": ["Mo-Su 00:00-24:00"],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "bestRating": "5",
+        "ratingCount": "432"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Pan Damian"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Pan Damian mówił, że odpływ w łazience regularnie się zatykał. Przyczyną było zarośnięcie żeliwnego trójnika tuż przy pionie kanalizacyjnym. Po czyszczeniu i sprawdzeniu kamerą wszystko działa bez zarzutu.",
+          "datePublished": "2025-11-23"
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Pani Anna"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Szybka reakcja, czysto wykonana praca. Polecam hydraulika w Warszawie!",
+          "datePublished": "2025-10-15"
+        }
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Udrażnianie zlewu"
+          },
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "priceCurrency": "PLN",
+            "minPrice": "300",
+            "maxPrice": "450"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Udrażnianie WC"
+          },
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "priceCurrency": "PLN",
+            "minPrice": "350",
+            "maxPrice": "550"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Udrażnianie pionów kanalizacyjnych"
+          },
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "priceCurrency": "PLN",
+            "minPrice": "550",
+            "maxPrice": "800"
+          }
+        }
+      ]
+    }
+  </script>
+
+  <h1>{title}</h1>
+
+  <Carousel
+    slides={[
+      {
+        src: "/img/udraznianiezlewu/udraznianie-zlewu.webp",
+        alt: "Udrażnianie zlewu",
+      },
+      {
+        src: "/img/udraznianiezlewu/przepychanie-zlewu.webp",
+        alt: "Przepychanie zlewu",
+      },
+      {
+        src: "/img/kamerowanie-rur-kanalizacyjnych.webp",
+        alt: "Kamerowanie rur kanalizacyjnych",
+      },
+      {
+        src: "/img/udraznianie-przykanalika.webp",
+        alt: "Udrażnianie przykanalika",
+      },
+      {
+        src: "/img/udraznianie-odplywu-pralki.webp",
+        alt: "Udrażnianie odpływu pralki",
+      },
+      { src: "/img/przepychanie-pisuaru.webp", alt: "Przepychanie pisuaru" },
+      {
+        src: "/img/udraznianiezlewu/czyszczenie-rur-zlewu.webp",
+        alt: "Udrażnianie rur od zlewu",
+      },
+      {
+        src: "/img/udraznianie-pionu-kanalizacyjnego.webp",
+        alt: "Udrażnianie pionu kanalizacyjnego",
+      },
+      {
+        src: "/img/udraznianie-rury-od-szamba-przez-toalete.webp",
+        alt: "Udrażnianie rury od szamba przez toaletę",
+      },
+      {
+        src: "/img/udraznianiezlewu/udroznianiezlewu.webp",
+        alt: "Udrożnianie zlewu",
+      },
+    ]}
+  />
+
+  <article class="service-card">
+    <ul class="lead">
+      <li>
+        <a href="/udraznianie-zlewu"
+          >Skuteczne czyszczenie i udrażnianie zlewu</a
+        >
+      </li>
+      <li>
+        <a href="/hydraulik-warszawa#pogotowie-hydrauliczne"
+          >Pogotowie hydrauliczne Warszawa 24/7</a
+        >
+      </li>
+      <li>Udrażnianie rur wuko</li>
+      <li>Udrażnianie pionów i poziomów kanalizacyjnych</li>
+      <li>Przepychanie zlewu</li>
+      <li>Udrażnianie wanny</li>
+      <li>Odtykanie wc, toalety</li>
+      <li>Czyszczenie odpływu zmywarki</li>
+      <li>Kamerowanie rur kanalizacyjnych</li>
+      <li>Pogotowie kanalizacyjne Warszawa</li>
+      <li>Pogotowie hydrauliczne Warszawa</li>
+      <li>Przepychanie rur od szamba</li>
+      <li>Lokalizacja wycieków kamerą termowizyjną</li>
+      <li>Czyszczenie drenaży i rynien</li>
+    </ul>
+    <div class="cta-section">
+      <h3>Masz awarię rur kanalizacyjnych? Zadzwoń Teraz!</h3>
+      <p>
+        <strong>Telefon:</strong>
+        <a
+          class="call-inline"
+          href="tel:+48510733300"
+          aria-label="Zadzwoń pod numer 510 733 300"
+        >
+          510&nbsp;733&nbsp;300
+        </a>
+      </p>
+    </div>
+  </article>
+
+  <article class="service-card">
+    <h2>Poniżej opisujemy, jakimi metodami usuwamy awarie kanalizacyjne</h2>
+    <ul>
+      <li>
+        <h3>
+          <strong>Elektryczną sprężyną</strong> udrażniamy odpływy kuchenne i łazienkowe,
+          a także rury odprowadzające ścieki poza obręb budynków — do kanalizacji
+          miejskiej lub do zbiorników na szambo.
+        </h3>
+        <ul>
+          <li>
+            <b>Co to jest sprężyna elektryczna?</b> To spirala <strong
+              >napędzana silnikiem elektrycznym</strong
+            >, bezpieczna dla instalacji domowych. Radzi sobie z tłuszczem,
+            włosami, resztkami jedzenia czy osadami.
+          </li>
+          <li>
+            <b>Jak to działa?</b> Napęd wprawia spiralę w ruch, a <strong
+              >końcówka rozdrabnia i przepycha zator</strong
+            >, przywracając drożność.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>
+          <strong>Metodę WUKO (czyszczenie ciśnieniowe)</strong> stosujemy, gdy mamy
+          do czynienia z długimi odcinkami rur o średnicach powyżej 75 mm, zlokalizowanych
+          w całości lub częściowo poza budynkami.
+        </h3>
+        <ul>
+          <li>
+            <b>Co to jest WUKO?</b> To czyszczenie rur <strong
+              >wodą pod wysokim ciśnieniem</strong
+            >. Dysze jednocześnie torują drogę i myją ścianki rur.
+          </li>
+          <li>
+            <b>Jak to działa?</b> Pompa tłoczy wodę do elastycznego węża. <strong
+              >Strumienie rozbijają osady, wypłukują zanieczyszczenia</strong
+            >, a brud spływa do studzienki rewizyjnej. Efekt to drożna i czysta
+            rura.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>
+          <strong>Kamerowanie rur</strong> wykonujemy, aby precyzyjnie ustalić przyczynę
+          problemów i zapobiec ich nawrotom.
+        </h3>
+        <ul>
+          <li>
+            <b>W jakich sytuacjach?</b> Gdy powtarzają się zatory, podejrzewa się
+            nieszczelność, wrastanie korzeni albo złe spadki instalacji.
+          </li>
+          <li>
+            <b>Co to daje?</b> Kamera <strong
+              >rejestruje obraz w czasie rzeczywistym</strong
+            >, pozwala wskazać miejsce zatoru czy uszkodzenia. To szybka i
+            bezinwazyjna diagnoza.
+          </li>
+          <li>
+            <b>Jak to działa?</b> Do odpływu wprowadza się przewód z kamerą LED.
+            Obraz trafia na monitor, a hydraulik <strong
+              >dokładnie lokalizuje problem</strong
+            >. Nagranie może służyć jako dokumentacja.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </article>
+
+  <article class="service-card">
+    <p class="lead">
+      Masz problem z zapchaną kanalizacją? Mogę pomóc! Moja firma specjalizuje
+      się w udrażnianiu zatorów z rur kanalizacyjnych za pomocą najlepszych
+      narzędzi i technologii. Nie trać czasu na walkę z zapchaną kanalizacją!
+      Skontaktuj się ze mną <b
+        ><a
+          class="call-inline"
+          href="tel:+48510733300"
+          aria-label="Zadzwoń pod numer 510 733 300">510&nbsp;733&nbsp;300</a
+        ></b
+      >
+    </p>
+  </article>
+
+  <article>
+    <h2>Najczęstsze pytania</h2>
+    <details>
+      <summary>Czy chemia do rur jest bezpieczna?</summary>
+      <p>
+        Środki żrące często tylko przesuwają problem i potrafią uszkodzić
+        elementy instalacji. Preferujemy metody mechaniczne i ciśnieniowe —
+        skuteczne i bezpieczne.
+      </p>
+    </details>
+    <details>
+      <summary>Czy pozostawicie porządek?</summary>
+      <p>
+        Tak. Zabezpieczamy miejsce pracy i sprzątamy po sobie. To standard
+        usługi.
+      </p>
+    </details>
+    <details>
+      <summary>Na jakim obszarze działacie?</summary>
+      <p>
+        Warszawa, Wołomin, Otwock, Wyszków, Góra Kalwaria, Nadarzyn, Pruszków,
+        Jabłonna i poostałe rejony podwarszawskie.
+      </p>
+    </details>
+    <details>
+      <summary
+        >Czy kwas fosforowy z Coca Coli może udrożnić rury gdy woda nie spływa?</summary
+      >
+      <p>
+        W Internecie jest wiele śmiesznych i nieprawdziwych informacji pisanych
+        wyłącznie pod pozycjonowanie stron. Jedną z nich jest fake o
+        przepychaniu rur Colą. Przecież gdyby Coca-Cola była żrąca, tak że
+        rozpuszczałaby zatory w rurach, to nie nadawałaby się do spożycia dla
+        ludzi, bo byłaby trująca.
+      </p>
+    </details>
+  </article>
+
+  <article class="service-card">
+    <h2>Awaria kanalizacji: 1,5 tony kociego żwirku w szambie</h2>
+    <p class="clearfix">
+      <img
+        src="img/czy-do-rur-można-wrzucac-koci-piasek-z-kuwety.webp"
+        width="926"
+        height="695"
+        class="img-responsive img-thumbnail img-center"
+        alt="Zasyfonowany pion kanalizacyjny w Falenicy w Warszawie Wawer"
+      />
+      <p>Zdjęcie przedstawia wnętrze zbiornika na szambo, a u góry widoczna jest rura wlotowa prowadząca z łazienki. Przyczyną poważnej awarii było regularne wyrzucanie kociego żwirku do toalety przez klientkę, właścicielkę trzech kotów.</p>
+      <p>Przez dwa lata rury kanalizacyjne oraz sam zbiornik wypełniały się zbitym kocim piaskiem. Zator był tak duży, że po wezwaniu szamboniarki i opróżnieniu zbiornika, okazało się, że usunięto aż 1,5 tony zbrylonego żwirku.</p>
+      <p>Po usunięciu głównej masy zanieczyszczeń przystąpiliśmy do udrażniania zatkanych rur. Zastosowaliśmy ciśnieniową metodę hydrodynamiczną (WUKO), która skutecznie usunęła pozostałości żwirku z instalacji. Dzięki temu woda w rurach znów może swobodnie spływać.</p>
+      <p>Zadowolona klientak, że pozbyła się kłopotu, zapewniła, że po tej kosztownej lekcji, kocie odchody nigdy więcej nie trafią do toalety.</p>
+  </article>
+
+  <article class="service-card">
+    <h2>
+      Udrażnianie Kanalizacji w Falenicy (Warszawa Wawer): autopsja błędu, który
+      zatyka rury
+    </h2>
+    <p class="clearfix">
+      <img
+        src="img/zasyfonowany-pion-kanalizacyjny-w-falenicy.webp"
+        width="926"
+        height="695"
+        class="img-responsive img-thumbnail img-center"
+        alt="Zasyfonowany pion kanalizacyjny w Falenicy w Warszawie Wawer"
+      />
+      <h2>
+        Relacja z terenu: Kiedy instalacja kanalizacyjna staje się pułapką
+      </h2>
+
+      <p>
+        Jako firma specjalizująca się w udrażnianiu kanalizacji i czyszczeniu
+        rur w Warszawie, w tym w dzielnicy Wawer (Falenica), widzieliśmy już
+        niemal wszystko. Jednak niektóre przypadki, jak ten ze zdjęcia,
+        zasługują na szczególną uwagę. To nie jest zwykłe zapchanie tłuszczem
+        czy włosami. To podręcznikowy przykład błędu montażowego, który
+        gwarantuje ciągłe problemy i regularne wezwania fachowców do
+        przepychania pionów kanalizacyjnych.
+      </p>
+
+      <p>
+        Zdjęcie pochodzi z piwnicy w Falenicy i jest najlepszą odpowiedzią na
+        pytanie:
+        <strong
+          >„Czy zgodnie z Polską Normą może być tak wykonany pion
+          kanalizacyjny?”</strong
+        >
+      </p>
+
+      <p><strong>Odpowiedź jest krótka: NIE.</strong></p>
+
+      <h2>Zasyfonowanie Pionów Kanalizacyjnych – Błąd, Który Musi Zatykać</h2>
+
+      <p>
+        Głównym i najbardziej rażącym błędem widocznym na zdjęciu jest
+        zasyfonowanie pionu kanalizacyjnego. Pion, czyli główna rura spustowa,
+        został zakończony kolanami 90 stopni tworzącymi syfon (kształt litery
+        „U”) tuż przed podłączeniem do odpływu.
+      </p>
+
+      <h3>Dlaczego to jest katastrofa techniczna?</h3>
+
+      <ul>
+        <li>
+          <strong>Blokada przepływu:</strong> syfon zatrzymuje wodę i tworzy barierę,
+          której nie powinno być w pionie kanalizacyjnym. Spowalnia to spływ ścieków
+          z całego budynku.
+        </li>
+        <li>
+          <strong>Samo-zapychanie:</strong> woda stojąca w syfonie staje się miejscem
+          odkładania osadów, tłuszczu i stałych zanieczyszczeń — co prowadzi do szybkich
+          i regularnych zatorów.
+        </li>
+        <li>
+          <strong>Brak wentylacji:</strong> ostre kolana i zasyfonowanie zakłócają
+          wentylację instalacji. Powstające podciśnienie może wysysać wodę z syfonów
+          urządzeń sanitarnych na wyższych kondygnacjach, powodując nieprzyjemny
+          zapach w mieszkaniach.
+        </li>
+      </ul>
+
+      <h2>Co mówi Polska Norma? Prawidłowe wykonanie instalacji</h2>
+
+      <p>
+        Prawidłowe wykonanie instalacji kanalizacyjnej określa
+        <strong>PN-EN 12056-2:2002</strong> oraz
+        <strong>§ 122 Rozporządzenia Ministra Infrastruktury</strong>
+        w sprawie warunków technicznych.
+      </p>
+
+      <ul>
+        <li>Pion musi być prowadzony pionowo.</li>
+        <li>
+          Połączenie z poziomym przewodem powinno być wykonane łagodnymi łukami
+          (np. 2 × 45°).
+        </li>
+        <li>
+          Pion <strong>nie może być zasyfonowany</strong> — jest to błąd projektowy
+          i wykonawczy.
+        </li>
+        <li>
+          Należy zapewnić dostęp do czyszczenia (rewizje) w kluczowych
+          miejscach.
+        </li>
+      </ul>
+
+      <h2>Szukasz usługi udrażniania w Warszawie Wawer?</h2>
+
+      <p>
+        Jeżeli Twoja instalacja wygląda podobnie, albo zmagasz się z ciągle
+        zapychającą się kanalizacją w Falenicy, nie czekaj na kolejną awarię.
+        Nasza praca to nie tylko przepychanie rur — to diagnoza przyczyn i ich
+        trwała eliminacja.
+      </p>
+
+      <h2>Co mówią przepisy na temat budowy pionów kanalizacyjnych</h2>
+
+      <ul>
+        <li>
+          <strong>
+            <a
+              href="https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20020750690"
+              target="_blank"
+              rel="noopener"
+            >
+              Rozporządzenie Ministra Infrastruktury – § 122
+            </a>
+          </strong><br />
+          Akt prawny obligujący do stosowania Polskich Norm.
+        </li>
+        <li>
+          <strong>
+            <a
+              href="https://www.scribd.com/document/797509025/PN-en-12056-2-Systemy-Kanalizacji-Grawitacyjnej-Wewn%C4%85trz-Budynkow-Cz%C4%99%C5%9B%C4%87-2-Kanalizacja-Sanitarna"
+              target="_blank"
+              rel="noopener"
+            >
+              PN-EN 12056-2:2002
+            </a>
+          </strong><br />
+          Systemy kanalizacji grawitacyjnej wewnątrz budynków – zasady projektowania,
+          w tym zakaz zasyfonowania pionów.
+        </li>
+      </ul>
+    </p>
+  </article>  
+
+    <PoradnikSection />
+    <OpinionsSection />
+    <KameraSection />
+
+    <article class="cta-call">
+      <h2 class="cta-title">Masz zator? <strong>Zadzwoń teraz</strong></h2>
+      <p class="cta-desc">
+        <b
+          >Na miejscu szybko ocenię sytuację i dobiorę właściwą metodę. Pracuję
+          czysto i skutecznie.</b
+        >
+      </p>
+
+      <a
+        class="cta-btn"
+        href="tel:+48510733300"
+        aria-label="Zadzwoń 510 733 300"
+      >
+        <span class="cta-btn-icon" aria-hidden="true">📞</span>
+        <span>510&nbsp;733&nbsp;300</span>
+      </a>
+    </article>
+  </article>
+</Default>
