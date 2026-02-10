@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klimatyzatory 25-34 m² – Najlepsze modele do średnich pomieszczeń</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  </noscript>
+
+  <link rel="stylesheet" href="klimatyzatory-metraz.css">
+</head>
+<body>
+
+<!-- Overlay mobilne menu -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- NAVBAR -->
+<header class="navbar" id="navbar">
+  <nav class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-text">Klima</span><span class="logo-accent">Expert</span>
+    </a>
+    
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#" class="nav-link">Klimatyzacja do domu i mieszkania</a></li>
+      <li><a href="#" class="nav-link">Montaż</a></li>
+      <li><a href="#" class="nav-link">Cennik</a></li>
+      <li><a href="#" class="nav-link">Realizacje</a></li>
+      <li><a href="#wycena" class="btn-nav-cta">Darmowa Wycena</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <!-- Chmury -->
+  <div class="clouds">
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+    <div class="cloud cloud-4"></div>
+  </div>
+  
+  <!-- Śnieżynki -->
+  <div class="snowflakes-hero" id="snowflakesHero"></div>
+  
+  <div class="hero-content">
+    <h1>Klimatyzatory 25-34 m²</h1>
+    <p>Idealne rozwiązania do średnich pomieszczeń – salonu, biura czy większej sypialni. Sprawdzone modele wszystkich marek.</p>
+  </div>
+</section>
+
+<!-- WYBÓR POWIERZCHNI -->
+<section class="filters-section">
+  <div class="selection-box">
+    <h3>Dobierz moc do pomieszczenia:</h3>
+    <div class="area-buttons">
+      <a href="klimatyzatory-do-24m2.html" class="area-btn">do 24 m²</a>
+      <span class="area-btn active">25 – 34 m²</span>
+      <a href="klimatyzatory-35-49m2.html" class="area-btn">35 – 49 m²</a>
+      <a href="klimatyzatory-50-80m2.html" class="area-btn">50 – 80 m²</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUKTY -->
+<section class="products-section">
+  <div class="products-grid" id="productsGrid">
+    <!-- Produkty generowane przez JS -->
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; <span id="year"></span> KlimaExpert. Wszelkie prawa zastrzeżone.</p>
+</footer>
+
+<script>
+  // Rok w stopce
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Dane produktów
+  const PRODUCTS = [
+    {
+      id: "amber-prestige",
+      name: "Amber Prestige",
+      series: ["Dom", "Biuro"],
+      areas: ["24", "34", "49", "80"],
+      cooling: "2.7 / 3.5 / 5.3 / 7.0 kW",
+      heating: "3.5 / 4.2 / 5.6 / 7.0 kW",
+      energyCooling: "A+++",
+      energyHeating: "A+++",
+      colors: ["Biały"],
+      features: [
+        ["+8°C", "Oszczędny", "Sprężarka 2-stopniowa"],
+        ["Jonizator", "Filtry opcjonalnie"]
+      ],
+      img: "https://udraznianierur.eu/klimatyzatory-scienne/gree-amber-prestige-gwh09yd-s6dba2a-indoor.webp",
+      detailsPage: "gree-amber-prestige-2-7kw.html"
+    },
+    {
+      id: "soyal",
+      name: "Soyal",
+      series: ["Dom"],
+      areas: ["24", "34", "49"],
+      cooling: "2.7 / 3.5 / 5.3 kW",
+      heating: "3.6 / 4.2 / 5.6 kW",
+      energyCooling: "A+++",
+      energyHeating: "A+++",
+      colors: ["Biały"],
+      features: [["Samooczyszczanie", "Wykrywanie ludzi", "Cicha praca", "Gorący start"]],
+      img: "https://udraznianierur.eu/klimatyzatory-scienne/klimatyzator-gree-soyal-GWH09AKC-K6DNA1A-indoor.webp",
+      detailsPage: "gree-soyal-2-7kw.html"
+    },
+    {
+      id: "u-crown",
+      name: "U-Crown",
+      series: ["Dom", "Biuro"],
+      areas: ["24", "34", "49"],
+      cooling: "2.7 / 3.5 / 5.3 kW",
+      heating: "3.2 / 4.0 / 5.6 kW",
+      energyCooling: "A++",
+      energyHeating: "A++",
+      colors: ["Szary", "Szampański"],
+      features: [["Wi-Fi", "Grzanie", "Cichy", "Jonizacja"]],
+      img: "https://udraznianierur.eu/klimatyzatory-scienne/klimatyzator-scienny-gree-u-crown-GWH09UB-K6DNA4A-kolor-szampanski-indoor.webp",
+      detailsPage: "gree-u-crown-2-7kw.html"
+    },
+    {
+      id: "airy",
+      name: "Airy",
+      series: ["Mieszkanie", "Dom"],
+      areas: ["24", "34", "49", "80"],
+      cooling: "2.7 / 3.5 / 5.3 / 7.1 kW",
+      heating: "3.0 / 3.8 / 5.6 / 7.8 kW",
+      energyCooling: "A+++",
+      energyHeating: "A++",
+      colors: ["Biały", "Czarny", "Szampański", "Szary"],
+      features: [["Wi-Fi", "Tryb nocny", "Głos", "Grzanie"]],
+      img: "https://udraznianierur.eu/klimatyzatory-scienne/klimatyzator-scienny-gree-airy-GWH09AVEXF-K6DNA1A-kolor-grafitowy-indoor.webp",
+      detailsPage: "gree-airy-2-7kw.html"
+    },
+    {
+      id: "pular",
+      name: "Pular",
+      series: ["Mieszkanie"],
+      areas: ["24", "34", "49", "80"],
+      cooling: "2.5 / 3.2 / 4.6 / 6.2 kW",
+      heating: "2.8 / 3.4 / 5.2 / 6.5 kW",
+      energyCooling: "A++",
+      energyHeating: "A+",
+      colors: ["Biały połysk", "Biały mat"],
+      features: [["Wi-Fi", "Grzanie", "Cichy", "Osuszanie"]],
+      img: "https://udraznianierur.eu/klimatyzatory-scienne/klimatyzator-scienny-gree-pular-GWH12AGBXB-K6DNA1A-biały-indoor.webp",
+      detailsPage: "gree-pular-2-7kw.html"
+    },
+    {
+      id: "clivia",
+      name: "Clivia",
+      series: ["Mieszkanie"],
+      areas: ["24", "34", "49", "80"],
+      cooling: "2.7 / 3.5 / 5.3 / 7.1 kW",
+      heating: "3.0 / 3.8 / 5.3 / 7.3 kW",
+      energyCooling: "A++",
+      energyHeating: "A+",
+      colors: ["Beżowy", "Granatowy", "Srebrny", "Satynowa czerń", "Biały"],
+      features: [["Wi-Fi", "Grzanie", "Cichy", "Design"]],
+      img: "https://udraznianierur.eu/klimatyzatory-scienne/klimatyzator-gree-clivia-GWH12AUCXB-K6DNA1A-kolor-granatowy-indoor.webp",
+      detailsPage: "gree-clivia-2-7kw.html"
+    },
+    {
+      id: "g-tech",
+      name: "G-Tech",
+      series: ["Biuro"],
+      areas: ["24", "34"],
+      cooling: "2.7 / 3.5 kW",
+      heating: "3.2 / 3.8 kW",
+      energyCooling: "A+++",
+      energyHeating: "A++",
+      colors: ["Różowe złoto", "Srebrny"],
+      features: [["Wi-Fi", "Grzanie", "Cichy", "Design"]],
+      img: "https://udraznianierur.eu/klimatyzatory-scienne/klimatyzator-gree-g-tech-GWH09YD-S6DBA2A-kolor-rozowe-zloto-indoor.webp",
+      detailsPage: "gree-g-tech-2-7kw.html"
+    },
+    {
+      id: "lomo-luxury-plus",
+      name: "Lomo Luxury Plus",
+      series: ["Mieszkanie"],
+      areas: ["24", "34", "49", "80"],
+      cooling: "2.7 / 3.5 / 5.2 / 7.1 kW",
+      heating: "3.0 / 3.8 / 5.6 / 7.8 kW",
+      energyCooling: "A++",
+      energyHeating: "A+",
+      colors: ["Biały"],
+      features: [["Wi-Fi", "Grzanie", "Cichy", "Osuszanie"]],
+      img: "https://udraznianierur.eu/klimatyzatory-scienne/klimatyzator-scienny-gree-lomo-luxury-plus-gwh12qc-k6dnb2f-indoor.webp",
+      detailsPage: "gree-lomo-luxury-plus-2-7kw.html"
+    },
+    {
+      id: "konsola",
+      name: "Konsola",
+      series: ["Biuro"],
+      areas: ["24", "34", "49"],
+      cooling: "2.7 / 3.5 / 5.2 kW",
+      heating: "2.9 / 3.8 / 5.3 kW",
+      energyCooling: "A++",
+      energyHeating: "A+",
+      colors: ["Biały"],
+      features: [["Wi-Fi", "Grzanie", "Podłogowy", "Cichy"]],
+      img: "https://udraznianierur.eu/klimatyzatory-scienne/klimatyzator-gree-konsola-kolor-bialy-indoor.webp",
+      detailsPage: "gree-konsola-2-7kw.html"
+    },
+    {
+      id: "fairy",
+      name: "Fairy",
+      series: ["Mieszkanie"],
+      areas: ["24", "34", "49", "80"],
+      cooling: "2.7 / 3.5 / 5.3 / 7.1 kW",
+      heating: "3.0 / 3.8 / 5.6 / 7.8 kW",
+      energyCooling: "A++",
+      energyHeating: "A+",
+      colors: ["Biały"],
+      features: [["Wi-Fi", "Grzanie", "Cichy", "Jonizacja"]],
+      img: "https://udraznianierur.eu/klimatyzatory-scienne/klimatyzator-gree-fairy-kolor-srebrny-indoor.webp",
+      detailsPage: "gree-fairy-2-7kw.html"
+    },
+    {
+      id: "amber-standard",
+      name: "Amber Standard",
+      series: ["Dom", "Biuro"],
+      areas: ["24", "34", "49", "80"],
+      cooling: "2.7 / 3.5 / 5.3 / 7.0 kW",
+      heating: "2.9 / 3.8 / 5.6 / 7.2 kW",
+      energyCooling: "A+++",
+      energyHeating: "A+",
+      colors: ["Biały"],
+      features: [["Wi-Fi", "Grzanie", "Cichy", "Jonizacja"]],
+      img: "https://udraznianierur.eu/klimatyzatory-scienne/klimatyzator-gree-amber-standard-kolor-czarny-indoor.webp",
+      detailsPage: "gree-amber-standard-2-7kw.html"
+    },
+    {
+      id: "pular-pro",
+      name: "Pular Pro",
+      series: ["Mieszkanie"],
+      areas: ["24", "34", "49", "80"],
+      cooling: "2.7 / 3.5 / 5.3 / 7.1 kW",
+      heating: "3.0 / 3.8 / 5.6 / 7.8 kW",
+      energyCooling: "A++",
+      energyHeating: "A+",
+      colors: ["Czarny mat", "Czarny połysk", "Biały połysk", "Biały mat"],
+      features: [["Wi-Fi", "Grzanie", "Cichy", "Osuszanie"]],
+      img: "https://udraznianierur.eu/klimatyzatory-scienne/klimatyzator-gree-pular-pro-kolor-dark-indoor.webp",
+      detailsPage: "gree-pular-pro-2-7kw.html"
+    },
+    {
+      id: "cosmo",
+      name: "Cosmo",
+      series: ["Mieszkanie", "Dom"],
+      areas: ["24", "34", "49", "80"],
+      cooling: "2.7 / 3.5 / 5.1 / 7.1 kW",
+      heating: "3.0 / 3.8 / 5.6 / 7.8 kW",
+      energyCooling: "A+++",
+      energyHeating: "A++",
+      colors: ["Perłowy"],
+      features: [["Wi-Fi", "Filtr HEPA", "Osuszanie", "Samoczyszczenie"]],
+      img: "https://udraznianierur.eu/klimatyzatory-scienne/klimatyzator-gree-cosmo-kolor-pearl-indoor.webp",
+      detailsPage: "gree-cosmo-2-7kw.html"
+    }
+  ];
+
+  // Stała powierzchni dla tej strony
+  const AREA_FILTER = '34';
+
+  // Generowanie karty produktu
+  function createProductCard(product) {
+    const seriesText = product.series.join(' / ');
+    const energyBadgeClass = product.energyCooling === 'A+++' ? 'a-plus-plus' : '';
+    const colorsHTML = product.colors.map(c => `<span class="color-tag">${c}</span>`).join('');
+    
+    // Znajdź indeks powierzchni i wyciągnij odpowiednią moc
+    const areaIndex = product.areas.indexOf(AREA_FILTER);
+    const coolingRaw = product.cooling.replace(' kW', ''); // usuń kW z końca
+    const coolingValues = coolingRaw.split(' / ');
+    const singleCoolingValue = areaIndex >= 0 && coolingValues[areaIndex] 
+      ? coolingValues[areaIndex] 
+      : coolingValues[0];
+    const singleCooling = singleCoolingValue + ' kW'; // dodaj kW
+    
+    // Generowanie features - jeśli są 2 linie to card-features-row, jeśli 1 to card-features
+    let featuresHTML = '';
+    if (product.features && product.features.length > 0) {
+      if (product.features.length > 1) {
+        // Wiele linii - użyj card-features-row
+        featuresHTML = product.features.map(row => 
+          `<div class="card-features-row">${row.map(f => `<div class="feature-item">${f}</div>`).join('')}</div>`
+        ).join('');
+      } else {
+        // Jedna linia - użyj card-features
+        featuresHTML = `<div class="card-features">${product.features[0].map(f => `<div class="feature-item">${f}</div>`).join('')}</div>`;
+      }
+    }
+
+    return `
+      <article class="product-card" data-series="${product.series.join(',')}">
+        <div class="card-image">
+          <img src="${product.img}" alt="${product.name}" loading="lazy" />
+          <div class="energy-badge ${energyBadgeClass}">${product.energyCooling}</div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">${product.name}</h3>
+          
+          ${featuresHTML}
+          
+          <div class="card-specs">
+            <div class="spec-row">
+              <span class="spec-label">Wydajność chłodzenia:</span>
+              <span class="spec-value">${singleCooling}</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Klasa energet. chłodzenia:</span>
+              <span class="spec-value"><span class="energy-pill">${product.energyCooling}</span></span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Klasa energet. grzania:</span>
+              <span class="spec-value"><span class="energy-pill energy-pill-heating">${product.energyHeating}</span></span>
+            </div>
+          </div>
+          
+          <div class="card-colors">
+            <div class="colors-label">Dostępne kolory:</div>
+            <div class="color-tags">${colorsHTML}</div>
+          </div>
+          
+          <div class="card-footer">
+            <div class="card-price">
+              Od:
+              <span>Zapytaj</span>
+            </div>
+            <a href="${product.detailsPage}" class="btn-details">
+              Szczegóły
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+    `;
+  }
+
+  // Renderowanie produktów - tylko do 25m² (area = "24")
+  function renderProducts() {
+    const grid = document.getElementById('productsGrid');
+    const filtered = PRODUCTS.filter(p => p.areas.includes('24'));
+    
+    grid.innerHTML = filtered.map(createProductCard).join('');
+  }
+
+  // Inicjalizacja
+  renderProducts();
+
+  // Śnieżynki w hero
+  function createHeroSnowflakes() {
+    const container = document.getElementById('snowflakesHero');
+    const snowflakes = ['❄', '❅', '❆', '✧', '•'];
+    
+    for (let i = 0; i < 25; i++) {
+      const flake = document.createElement('div');
+      flake.className = 'snowflake-hero';
+      flake.textContent = snowflakes[Math.floor(Math.random() * snowflakes.length)];
+      flake.style.left = Math.random() * 100 + '%';
+      flake.style.fontSize = (Math.random() * 15 + 10) + 'px';
+      flake.style.animationDuration = (Math.random() * 5 + 5) + 's';
+      flake.style.animationDelay = (Math.random() * 10) + 's';
+      flake.style.opacity = Math.random() * 0.5 + 0.3;
+      container.appendChild(flake);
+    }
+  }
+  createHeroSnowflakes();
+
+  // Hamburger menu
+  (function() {
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    const navOverlay = document.getElementById('navOverlay');
+    const navLinks = document.querySelectorAll('.nav-link, .btn-nav-cta');
+
+    setTimeout(() => navMenu.classList.add('menu-ready'), 100);
+
+    function toggleMenu() {
+      navToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+      navOverlay.classList.toggle('active');
+      document.body.style.overflow = navToggle.classList.contains('active') ? 'hidden' : '';
+    }
+
+    function closeMenu() {
+      navToggle.classList.remove('active');
+      navMenu.classList.remove('active');
+      navOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    navToggle.addEventListener('click', toggleMenu);
+    navOverlay.addEventListener('click', closeMenu);
+    navLinks.forEach(link => link.addEventListener('click', closeMenu));
+    
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navMenu.classList.contains('active')) closeMenu();
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 1100 && navMenu.classList.contains('active')) closeMenu();
+    });
+  })();
+</script>
+
+</body>
+</html>

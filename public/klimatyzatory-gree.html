@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klimatyzatory Gree – Katalog Modeli 2024</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  </noscript>
+
+  <link rel="stylesheet" href="navbar-style.css">
+
+  <style>
+    :root {
+      --primary: #1a3a52;
+      --accent: #2c7dfa;
+      --accent-dark: #1e5fc9;
+      --accent-light: #eff6ff;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #2d3748;
+      --muted: #718096;
+      --border: #e2e8f0;
+      --shadow: 0 12px 40px rgba(0,0,0,0.12);
+      --shadow-hover: 0 20px 50px rgba(44, 125, 250, 0.25);
+      --serif: "Playfair Display", serif;
+      --sans: "Inter", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      padding-top: 72px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* === HERO SECTION === */
+    .hero {
+      position: relative;
+      background: linear-gradient(135deg, #2c7dfa 0%, #1e5fc9 50%, #1a4f9e 100%);
+      padding: 80px 20px;
+      overflow: hidden;
+      min-height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Chmury */
+    .clouds {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .cloud {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+      filter: blur(30px);
+    }
+
+    .cloud-1 { width: 400px; height: 150px; top: 10%; left: -5%; animation: float 25s ease-in-out infinite; }
+    .cloud-2 { width: 300px; height: 120px; top: 60%; right: -3%; animation: float 20s ease-in-out infinite reverse; }
+    .cloud-3 { width: 250px; height: 100px; top: 30%; left: 50%; animation: float 30s ease-in-out infinite; }
+    .cloud-4 { width: 350px; height: 130px; bottom: 10%; left: 20%; animation: float 22s ease-in-out infinite reverse; }
+
+    @keyframes float {
+      0%, 100% { transform: translateX(0) translateY(0); }
+      50% { transform: translateX(30px) translateY(-20px); }
+    }
+
+    /* Śnieżynki w hero */
+    .snowflakes-hero {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .snowflake-hero {
+      position: absolute;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 20px;
+      animation: fall-hero linear infinite;
+      text-shadow: 0 0 10px rgba(255,255,255,0.5);
+    }
+
+    @keyframes fall-hero {
+      0% { transform: translateY(-20px) rotate(0deg); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateY(400px) rotate(360deg); opacity: 0; }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: #fff;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+      padding: 8px 20px;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: 52px;
+      font-weight: 800;
+      margin: 0 0 15px 0;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    .hero p {
+      font-size: 18px;
+      opacity: 0.95;
+      max-width: 650px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 15px 30px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+
+    /* === FILTRY === */
+    /* === SEKCJA WYBORU POWIERZCHNI === */
+    .filters-section {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 30px 20px 10px;
+    }
+    
+    .selection-box {
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      text-align: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    
+    .selection-box h3 {
+      margin: 0 0 20px 0;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .area-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .area-btn {
+      padding: 12px 24px;
+      border: 2px solid var(--border);
+      border-radius: 5px;
+      background: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .area-btn:hover {
+      border-color: var(--accent);
+      background: rgba(44, 125, 250, 0.05);
+      box-shadow: 0 4px 12px rgba(44, 125, 250, 0.15);
+    }
+
+    .area-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(44, 125, 250, 0.3);
+      cursor: default;
+    }
+
+    /* === GRID PRODUKTÓW === */
+    .products-section {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* Ostatnia karta wycentrowana */
+    .products-grid .product-card:last-child:nth-child(3n+1) {
+      grid-column: 2;
+    }
+
+    /* === KARTA PRODUKTU === */
+    .product-card {
+      background: var(--card);
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all 0.4s ease;
+      border: 1px solid var(--border);
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow);
+    }
+
+    .card-image {
+      position: relative;
+      max-height: 156%;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .card-image img {
+      max-width: 85%;
+      max-height: 85%;
+      object-fit: contain;
+      transition: transform 0.4s ease;
+    }
+
+    .product-card:hover .card-image img {
+      transform: scale(1.05);
+    }
+
+    .energy-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+      color: #fff;
+      padding: 4px 12px;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: 800;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
+
+    .energy-badge.a-plus-plus {
+      background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
+
+    .card-body {
+      padding: 0 20px 18px 20px;
+    }
+
+    .card-title {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 0 0 10px 0;
+    }
+
+    .card-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 8px;
+      justify-content: center;
+    }
+    .card-features-row {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 8px;
+      margin-bottom: 9px;
+      justify-content: center;
+    }
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      color: var(--primary);
+      font-weight: 600;
+      background: #f8fafc;
+      padding: 5px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    }
+
+    .card-specs {
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
+      margin-bottom: 12px;
+    }
+
+    .spec-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4px 0;
+      font-size: 13px;
+    }
+
+    .spec-label { color: var(--muted); }
+    .spec-value { font-weight: 700; color: var(--primary); }
+
+    /* Pigułki klas energetycznych */
+    .energy-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      border: 1.5px solid #0ea5e9;
+      color: #0369a1;
+    }
+
+    .energy-pill-heating {
+      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      border: 1.5px solid #f59e0b;
+      color: #92400e;
+    }
+
+    .card-colors {
+      margin-bottom: 14px;
+    }
+
+    .colors-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .color-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .color-tag {
+      font-size: 11px;
+      padding: 4px 10px;
+      background: #f1f5f9;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    .card-price {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .card-price span {
+      display: block;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .btn-details {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-details:hover {
+      background: var(--accent);
+      transform: translateX(3px);
+    }
+
+    .btn-details svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .btn-details:hover svg {
+      transform: translateX(3px);
+    }
+
+    /* === FOOTER === */
+    footer {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    footer p {
+      margin: 0;
+      opacity: 0.8;
+      font-size: 14px;
+    }
+
+    /* === RESPONSYWNOŚĆ === */
+    @media (max-width: 992px) {
+      .products-grid { grid-template-columns: repeat(2, 1fr); gap: 25px; }
+      .products-grid .product-card:last-child:nth-child(3n+1) { grid-column: auto; }
+      .hero h1 { font-size: 40px; }
+      .hero { padding: 60px 20px; min-height: 300px; }
+    }
+
+    @media (max-width: 640px) {
+      .products-grid { grid-template-columns: 1fr; gap: 20px; }
+      .hero h1 { font-size: 32px; }
+      .hero p { font-size: 16px; }
+      .hero { padding: 50px 20px; min-height: 280px; }
+      .card-body { padding: 20px; }
+      .area-buttons { gap: 8px; }
+      .area-btn { padding: 10px 16px; font-size: 13px; }
+    }
+
+    @media (max-width: 400px) {
+      .hero h1 { font-size: 26px; }
+      .hero-badge { font-size: 11px; padding: 6px 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Overlay mobilne menu -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo" aria-label="Dobry Klimat - Strona główna">
+      <span class="logo-snowflake">❄️</span>
+      <span class="logo-text-new">
+        <span class="logo-text-black">Dobry</span> <span class="logo-text-blue">Klimat</span>
+      </span>
+    </a>
+    <ul class="nav-links" id="navMenu">
+      <li><a href="index.html#klimatyzatory">Polecane</a></li>
+      <li><a href="realizacje.html">Realizacje</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="index.html#kontakt">Kontakt</a></li>
+      <li><a href="tel:+48888888888" class="nav-cta">888 888 888</a></li>
+    </ul>
+    <button class="hamburger" id="navToggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <!-- Chmury -->
+  <div class="clouds">
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+    <div class="cloud cloud-4"></div>
+  </div>
+  
+  <!-- Śnieżynki -->
+  <div class="snowflakes-hero" id="snowflakesHero"></div>
+  
+  <div class="hero-content">
+    <h1>Klimatyzatory Gree</h1>
+    <p>Profesjonalne rozwiązania klimatyzacyjne dla Twojego domu, mieszkania i biura. Wybierz spośród 13 modeli.</p>
+  </div>
+</section>
+
+<!-- WYBÓR POWIERZCHNI -->
+<section class="filters-section">
+  <div class="selection-box">
+    <h3>Dobierz moc do pomieszczenia:</h3>
+    <div class="area-buttons" id="areaButtons">
+      <span class="area-btn active">Wszystkie</span>
+      <a href="klimatyzatory-do-24m2.html" class="area-btn">do 24 m²</a>
+      <a href="klimatyzatory-25-34m2.html" class="area-btn">25 – 34 m²</a>
+      <a href="klimatyzatory-35-49m2.html" class="area-btn">35 – 49 m²</a>
+      <a href="klimatyzatory-50-80m2.html" class="area-btn">50 – 80 m²</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUKTY -->
+<section class="products-section">
+  <div class="products-grid" id="productsGrid">
+    <!-- Produkty generowane przez JS -->
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; <span id="year"></span> Dobry Klimat. Wszelkie prawa zastrzeżone.</p>
+</footer>
+
+<script>
+  // Rok w stopce
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Dane produktów
+  const PRODUCTS = [
+    {
+      id: "amber-prestige",
+      name: "Amber Prestige",
+      series: ["Dom", "Biuro"],
+      areas: ["24", "34", "49", "80"],
+      cooling: "2.7 / 3.5 / 5.3 / 7.0 kW",
+      heating: "3.5 / 4.2 / 5.6 / 7.0 kW",
+      energyCooling: "A+++",
+      energyHeating: "A+++",
+      colors: ["Biały"],
+      features: [["Wi-Fi", "+8°C", "Sprężarka 2-stopniowa"]],
+      img: "https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-gree/gree-amber-prestige-gwh09yd-s6dba2a-indoor.webp",
+      detailsPage: "gree-amber-prestige-2-7kw.html"
+    },
+    {
+      id: "soyal",
+      name: "Soyal",
+      series: ["Dom"],
+      areas: ["24", "34", "49"],
+      cooling: "2.7 / 3.5 / 5.3 kW",
+      heating: "3.6 / 4.2 / 5.6 kW",
+      energyCooling: "A+++",
+      energyHeating: "A+++",
+      colors: ["Srebrno-biały"],
+      features: [["Wi-Fi", "Grzanie", "Cichy", "Jonizacja"]],
+      img: "https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-gree/klimatyzator-gree-soyal-GWH09AKC-K6DNA1A-indoor.webp",
+      detailsPage: "gree-soyal-2-7kw.html"
+    },
+    {
+      id: "u-crown",
+      name: "U-Crown",
+      series: ["Dom", "Biuro"],
+      areas: ["24", "34", "49"],
+      cooling: "2.7 / 3.5 / 5.3 kW",
+      heating: "3.2 / 4.0 / 5.6 kW",
+      energyCooling: "A++",
+      energyHeating: "A++",
+      colors: ["Szary", "Szampański"],
+      features: [["Wi-Fi", "Grzanie", "Cichy", "Jonizacja"]],
+      img: "https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-gree/klimatyzator-scienny-gree-u-crown-GWH09UB-K6DNA4A-kolor-szampanski-indoor.webp",
+      detailsPage: "gree-u-crown-2-7kw.html"
+    },
+    {
+      id: "airy",
+      name: "Airy",
+      series: ["Mieszkanie", "Dom"],
+      areas: ["24", "34", "49", "80"],
+      cooling: "2.7 / 3.5 / 5.3 / 7.1 kW",
+      heating: "3.0 / 3.8 / 5.6 / 7.8 kW",
+      energyCooling: "A+++",
+      energyHeating: "A++",
+      colors: ["Biały", "Czarny", "Szampański", "Szary"],
+      features: [["Wi-Fi", "Tryb nocny", "Głos", "Grzanie"]],
+      img: "https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-gree/klimatyzator-scienny-gree-airy-GWH09AVEXF-K6DNA1A-kolor-grafitowy-indoor.webp",
+      detailsPage: "gree-airy-2-7kw.html"
+    },
+    {
+      id: "pular",
+      name: "Pular",
+      series: ["Mieszkanie"],
+      areas: ["24", "34", "49", "80"],
+      cooling: "2.5 / 3.2 / 4.6 / 6.2 kW",
+      heating: "2.8 / 3.4 / 5.2 / 6.5 kW",
+      energyCooling: "A++",
+      energyHeating: "A+",
+      colors: ["Biały połysk", "Biały mat"],
+      features: [["Wi-Fi", "Grzanie", "Cichy", "Osuszanie"]],
+      img: "https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-gree/klimatyzator-scienny-gree-pular-GWH12AGBXB-K6DNA1A-biały-indoor.webp",
+      detailsPage: "gree-pular-2-5kw.html"
+    },
+    {
+      id: "clivia",
+      name: "Clivia",
+      series: ["Mieszkanie"],
+      areas: ["24", "34", "49", "80"],
+      cooling: "2.7 / 3.5 / 5.3 / 7.1 kW",
+      heating: "3.0 / 3.8 / 5.3 / 7.3 kW",
+      energyCooling: "A++",
+      energyHeating: "A+",
+      colors: ["Beżowy", "Granatowy", "Srebrny", "Satynowa czerń", "Biały"],
+      features: [["Wi-Fi", "Grzanie", "Cichy", "Design"]],
+      img: "https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-gree/klimatyzator-gree-clivia-GWH12AUCXB-K6DNA1A-kolor-granatowy-indoor.webp",
+      detailsPage: "gree-clivia-2-7kw.html"
+    },
+    {
+      id: "g-tech",
+      name: "G-Tech",
+      series: ["Biuro"],
+      areas: ["24", "34"],
+      cooling: "2.7 / 3.5 kW",
+      heating: "3.2 / 3.8 kW",
+      energyCooling: "A+++",
+      energyHeating: "A++",
+      colors: ["Różowe złoto", "Srebrny"],
+      features: [["Wi-Fi", "Grzanie", "Cichy", "Design"]],
+      img: "https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-gree/klimatyzator-gree-g-tech-GWH09YD-S6DBA2A-kolor-rozowe-zloto-indoor.webp",
+      detailsPage: "gree-g-tech-2-7kw.html"
+    },
+    {
+      id: "lomo-luxury-plus",
+      name: "Lomo Luxury Plus",
+      series: ["Mieszkanie"],
+      areas: ["24", "34", "49", "80"],
+      cooling: "2.7 / 3.5 / 5.2 / 7.1 kW",
+      heating: "3.0 / 3.8 / 5.6 / 7.8 kW",
+      energyCooling: "A++",
+      energyHeating: "A+",
+      colors: ["Biały"],
+      features: [["Wi-Fi", "Grzanie", "Cichy", "Osuszanie"]],
+      img: "https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-gree/klimatyzator-scienny-gree-lomo-luxury-plus-gwh12qc-k6dnb2f-indoor.webp",
+      detailsPage: "gree-lomo-luxury-plus-2-7kw.html"
+    },
+    {
+      id: "konsola",
+      name: "Konsola",
+      series: ["Biuro"],
+      areas: ["24", "34", "49"],
+      cooling: "2.7 / 3.5 / 5.2 kW",
+      heating: "2.9 / 3.8 / 5.3 kW",
+      energyCooling: "A++",
+      energyHeating: "A+",
+      colors: ["Biały"],
+      features: [["Wi-Fi", "Grzanie", "Podłogowy", "Cichy"]],
+      img: "https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-gree/klimatyzator-gree-konsola-kolor-bialy-indoor.webp",
+      detailsPage: "gree-konsola-2-7kw.html"
+    },
+    {
+      id: "fairy",
+      name: "Fairy",
+      series: ["Mieszkanie"],
+      areas: ["24", "34", "49", "80"],
+      cooling: "2.7 / 3.5 / 5.3 / 7.1 kW",
+      heating: "3.0 / 3.8 / 5.6 / 7.8 kW",
+      energyCooling: "A++",
+      energyHeating: "A+",
+      colors: ["Biały", "Srebrny", "Czarny"],                                       
+      features: [["Wi-Fi", "Grzanie", "Cichy", "Jonizacja"]],
+      img: "https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-gree/klimatyzator-gree-fairy-kolor-srebrny-indoor.webp",
+      detailsPage: "gree-fairy-2-7kw.html"
+    },
+    {
+      id: "amber-standard",
+      name: "Amber Standard",
+      series: ["Dom", "Biuro"],
+      areas: ["24", "34", "49", "80"],
+      cooling: "2.7 / 3.5 / 5.3 / 7.0 kW",
+      heating: "2.9 / 3.8 / 5.6 / 7.2 kW",
+      energyCooling: "A+++",
+      energyHeating: "A+",
+      colors: ["Biały", "Srebrny", "Czarno-srebrny", "Czarny"],
+      features: [["Wi-Fi", "Grzanie", "Cichy", "Jonizacja"]],
+      img: "https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-gree/klimatyzator-gree-amber-standard-kolor-czarny-indoor.webp",
+      detailsPage: "gree-amber-standard-2-7kw.html"
+    },
+    {
+      id: "pular-pro",
+      name: "Pular Pro",
+      series: ["Mieszkanie"],
+      areas: ["24", "34", "49", "80"],
+      cooling: "2.7 / 3.5 / 5.3 / 7.1 kW",
+      heating: "3.0 / 3.8 / 5.6 / 7.8 kW",
+      energyCooling: "A++",
+      energyHeating: "A+",
+      colors: ["Czarny mat", "Czarny połysk", "Biały połysk", "Biały mat"],
+      features: [["Wi-Fi", "Grzanie", "Cichy", "Osuszanie"]],
+      img: "https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-gree/klimatyzator-gree-pular-pro-kolor-dark-indoor.webp",
+      detailsPage: "gree-pular-pro-2-7kw.html"
+    },
+    {
+      id: "cosmo",
+      name: "Cosmo",
+      series: ["Mieszkanie", "Dom"],
+      areas: ["24", "34", "49", "80"],
+      cooling: "2.7 / 3.5 / 5.1 / 7.1 kW",
+      heating: "3.0 / 3.8 / 5.6 / 7.8 kW",
+      energyCooling: "A+++",
+      energyHeating: "A++",
+      colors: ["Perłowy"],
+      features: [["Wi-Fi", "Filtr HEPA", "Osuszanie", "Samoczyszczenie"]],
+      img: "https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-gree/klimatyzator-gree-cosmo-kolor-pearl-indoor.webp",
+      detailsPage: "gree-cosmo-pearl-2-7kw.html"
+    }
+  ];
+
+  // Generowanie karty produktu
+  function createProductCard(product) {
+    const seriesText = product.series.join(' / ');
+    const energyBadgeClass = product.energyCooling === 'A+++' ? 'a-plus-plus' : '';
+    const colorsHTML = product.colors.map(c => `<span class="color-tag">${c}</span>`).join('');
+    
+    // Generowanie features - jeśli są 2 linie to card-features-row, jeśli 1 to card-features
+    let featuresHTML = '';
+    if (product.features && product.features.length > 0) {
+      if (product.features.length > 1) {
+        // Wiele linii - użyj card-features-row
+        featuresHTML = product.features.map(row => 
+          `<div class="card-features-row">${row.map(f => `<div class="feature-item">${f}</div>`).join('')}</div>`
+        ).join('');
+      } else {
+        // Jedna linia - użyj card-features
+        featuresHTML = `<div class="card-features">${product.features[0].map(f => `<div class="feature-item">${f}</div>`).join('')}</div>`;
+      }
+    }
+
+    return `
+      <article class="product-card" data-series="${product.series.join(',')}">
+        <div class="card-image">
+          <img src="${product.img}" alt="${product.name}" loading="lazy" />
+          <div class="energy-badge ${energyBadgeClass}">${product.energyCooling}</div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">${product.name}</h3>
+          
+          ${featuresHTML}
+          
+          <div class="card-specs">
+            <div class="spec-row">
+              <span class="spec-label">Wydajność chłodzenia:</span>
+              <span class="spec-value">${product.cooling}</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Wydajność grzania:</span>
+              <span class="spec-value">${product.heating}</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Klasa energet. chłodzenia:</span>
+              <span class="spec-value"><span class="energy-pill">${product.energyCooling}</span></span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Klasa energet. grzania:</span>
+              <span class="spec-value"><span class="energy-pill energy-pill-heating">${product.energyHeating}</span></span>
+            </div>
+          </div>
+          
+          <div class="card-colors">
+            <div class="colors-label">Dostępne kolory:</div>
+            <div class="color-tags">${colorsHTML}</div>
+          </div>
+          
+          <div class="card-footer">
+            <div class="card-price">
+              Od:
+              <span>Zapytaj</span>
+            </div>
+            <a href="${product.detailsPage}" class="btn-details">
+              Szczegóły
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+    `;
+  }
+
+  // Renderowanie produktów
+  function renderProducts(area = 'all') {
+    const grid = document.getElementById('productsGrid');
+    const filtered = area === 'all' 
+      ? PRODUCTS 
+      : PRODUCTS.filter(p => p.areas.includes(area));
+    
+    grid.innerHTML = filtered.map(createProductCard).join('');
+  }
+
+  // Inicjalizacja - wyświetl wszystkie produkty
+  renderProducts();
+
+  // Śnieżynki w hero
+  function createHeroSnowflakes() {
+    const container = document.getElementById('snowflakesHero');
+    const snowflakes = ['❄', '❅', '❆', '✧', '•'];
+    
+    for (let i = 0; i < 25; i++) {
+      const flake = document.createElement('div');
+      flake.className = 'snowflake-hero';
+      flake.textContent = snowflakes[Math.floor(Math.random() * snowflakes.length)];
+      flake.style.left = Math.random() * 100 + '%';
+      flake.style.fontSize = (Math.random() * 15 + 10) + 'px';
+      flake.style.animationDuration = (Math.random() * 5 + 5) + 's';
+      flake.style.animationDelay = (Math.random() * 10) + 's';
+      flake.style.opacity = Math.random() * 0.5 + 0.3;
+      container.appendChild(flake);
+    }
+  }
+  createHeroSnowflakes();
+
+  // Hamburger menu
+  (function() {
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    const navOverlay = document.getElementById('navOverlay');
+    const navLinks = document.querySelectorAll('.nav-links a, .nav-cta');
+    let resizeTimeout;
+
+    setTimeout(function() {
+      navMenu.classList.add('menu-ready');
+    }, 100);
+
+    function toggleMenu() {
+      navToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+      navOverlay.classList.toggle('active');
+      const isExpanded = navToggle.classList.contains('active');
+      navToggle.setAttribute('aria-expanded', isExpanded);
+      document.body.style.overflow = isExpanded ? 'hidden' : '';
+    }
+
+    function closeMenu() {
+      navToggle.classList.remove('active');
+      navMenu.classList.remove('active');
+      navOverlay.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    navToggle.addEventListener('click', toggleMenu);
+    navOverlay.addEventListener('click', closeMenu);
+    navLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && navMenu.classList.contains('active')) closeMenu();
+    });
+
+    window.addEventListener('resize', function() {
+      navMenu.classList.remove('menu-ready');
+      if (window.innerWidth > 1100 && navMenu.classList.contains('active')) closeMenu();
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(function() {
+        navMenu.classList.add('menu-ready');
+      }, 150);
+    });
+  })();
+</script>
+
+</body>
+</html>

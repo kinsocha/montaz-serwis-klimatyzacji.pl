@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gree Clivia 7,1 kW – Technologia G-AI i Lampa UVC</title>
+
+  <!-- Optymalizacja połączeń sieciowych -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <!-- Optymalizacja ładowania czcionek: display=swap oraz asynchroniczne ładowanie -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  </noscript>
+
+  <link rel="stylesheet" href="https://montaz-serwis-klimatyzacji.pl/style.css">
+  <link rel="stylesheet" href="navbar-style.css">
+</head>
+<body>
+
+<!-- NIEBIESKI TRAPEZ W TLE (nie wpływa na layout) -->
+<div class="trapez-bg"></div>
+
+<!-- NIEBIESKI TRAPEZ LEWY -->
+<div class="trapez-bg-left"></div>
+
+<!-- NIEBIESKA BELKA (na wysokości kosztów eksploatacji) -->
+<div class="blue-bar"></div>
+
+<!-- KONTENER NA ŚNIEG -->
+<div class="snow-container" id="snowContainer"></div>
+
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo" aria-label="Dobry Klimat - Strona główna">
+      <span class="logo-snowflake">❄️</span>
+      <span class="logo-text-new">
+        <span class="logo-text-black">Dobry</span> <span class="logo-text-blue">Klimat</span>
+      </span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#klimatyzatory">Polecane</a></li>
+      <li><a href="realizacje.html">Realizacje</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="index.html#kontakt">Kontakt</a></li>
+      <li><a href="tel:+48888888888" class="nav-cta">888 888 888</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<main id="main-content" class="container">
+  <header class="header-section">
+    <div class="brand">
+      <span style="color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: 1px;">Technologia G-AI</span>
+      <h1>Clivia 7,1 kW</h1>
+      <p style="color: var(--muted); font-family: 'IBM Plex Mono';">Indeks: GWH24AUDXF-K6DNA1A</p>
+    </div>
+
+    <section class="selection-box" aria-labelledby="selection-title">
+      <h3 id="selection-title">Dobierz moc do pomieszczenia:</h3>
+      <div class="areaButtons">
+        <a href="gree-clivia-2-7kw.html" class="areaBtn">do 27 m²</a>
+        <a href="gree-clivia-3-5kw.html" class="areaBtn">28 – 35 m²</a>
+        <a href="gree-clivia-5-3kw.html" class="areaBtn">36 – 53 m²</a>
+        <span class="areaBtn active" aria-pressed="true">54 – 71 m²</span>
+        <a href="klimatyzatory-gree.html" class="areaBtn areaBtn-full">Powrót - wszystkie Gree</a>
+      </div>
+    </section>
+  </header>
+
+  <div class="page-content">
+      <aside class="sticky-sidebar" aria-label="Zdjęcia produktu">
+        <div class="img-container">
+          <div class="img-main">
+            <img src="https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-gree/klimatyzator-gree-clivia-GWH12AUCXB-K6DNA1A-bialy-indoor.webp" 
+                 alt="Klimatyzator ścienny Gree Clivia - jednostka wewnętrzna biała" width="300" height="300" fetchpriority="high">
+          </div>
+          <div class="img-footer">
+            <span style="font-weight: 700; color: #ffffff;">Jednostka wewn.</span>
+            <span style="background: #ffffff; color: var(--accent); padding: 3px 12px; border-radius: 5px; font-size: 12px; font-weight: 800;">Biały</span>
+          </div>
+        </div>
+        <div class="img-container">
+          <div class="img-main">
+            <img src="https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-gree/klimatyzator-gree-clivia-GWH12AUCXB-K6DNA1A-kolor-bezowy-indoor.webp" 
+                 alt="Klimatyzator ścienny Gree Clivia - jednostka wewnętrzna beżowa" width="300" height="300" loading="lazy">
+          </div>
+          <div class="img-footer">
+            <span style="font-weight: 700; color: #ffffff;">Jednostka wewn.</span>
+            <span style="background: #ffffff; color: var(--accent); padding: 3px 12px; border-radius: 5px; font-size: 12px; font-weight: 800;">Beżowy</span>
+          </div>
+        </div>
+        <div class="img-container">
+          <div class="img-main">
+            <img src="https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-gree/klimatyzator-gree-clivia-GWH12AUCXB-K6DNA1A-kolor-granatowy-indoor.webp" 
+                 alt="Klimatyzator ścienny Gree Clivia - jednostka wewnętrzna granatowa" width="300" height="300" loading="lazy">
+          </div>
+          <div class="img-footer">
+            <span style="font-weight: 700; color: #ffffff;">Jednostka wewn.</span>
+            <span style="background: #ffffff; color: var(--accent); padding: 3px 12px; border-radius: 5px; font-size: 12px; font-weight: 800;">Granatowy</span>
+          </div>
+        </div>
+        <div class="img-container">
+          <div class="img-main">
+            <img src="https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-gree/klimatyzator-gree-clivia-GWH12AUCXB-K6DNA1A-kolor-satynowa-czern-indoor.webp" 
+                 alt="Klimatyzator ścienny Gree Clivia - jednostka wewnętrzna satynowa czerń" width="300" height="300" loading="lazy">
+          </div>
+          <div class="img-footer">
+            <span style="font-weight: 700; color: #ffffff;">Jednostka wewn.</span>
+            <span style="background: #ffffff; color: var(--accent); padding: 3px 12px; border-radius: 5px; font-size: 12px; font-weight: 800;">Satynowa czerń</span>
+          </div>
+        </div>
+        <div class="img-container">
+          <div class="img-main">
+            <img src="https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-gree/klimatyzator-gree-clivia-GWH12AUCXB-K6DNA1A-kolor-srebrny-indoor.webp" 
+                 alt="Klimatyzator ścienny Gree Clivia - jednostka wewnętrzna srebrna" width="300" height="300" loading="lazy">
+          </div>
+          <div class="img-footer">
+            <span style="font-weight: 700; color: #ffffff;">Jednostka wewn.</span>
+            <span style="background: #ffffff; color: var(--accent); padding: 3px 12px; border-radius: 5px; font-size: 12px; font-weight: 800;">Srebrny</span>
+          </div>
+        </div>
+        <div class="img-container">
+            <div class="img-main">
+              <img src="https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-gree/klimatyzator-gree-clivia-outdoor.webp" 
+                   alt="Agregat zewnętrzny Gree Clivia" width="340" height="340" loading="lazy">
+            </div>
+            <div class="img-footer img-footer-outdoor">
+              <span style="font-weight: 700; color: #ffffff;">Jednostka zewnętrzna</span>
+            </div>
+        </div>
+      </aside>
+
+      <article class="details-card">
+        <header>
+          <h2>Inteligencja, zdrowie i oszczędność</h2>
+        </header>
+        
+        <section class="price-box" style="margin-top: 8px;" aria-label="Cena i gwarancja">
+          <div>
+            <span style="display: block; font-size: 13px; color: #2c7dfa; font-weight: 700;">Szacowany koszt z montażem (8% VAT)</span>
+            <span class="price-value">8 499 zł</span>
+          </div>
+          <!-- <div style="text-align: right;">
+            <span style="color: #2c7dfa; font-size: 12px; font-weight: 700;">GWARANCJA: 5 lat</span>
+          </div> -->
+        </section>
+
+        <section class="tech-params-section" aria-labelledby="tech-params-title">
+          <h3 id="tech-params-title" class="tech-sub-title">Parametry techniczne</h3>
+          <table class="spec-list">
+            <caption style="text-align: left !important;">Szczegółowa specyfikacja modelu Clivia 7,1 kW (GWH24AUDXF-K6DNA1A)</caption>
+            <thead>
+              <tr style="display: none;">
+                <th scope="col">Parametr</th>
+                <th scope="col">Wartość</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Klasa energetyczna (chłodzenie/grzanie)</th><td class="val">A++ / A+</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Moc chłodnicza</th><td class="val">7,10 kW</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Moc grzewcza</th><td class="val">7,30 kW</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">SEER / SCOP</th><td class="val">7,0 / 4,3</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Sezonowa efektywność chłodzenia / grzania</th><td class="val">282% / 169%</td></tr>
+              <tr><td colspan="2" style="font-size: 12px; color: var(--muted); padding: 8px 0; font-style: italic;">* Są to wartości deklarowane przez producenta, liczone w warunkach laboratoryjnych.</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Chłodzenie (zakres pracy przy temp. zewn.)</th><td class="val">−15°C do 50°C</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Grzanie (zakres pracy przy temp. zewn.)</th><td class="val">−25°C do 30°C</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Pobór mocy - chłodzenie</th><td class="val">2,03 kW</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Pobór mocy - grzanie</th><td class="val">1,87 kW</td></tr>
+              <tr><td colspan="2" style="font-size: 12px; color: var(--muted); padding: 8px 0; font-style: italic;">* Są to wartości deklarowane przez producenta, liczone w warunkach laboratoryjnych.</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Przepływ powietrza (j. wewn.)</th><td class="val">280 – 1000 m³/h</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Poziom hałasu (j. wewn.)</th><td class="val">27 – 48 dB(A)</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Poziom hałasu (j. zewn.)</th><td class="val">59 dB(A)</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- MOBILNE ZDJĘCIA (widoczne tylko na mobile) -->
+        <div class="mobile-only-photos">
+          <div class="img-container">
+            <div class="img-main">
+              <img src="https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-gree/klimatyzator-gree-clivia-GWH12AUCXB-K6DNA1A-bialy-indoor.webp" 
+                   alt="Klimatyzator ścienny Gree Clivia - jednostka wewnętrzna biała" width="300" height="300" loading="lazy">
+            </div>
+            <div class="img-footer">
+              <span style="font-weight: 700; color: #ffffff;">Jednostka wewn.</span>
+              <span style="background: #ffffff; color: var(--accent); padding: 3px 12px; border-radius: 5px; font-size: 12px; font-weight: 800;">Biały</span>
+            </div>
+          </div>
+          <div class="img-container">
+            <div class="img-main">
+              <img src="https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-gree/klimatyzator-gree-clivia-GWH12AUCXB-K6DNA1A-kolor-bezowy-indoor.webp" 
+                   alt="Klimatyzator ścienny Gree Clivia - jednostka wewnętrzna beżowa" width="300" height="300" loading="lazy">
+            </div>
+            <div class="img-footer">
+              <span style="font-weight: 700; color: #ffffff;">Jednostka wewn.</span>
+              <span style="background: #ffffff; color: var(--accent); padding: 3px 12px; border-radius: 5px; font-size: 12px; font-weight: 800;">Beżowy</span>
+            </div>
+          </div>
+          <div class="img-container">
+            <div class="img-main">
+              <img src="https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-gree/klimatyzator-gree-clivia-GWH12AUCXB-K6DNA1A-kolor-granatowy-indoor.webp" 
+                   alt="Klimatyzator ścienny Gree Clivia - jednostka wewnętrzna granatowa" width="300" height="300" loading="lazy">
+            </div>
+            <div class="img-footer">
+              <span style="font-weight: 700; color: #ffffff;">Jednostka wewn.</span>
+              <span style="background: #ffffff; color: var(--accent); padding: 3px 12px; border-radius: 5px; font-size: 12px; font-weight: 800;">Granatowy</span>
+            </div>
+          </div>
+          <div class="img-container">
+            <div class="img-main">
+              <img src="https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-gree/klimatyzator-gree-clivia-GWH12AUCXB-K6DNA1A-kolor-satynowa-czern-indoor.webp" 
+                   alt="Klimatyzator ścienny Gree Clivia - jednostka wewnętrzna satynowa czerń" width="300" height="300" loading="lazy">
+            </div>
+            <div class="img-footer">
+              <span style="font-weight: 700; color: #ffffff;">Jednostka wewn.</span>
+              <span style="background: #ffffff; color: var(--accent); padding: 3px 12px; border-radius: 5px; font-size: 12px; font-weight: 800;">Satynowa czerń</span>
+            </div>
+          </div>
+          <div class="img-container">
+            <div class="img-main">
+              <img src="https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-gree/klimatyzator-gree-clivia-GWH12AUCXB-K6DNA1A-kolor-srebrny-indoor.webp" 
+                   alt="Klimatyzator ścienny Gree Clivia - jednostka wewnętrzna srebrna" width="300" height="300" loading="lazy">
+            </div>
+            <div class="img-footer">
+              <span style="font-weight: 700; color: #ffffff;">Jednostka wewn.</span>
+              <span style="background: #ffffff; color: var(--accent); padding: 3px 12px; border-radius: 5px; font-size: 12px; font-weight: 800;">Srebrny</span>
+            </div>
+          </div>
+          <div class="img-container">
+              <div class="img-main">
+                <img src="https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-gree/klimatyzator-gree-clivia-outdoor.webp" 
+                     alt="Agregat zewnętrzny Gree Clivia" width="340" height="340" loading="lazy">
+              </div>
+              <div class="img-footer">
+                <span style="font-weight: 700; color: #ffffff;">Jednostka zewnętrzna</span>
+              </div>
+          </div>
+        </div>
+
+        <section class="features-section">
+          <h2 class="features-title">Funkcje i zalety</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feat-ico" aria-hidden="true">🤖</div>
+              <div class="feat-txt">
+                <strong>Technologia G-AI</strong>
+                <p>Sztuczna inteligencja optymalizująca pracę i oszczędność do 10% energii.</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feat-ico" aria-hidden="true">🔬</div>
+              <div class="feat-txt">
+                <strong>Lampa LED UVC</strong>
+                <p>Sterylizacja powietrza eliminująca bakterie, wirusy i pleśń.</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feat-ico" aria-hidden="true">⚡</div>
+              <div class="feat-txt">
+                <strong>Jonizator</strong>
+                <p>Jonizacja powietrza eliminująca kurz i zwalczająca drobnoustroje.</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feat-ico" aria-hidden="true">💧</div>
+              <div class="feat-txt">
+                <strong>Kontrola wilgotności</strong>
+                <p>Utrzymanie komfortowego poziomu wilgotności w pomieszczeniu.</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feat-ico" aria-hidden="true">🔇</div>
+              <div class="feat-txt">
+                <strong>Cicha praca</strong>
+                <p>Zaledwie 19 dB(A) w trybie cichym – idealna do sypialni.</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feat-ico" aria-hidden="true">❄️</div>
+              <div class="feat-txt">
+                <strong>Grzanie do −25°C</strong>
+                <p>Efektywne ogrzewanie nawet przy ekstremalnie niskiej temperaturze.</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feat-ico" aria-hidden="true">🎨</div>
+              <div class="feat-txt">
+                <strong>5 kolorów</strong>
+                <p>Biały, Srebrny, Granatowy, Beżowy i Satynowa Czerń do wyboru.</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feat-ico" aria-hidden="true">🌬️</div>
+              <div class="feat-txt">
+                <strong>7 biegów wentylatora</strong>
+                <p>Precyzyjna regulacja siły nawiewu oraz 3 tryby snu.</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feat-ico" aria-hidden="true">🏠</div>
+              <div class="feat-txt">
+                <strong>Utrzymanie +8°C</strong>
+                <p>Utrzymanie stałej temperatury dyżurnej w budynkach sezonowych.</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feat-ico" aria-hidden="true">📶</div>
+              <div class="feat-txt">
+                <strong>Wi-Fi + Pilot IR</strong>
+                <p>Zdalne sterowanie aplikacją Gree+ lub klasycznym pilotem w zestawie.</p>
+              </div>
+            </div>
+          </div>
+          <p style="text-align: center; margin-top: 24px; font-size: 14px;">
+            <a href="https://gree.pl/produkt/klimatyzator-scienny-clivia/" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none;">📄 Pełna specyfikacja producenta →</a>
+          </p>
+        </section>
+
+        <!-- WYMIARY URZĄDZEŃ -->
+        <section class="dimensions-box" aria-labelledby="dimensions-title">
+          <h3 id="dimensions-title" class="tech-sub-title">Wymiary urządzeń</h3>
+          
+          <strong style="color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;">Jednostka wewn.</strong>
+          <div style="margin-top: 10px;">
+            <div class="dim-row">
+              <span class="dim-label">📐 Szerokość</span>
+              <span class="dim-value">993 mm</span>
+            </div>
+            <div class="dim-row">
+              <span class="dim-label">📏 Wysokość</span>
+              <span class="dim-value">311 mm</span>
+            </div>
+            <div class="dim-row">
+              <span class="dim-label">↔️ Głębokość</span>
+              <span class="dim-value">222 mm</span>
+            </div>
+          </div>
+          
+          <strong style="color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-top: 25px;">Jednostka zewnętrzna</strong>
+          <div style="margin-top: 10px;">
+            <div class="dim-row">
+              <span class="dim-label">📐 Szerokość</span>
+              <span class="dim-value">958 mm</span>
+            </div>
+            <div class="dim-row">
+              <span class="dim-label">📏 Wysokość</span>
+              <span class="dim-value">660 mm</span>
+            </div>
+            <div class="dim-row">
+              <span class="dim-label">↔️ Głębokość</span>
+              <span class="dim-value">402 mm</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- SEKCJA KOSZTÓW EKSPLOATACJI (na samym końcu) -->
+        <section class="cost-calculator" aria-labelledby="cost-title">
+          <h2 class="features-title" id="cost-title">💡 Koszty eksploatacji</h2>
+          <div class="cost-box" id="cost-content">
+            <!-- Zawartość wypełniana przez JavaScript -->
+            <p style="color: #8b5e00;">Ładowanie danych o kosztach...</p>
+          </div>
+        </section>
+
+      </article>
+    </div>
+</main>
+
+  <footer style="text-align: center; padding: 40px 20px; color: var(--muted); font-size: 14px;">
+    <p>&copy; 2024 Gree Partner. Wszelkie prawa zastrzeżone.</p>
+  </footer>
+
+  <!-- SKRYPT ŚNIEGU -->
+  <script>
+    window.addEventListener('load', function() {
+      const snowContainer = document.getElementById('snowContainer');
+      if (!snowContainer) return;
+      
+      let activeFlakes = [];
+      let snowInterval = null;
+      let isSnowing = false;
+      
+      function createSnowflake() {
+        const flake = document.createElement('div');
+        flake.classList.add('snowflake');
+        flake.textContent = '❄';
+        const size = Math.random() * 1.2 + 0.4;
+        const startX = Math.random() * 100;
+        const duration = Math.random() * 4 + 6;
+        const delay = Math.random() * 0.5;
+        flake.style.cssText = `left: ${startX}%; font-size: ${size}rem; animation-duration: ${duration}s; animation-delay: ${delay}s; opacity: ${Math.random() * 0.6 + 0.4};`;
+        snowContainer.appendChild(flake);
+        activeFlakes.push(flake);
+        setTimeout(() => {
+          if (flake.parentNode) flake.parentNode.removeChild(flake);
+          activeFlakes = activeFlakes.filter(f => f !== flake);
+        }, (duration + delay) * 1000);
+      }
+      
+      function startSnow() {
+        if (isSnowing) return;
+        isSnowing = true;
+        snowInterval = setInterval(createSnowflake, 100);
+      }
+      
+      function stopSnow() {
+        isSnowing = false;
+        if (snowInterval) { clearInterval(snowInterval); snowInterval = null; }
+      }
+      
+      function runSnowSchedule() {
+        setTimeout(() => {
+          startSnow();
+          setTimeout(() => { stopSnow();
+            setTimeout(() => { startSnow();
+              setTimeout(() => { stopSnow();
+                setTimeout(() => { startSnow();
+                  setTimeout(() => { stopSnow(); startRecurringSnow(); }, 0.10 * 1000);
+                }, 90 * 1000);
+              }, 20 * 1000);
+            }, 30 * 1000);
+          }, 4.0 * 1000);
+        }, 2.5 * 1000);
+      }
+      
+      function startRecurringSnow() {
+        setInterval(() => { startSnow(); setTimeout(() => { stopSnow(); }, 20 * 1000); }, 180 * 1000);
+      }
+      
+      runSnowSchedule();
+      document.addEventListener('visibilitychange', function() { if (document.hidden && isSnowing) stopSnow(); });
+    });
+  </script>
+
+  <script src="cost-calculator.js"></script>
+
+  <script>
+    (function() {
+      const navToggle = document.getElementById('navToggle');
+      const navMenu = document.getElementById('navMenu');
+      const navOverlay = document.getElementById('navOverlay');
+      const navLinks = document.querySelectorAll('.nav-link, .btn-nav-cta');
+      let resizeTimeout;
+      setTimeout(function() { navMenu.classList.add('menu-ready'); }, 100);
+      function toggleMenu() {
+        navToggle.classList.toggle('active'); navMenu.classList.toggle('active'); navOverlay.classList.toggle('active');
+        const isExpanded = navToggle.classList.contains('active');
+        navToggle.setAttribute('aria-expanded', isExpanded);
+        document.body.style.overflow = isExpanded ? 'hidden' : '';
+      }
+      function closeMenu() {
+        navToggle.classList.remove('active'); navMenu.classList.remove('active'); navOverlay.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false'); document.body.style.overflow = '';
+      }
+      navToggle.addEventListener('click', toggleMenu);
+      navOverlay.addEventListener('click', closeMenu);
+      navLinks.forEach(link => { link.addEventListener('click', closeMenu); });
+      document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && navMenu.classList.contains('active')) closeMenu(); });
+      window.addEventListener('resize', function() {
+        navMenu.classList.remove('menu-ready');
+        if (window.innerWidth > 1100 && navMenu.classList.contains('active')) closeMenu();
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(function() { navMenu.classList.add('menu-ready'); }, 150);
+      });
+    })();
+  </script>
+
+<script src="blue-bar-position.js"></script>
+</body>
+</html>

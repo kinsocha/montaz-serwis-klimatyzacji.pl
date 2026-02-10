@@ -1,0 +1,332 @@
+/* ============================================
+   NAVBAR STYLES - Dobry Klimat
+   Desktop + Tablet + Mobile
+   ============================================ */
+
+/* === NAVBAR GŁÓWNE STYLE (DESKTOP) === */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  box-shadow: var(--shadow);
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+/* === LOGO === */
+.logo,
+.nav-logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+}
+
+/* === NOWE LOGO DOBRY KLIMAT (snowflake) === */
+.logo-snowflake {
+  font-size: 34px;
+}
+
+.logo-text-new {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.logo-text-black {
+  color: #1a3a52;
+}
+
+.logo-text-blue {
+  color: #2563eb;
+}
+
+/* === NAV LINKS (DESKTOP) === */
+.nav-links {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  gap: 32px;
+  list-style: none !important;
+  list-style-type: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.nav-links li {
+  list-style: none !important;
+  list-style-type: none !important;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* === NAV PHONE === */
+.nav-phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.nav-phone svg {
+  color: var(--accent);
+}
+
+/* === NAV CTA BUTTON === */
+.nav-cta {
+  background: linear-gradient(135deg, var(--accent) 0%, #3b82f6 100%);
+  color: white !important;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: 600 !important;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+/* === HAMBURGER BUTTON === */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 2px;
+  background: var(--primary);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* === NAV TOGGLE (alternatywny hamburger) === */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1002;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* === NAV OVERLAY (tło przy otwartym menu mobile) === */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ============================================
+   RESPONSIVE - TABLET & MOBILE (max 1100px)
+   ============================================ */
+@media (max-width: 1100px) {
+  
+  /* Pokaż hamburger */
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav-toggle {
+    display: flex;
+  }
+  
+  /* Nav links - wysuwane menu z prawej */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+    flex-direction: column !important;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 80px 25px 30px 25px !important;
+    gap: 0;
+    box-shadow: -5px 0 30px rgba(0,0,0,0.15);
+    z-index: 1001;
+    overflow-y: auto;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .nav-links.active {
+    transform: translateX(0);
+    visibility: visible;
+  }
+  
+  .nav-links li {
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+    display: block !important;
+    list-style: none !important;
+  }
+  
+  .nav-links li:last-child {
+    border-bottom: none;
+    margin-top: 15px;
+  }
+  
+  .nav-links a {
+    display: block;
+    padding: 15px 0;
+    font-size: 16px;
+  }
+  
+  .nav-cta {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 14px 20px;
+  }
+  
+  /* Nav menu (alternatywna wersja) */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 80px 25px 30px 25px;
+    gap: 0;
+    box-shadow: -5px 0 30px rgba(0,0,0,0.15);
+    z-index: 1001;
+    overflow-y: auto;
+    transform: translateX(100%);
+    visibility: hidden;
+  }
+  
+  .nav-menu.menu-ready {
+    transition: transform 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .nav-menu.active {
+    transform: translateX(0);
+    visibility: visible;
+  }
+  
+  .nav-menu li {
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .nav-menu li:last-child {
+    border-bottom: none;
+    margin-top: 15px;
+  }
+  
+  .nav-link {
+    display: block;
+    padding: 15px 0;
+    font-size: 16px;
+    white-space: normal;
+  }
+  
+  .btn-nav-cta {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 14px 20px;
+  }
+}

@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gree G-Tech – Szczegóły modelu</title>
+
+  <!-- Fonts (jak w Twoich stylach) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --primary:#1a3a52;
+      --accent:#00a89d;
+      --bg:#faf9f7;
+      --card:#ffffff;
+      --text:#2d3748;
+      --muted:#718096;
+      --border:#e2e8f0;
+
+      --radius: 12px;
+      --shadow: 0 2px 10px rgba(0,0,0,.08);
+      --shadowHover: 0 10px 22px rgba(0,0,0,.12);
+
+      --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --serif: "Playfair Display", serif;
+      --sans: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body{
+      margin:0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.2;
+    }
+
+    /* Layout container */
+    .container{
+      width:100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 24px 16px 64px;
+    }
+
+    /* Header */
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 16px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 24px;
+    }
+    .brand{
+      display:flex; flex-direction:column; gap:2px;
+    }
+    .brand h1{
+      margin:0;
+      font-family: var(--serif);
+      font-size: 28px;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+    }
+    .brand .sub{
+      margin:0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--primary);
+      text-decoration:none;
+      font-weight: 600;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .btn:hover{
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      border-color: rgba(0,168,157,.35);
+    }
+    .btn.primary{
+      background: var(--accent);
+      color:#fff;
+      border-color: transparent;
+    }
+
+    /* Two-column page */
+    .page{
+      display:grid;
+      grid-template-columns: 360px 1fr;
+      gap: 22px;
+      align-items:start;
+    }
+    @media (max-width: 960px){
+      .page{ grid-template-columns: 1fr; }
+    }
+
+    /* Left images column */
+    .left{
+      position: sticky;
+      top: 16px;
+    }
+    @media (max-width: 960px){
+      .left{ position: relative; top: 0; }
+    }
+
+    .imageStack{
+      display:flex;
+      flex-direction:column;
+      gap: 14px;
+    }
+
+    .imgCard{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+
+    .imgWrap{
+      background: #f2f2f2;
+      padding: 16px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .imgWrap img{
+      width: 100%;
+      height: 280px;
+      display:block;
+      object-fit: contain;
+      border-radius: 10px;
+      background:#fff;
+    }
+
+    .imgCaption{
+      padding: 10px 12px 12px;
+      border-top: 1px solid var(--border);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+    }
+    .imgCaption .label{
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .pill{
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #f5f3f0;
+      color: var(--primary);
+      font-weight: 700;
+      border: 1px solid rgba(226,232,240,.9);
+    }
+
+    /* Right content card */
+    .rightCard{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+
+    .rightHeader{
+      padding: 18px 18px 14px;
+      border-bottom: 1px solid var(--border);
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+    }
+
+    .modelTitle{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap: 14px;
+    }
+
+    .modelTitle h2{
+      margin:0;
+      font-family: lato;
+      font-size: 26px;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      background: rgba(0,168,157,.10);
+      color: #0a6f68;
+      border: 1px solid rgba(0,168,157,.25);
+      white-space:nowrap;
+    }
+
+    .mutedLine{
+      color: var(--muted);
+      margin: 0;
+      font-size: 14px;
+    }
+
+    /* Compact spec sections */
+    .content{
+      padding: 16px 18px 18px;
+      display:flex;
+      flex-direction:column;
+      gap: 16px;
+    }
+
+    .section{
+      padding: 14px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    .section h3{
+      margin: 0 0 10px 0;
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.25;
+    }
+
+    .kv{
+      display:grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px 14px;
+      align-items:baseline;
+      font-size: 14px;
+    }
+    .kv .k{ color: var(--muted); }
+    .kv .v{ font-weight: 700; color: var(--text); text-align:right; }
+    .kv .v.mono{ font-family: var(--mono); font-weight: 600; }
+
+    .divider{
+      height:1px;
+      background: var(--border);
+      margin: 12px 0;
+    }
+
+    /* Feature list */
+    .features{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    @media (max-width: 640px){
+      .features{ grid-template-columns: 1fr; }
+    }
+    .features li{
+      display:flex;
+      gap: 10px;
+      align-items:flex-start;
+      color: var(--text);
+      font-size: 14px;
+    }
+    .ico{
+      width: 28px;
+      height: 28px;
+      flex: 0 0 28px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#fff;
+      color: var(--primary);
+      box-shadow: 0 1px 4px rgba(0,0,0,.06);
+      font-size: 14px;
+    }
+    .features .desc{
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 2px;
+    }
+    .features strong{
+      display:block;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.4;
+    }
+
+    /* Footer actions */
+    .actions{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding-top: 4px;
+    }
+
+    /* Gwarancja – dopisek */
+    .warranty {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+    }
+
+	    .warranty-note {
+	      font-size: 11px;
+	      line-height: 1.3;
+	      font-weight: 500;
+	      color: var(--muted);
+	      text-align: right;
+	    }
+	
+	    .explanation-note {
+	      grid-column: 1 / -1; /* Rozciągnij na obie kolumny w siatce kv */
+	      font-size: 11px;
+	      color: var(--muted);
+	      margin-top: -5px; /* Podciągnij bliżej specyfikacji powyżej */
+	      margin-bottom: 10px;
+	      line-height: 1.4;
+	    }
+	  </style>
+</head>
+
+<body data-product="GWH012AEC-K6DNA1A">
+
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">
+        <h1>Katalog Klimatyzatorów Gree</h1>
+        <p class="sub">Strona szczegółów modelu – Gree G-Tech 3.5 kW</p>
+      </div>
+
+      <a class="btn" href="index.html">← Wróć do katalogu</a>
+    </header>
+
+    <main class="page">
+      <!-- LEWA KOLUMNA: zdjęcia -->
+      <aside class="left">
+        <div class="imageStack">
+
+          <div class="imgCard">
+            <div class="imgWrap">
+              <img
+                src="https://udraznianierur.eu/klimatyzatory-scienne/klimatyzator-gree-g-tech-GWH09YD-S6DBA2A-kolor-rozowe-zloto-indoor.webp"
+                alt="Gree G-Tech – jednostka wewnętrzna (GWH012AEC-K6DNA1A) różowe złoto - Rose Gold"
+                loading="lazy"
+              />
+            </div>
+            <div class="imgCaption">
+              <span class="label">Jednostka wewnętrzna</span>
+              <span class="pill">Różowe złoto</span>
+            </div>
+          </div>
+          
+          <div class="imgCard">
+            <div class="imgWrap">
+              <img
+                src="https://udraznianierur.eu/klimatyzatory-scienne/klimatyzator-gree-g-tech-GWH09YD-S6DBA2A-kolor-srebrny-indoor.webp"
+                alt="Gree G-Tech – jednostka wewnętrzna (GWH012AEC-K6DNA1A) Silver"
+                loading="lazy"
+              />
+            </div>
+            <div class="imgCaption">
+              <span class="label">Jednostka wewnętrzna</span>
+              <span class="pill">Silver</span>
+            </div>
+          </div>
+
+ 
+
+          <div class="imgCard">
+            <div class="imgWrap">
+              <img
+                src="https://udraznianierur.eu/klimatyzatory-scienne/klimatyzator-gree-g-tech-outdoor.webp"
+                alt="Gree G-Tech – jednostka zewnętrzna (agregat)"
+                loading="lazy"
+              />
+            </div>
+            <div class="imgCaption">
+              <span class="label">Jednostka zewnętrzna</span>
+            </div>
+          </div>
+
+        </div>
+      </aside>
+
+      <!-- PRAWA KOLUMNA: treść -->
+      <section class="rightCard">
+        <div class="rightHeader">
+          <div class="modelTitle">
+            <h2>G-Tech  3,5 kW</h2>  
+            <span class="badge">A+++ / A++</span>
+          </div>
+          <p class="mutedLine">
+            <span style="font-family:var(--mono); font-weight:600;">GWH012AEC-K6DNA1A</span>
+            • czynnik R32 • zestaw split • dla pow. 30 – 40 m² (o inną pow. zapytaj)
+          </p>
+        </div>
+
+        <div class="content">
+          <div class="section">
+            <h3>Najważniejsze w skrócie</h3>
+            <div class="kv">
+              <div class="k">Chłodzenie (zakres pracy przy temp. zewn.)</div>
+              <div class="v"><span class="mono">−15°C do 43°C</span></div>
+
+              <div class="k">Grzanie (zakres pracy przy temp. zewn.)</div>
+              <div class="v"><span class="mono">−22°C do 24°C</span></div>
+
+              <div class="k">Moc chłodzenia (nom.)</div>
+              <div class="v">3,50 kW</div>
+
+              <div class="k">Moc grzania (nom.)</div>
+              <div class="v">3,81 kW</div>
+
+              <div class="k">Pobór mocy - chłodzenie (kW)</div>
+              <div class="v">0,88</div>
+
+	              <div class="k">Pobór mocy - grzanie (kW)</div>
+	              <div class="v">0,95</div>
+	              <p class="explanation-note">Oznacza to, że zużywa średnio około 0,9 kWh (900 W) energii elektrycznej na godzinę, dostarczając w zamian około 3,5 kW mocy chłodniczej i 3,8 kW mocy grzewczej</p>
+              
+
+              <div class="k">Gwarancja</div>
+              <div class="v warranty">
+                5 lat
+                <div class="warranty-note">
+                  *Z Autoryzowanym Instalatorem Gree
+                </div>
+              </div>
+
+              <div class="k">Cena</div>
+              <div class="v js-price">—</div>
+
+              <div class="k">Dostępność</div>
+              <div class="v js-availability">—</div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="kv">
+              <div class="k">Klasa energetyczna (chłodzenie / grzanie)</div>
+              <div class="v">A+++ / A++</div>
+
+              <div class="k">Sterowanie</div>
+              <div class="v">Wi-Fi + pilot IR</div>
+
+              <div class="k">Sprężarka</div>
+              <div class="v">inwerterowa</div>
+
+              <div class="k">Czynnik chłodniczy</div>
+              <div class="v">R32 (ekologiczny)</div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3>Funkcje, które faktycznie robią różnicę</h3>
+            <ul class="features">
+              <li>
+                <div class="ico">🔧</div>
+                <div>
+                  <strong>Innowacyjna konstrukcja (łatwy serwis)</strong>
+                  <div class="desc">Szybki demontaż i czyszczenie podzespołów (obudowa, turbina, taca ociekowa).</div>
+                </div>
+              </li>
+
+              <li>
+                <div class="ico">🎨</div>
+                <div>
+                  <strong>Dwa warianty kolorystyczne</strong>
+                  <div class="desc">Rose Gold i Silver – elegancki design z możliwością wymiany wstawek dekoracyjnych.</div>
+                </div>
+              </li>
+
+              <li>
+                <div class="ico">🧭</div>
+                <div>
+                  <strong>Żaluzja 3D (pionowa i pozioma)</strong>
+                  <div class="desc">Innowacyjna żaluzja kontrolująca nawiew powietrza jednocześnie w pionie i poziomie.</div>
+                </div>
+              </li>
+
+              <li>
+                <div class="ico">🌡️</div>
+                <div>
+                  <strong>Odczyt temperatury z pilota</strong>
+                  <div class="desc">Czujnik w pilocie pozwala na precyzyjną kontrolę temperatury w Twojej strefie komfortu.</div>
+                </div>
+              </li>
+
+              <li>
+                <div class="ico">🌬️</div>
+                <div>
+                  <strong>7 biegów wentylatora + 3 tryby snu</strong>
+                  <div class="desc">Elastyczna regulacja wydajności i komfortowe ustawienia na noc.</div>
+                </div>
+              </li>
+
+              <li>
+                <div class="ico">💧</div>
+                <div>
+                  <strong>Osuszanie</strong>
+                  <div class="desc">Urządzenie umożliwia inteligentną pracę w trybie osuszania powietrza w pomieszczeniu.</div>
+                </div>
+              </li>
+
+              <li>
+                <div class="ico">✨</div>
+                <div>
+                  <strong>Tryb +8°C – ochrona przed zamarznięciem</strong>
+                  <div class="desc">Utrzymuje minimalną temperaturę – przydatne w domach sezonowych.</div>
+                </div>
+              </li>
+
+              <li>
+                <div class="ico">🔇</div>
+                <div>
+                  <strong>Cicha praca</strong>
+                  <div class="desc">Tryb cichej pracy urządzenia dla większego komfortu akustycznego.</div>
+                </div>
+              </li>
+              
+              <li>
+                <div class="ico">📱</div>
+                <div>
+                  <strong>Sterowanie Wi-Fi</strong>
+                  <div class="desc">Kontrola z aplikacji mobilnej (Android/iOS) z każdego miejsca.</div>
+                </div>
+              </li>
+              
+              <li>
+                <div class="ico">🧪</div>
+                <div>
+                  <strong>Opcjonalne filtry oczyszczające</strong>
+                  <div class="desc">Możliwość rozbudowy o dodatkowe filtry powietrza.</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h3>Wymiary i waga</h3>
+            <div class="kv">
+              <div class="k">Jednostka wewnętrzna (szer.×wys.×gł.)</div>
+              <div class="v mono">945×293×225 mm</div>
+
+              <div class="k">Waga jednostki wewnętrznej</div>
+              <div class="v">14 kg</div>
+
+              <div class="k">Jednostka zewnętrzna (szer.×wys.×gł.)</div>
+              <div class="v mono">848×596×320 mm</div>
+
+              <div class="k">Waga jednostki zewnętrznej</div>
+              <div class="v">33 kg</div>
+
+              <div class="k">Przepływ powietrza</div>
+              <div class="v">150–750 m³/h</div>
+
+              <div class="k">Poziom hałasu</div>
+              <div class="v">20–43 dB(A)</div>
+            </div>
+
+            <div class="actions">
+              <a class="btn primary" href="#kontakt">Zapytaj o wycenę</a>
+              <a class="btn" href="index.html">Zobacz inne modele</a>
+            </div>
+          </div>
+
+          <div class="section" id="kontakt">
+            <h3>Kontakt / CTA</h3>
+            <p class="mutedLine" style="margin:0;">
+              Zainteresowany tym modelem? Skontaktuj się z nami, aby otrzymać szczegółową wycenę, informacje o dostępności oraz wariantach montażu.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="products-data.js"></script>
+  <script src="product-bind.js"></script>
+</body>
+</html>

@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gree Amber Prestige 3,5 kW – Technologia Premium</title>
+
+  <!-- Optymalizacja połączeń sieciowych -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <!-- Optymalizacja ładowania czcionek: display=swap oraz asynchroniczne ładowanie -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  </noscript>
+
+  <style>
+    :root {
+      --primary: #1a3a52;
+      --accent: #2c7dfa;
+      --accent-light: #eff6ff;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #2d3748;
+      --muted: #718096;
+      --border: #e2e8f0;
+      --radius: 16px;
+      --shadow: 0 12px 50px rgba(0,0,0,0.18);
+      --serif: "Playfair Display", serif;
+      --sans: "Inter", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* --- TRAPEZ W TLE --- */
+    .trapez-bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 45%;
+      height: 403px;
+      background: linear-gradient(135deg, #2c7dfa 0%, #1e5fc9 100%);
+      clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+      z-index: 0;
+      pointer-events: none;
+    }
+    
+    /* --- TRAPEZ LEWY (na wysokości jednostki zewnętrznej) --- */
+    .trapez-bg-left {
+      position: absolute;
+      top: 1200px;
+      left: 0;
+      width: 43%;
+      height: 400px;
+      background: linear-gradient(225deg, #2c7dfa 0%, #1e5fc9 100%);
+      clip-path: polygon(0% 0, 100% 0, 70% 100%, 0% 100%);
+      z-index: 0;
+      pointer-events: none;
+    }
+    
+    /* --- NIEBIESKA BELKA (na wysokości kosztów eksploatacji) --- */
+    .blue-bar {
+      position: absolute;
+      top: 2854px;
+      left: 0;
+      width: 100%;
+      height: 363px;
+      background: linear-gradient(90deg, #2c7dfa 0%, #1e5fc9 100%);
+      z-index: 0;
+      pointer-events: none;
+    }
+    
+    /* Navbar nad trapezem */
+    .navbar {
+      position: sticky;
+      z-index: 1000;
+    }
+    
+    /* Zawartość nad trapezem */
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* --- NAVBAR --- */
+    .navbar {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+
+    .nav-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      text-decoration: none;
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .logo-text { color: var(--primary); }
+    .logo-accent { color: var(--accent); }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 15px;
+      position: relative;
+      padding: 8px 0;
+      transition: color 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .btn-nav-cta {
+      padding: 12px 24px;
+      border-radius: 5px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      white-space: nowrap;
+      transition: all 0.3s ease;
+    }
+
+    /* --- HAMBURGER MENU --- */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 28px;
+      height: 20px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 1002;
+    }
+    
+    .nav-toggle span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background: var(--primary);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .nav-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .nav-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+    
+    /* Overlay na mobile */
+    .nav-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 999;
+    }
+    
+    .nav-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* --- MOBILE MENU (max 1100px) --- */
+    @media (max-width: 1100px) {
+      .nav-toggle {
+        display: flex;
+      }
+      
+      .nav-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 280px;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 80px 25px 30px 25px;
+        gap: 0;
+        box-shadow: -5px 0 30px rgba(0,0,0,0.15);
+        z-index: 1001;
+        overflow-y: auto;
+        transform: translateX(100%);
+        visibility: hidden;
+      }
+      
+      /* Transition tylko gdy menu jest zainicjalizowane (przez JS) */
+      .nav-menu.menu-ready {
+        transition: transform 0.3s ease, visibility 0.3s ease;
+      }
+      
+      .nav-menu.active {
+        transform: translateX(0);
+        visibility: visible;
+      }
+      
+      .nav-menu li {
+        width: 100%;
+        border-bottom: 1px solid var(--border);
+      }
+      
+      .nav-menu li:last-child {
+        border-bottom: none;
+        margin-top: 15px;
+      }
+      
+      .nav-link {
+        display: block;
+        padding: 15px 0;
+        font-size: 16px;
+        white-space: normal;
+      }
+      
+      .btn-nav-cta {
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 14px 20px;
+      }
+    }
+
+    /* --- ŚNIEG --- */
+    .snow-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 999;
+      overflow: hidden;
+    }
+
+    .snowflake {
+      position: absolute;
+      color: #fff;
+      text-shadow: 0 0 5px rgba(255,255,255,0.8), 0 0 10px rgba(200,220,255,0.5);
+      user-select: none;
+      pointer-events: none;
+      will-change: transform;
+    }
+
+    /* --- LAYOUT --- */
+    .container { max-width: 1300px; margin: 0 auto; padding: 40px 20px; }
+
+    .header-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 50px;
+      align-items: center;
+    }
+
+    .brand h1 { font-family: var(--serif); font-size: 42px; margin: 0 0 10px 0; color: var(--primary); text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); }
+
+    .selection-box {
+      background: var(--card);
+      padding: 30px;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .selection-box h3 { margin: 0 0 20px 0; font-size: 18px; text-align: center; }
+
+    .areaButtons { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .areaBtn {
+      padding: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      border: 1px solid #e2e8f0;
+      border-radius: 5px;
+      background: #fff;
+      color: var(--accent);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .areaBtn:hover, .areaBtn.active { background: #2c7dfa; color: #fff; }
+
+    .page-content { display: grid; grid-template-columns: 380px 1fr; gap: 40px; }
+
+    /* --- SIDEBAR ZDJĘCIA (DESKTOP) --- */
+    .sticky-sidebar { position: sticky; top: 120px; }
+    .img-container { background: #fff; border-radius: 5px; border: 1px solid var(--border); overflow: hidden; box-shadow: var(--shadow); margin-bottom: 20px; }
+    .img-main { padding: 20px; background: #fcfcfc; text-align: center; aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; }
+    .img-main img { max-width: 90%; max-height: 90%; height: auto; display: block; margin: 0 auto; object-fit: contain; }
+    .img-footer { padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; background: var(--accent); }
+    .img-footer-outdoor { background: linear-gradient(135deg, #2c7dfa 0%, #1e5fc9 100%); }
+
+    /* --- MOBILNE ZDJĘCIA (UKRYTE NA DESKTOP) --- */
+    .mobile-only-photos { display: none; margin: 30px 0; }
+
+    /* --- SZCZEGÓŁY --- */
+    .details-card { background: var(--card); border-radius: 5px; border: 1px solid var(--border); box-shadow: var(--shadow); padding: 15px 40px 15px 40px; }
+
+    .price-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #eff6ff;
+      padding: 24px;
+      border-radius: 14px;
+      margin-bottom: 30px;
+      border-left: 6px solid #2c7dfa;
+    }
+
+    .price-value { font-size: 34px; font-weight: 800; color: var(--primary); }
+
+    .spec-list { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
+    .spec-list th, .spec-list td { padding: 12px 0; border-bottom: 1px solid #f0f0f0; font-size: 15px; }
+    .spec-list td.val { text-align: right; font-weight: 700; color: var(--primary); }
+
+    .dimensions-box {
+      background: linear-gradient(244deg, #fcfcfc 0%, #d0d2d41a 100%);
+      border-radius: 5px;
+      padding: 18px;
+      border: 1px solid var(--border);
+      margin: 20px -19px 40px -19px;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+    }  
+
+    .tech-sub-title { 
+      font-size: 18px; 
+      font-weight: 700; 
+      color: var(--primary); 
+      margin: 5px 0 15px 0; 
+      display: flex; 
+      align-items: center; 
+      gap: 10px;
+    }
+    .tech-sub-title::before {
+      content: '';
+      width: 4px;
+      height: 18px;
+      background: var(--accent);
+      border-radius: 5px;
+    }
+
+    .dim-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px dashed #cbd5e1;
+    }
+    .dim-row:last-child { border-bottom: none; }
+    .dim-label { color: var(--muted); font-size: 14px; display: flex; align-items: center; gap: 8px; }
+    .dim-value { font-weight: 700; color: var(--primary); }
+
+    .features-title { font-size: 22px; font-weight: 700; margin: 40px 0 25px 0; color: var(--primary); border-bottom: 2px solid var(--accent-light); padding-bottom: 10px; }
+    
+    .features-grid { 
+      display: grid; 
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 20px; 
+    }
+
+    .feature-card { 
+      display: flex; 
+      gap: 16px; 
+      padding: 20px; 
+      background: linear-gradient(171deg, #fcfcfc 0%, #d0d2d400 100%);
+      border: 1px solid var(--border); 
+      border-radius: 5px; 
+      transition: all 0.3s ease;
+    }
+
+    .feat-ico {
+      width: 48px;
+      height: 48px;
+      background: var(--accent-light);
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+
+    .feat-txt strong { display: block; font-size: 15px; color: var(--primary); margin-bottom: 4px; }
+    .feat-txt p { margin: 0; font-size: 13px; color: var(--muted); line-height: 1.4; }
+
+    /* --- KOSZTY EKSPLOATACJI --- */
+    .cost-calculator { margin: 30px 0; }
+    .cost-box {
+      background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
+      border-radius: 5px;
+      padding: 25px;
+      border: 2px solid #ffb84d;
+      box-shadow: 0 4px 12px rgba(255, 184, 77, 0.15);
+    }
+    .cost-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px dashed #ffd699;
+    }
+    .cost-row:last-child { border-bottom: none; }
+    .cost-label { color: #8b5e00; font-size: 14px; font-weight: 600; }
+    .cost-value { font-weight: 700; color: #1a3a52; font-size: 16px; }
+
+    /* --- RESPONSIVE --- */
+    /* Responsywność dla szerokości 1100-1300px */
+    @media (max-width: 1300px) {
+      .container { padding: 40px 30px; }
+      .page-content { gap: 30px; }
+    }
+    
+    @media (max-width: 1200px) {
+      .page-content { grid-template-columns: 340px 1fr; }
+      .sticky-sidebar { top: 100px; }
+    }
+    
+    @media (max-width: 1100px) {
+      .page-content { grid-template-columns: 300px 1fr; gap: 25px; }
+      .brand h1 { font-size: 36px; }
+    }
+
+    @media (max-width: 992px) {
+      .header-section, .page-content { grid-template-columns: 1fr; }
+      .features-grid { grid-template-columns: 1fr; }
+      .sticky-sidebar { display: none; }
+      .mobile-only-photos { display: block; }
+      .brand h1 { font-size: 32px; }
+      .details-card { padding: 25px; display: flex; flex-direction: column; }
+      
+      /* Kolejność sekcji na mobile: wymiary pod funkcjami, koszty na końcu */
+      .details-card > header { order: 1; }
+      .details-card > .price-box { order: 2; }
+      .details-card > .tech-params-section { order: 3; }
+      .details-card > .mobile-only-photos { order: 4; }
+      .details-card > .features-section { order: 5; }
+      .details-card > .dimensions-box { order: 6; }
+      .details-card > .cost-calculator { order: 7; }
+      
+      /* Trapez prawy mniejszy na mobile */
+      .trapez-bg {
+        width: 60%;
+        height: 400px;
+        clip-path: polygon(40% 0, 100% 0, 100% 100%, 10% 100%);
+      }
+      
+      /* Trapez lewy mniejszy na mobile */
+      .trapez-bg-left {
+        width: 60%;
+        height: 300px;
+        top: 600px;
+        clip-path: polygon(0% 0, 100% 0, 60% 100%, 0% 100%);
+      }
+      
+      /* Belka na mobile */
+      .blue-bar {
+        top: 2200px;
+        height: 150px;
+      }
+    }
+    
+    /* Trapez - breakpointy */
+    @media (max-width: 914px) {
+      .trapez-bg { width: 52%; }
+    }
+    @media (max-width: 828px) {
+      .trapez-bg { width: 44%; }
+    }
+    @media (max-width: 762px) {
+      .trapez-bg { width: 38%; }
+    }
+    @media (max-width: 716px) {
+      .trapez-bg { width: 31%; }
+    }
+    @media (max-width: 670px) {
+      .trapez-bg { width: 23%; }
+    }
+    @media (max-width: 626px) {
+      .trapez-bg { width: 17%; }
+    }
+    @media (max-width: 590px) {
+      .trapez-bg { width: 12%; }
+    }
+    @media (max-width: 568px) {
+      .trapez-bg { width: 8%; }
+    }
+    
+    /* Małe smartfony */
+    @media (max-width: 480px) {
+      .container { padding: 20px 15px; }
+      .brand h1 { font-size: 26px; }
+      .header-section { gap: 25px; margin-bottom: 30px; }
+      .selection-box { padding: 20px; }
+      .selection-box h3 { font-size: 16px; }
+      .areaButtons { grid-template-columns: 1fr 1fr; gap: 8px; }
+      .areaBtn { padding: 10px 8px; font-size: 13px; }
+      .details-card { padding: 15px; }
+      .price-box { padding: 18px; flex-direction: column; gap: 15px; text-align: center; }
+      .price-box > div:last-child { text-align: center; }
+      .price-value { font-size: 28px; }
+      .features-title { font-size: 18px; }
+      .feature-card { padding: 15px; gap: 12px; }
+      .feat-ico { width: 40px; height: 40px; font-size: 18px; }
+      .dimensions-box { padding: 15px; margin: 15px -14px 30px -14px; }
+      .nav-logo { font-size: 22px; }
+    }
+    
+    /* Bardzo małe smartfony */
+    @media (max-width: 360px) {
+      .brand h1 { font-size: 22px; }
+      .areaButtons { grid-template-columns: 1fr; }
+      .price-value { font-size: 24px; }
+      .nav-logo { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NIEBIESKI TRAPEZ W TLE (nie wpływa na layout) -->
+<div class="trapez-bg"></div>
+
+<!-- NIEBIESKI TRAPEZ LEWY -->
+<div class="trapez-bg-left"></div>
+
+<!-- NIEBIESKA BELKA (na wysokości kosztów eksploatacji) -->
+<div class="blue-bar"></div>
+
+<!-- KONTENER NA ŚNIEG -->
+<div class="snow-container" id="snowContainer"></div>
+
+<!-- OVERLAY MOBILNE MENU -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+<header class="navbar" role="banner" id="navbar">
+  <nav class="nav-container" aria-label="Nawigacja główna">
+    <a href="#" class="nav-logo" aria-label="Gree Partner - Strona główna">
+      <span class="logo-text">Gree</span><span class="logo-accent">Partner</span>
+    </a>
+    
+    <!-- HAMBURGER BUTTON -->
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+    <ul class="nav-menu" id="navMenu" role="list">
+      <li><a href="#" class="nav-link">Klimatyzacja do domu</a></li>
+      <li><a href="#" class="nav-link">Klimatyzacja do mieszkania</a></li>
+      <li><a href="#" class="nav-link">Montaż</a></li>
+      <li><a href="#" class="nav-link">Cennik</a></li>
+      <li><a href="#" class="nav-link">Realizacje</a></li>
+      <li><a href="#wycena" class="btn-nav-cta">Darmowa Wycena</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main-content" class="container">
+  <header class="header-section">
+    <div class="brand">
+      <span style="color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: 1px;">Model Premium 2024</span>
+      <h1>Król Zimy: Amber Prestige 3,5 kW</h1>
+      <p style="color: var(--muted); font-family: 'IBM Plex Mono';">Indeks: GWH12YD-S6DBA2A</p>
+    </div>
+
+    <section class="selection-box" aria-labelledby="selection-title">
+      <h3 id="selection-title">Dobierz moc do pomieszczenia:</h3>
+      <div class="areaButtons">
+        <button class="areaBtn" aria-pressed="false">do 24 m²</button>
+        <button class="areaBtn active" aria-pressed="true">25 – 34 m²</button>
+        <button class="areaBtn" aria-pressed="false">35 – 49 m²</button>
+        <button class="areaBtn" aria-pressed="false">50 – 80 m²</button>
+      </div>
+    </section>
+  </header>
+
+  <div class="page-content">
+      <aside class="sticky-sidebar" aria-label="Zdjęcia produktu">
+        <div class="img-container">
+          <div class="img-main">
+            <img src="https://udraznianierur.eu/klimatyzatory-scienne/gree-amber-prestige-gwh09yd-s6dba2a-indoor.webp" 
+                 alt="Klimatyzator ścienny Gree Amber Prestige - jednostka wewnętrzna" width="300" height="300" fetchpriority="high">
+          </div>
+          <div class="img-footer">
+            <span style="font-weight: 700; color: #ffffff;">Jednostka wewnętrzna</span>
+            <span style="background: #ffffff; color: var(--accent); padding: 3px 12px; border-radius: 5px; font-size: 12px; font-weight: 800;" aria-label="Klasa energetyczna A+++">A+++</span>
+          </div>
+        </div>
+        <div class="img-container">
+            <div class="img-main">
+              <img src="https://udraznianierur.eu/klimatyzatory-scienne/gree-amber-prestige-YD09NA2-outdoor.webp" 
+                   alt="Agregat zewnętrzny Gree Amber Prestige" width="340" height="340" loading="lazy">
+            </div>
+            <div class="img-footer img-footer-outdoor">
+              <span style="font-weight: 700; color: #ffffff;">Jednostka zewnętrzna</span>
+              <span style="background: #ffffff; color: var(--accent); padding: 3px 12px; border-radius: 5px; font-size: 12px; font-weight: 800;">A+++</span>
+            </div>
+        </div>
+      </aside>
+
+      <article class="details-card">
+        <header>
+          <h2>Najwyższa wydajność, bez kompromisów</h2>
+        </header>
+        
+        <section class="price-box" aria-label="Cena i gwarancja">
+          <div>
+            <span style="display: block; font-size: 13px; color: #2c7dfa; font-weight: 700;">Szacowany koszt z montażem (8% VAT)</span>
+            <span class="price-value">5 499 zł</span>
+          </div>
+          <div style="text-align: right;">
+            <span style="color: #2c7dfa; font-size: 12px; font-weight: 700;">GWARANCJA: 7 lat</span>
+          </div>
+        </section>
+
+        <section class="tech-params-section" aria-labelledby="tech-params-title">
+          <h3 id="tech-params-title" class="tech-sub-title">Parametry techniczne</h3>
+          <table class="spec-list">
+            <caption style="text-align: left !important;">Szczegółowa specyfikacja modelu Amber Prestige 3,5 kW (GWH12YD-S6DBA2A)</caption>
+            <thead>
+              <tr style="display: none;">
+                <th scope="col">Parametr</th>
+                <th scope="col">Wartość</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Klasa energetyczna (chłodzenie/grzanie)</th><td class="val">A+++ / A+++</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Moc chłodnicza</th><td class="val">3,53 kW</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Moc grzewcza</th><td class="val">4,20 kW</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">SEER / SCOP</th><td class="val">8,5 / 5,1</td></tr>
+              <tr><td colspan="2" style="font-size: 12px; color: var(--muted); padding: 8px 0; font-style: italic;">Sezonowa efektywność chłodzenia / Sezonowa efektywność grzania według producenta<br>* Są to wartości deklarowane przez producenta, liczone w warunkach laboratoryjnych.</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Chłodzenie (zakres pracy przy temp. zewn.)</th><td class="val">−18°C do 52°C</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Grzanie (zakres pracy przy temp. zewn.)</th><td class="val">−30°C do 24°C</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Pobór mocy - chłodzenie</th><td class="val">0,55 kW</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Pobór mocy - grzanie</th><td class="val">0,75 kW</td></tr>
+              <tr><td colspan="2" style="font-size: 12px; color: var(--muted); padding: 8px 0; font-style: italic;">* Są to wartości deklarowane przez producenta, liczone w warunkach laboratoryjnych.</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Przepływ powietrza (j. wewn.)</th><td class="val">300 – 680 m³/h</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Poziom hałasu (j. wewn.)</th><td class="val">22 – 41 dB(A)</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Poziom hałasu (j. zewn.)</th><td class="val">53 dB(A)</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- MOBILNE ZDJĘCIA (widoczne tylko na mobile) -->
+        <div class="mobile-only-photos">
+          <div class="img-container">
+            <div class="img-main">
+              <img src="https://udraznianierur.eu/klimatyzatory-scienne/gree-amber-prestige-gwh09yd-s6dba2a-indoor.webp" 
+                   alt="Klimatyzator ścienny Gree Amber Prestige - jednostka wewnętrzna" width="300" height="300" loading="lazy">
+            </div>
+            <div class="img-footer">
+              <span style="font-weight: 700; color: #ffffff;">Jednostka wewnętrzna</span>
+              <span style="background: #ffffff; color: var(--accent); padding: 3px 12px; border-radius: 5px; font-size: 12px; font-weight: 800;">A+++</span>
+            </div>
+          </div>
+          <div class="img-container" style="margin-top: 20px;">
+              <div class="img-main">
+                <img src="https://udraznianierur.eu/klimatyzatory-scienne/gree-amber-prestige-YD09NA2-outdoor.webp" 
+                     alt="Agregat zewnętrzny Gree Amber Prestige" width="340" height="340" loading="lazy">
+              </div>
+              <div class="img-footer">
+                <span style="font-weight: 700; color: #ffffff;">Jednostka zewnętrzna</span>
+                <span style="background: #ffffff; color: var(--accent); padding: 3px 12px; border-radius: 5px; font-size: 12px; font-weight: 800;">A+++</span>
+              </div>
+          </div>
+        </div>
+
+        <section class="features-section">
+          <h2 class="features-title">Funkcje i zalety</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feat-ico" aria-hidden="true">⭐</div>
+              <div class="feat-txt">
+                <strong>Najwyższa klasa A+++</strong>
+                <p>SEER 8,5 i SCOP 5,1 – maksymalna efektywność przez cały rok.</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feat-ico" aria-hidden="true">🔇</div>
+              <div class="feat-txt">
+                <strong>Cicha praca</strong>
+                <p>Zaledwie 22 dB(A) w trybie cichym – idealna do sypialni.</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feat-ico" aria-hidden="true">❄️</div>
+              <div class="feat-txt">
+                <strong>Grzanie w −30°C</strong>
+                <p>Najniższa temperatura pracy na rynku – idealne na srogie zimy.</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feat-ico" aria-hidden="true">🔥</div>
+              <div class="feat-txt">
+                <strong>Chłodzenie w 52°C</strong>
+                <p>Pracuje wydajnie nawet w ekstremalnych upałach i serwerowniach.</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feat-ico" aria-hidden="true">▥</div>
+              <div class="feat-txt">
+                <strong>System filtrów</strong>
+                <p>Możliwość doposażenia o opcjonalne filtry oczyszczające powietrze.</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feat-ico" aria-hidden="true">📱</div>
+              <div class="feat-txt">
+                <strong>Wi-Fi + Pilot IR</strong>
+                <p>Zdalne sterowanie aplikacją G-Tech lub klasycznym pilotem w zestawie.</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feat-ico" aria-hidden="true">🌬️</div>
+              <div class="feat-txt">
+                <strong>7 biegów wentylatora</strong>
+                <p>Precyzyjna regulacja siły nawiewu oraz 3 tryby snu.</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feat-ico" aria-hidden="true">⊖</div>
+              <div class="feat-txt">
+                <strong>Jonizator Cold Plasma</strong>
+                <p>System jonizacji wspomagający usuwanie drobnoustrojów z powietrza.</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feat-ico" aria-hidden="true">✨</div>
+              <div class="feat-txt">
+                <strong>Ochrona +8°C</strong>
+                <p>Utrzymanie stałej temperatury dyżurnej w budynkach sezonowych.</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feat-ico" aria-hidden="true">📊</div>
+              <div class="feat-txt">
+                <strong>Mocny przepływ</strong>
+                <p>Do 680 m³/h zapewnia błyskawiczne schłodzenie przestrzeni do 35 m².</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- WYMIARY URZĄDZEŃ -->
+        <section class="dimensions-box" aria-labelledby="dimensions-title">
+          <h3 id="dimensions-title" class="tech-sub-title">Wymiary urządzeń</h3>
+          
+          <strong style="color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;">Jednostka wewnętrzna</strong>
+          <div style="margin-top: 10px;">
+            <div class="dim-row">
+              <span class="dim-label">📐 Szerokość</span>
+              <span class="dim-value">848 mm</span>
+            </div>
+            <div class="dim-row">
+              <span class="dim-label">📏 Wysokość</span>
+              <span class="dim-value">292 mm</span>
+            </div>
+            <div class="dim-row">
+              <span class="dim-label">↔️ Głębokość</span>
+              <span class="dim-value">225 mm</span>
+            </div>
+          </div>
+          
+          <strong style="color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-top: 25px;">Jednostka zewnętrzna</strong>
+          <div style="margin-top: 10px;">
+            <div class="dim-row">
+              <span class="dim-label">📐 Szerokość</span>
+              <span class="dim-value">720 mm</span>
+            </div>
+            <div class="dim-row">
+              <span class="dim-label">📏 Wysokość</span>
+              <span class="dim-value">540 mm</span>
+            </div>
+            <div class="dim-row">
+              <span class="dim-label">↔️ Głębokość</span>
+              <span class="dim-value">270 mm</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- SEKCJA KOSZTÓW EKSPLOATACJI (na samym końcu) -->
+        <section class="cost-calculator" aria-labelledby="cost-title">
+          <h2 class="features-title" id="cost-title">💡 Koszty eksploatacji</h2>
+          <div class="cost-box" id="cost-content">
+            <!-- Zawartość wypełniana przez JavaScript -->
+            <p style="color: #8b5e00;">Ładowanie danych o kosztach...</p>
+          </div>
+        </section>
+
+      </article>
+    </div>
+</main>
+
+  <footer style="text-align: center; padding: 40px 20px; color: var(--muted); font-size: 14px;">
+    <p>&copy; 2024 Gree Partner. Wszelkie prawa zastrzeżone.</p>
+  </footer>
+
+  <!-- SKRYPT ŚNIEGU - Zoptymalizowany, nie blokuje ładowania strony -->
+  <script>
+    // Wykonaj po pełnym załadowaniu strony (nie blokuje renderowania)
+    window.addEventListener('load', function() {
+      // Użyj requestIdleCallback jeśli dostępny, inaczej setTimeout
+      const scheduleSnow = window.requestIdleCallback || function(cb) { setTimeout(cb, 1); };
+      
+      scheduleSnow(function() {
+        initSnowEffect();
+      });
+    });
+
+    function initSnowEffect() {
+      const snowContainer = document.getElementById('snowContainer');
+      const navbar = document.getElementById('navbar');
+      
+      let isSnowing = false;
+      let snowInterval = null;
+      let activeFlakes = [];
+      
+      // Konfiguracja płatków śniegu
+      const snowflakes = ['❄', '❅', '❆', '✧', '✦', '•'];
+      const navbarHeight = navbar ? navbar.offsetHeight : 60;
+      
+      // Funkcja tworząca pojedynczy płatek
+      function createSnowflake() {
+        if (!isSnowing) return;
+        
+        const flake = document.createElement('div');
+        flake.className = 'snowflake';
+        flake.textContent = snowflakes[Math.floor(Math.random() * snowflakes.length)];
+        
+        // Losowa pozycja startowa (z navbara)
+        const startX = Math.random() * window.innerWidth;
+        flake.style.left = startX + 'px';
+        flake.style.top = navbarHeight + 'px';
+        
+        // Losowy rozmiar - 2x WIĘKSZY
+        const size = (Math.random() * 12 + 8) * 2;
+        flake.style.fontSize = size + 'px';
+        flake.style.opacity = Math.random() * 0.5 + 0.5;
+        
+        // Oblicz wysokość całego dokumentu (do footera/końca strony)
+        const documentHeight = Math.max(
+          document.body.scrollHeight,
+          document.body.offsetHeight,
+          document.documentElement.scrollHeight,
+          document.documentElement.offsetHeight
+        );
+        const fallDistance = documentHeight - navbarHeight;
+        
+        // Losowa prędkość - czas proporcjonalny do wysokości strony
+        const baseSpeed = 150; // pikseli na sekundę
+        const speedVariation = Math.random() * 50 + 100; // 100-150 px/s
+        const duration = fallDistance / speedVariation;
+        
+        // Animacja CSS inline (dynamiczna wysokość)
+        flake.style.animation = `none`;
+        flake.offsetHeight; // Force reflow
+        flake.style.transition = `transform ${duration}s linear, opacity ${duration}s linear`;
+        
+        snowContainer.appendChild(flake);
+        activeFlakes.push(flake);
+        
+        // Uruchom animację po dodaniu do DOM
+        requestAnimationFrame(() => {
+          flake.style.transform = `translateY(${fallDistance}px) rotate(360deg)`;
+          flake.style.opacity = '0.3';
+        });
+        
+        // Usuń płatek po zakończeniu animacji (gdy dotrze do dołu strony)
+        setTimeout(() => {
+          if (flake.parentNode) {
+            flake.parentNode.removeChild(flake);
+          }
+          const index = activeFlakes.indexOf(flake);
+          if (index > -1) {
+            activeFlakes.splice(index, 1);
+          }
+        }, duration * 1000 + 100); // +100ms bufor
+      }
+      
+      // Funkcja startująca śnieg
+      function startSnow() {
+        if (isSnowing) return;
+        
+        isSnowing = true;
+        
+        // Twórz płatki co 100ms
+        snowInterval = setInterval(createSnowflake, 100);
+      }
+      
+      // Funkcja zatrzymująca śnieg (płatki spadają do końca strony)
+      function stopSnow() {
+        isSnowing = false;
+        
+        if (snowInterval) {
+          clearInterval(snowInterval);
+          snowInterval = null;
+        }
+        // NIE usuwamy płatków - pozwalamy im spaść do końca strony
+        // Każdy płatek sam się usunie po zakończeniu swojej animacji
+      }
+      
+      // Funkcja czyszcząca wszystkie płatki (do użycia tylko gdy naprawdę trzeba)
+      function clearAllFlakes() {
+        activeFlakes.forEach(flake => {
+          if (flake.parentNode) {
+            flake.parentNode.removeChild(flake);
+          }
+        });
+        activeFlakes = [];
+      }
+      
+      // ============================================
+      // HARMONOGRAM ŚNIEGU
+      // ============================================
+      // 1. Po 6s od załadowania: śnieg przez 10s
+      // 2. Przerwa 30s (pół minuty)
+      // 3. Śnieg przez 20s
+      // 4. Przerwa 2 minuty (120s)
+      // 5. Śnieg przez 20s
+      // 6. Później co 3 minuty (180s) śnieg przez 20s - zapętlone
+      
+      function runSnowSchedule() {
+        // Faza 1: Start po 6 sekundach, śnieg przez 10 sekund
+        setTimeout(() => {
+          startSnow();
+          
+          // Stop po 10 sekundach
+          setTimeout(() => {
+            stopSnow();
+            
+            // Faza 2: Przerwa 30 sekund, potem śnieg 20 sekund
+            setTimeout(() => {
+              startSnow();
+              
+              setTimeout(() => {
+                stopSnow();
+                
+                // Faza 3: Przerwa 2 minuty (120s), potem śnieg 20 sekund
+                setTimeout(() => {
+                  startSnow();
+                  
+                  setTimeout(() => {
+                    stopSnow();
+                    
+                    // Faza 4: Zapętlona - co 3 minuty (180s) śnieg przez 20s
+                    startRecurringSnow();
+                    
+                  }, 0.10 * 1000); // Śnieg trwa 0.1s
+                  
+                }, 90 * 1000); // Przerwa 1.5 minuty
+                
+              }, 20 * 1000); // Śnieg trwa 20s
+              
+            }, 30 * 1000); // Przerwa 30 sekund
+            
+          }, 4.0 * 1000); // Pierwszy śnieg trwa 2.0s
+          
+        }, 2.5 * 1000); // Start po 2.5 sekundach
+      }
+      
+      // Funkcja cyklicznego śniegu (co 3 minuty przez 20 sekund)
+      function startRecurringSnow() {
+        setInterval(() => {
+          startSnow();
+          
+          setTimeout(() => {
+            stopSnow();
+          }, 20 * 1000); // Śnieg trwa 20 sekund
+          
+        }, 180 * 1000); // Co 3 minuty (180 sekund)
+      }
+      
+      // Uruchom harmonogram
+      runSnowSchedule();
+      
+      // Optymalizacja: Pause gdy strona niewidoczna
+      document.addEventListener('visibilitychange', function() {
+        if (document.hidden && isSnowing) {
+          stopSnow();
+        }
+      });
+    }
+  </script>
+
+  <!-- SKRYPT KONFIGURACJI KOSZTÓW -->
+  <script>
+    // Konfiguracja kosztów (inline, aby nie czekać na zewnętrzny plik)
+    const COST_CONFIG = {
+      enabled: true,
+      pricePerKWh: 0.85,
+      tariffName: "taryfa G11",
+      avgHoursPerDay: 8
+    };
+    
+    // Automatyczne wypełnienie sekcji kosztów
+    if (typeof COST_CONFIG !== 'undefined') {
+      const costContent = document.getElementById('cost-content');
+      if (costContent && COST_CONFIG.enabled) {
+        // Parametry dla modelu 3,5 kW
+        const powerCooling = 0.93; // kW
+        const powerHeating = 0.95; // kW
+        
+        const costPerHourCooling = (powerCooling * COST_CONFIG.pricePerKWh).toFixed(2);
+        const costPerHourHeating = (powerHeating * COST_CONFIG.pricePerKWh).toFixed(2);
+        const costPerDayCooling = (costPerHourCooling * COST_CONFIG.avgHoursPerDay).toFixed(2);
+        const costPerDayHeating = (costPerHourHeating * COST_CONFIG.avgHoursPerDay).toFixed(2);
+        const costPerMonthCooling = (costPerDayCooling * 30).toFixed(2);
+        const costPerMonthHeating = (costPerDayHeating * 30).toFixed(2);
+        
+        costContent.innerHTML = `
+          <p style="margin: 0 0 15px 0; color: #8b5e00; font-size: 14px;">
+            Przy obecnej cenie prądu <strong>${COST_CONFIG.pricePerKWh} zł/kWh</strong> (${COST_CONFIG.tariffName}):
+          </p>
+          <div class="cost-row">
+            <div class="cost-label">🌡️ Koszt chłodzenia (godzina)</div>
+            <div class="cost-value">${costPerHourCooling} zł/h</div>
+          </div>
+          <div class="cost-row">
+            <div class="cost-label">❄️ Koszt grzania (godzina)</div>
+            <div class="cost-value">${costPerHourHeating} zł/h</div>
+          </div>
+          <div class="cost-row">
+            <div class="cost-label">📅 Koszt chłodzenia (dzień - ${COST_CONFIG.avgHoursPerDay}h)</div>
+            <div class="cost-value">${costPerDayCooling} zł/dzień</div>
+          </div>
+          <div class="cost-row">
+            <div class="cost-label">📅 Koszt grzania (dzień - ${COST_CONFIG.avgHoursPerDay}h)</div>
+            <div class="cost-value">${costPerDayHeating} zł/dzień</div>
+          </div>
+          <div class="cost-row">
+            <div class="cost-label">📊 Koszt chłodzenia (miesiąc)</div>
+            <div class="cost-value">${costPerMonthCooling} zł/mc</div>
+          </div>
+          <div class="cost-row">
+            <div class="cost-label">📊 Koszt grzania (miesiąc)</div>
+            <div class="cost-value">${costPerMonthHeating} zł/mc</div>
+          </div>
+          <p style="margin: 15px 0 0 0; color: #8b5e00; font-size: 12px; opacity: 0.8;">
+            * Obliczenia przy założeniu ${COST_CONFIG.avgHoursPerDay}h pracy dziennie. Rzeczywiste koszty mogą się różnić w zależności od warunków użytkowania.
+          </p>
+        `;
+      }
+    }
+  </script>
+
+  <!-- SKRYPT HAMBURGER MENU -->
+  <script>
+    (function() {
+      const navToggle = document.getElementById('navToggle');
+      const navMenu = document.getElementById('navMenu');
+      const navOverlay = document.getElementById('navOverlay');
+      const navLinks = document.querySelectorAll('.nav-link, .btn-nav-cta');
+      let resizeTimeout;
+      
+      // Dodaj klasę menu-ready po krótkim opóźnieniu (zapobiega animacji przy zmianie breakpointu)
+      setTimeout(function() {
+        navMenu.classList.add('menu-ready');
+      }, 100);
+      
+      function toggleMenu() {
+        navToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        navOverlay.classList.toggle('active');
+        
+        // Accessibility
+        const isExpanded = navToggle.classList.contains('active');
+        navToggle.setAttribute('aria-expanded', isExpanded);
+        
+        // Zablokuj scroll body gdy menu otwarte
+        document.body.style.overflow = isExpanded ? 'hidden' : '';
+      }
+      
+      function closeMenu() {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        navOverlay.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+      
+      // Toggle menu on hamburger click
+      navToggle.addEventListener('click', toggleMenu);
+      
+      // Close menu on overlay click
+      navOverlay.addEventListener('click', closeMenu);
+      
+      // Close menu when clicking nav links
+      navLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
+      
+      // Close menu on Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+          closeMenu();
+        }
+      });
+      
+      // Close menu on window resize + disable transition temporarily
+      window.addEventListener('resize', function() {
+        // Usuń transition podczas resize
+        navMenu.classList.remove('menu-ready');
+        
+        if (window.innerWidth > 1100 && navMenu.classList.contains('active')) {
+          closeMenu();
+        }
+        
+        // Przywróć transition po zakończeniu resize
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(function() {
+          navMenu.classList.add('menu-ready');
+        }, 150);
+      });
+    })();
+  </script>
+
+</body>
+</html>
