@@ -84,9 +84,9 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           # dangerous-clean-slate: true
-          server: h50.seohost.pl
-          username: githubmontazklimatyzacji@srv78381.seohost.com.pl
-          password: iwvirJA6Ns8fT
+          server: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          password: ${{ secrets.REMOTE_PASSWORD }}
           local-dir: ${{ env.BUILD_PATH }}/dist/
           passive: true 
           exclude: |
