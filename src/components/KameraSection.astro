@@ -1,0 +1,147 @@
+---
+  // brak logiki – czysty HTML/JSX
+---
+
+<section class="service-card" id="video-kamera">
+  <h2>Kamerowanie kanalizacji – przykład nagrania z inspekcji</h2>
+
+  <!-- Opis UX nad filmem -->
+  <p class="lead">
+    To nagranie pochodzi z rzeczywistej inspekcji kamery w rurze kanalizacyjnej. 
+    Dzięki kamerze można szybko sprawdzić stan wnętrza instalacji i namierzyć miejsce zatoru bez kucia ścian. 
+    W tym przypadku przyczyną problemu okazał się gumowy wężyk wprowadzony kiedyś do rury.
+  </p>
+
+  <div class="video-wrapper">
+    <video
+      id="inspection-video"
+      controls
+      preload="none"
+      poster="/img/kamerowanie-rur-kanalizacyjnych-warszawa.webp"
+      width="100%"
+    >
+      <source
+        src="/video/kamerowanie-kanalizacji-warszawa.mp4"
+        type="video/mp4"
+      />
+      Twój browser nie obsługuje elementu video.
+    </video>
+  </div>
+
+  <!-- Nowy przycisk „Zakończ” -->
+  <button type="button" class="video-reset-btn" id="video-reset-btn">
+    Zakończ odtwarzanie
+  </button>
+
+  <!-- Opis Discover pod filmem -->
+  <p class="discover-description">
+    Nagranie z kamery inspekcyjnej pokazujące wnętrze rury kanalizacyjnej, w której znaleziono
+    pozawijany gumowy wężyk prowadzący do częstych zatorów. Wideo przedstawia rzeczywisty przebieg
+    diagnostyki – światło kamery, szczegóły osadów na ściankach i sposób poruszania się w przewodzie.
+    Praktyczny przykład, jak kamerowanie kanalizacji pozwala szybko zlokalizować przyczynę problemu bez
+    kucia ani demontażu.
+  </p>
+</section>
+
+<style>
+  #video-kamera h2 {
+    font-size: 24px;
+    margin-bottom: 0.8rem;
+    color: rgb(0, 91, 239);
+    text-align: left;
+  }
+
+  #video-kamera .lead {
+    font-size: 17px;
+    margin-bottom: 1.2rem;
+  }
+
+  .video-wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    background: #000;
+  }
+
+  .video-wrapper video {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Przycisk „Zakończ” */
+  .video-reset-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.75rem auto 0;
+    padding: 0.4rem 1.3rem;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    background: #f7f7f7;
+    font-size: 14px;
+    cursor: pointer;
+    color: #333;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+  }
+
+  .video-reset-btn:hover {
+    background: #eeeeee;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+    transform: translateY(-1px);
+  }
+
+  .video-reset-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  }
+
+  .discover-description {
+    margin-top: 1rem;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444;
+    text-align: justify;
+  }
+
+  @media (max-width: 768px) {
+    #video-kamera h2 {
+      font-size: 21px;
+    }
+
+    #video-kamera .lead {
+      font-size: 16px;
+    }
+
+    .discover-description {
+      font-size: 14px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById("inspection-video") as HTMLVideoElement;
+    const resetBtn = document.getElementById("video-reset-btn");
+
+    if (!video || !resetBtn) return;
+
+    resetBtn.addEventListener("click", function () {
+      // Zatrzymaj
+      video.pause();
+      // Przewiń na początek
+      try {
+        video.currentTime = 0;
+      } catch (e) {
+        /* nie wszystkie przeglądarki lubią currentTime przed załadowaniem,
+           ale tutaj wideo jest już odtworzone, więc jest OK */
+      }
+      // Przeładuj, żeby przywrócić poster (miniaturę)
+      video.load();
+    });
+  });
+</script>

@@ -1,0 +1,96 @@
+---
+import { Picture } from "astro:assets";
+import { getCollection, type CollectionEntry } from "astro:content";
+import Default from "@layouts/Default.astro";
+import Comments from "@components/Comments.astro";
+
+export async function getStaticPaths() {
+  return (await getCollection("blog"))
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    .filter(({ data }) => data.pubDate.valueOf() <= new Date().valueOf())
+    .map((post) => ({
+      params: { slug: post.slug },
+      props: post,
+    }));
+}
+type Props = CollectionEntry<"blog">;
+
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<link slot="head" rel="stylesheet" href="/css/articles-styles.css" />
+<link slot="head" rel="stylesheet" href="/css/articles-styles-simple.css" />
+<script
+  slot="head"
+  is:inline
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.data.heroTitle,
+    description:
+      "Regularne czyszczenie drenaży i rynien to kluczowa profilaktyka przed zawilgoceniem fundamentów, zalaniem piwnic i uszkodzeniem elewacji budynku.",
+    image: post.data.hero.src,
+    author: {
+      "@type": "Organization",
+      name: post.data.author,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: post.data.author,
+      logo: {
+        "@type": "ImageObject",
+        url: "https://udraznianiekanalizacji.eu/img/awaria.png",
+      },
+    },
+    datePublished: post.data.pubDate,
+    dateModified: post.data.updatedDate,
+  })}
+/>
+<Default {...post.data}>
+  <article class="service-card blog-article">
+    <header class="article-header">
+      <span class="blog-category">{post.data.category}</span>
+      <h1>{post.data.heroTitle}</h1>
+      <p class="lead-excerpt">
+        {post.data.heroLead}
+      </p>
+      <div class="article-meta">
+        <span class="blog-author">Autor: {post.data.author}</span>
+        <span class="blog-date">
+          Data publikacji:
+          <time
+            >{
+              post.data.pubDate.toLocaleDateString("pl-PL", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                timeZone: "Europe/Warsaw",
+              })
+            }</time
+          >
+        </span>
+        <span class="blog-read-time"
+          >⏱ Czas czytania: {post.data.readingTime ?? 1} min</span
+        >
+      </div>
+      <figure class="article-image">
+        <Picture
+          loading="lazy"
+          width={800}
+          src={post.data.hero}
+          alt={post.data.heroAlt}
+          formats={["webp", "jpg"]}
+        />
+        <figcaption>
+          {post.data.heroCaption}
+        </figcaption>
+      </figure>
+    </header>
+    <section class="article-content">
+      <Content />
+    </section>
+    <Comments />
+  </article>
+</Default>

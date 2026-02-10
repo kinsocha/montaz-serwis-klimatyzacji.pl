@@ -1,0 +1,87 @@
+---
+import Default from "@layouts/Default.astro";
+
+const canonical = "https://udraznianiekanalizacji.eu/kontakt";
+
+const title = "Kontakt – Udrażnianie kanalizacji Warszawa | 510 733 300";
+
+const description =
+  "Skontaktuj się z hydraulikiem – udrażnianie rur, zlewów i pionów w Warszawie. Zadzwoń 510 733 300 lub napisz na kontakt@udraznianiekanalizacji.eu.";
+
+const keywords =
+  "kontakt hydraulik Warszawa, udrażnianie kanalizacji kontakt, telefon hydraulik Warszawa, kontakt udrażnianie rur";
+---
+
+<Default
+  title={title}
+  description={description}
+  keywords={keywords}
+  canonical={canonical}
+>
+  <h1>Kontakt – Udrażnianie kanalizacji Warszawa i okolice</h1>
+
+  <p class="lead">
+    Masz problem z kanalizacją, zlewem lub odpływem? Skontaktuj się bezpośrednio
+    – odbieram lub oddzwaniam tak szybko, jak to możliwe.
+  </p>
+
+  <article class="contact-info">
+    <h2>Dane kontaktowe</h2>
+    <ul>
+      <li>
+        <strong>Telefon:</strong>
+        <a href="tel:+48510733300">510&nbsp;733&nbsp;300</a>
+      </li>
+      <li>
+        <strong>E-mail:</strong>
+        <a href="mailto:kontakt@udraznianiekanalizacji.eu">
+          kontakt@udraznianiekanalizacji.eu
+        </a>
+      </li>
+      <li><strong>Miasto:</strong> Warszawa i okolice</li>
+    </ul>
+  </article>
+
+  <article class="contact-map">
+    <h2>Obszar działania</h2>
+    <div id="map" style="height: 380px; border-radius: 12px;"></div>
+  </article>
+
+  <article class="cta-call">
+    <h2 class="cta-title">
+      Masz zator? <strong>Zadzwoń teraz</strong>
+    </h2>
+    <p class="cta-desc">
+      <b
+        >Na miejscu szybko ocenię sytuację i dobiorę właściwą metodę. Pracuję
+        czysto i skutecznie.</b
+      >
+    </p>
+
+    <a class="cta-btn" href="tel:+48510733300" aria-label="Zadzwoń 510 733 300">
+      <span class="cta-btn-icon" aria-hidden="true">📞</span>
+      <span>510&nbsp;733&nbsp;300</span>
+    </a>
+  </article>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Leaflet jest ładowany w Default.astro (defer), więc tu tylko inicjalizacja mapy
+      if (typeof globalThis.L !== "undefined") {
+        const map = globalThis.L.map("map").setView([52.2297, 21.0122], 11);
+
+        globalThis.L.tileLayer(
+          "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+          {
+            attribution: "&copy; OpenStreetMap",
+          }
+        ).addTo(map);
+
+        globalThis.L.marker([52.2297, 21.0122])
+          .addTo(map)
+          .bindPopup("Warszawa – obszar działania")
+          .openPopup();
+      }
+    });
+  </script>
+</Default>

@@ -1,0 +1,194 @@
+---
+type Props = {
+  slides: { src: string; alt: string }[];
+};
+const props = Astro.props;
+---
+
+<div class="carousel-wrapper">
+  <div class="carousel">
+    {
+      props.slides.map(({ src, alt }, index) => (
+        <div
+          class={`slide ${index === 0 ? "active" : ""}`}
+          data-label={`Slide ${index}`}
+        >
+          <img src={src} alt={alt} width="440" height="270" loading="lazy" />
+        </div>
+      ))
+    }
+    <button class="carousel-btn prev" aria-label="Poprzednie zdjęcie">
+      &#10094;
+    </button>
+    <button class="carousel-btn next" aria-label="Następne zdjęcie">
+      &#10095;
+    </button>
+  </div>
+</div>
+
+<!-- ===== KARUZELA ===== -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Karuzela
+    const slides = document.querySelectorAll(
+      ".slide"
+    ) as NodeListOf<HTMLDivElement>;
+    const next = document.querySelector(
+      ".carousel-btn.next"
+    ) as HTMLButtonElement | null;
+    const prev = document.querySelector(
+      ".carousel-btn.prev"
+    ) as HTMLButtonElement | null;
+    let index = 0;
+
+    function showSlide(i: number) {
+      slides.forEach((s, idx) => {
+        s.classList.toggle("active", idx === i);
+      });
+    }
+
+    if (slides.length) {
+      next?.addEventListener("click", () => {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+      });
+
+      prev?.addEventListener("click", () => {
+        index = (index - 1 + slides.length) % slides.length;
+        showSlide(index);
+      });
+
+      setInterval(() => {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+      }, 5000);
+
+      showSlide(index);
+    }
+  });
+</script>
+
+<style>
+  /* ====== KARUZELA ZDJĘĆ – wersja w pełni responsywna ====== */
+  .carousel-wrapper {
+    width: 100%;
+    max-width: 733px; /* nigdy nie przekroczy szerokości kontenera */
+    height: auto;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 280px;
+    position: relative;
+    background: rgba(230, 230, 230, 0.4);
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .slide {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    transition: opacity 0.4s ease;
+  }
+
+  .slide.active {
+    display: flex;
+  }
+
+  .slide img {
+    width: 60%; /* proporcjonalne skalowanie */
+    max-width: 440px; /* na dużych ekranach limit */
+    height: auto;
+    max-height: 270px;
+    object-fit: cover;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow:
+      0 5px 14px rgba(0, 0, 0, 0.25),
+      0 -3px 10px rgba(0, 0, 0, 0.18),
+      4px 0 10px rgba(0, 0, 0, 0.18),
+      -4px 0 10px rgba(0, 0, 0, 0.18);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .slide img:hover {
+    box-shadow:
+      0 7px 18px rgba(0, 0, 0, 0.3),
+      0 -4px 12px rgba(0, 0, 0, 0.2),
+      5px 0 12px rgba(0, 0, 0, 0.2),
+      -5px 0 12px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Strzałki */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.75);
+    border: none;
+    font-size: 28px;
+    color: #333;
+    cursor: pointer;
+    padding: 4px 10px;
+    border-radius: 50%;
+    transition:
+      background 0.2s ease,
+      transform 0.2s ease;
+    z-index: 10;
+  }
+
+  .carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.15);
+    color: #000;
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .carousel-btn.prev {
+    left: 10px;
+  }
+  .carousel-btn.next {
+    right: 10px;
+  }
+
+  /* ===== RESPONSYWNOŚĆ ===== */
+  @media (max-width: 991px) {
+    .slide img {
+      width: 70%;
+      max-width: 400px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .carousel {
+      min-height: 220px;
+      background: rgba(240, 240, 240, 0.5);
+    }
+    .slide img {
+      width: 80%;
+      max-width: 340px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .carousel {
+      min-height: 200px;
+    }
+    .slide img {
+      width: 90%;
+      max-width: 300px;
+    }
+    .carousel-btn {
+      font-size: 22px;
+      padding: 3px 8px;
+    }
+  }
+</style>

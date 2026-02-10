@@ -1,0 +1,432 @@
+---
+import Default from "@layouts/Default.astro";
+import Carousel from "@components/Carousel.astro";
+
+const canonical = "https://udraznianiekanalizacji.eu/hydraulik-warszawa";
+
+const title =
+  "Hydraulik Warszawa – usługi hydrauliczne i udrażnianie kanalizacji 510733300";
+
+const description =
+  "Tel. 510 733 300 Pogotowie kanalizacyjne i hydrauliczne Warszawa. Szybka pomoc, nowoczesny sprzęt. Kamerujemy, czyścimy i przepychamy rury w Warszawie i okolicy do 60km, zadzwoń – pomożemy!";
+
+const keywords =
+  "hydraulik Warszawa, usługi hydrauliczne Warszawa, udrażnianie rur Warszawa, udrażnianie kanalizacji Warszawa, przepychanie rur Warszawa, przepychanie kanalizacji Warszawa";
+---
+
+<Default
+  title={title}
+  description={description}
+  keywords={keywords}
+  canonical={canonical}
+>
+  <!-- JSON-LD jak w index.astro -->
+  <script
+    slot="head"
+    type="application/ld+json"
+    is:inline
+    set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://udraznianiekanalizacji.eu",
+          name: "Udrażnianie kanalizacji Warszawa - Przepychanie kanalizacji Warszawa",
+          description:
+            "Tel. 510 733 300 Pogotowie kanalizacyjne i hydrauliczne Warszawa. Szybka pomoc, nowoczesny sprzęt. Kamerowanie. czyszczenie rur i przepychanie kanalizacji w Warszawie i okolicach do 50 km. Gwarancja.",
+          url: "https://udraznianiekanalizacji.eu",
+          telephone: "+48510733300",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://udraznianiekanalizacji.eu/img/awaria.png",
+            "@id": "https://udraznianiekanalizacji.eu/img/awaria.png",
+            width: 277,
+            height: 279,
+          },
+          image: { "@id": "https://udraznianiekanalizacji.eu/img/awaria.png" },
+          sameAs: ["https://twitter.com/udraznianierury"],
+        },
+        {
+          "@type": "LocalBusiness",
+          name: "Udrażnianie kanalizacji Warszawa - Przepychanie kanalizacji Warszawa",
+          description:
+            "Tel. 510 733 300 Profesjonalne udrażnianie kanalizacji Warszawa. Szybka pomoc, nowoczesny sprzęt, skuteczne przepychanie rur, zlewów, umywalek, pionów, brodzików i pozostałych odpływów. Szybka pomoc hydrauliczna - przepychanie kanalizacji Warszawa wuko, sprężyna elektryczna, kamera",
+          url: "https://udraznianiekanalizacji.eu",
+          telephone: "+48510733300",
+          openingHours: ["Mo-Fr 09:00-22:00", "Sa 09:00-16:00"],
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Skarbka z gór 155",
+            addressLocality: "Warszawa",
+            addressRegion: "mazowieckie",
+            postalCode: "03-287",
+            addressCountry: "PL",
+          },
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: 52.20850020573472,
+            longitude: 20.969550899259925,
+          },
+          email: "hydraulikwarszawanet@gmail.com",
+          logo: "https://udraznianiekanalizacji.eu/img/awaria.png",
+          sameAs: ["https://twitter.com/udraznianierury"],
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://udraznianiekanalizacji.eu#webpage",
+          url: "https://udraznianiekanalizacji.eu",
+          name: "Udrażnianie kanalizacji Warszawa",
+          inLanguage: "pl-PL",
+          isPartOf: { "@id": "https://udraznianiekanalizacji.eu#website" },
+          datePublished: "2008-03-05T15:19:36+01:00",
+          dateModified: "2025-07-30T12:00:00+01:00",
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://udraznianiekanalizacji.eu#website",
+          url: "https://udraznianiekanalizacji.eu",
+          name: "Udrażnianie kanalizacji Warszawa - Przepychanie kanalizacji Warszawa",
+          description:
+            "Tel. 510 733 300 Profesjonalne udrażnianie kanalizacji Warszawa. Szybka pomoc, nowoczesny sprzęt, skuteczne przepychanie rur, zlewów, umywalek, pionów, brodzików i pozostałych odpływów. Szybka pomoc hydrauliczna - przepychanie kanalizacji Warszawa wuko, sprężyna elektryczna, kamera",
+          inLanguage: "pl-PL",
+          publisher: {
+            "@id": "https://udraznianiekanalizacji.eu#organization",
+          },
+        },
+        {
+          "@type": "CreativeWorkSeries",
+          "@id": "https://udraznianiekanalizacji.eu",
+          name: "Udrażnianie kanalizacji Warszawa - Przepychanie kanalizacji Warszawa",
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "5.0",
+            bestRating: "5",
+            ratingCount: "432",
+          },
+        },
+        {
+          "@type": "Review",
+          author: { "@type": "Person", name: "Michał Dąbrowski" },
+          datePublished: "2025-07-25",
+          reviewBody:
+            "Zatkany zlew w łazience przestał spływać. Wezwałem fachowca z Warszawy i problem został rozwiązany w niecałe pół godziny. Sprzęt profesjonalny, zero bałaganu. Polecam każdemu!",
+          name: "Błyskawiczne udrażnianie kanalizacji w Warszawie",
+          reviewRating: {
+            "@type": "Rating",
+            ratingValue: "5",
+            bestRating: "5",
+          },
+          itemReviewed: {
+            "@type": "LocalBusiness",
+            name: "Udrażnianie kanalizacji Warszawa - Przepychanie kanalizacji Warszawa",
+          },
+        },
+        {
+          "@type": "Review",
+          author: { "@type": "Person", name: "Karolina Żabińska" },
+          datePublished: "2025-07-28",
+          reviewBody:
+            "Profesjonalna obsługa i szybka reakcja. Udrażnianie kanalizacji wykonane dokładnie, bez szkód i nieprzyjemnego zapachu. Fachowiec godny zaufania.",
+          name: "Szybka pomoc w zatkanym odpływie",
+          reviewRating: {
+            "@type": "Rating",
+            ratingValue: "5",
+            bestRating: "5",
+          },
+          itemReviewed: {
+            "@type": "LocalBusiness",
+            name: "Udrażnianie kanalizacji Warszawa - Przepychanie kanalizacji Warszawa",
+          },
+        },
+        {
+          "@type": "Review",
+          author: { "@type": "Person", name: "Tomasz Matecki" },
+          datePublished: "2025-07-30",
+          reviewBody:
+            "Korzystałem z usługi przepychania kanalizacji metodą WUKO. Wszystko przebiegło sprawnie i czysto. Zdecydowanie polecam.",
+          name: "Udrażnianie kanalizacji metodą WUKO",
+          reviewRating: {
+            "@type": "Rating",
+            ratingValue: "5",
+            bestRating: "5",
+          },
+          itemReviewed: {
+            "@type": "LocalBusiness",
+            name: "Udrażnianie kanalizacji Warszawa - Przepychanie kanalizacji Warszawa",
+          },
+        },
+      ],
+    })}
+  />
+
+  <h1>Hydraulik Warszawa – usługi hydrauliczne i udrażnianie kanalizacji</h1>
+
+  <Carousel
+    slides={[
+      {
+        src: "/img/udraznianiezlewu/udraznianie-zlewu.webp",
+        alt: "Udrażnianie zlewu",
+      },
+      {
+        src: "/img/udraznianiezlewu/przepychanie-zlewu.webp",
+        alt: "Przepychanie zlewu",
+      },
+      {
+        src: "/img/kamerowanie-rur-kanalizacyjnych.webp",
+        alt: "Kamerowanie rur kanalizacyjnych",
+      },
+      {
+        src: "/img/udraznianie-przykanalika.webp",
+        alt: "Udrażnianie przykanalika",
+      },
+      {
+        src: "/img/udraznianie-odplywu-pralki.webp",
+        alt: "Udrażnianie odpływu pralki",
+      },
+      {
+        src: "/img/przepychanie-pisuaru.webp",
+        alt: "Przepychanie pisuaru",
+      },
+      {
+        src: "/img/udraznianiezlewu/czyszczenie-rur-zlewu.webp",
+        alt: "Udrażnianie rur od zlewu",
+      },
+      {
+        src: "/img/udraznianie-pionu-kanalizacyjnego.webp",
+        alt: "Udrażnianie pionu kanalizacyjnego",
+      },
+      {
+        src: "/img/udraznianie-rury-od-szamba-przez-toalete.webp",
+        alt: "Udrażnianie rury od szamba przez toaletę",
+      },
+      {
+        src: "/img/udraznianiezlewu/udroznianiezlewu.webp",
+        alt: "Udrożnianie zlewu",
+      },
+    ]}
+  />
+
+  <article class="service-card">
+    <ul class="lead">
+      <li>
+        <a href="/udraznianie-zlewu"
+          >Skuteczne czyszczenie i udrażnianie zlewu</a
+        >
+      </li>
+      <li>
+        <a href="/hydraulik-warszawa#pogotowie-hydrauliczne">
+          Pogotowie hydrauliczne Warszawa 24/7
+        </a>
+      </li>
+      <li>Udrażnianie rur wuko</li>
+      <li>Udrażnianie pionów i poziomów kanalizacyjnych</li>
+      <li>Przepychanie zlewu</li>
+      <li>Udrażnianie wanny</li>
+      <li>Odtykanie wc, toalety</li>
+      <li>Czyszczenie odpływu zmywarki</li>
+      <li>Kamerowanie rur kanalizacyjnych</li>
+      <li>Pogotowie kanalizacyjne Warszawa</li>
+      <li>Pogotowie hydrauliczne Warszawa</li>
+      <li>Przepychanie rur od szamba</li>
+      <li>Lokalizacja wycieków kamerą termowizyjną</li>
+      <li>Czyszczenie drenaży i rynien</li>
+    </ul>
+    <div class="cta-section" id="pogotowie-hydrauliczne">
+      <h3>Masz awarię rur kanalizacyjnych? Zadzwoń teraz!</h3>
+      <p>
+        <strong>Telefon:</strong>
+        <a
+          class="call-inline"
+          href="tel:+48510733300"
+          aria-label="Zadzwoń pod numer 510 733 300"
+        >
+          510&nbsp;733&nbsp;300
+        </a>
+      </p>
+    </div>
+  </article>
+
+  <article class="service-card">
+    <h2>
+      Poniżej opisuję, jakimi metodami usuwam awarie kanalizacyjne w Warszawie
+    </h2>
+    <ul>
+      <li>
+        <h3>
+          <strong>Elektryczną sprężyną</strong> udrażniam odpływy kuchenne i łazienkowe,
+          a także rury odprowadzające ścieki poza obręb budynków — do kanalizacji
+          miejskiej lub do zbiorników na szambo.
+        </h3>
+        <ul>
+          <li>
+            <b>Co to jest sprężyna elektryczna?</b> To spirala
+            <strong>napędzana silnikiem elektrycznym</strong>, bezpieczna dla
+            instalacji domowych. Radzi sobie z tłuszczem, włosami, resztkami
+            jedzenia czy osadami.
+          </li>
+          <li>
+            <b>Jak to działa?</b> Napęd wprawia spiralę w ruch, a
+            <strong>końcówka rozdrabnia i przepycha zator</strong>, przywracając
+            drożność.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>
+          <strong>Metodę WUKO (czyszczenie ciśnieniowe)</strong> stosuję, gdy mamy
+          do czynienia z długimi odcinkami rur o średnicach powyżej 75 mm, zlokalizowanych
+          w całości lub częściowo poza budynkami.
+        </h3>
+        <ul>
+          <li>
+            <b>Co to jest WUKO?</b> To czyszczenie rur
+            <strong>wodą pod wysokim ciśnieniem</strong>. Dysze jednocześnie
+            torują drogę i myją ścianki rur.
+          </li>
+          <li>
+            <b>Jak to działa?</b> Pompa tłoczy wodę do elastycznego węża.
+            <strong
+              >Strumienie rozbijają osady, wypłukują zanieczyszczenia</strong
+            >, a brud spływa do studzienki rewizyjnej. Efekt to drożna i czysta
+            rura.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>
+          <strong>Kamerowanie rur</strong> wykonuję, aby precyzyjnie ustalić przyczynę
+          problemów i zapobiec ich nawrotom.
+        </h3>
+        <ul>
+          <li>
+            <b>W jakich sytuacjach?</b> Gdy powtarzają się zatory, podejrzewa się
+            nieszczelność, wrastanie korzeni albo złe spadki instalacji.
+          </li>
+          <li>
+            <b>Co to daje?</b> Kamera
+            <strong>rejestruje obraz w czasie rzeczywistym</strong>, pozwala
+            wskazać miejsce zatoru czy uszkodzenia. To szybka i bezinwazyjna
+            diagnoza.
+          </li>
+          <li>
+            <b>Jak to działa?</b> Do odpływu wprowadza się przewód z kamerą LED.
+            Obraz trafia na monitor, a hydraulik
+            <strong>dokładnie lokalizuje problem</strong>. Nagranie może służyć
+            jako dokumentacja.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </article>
+
+  <article class="service-card">
+    <p class="lead">
+      Masz problem z zapchaną kanalizacją? Mogę pomóc! Specjalizuję się w
+      udrażnianiu zatorów z rur kanalizacyjnych za pomocą profesjonalnych
+      narzędzi i sprawdzonych metod. Nie trać czasu na nieskuteczne domowe
+      sposoby – zadzwoń:
+      <b>
+        <a
+          class="call-inline"
+          href="tel:+48510733300"
+          aria-label="Zadzwoń pod numer 510 733 300"
+        >
+          510&nbsp;733&nbsp;300
+        </a>
+      </b>
+    </p>
+  </article>
+
+  <article class="service-card">
+    <h2>Najczęstsze pytania</h2>
+    <details>
+      <summary>Czy chemia do rur jest bezpieczna?</summary>
+      <p>
+        Środki żrące często tylko przesuwają problem i potrafią uszkodzić
+        elementy instalacji. Zdecydowanie bezpieczniejsze są metody mechaniczne
+        i ciśnieniowe — skuteczne i bezpieczne dla rur.
+      </p>
+    </details>
+    <details>
+      <summary>Czy pozostawiacie porządek po udrażnianiu kanalizacji?</summary>
+      <p>
+        Tak. Zabezpieczam miejsce pracy i sprzątamy po sobie. To standard
+        usługi.
+      </p>
+    </details>
+    <details>
+      <summary>Na jakim obszarze działacie?</summary>
+      <p>
+        Warszawa oraz miejscowości podwarszawskie, m.in. Wołomin, Otwock,
+        Wyszków, Góra Kalwaria, Nadarzyn, Pruszków, Jabłonna i inne okolice
+        miasta.
+      </p>
+    </details>
+    <details>
+      <summary>
+        Czy kwas fosforowy z Coca-Coli może udrożnić rury, gdy woda nie spływa?
+      </summary>
+      <p>
+        W internecie krąży wiele żartów i mitów na temat „przepychania rur
+        Colą”. Gdyby napój był na tyle żrący, żeby rozpuszczać solidne zatory w
+        rurach, nie nadawałby się do picia. Do udrażniania kanalizacji stosuję
+        sprzęt hydrauliczny, a nie napoje gazowane.
+      </p>
+    </details>
+  </article>
+
+  <article>
+    <h2>Czy samodzielne przepychanie rur ręczną sprężyną ma sens?</h2>
+    <p class="clearfix">
+      <img
+        src="/img/reczna-sprezyna-do-przepychania-kanalizacji.webp"
+        width="926"
+        height="450"
+        class="img-responsive img-thumbnail img-center"
+        alt="Ręczna sprężyna do przepychania kanalizacji"
+      />
+    </p>
+    <p>
+      <strong>Domowe przepychanie rur</strong> to coś, co można zrobić w wielu instalacjach,
+      zarówno w domach jednorodzinnych, jak i w blokach. Najczęściej zaczyna się
+      od wlania żelu lub płynu do przepychania rur. Ważne, aby unikać granulek –
+      preparaty w formie granulatu mogą zbić się w twardą masę i jeszcze bardziej
+      zwęzić przekrój rury.
+    </p>
+    <p>
+      Inną drogą jest zakup ręcznej sprężyny do przetykania rur. Wymaga to
+      jednak wprawy i zwykle udziału dwóch osób – jedna kręci korbką, druga
+      prowadzi sprężynę w głąb instalacji, pilnując, aby była odpowiednio
+      naprężona. W przeciwnym razie potrafi się powyginać i praca staje się
+      bardzo trudna.
+    </p>
+    <p>
+      We wszystkich przypadkach uporczywych zatorów w zlewach, odpływach od
+      zmywarek czy pralki polecam skorzystanie z profesjonalnych usług
+      hydraulicznych. <strong
+        >Odpływy, piony, poziomy i przyłącza kanalizacyjne to dla mnie
+        codzienność</strong
+      >.
+    </p>
+  </article>
+
+  <article class="cta-call">
+    <h2 class="cta-title">
+      Masz zator?
+      <strong>Zadzwoń teraz</strong>
+    </h2>
+    <p class="cta-desc">
+      <b
+        >Na miejscu szybko ocenię sytuację i dobiorę właściwą metodę. Pracuję
+        czysto i skutecznie.</b
+      >
+    </p>
+
+    <a class="cta-btn" href="tel:+48510733300" aria-label="Zadzwoń 510 733 300">
+      <span class="cta-btn-icon" aria-hidden="true">📞</span>
+      <span>510&nbsp;733&nbsp;300</span>
+    </a>
+  </article>
+</Default>

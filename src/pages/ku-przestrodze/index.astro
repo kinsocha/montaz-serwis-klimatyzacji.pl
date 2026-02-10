@@ -1,0 +1,293 @@
+---
+import Default from "@layouts/Default.astro";
+
+const title = "Ku przestrodze: skutki chemii do rur – galeria przypadków";
+const description =
+  "Zobacz realne przypadki z interwencji: stopione syfony, skamieniałe granulki i uszkodzone odpływy po środkach żrących. Wejścia do opisów i zdjęć.";
+const keywords =
+  "chemia do rur skutki, kret do rur zniszczenia, stopiony syfon, skamieniałe granulki, udrażnianie kanalizacji warszawa";
+const canonical = "https://udraznianiekanalizacji.eu/ku-przestrodze";
+
+// Lista podstron (stworzysz je później w: src/pages/ku-przestrodze/<slug>/index.astro)
+const cases = [
+  {
+    title: "Skamieniałe granulki w syfonie brodzikowym",
+    slug: "skamieniale-granulki-w-syfonie-brodzikowym",
+    excerpt:
+      "Granulki pęcznieją, twardnieją i potrafią zamienić się w korek nie do ruszenia bez demontażu.",
+    img: "/img/skutki-udrazniania-kanalizaji-chemia-hero.webp",
+    alt: "Skutki chemii do rur – skamieniałe granulki",
+    tag: "GRANULKI",
+  },
+ /* {
+    title: "Stopiony syfon i uszczelki – agresywna chemia robi swoje",
+    slug: "stopiony-syfon-i-uszczelki",
+    excerpt:
+      "Czasem wystarczy jedna dawka środka żrącego, żeby elementy z tworzywa uległy odkształceniu lub rozszczelnieniu.",
+    img: "/img/skutki-udrazniania-kanalizaji-chemia-hero.webp",
+    alt: "Zniszczony syfon po chemii do rur",
+    tag: "SYFON",
+  },
+  {
+    title: "Chemia „przepchnęła” zator dalej – nawracające zapchania",
+    slug: "chemia-przesuwa-zator-dalej",
+    excerpt:
+      "Zator znika na chwilę, ale problem wraca. Osad ląduje głębiej i robi się trudniej (i drożej) w naprawie.",
+    img: "/img/skutki-udrazniania-kanalizaji-chemia-hero.webp",
+    alt: "Zator w rurach po użyciu chemii",
+    tag: "ZATORY",
+  },
+  {
+    title: "Uszkodzona armatura i odpływ zlewu – skutki zalania chemią",
+    slug: "uszkodzona-armatura-i-odplyw-zlewu",
+    excerpt:
+      "Środki żrące potrafią uszkadzać elementy odpływu, a przy nieszczelności zrobić szkody w szafce i posadzce.",
+    img: "/img/skutki-udrazniania-kanalizaji-chemia-hero.webp",
+    alt: "Uszkodzenia odpływu zlewu po chemii",
+    tag: "ZLEW",
+  }, */
+];
+---
+
+<Default
+  title={title}
+  description={description}
+  keywords={keywords}
+  canonical={canonical}
+>
+  <header class="hero">
+    <div>
+      <div class="hero__text">
+        <h1>{title}</h1>
+        <p class="lead">
+          To nie teoria. To zdjęcia i opisy z prawdziwych interwencji po użyciu
+          środków żrących. Każdy kafelek prowadzi do osobnej podstrony z opisem
+          przypadku.
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn btn--warning" href="#przypadki">Zobacz przypadki</a>
+          <a class="btn btn--outline" href="/#blog">Wróć do poradnika</a>
+        </div>
+
+        <div class="note">
+          <strong>Uwaga:</strong> Chemia do rur bywa skuteczna „na chwilę”, ale
+          potrafi też uszkodzić elementy instalacji i utrudnić późniejsze
+          udrażnianie metodami mechanicznymi.
+        </div>
+      </div>
+<!--
+      <div class="hero__media" aria-hidden="true">
+        <img
+          src="/img/skutki-udrazniania-kanalizaji-chemia-hero.webp"
+          width="1200"
+          height="520"
+          loading="eager"
+          alt="Skutki chemii do rur – galeria zniszczeń"
+        />
+        <div class="badge">⚠️ KU PRZESTRODZE</div>
+      </div>   -->
+    </div>
+  </header>
+
+  <main class="service-card" id="przypadki">
+    <h2>Galeria przypadków</h2>
+    <p class="lead">
+      Kliknij w przypadek, żeby wejść w szczegóły: co się stało, jak wyglądała
+      instalacja i jak finalnie przywróciliśmy drożność.
+    </p>
+
+    <div class="grid">
+      {cases.map((c) => (
+        <article class="card">
+          <a class="card__link" href={`/ku-przestrodze/${c.slug}`}>
+            <div class="card__img">
+              <span class="tag">{c.tag}</span>
+              <img
+                src={c.img}
+                alt={c.alt}
+                width="600"
+                height="360"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="card__body">
+              <h3>{c.title}</h3>
+              <p>{c.excerpt}</p>
+              <span class="more">Zobacz opis →</span>
+            </div>
+          </a>
+        </article>
+      ))}
+    </div>
+
+    <div class="cta">
+      <h3>Masz problem po użyciu chemii?</h3>
+      <p>
+        Jeśli odpływ dalej stoi albo coś zaczęło cieknąć – lepiej przerwać
+        „dosypywanie” i przejść na bezpieczniejsze metody udrażniania.
+      </p>
+      <a class="cta__btn" href="tel:+48510733300" aria-label="Zadzwoń 510 733 300">
+        📞 510&nbsp;733&nbsp;300
+      </a>
+    </div>
+  </main>
+
+  <style>
+    .hero {
+      margin: 12px 0 18px;
+    }
+     
+    .hero__text {
+      padding: 18px;
+      border-radius: 10px;
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+    .hero__media {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      border: 2px solid #e7736685;
+      background: #fff5f5;
+      min-height: 260px;
+    }
+    .hero__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: #e74c3c;
+      color: #fff;
+      padding: 6px 10px;
+      font-weight: 800;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    .hero__cta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+    .note {
+      margin-top: 14px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      background: #fff5f5;
+      border: 1px solid #e7736685;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      text-align: center;
+    }
+    .btn--outline {
+      border: 1px solid rgba(0, 0, 0, 0.18);
+      color: inherit;
+      background: transparent;
+    }
+    .btn--warning {
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+    }
+    .btn--warning:hover {
+      background-color: #c0392b;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      background: #fff;
+      transition: transform 0.15s ease;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+    }
+    .card__link {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+    .card__img {
+      position: relative;
+      background: #fff5f5;
+    }
+    .card__img img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .tag {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(231, 76, 60, 0.95);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-weight: 800;
+      font-size: 0.75rem;
+      z-index: 2;
+    }
+    .card__body {
+      padding: 12px 14px 14px;
+    }
+    .card__body h3 {
+      margin: 0 0 6px;
+      font-size: 1.05rem;
+      line-height: 1.25;
+    }
+    .card__body p {
+      margin: 0 0 10px;
+      opacity: 0.9;
+    }
+    .more {
+      font-weight: 800;
+      color: #e74c3c;
+    }
+
+    .cta {
+      margin-top: 18px;
+      padding: 14px;
+      border-radius: 10px;
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+    .cta__btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 900;
+      background: #111;
+      color: #fff;
+    }
+  </style>
+</Default>

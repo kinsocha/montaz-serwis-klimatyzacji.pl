@@ -1,0 +1,300 @@
+---
+import Carousel from "@components/Carousel.astro";
+import Default from "../layouts/Default.astro";
+
+const title =
+  "Udrażnianie Kanalizacji Warszawa - Pogotowie Kanalizacyjne 510 733 300";
+const description =
+  "Udrażnianie kanalizacji w Warszawie. Sprężyna elektryczna, WUKO, kamerowanie rur. Skuteczne usuwanie zatorów w pionach i poziomach kanalizacyjnych. Tel. 510 733 300.";
+const keywords =
+  "udrażnianie kanalizacji Warszawa, pogotowie kanalizacyjne Warszawa, przepychanie kanalizacji Warszawa, WUKO Warszawa, kamerowanie kanalizacji Warszawa, udrażnianie pionów Warszawa";
+const canonical =
+  "https://udraznianiekanalizacji.eu/udraznianie-kanalizacji-warszawa";
+---
+
+<Default
+  title={title}
+  description={description}
+  keywords={keywords}
+  canonical={canonical}
+>
+  <!-- JSON-LD dla strony udrażniania kanalizacji (LocalBusiness, bez microdata) -->
+  <script
+    slot="head"
+    type="application/ld+json"
+    is:inline
+    set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: "Udrażnianie Kanalizacji Warszawa - Pogotowie Kanalizacyjne",
+      description:
+        "Pogotowie kanalizacyjne w Warszawie. Udrażnianie kanalizacji, pionów i poziomów, WUKO, sprężyna elektryczna, kamerowanie rur. Szybka pomoc na terenie Warszawy i okolic.",
+      url: "https://udraznianiekanalizacji.eu/udraznianie-kanalizacji-warszawa",
+      telephone: "+48510733300",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Borzymowska 43e",   
+        addressLocality: "Warszawa",
+        addressRegion: "mazowieckie",
+        postalCode: "03-565",
+        addressCountry: "PL",
+      },
+      areaServed: "Warszawa i okolice do 60 km",
+      image:
+        "https://udraznianiekanalizacji.eu/img/udraznianie-kanalizacji-warszawa.webp",
+    })}
+  />
+
+  <h1>Udrażnianie Kanalizacji Warszawa – Pogotowie Kanalizacyjne</h1>
+
+  <Carousel
+    slides={[
+      {
+        src: "/img/udraznianiezlewu/udraznianie-zlewu.webp",
+        alt: "Udrażnianie zlewu w mieszkaniu w Warszawie",
+      },
+      {
+        src: "/img/udraznianiezlewu/przepychanie-zlewu.webp",
+        alt: "Przepychanie kuchennego odpływu sprężyną elektryczną",
+      },
+      {
+        src: "/img/kamerowanie-rur-kanalizacyjnych.webp",
+        alt: "Kamerowanie kanalizacji w budynku wielorodzinnym",
+      },
+      {
+        src: "/img/udraznianie-przykanalika.webp",
+        alt: "Udrażnianie przykanalika kanalizacyjnego metodą WUKO",
+      },
+      {
+        src: "/img/udraznianie-odplywu-pralki.webp",
+        alt: "Udrażnianie odpływu pralki podłączonego do kanalizacji",
+      },
+      { src: "/img/przepychanie-pisuaru.webp", alt: "Przepychanie pisuaru" },
+      {
+        src: "/img/udraznianiezlewu/czyszczenie-rur-zlewu.webp",
+        alt: "Czyszczenie rur kanalizacyjnych od zlewu",
+      },
+      {
+        src: "/img/udraznianie-pionu-kanalizacyjnego.webp",
+        alt: "Udrażnianie pionu kanalizacyjnego w bloku",
+      },
+      {
+        src: "/img/udraznianie-rury-od-szamba-przez-toalete.webp",
+        alt: "Udrażnianie rury od szamba przez toaletę",
+      },
+      {
+        src: "/img/udraznianiezlewu/udroznianiezlewu.webp",
+        alt: "Udrożniony zlew po usunięciu zatoru",
+      },
+    ]}
+  />
+
+  <article class="service-card">
+    <p class="lead">
+      Zablokowana kanalizacja w mieszkaniu, domu lub lokalu usługowym w
+      Warszawie potrafi sparaliżować normalne funkcjonowanie. Gdy woda cofa się
+      z odpływu, pion „bulgocze”, a toaleta przestaje działać, potrzebne jest
+      szybkie i profesjonalne <strong>udrażnianie kanalizacji</strong>. Zajmuję
+      się usuwaniem zatorów w pionach i poziomach kanalizacyjnych, podejściach
+      do WC, zlewów, wanien, pryszniców oraz przykanalikach poza budynkiem.
+    </p>
+    <p>
+      Do każdej awarii podchodzę jak do konkretnego przypadku – nie tylko
+      przepycham rurę, ale też analizuję, dlaczego doszło do zatoru. Dzięki
+      temu wielu problemów udaje się uniknąć w przyszłości.
+    </p>
+  </article>
+
+  <article class="service-card">
+    <h2>Jakimi metodami udrażniam kanalizację w Warszawie?</h2>
+
+    <p>
+      Charakter zatoru w kanalizacji zależy od wielu czynników: wieku instalacji,
+      średnicy rur, sposobu użytkowania i jakości montażu. Dlatego dobór metody
+      zawsze dostosowuję do konkretnej sytuacji.
+    </p>
+
+    <h3>Sprężyna elektryczna – udrażnianie wewnątrz budynku</h3>
+    <p>
+      <strong>Sprężyna elektryczna</strong> jest podstawowym narzędziem do
+      udrażniania kanalizacji w pionach i krótkich poziomach wewnątrz budynku.
+      Napędzana silnikiem spirala dociera głęboko w przewód i mechanicznie
+      rozbija zator.
+    </p>
+    <p>Stosuję ją m.in. do:</p>
+    <ul>
+      <li>udrażniania pionów kanalizacyjnych w blokach i kamienicach,</li>
+      <li>odtykania toalet i podejść WC,</li>
+      <li>czyszczenia podejść do wanien, brodzików i umywalek,</li>
+      <li>usuwania zatorów w krótkich odcinkach poziomych w piwnicy.</li>
+    </ul>
+    <p>
+      Dzięki różnym końcówkom roboczym (noże, gruszki, sprężyny tnące) można
+      dopasować narzędzie do rodzaju zanieczyszczeń i materiału rur.
+    </p>
+
+    <h3>WUKO – hydrodynamiczne czyszczenie kanalizacji</h3>
+    <p>
+      Przy dłuższych odcinkach poziomych, rurach na zewnątrz budynku oraz
+      przykanalikach stosuję <strong>WUKO</strong>, czyli czyszczenie
+      kanalizacji wodą pod wysokim ciśnieniem.
+    </p>
+    <p>Metoda WUKO jest szczególnie skuteczna, gdy:</p>
+    <ul>
+      <li>w rurach nagromadziły się wieloletnie osady i tłuszcz,</li>
+      <li>dochodzi do cofania się ścieków przy większym spływie wody,</li>
+      <li>instalacja była długo niewykorzystywana i zarosła osadami,</li>
+      <li>potrzebne jest kompleksowe czyszczenie przewodów przed remontem.</li>
+    </ul>
+    <p>
+      Dysze robocze jednocześnie rozbijają osad i dokładnie płuczą ścianki rur,
+      przywracając im pełną przepustowość.
+    </p>
+
+    <h3>Kamerowanie kanalizacji – gdy problem się powtarza</h3>
+    <p>
+      Jeśli zatory wracają w tym samym miejscu, samo udrażnianie może być tylko
+      doraźnym rozwiązaniem. W takich sytuacjach proponuję
+      <strong>kamerowanie kanalizacji</strong>, czyli inspekcję wnętrza rur
+      kamerą wizyjną.
+    </p>
+    <p>Dzięki temu można:</p>
+    <ul>
+      <li>zlokalizować miejsca, w których rura jest zapadnięta lub pęknięta,</li>
+      <li>wykryć wrastające korzenie i przewężenia,</li>
+      <li>zidentyfikować błędy montażowe (np. kontrspadki),</li>
+      <li>
+        przygotować dokumentację dla wspólnoty, administracji lub ubezpieczyciela.
+      </li>
+    </ul>
+  </article>
+
+  <article class="service-card">
+    <h2>Typowe objawy problemów z kanalizacją</h2>
+
+    <p>
+      Problemy z kanalizacją rzadko pojawiają się całkowicie bez zapowiedzi.
+      Warto zwrócić uwagę na kilka charakterystycznych sygnałów:
+    </p>
+
+    <h3>Wolno spływająca woda</h3>
+    <p>
+      Jeżeli zlewozmywak, umywalka lub brodzik opróżnia się zdecydowanie wolniej
+      niż wcześniej, oznacza to, że wewnątrz rury narasta zator. Na tym etapie
+      <strong>udrażnianie kanalizacji</strong> jest najszybsze i najmniej
+      uciążliwe.
+    </p>
+
+    <h3>Bulgotanie w pionie</h3>
+    <p>
+      Dźwięk „ssania” lub bulgotania po spuszczeniu wody w toalecie albo
+      zlewie świadczy o problemach z przepływem powietrza w instalacji.
+      Zazwyczaj jest to wynik częściowego przytkania przewodu lub błędów
+      w ułożeniu rur.
+    </p>
+
+    <h3>Cofanie się ścieków</h3>
+    <p>
+      Cofanie się wody z kratki ściekowej, WC lub zlewu to sygnał, że rura
+      jest całkowicie zablokowana. W takiej sytuacji konieczna jest szybka
+      interwencja pogotowia kanalizacyjnego i użycie sprężyny elektrycznej
+      lub WUKO.
+    </p>
+
+    <h3>Nieprzyjemny zapach z kanalizacji</h3>
+    <p>
+      Zapach wydobywający się z odpływów może oznaczać, że w instalacji stoją
+      ścieki lub nagromadziły się osady. Dokładne czyszczenie kanalizacji
+      przywraca normalny przepływ i eliminuje problem u źródła.
+    </p>
+  </article>
+
+  <article class="service-card">
+    <h2>Dlaczego warto zlecić udrażnianie kanalizacji fachowcowi?</h2>
+
+    <p>
+      Domowe próby ratowania sytuacji za pomocą przypadkowych środków chemicznych
+      lub tanich „spiralek” rzadko rozwiązują problem trwale. Często jedynie
+      przesuwają zator w głąb instalacji, a przy okazji mogą:
+    </p>
+    <ul>
+      <li>uszkodzić syfony i elastyczne węże,</li>
+      <li>podrażnić skórę i drogi oddechowe domowników,</li>
+      <li>utrudnić późniejszą pracę hydraulika,</li>
+      <li>spowodować wyższe koszty naprawy w przyszłości.</li>
+    </ul>
+
+    <p>
+      Profesjonalne <strong>udrażnianie kanalizacji w Warszawie</strong>
+      oznacza:
+    </p>
+    <ul>
+      <li>dobór metody do rodzaju zatoru i typu instalacji,</li>
+      <li>wykorzystanie specjalistycznego sprzętu (sprężyna, WUKO, kamera),</li>
+      <li>analizę przyczyn, a nie tylko usunięcie skutków,</li>
+      <li>maksymalne ograniczenie bałaganu w miejscu pracy.</li>
+    </ul>
+  </article>
+
+  <article class="service-card">
+    <h2>Gdzie działamy – Warszawa i okolice</h2>
+
+    <p>
+      Przyjmuję zlecenia na <strong>udrażnianie kanalizacji w Warszawie</strong>
+      oraz w miejscowościach położonych w jej sąsiedztwie. Dojeżdżam zarówno do
+      domów jednorodzinnych, jak i bloków oraz lokali usługowych.
+    </p>
+
+    <p>
+      Standardowo obsługuję zlecenia na terenie miasta oraz w pasie miejscowości
+      podwarszawskich w promieniu do około 60 km. Cenę ustalam przez podczas rozmowy 
+      telefonicznej, dzięki temu wiesz jaki jest koszt usługi jeszcze przed przyjazdem.
+    </p>
+  </article>
+
+
+  <article class="service-card">
+    <h2>Najczęściej zadawane pytanie o udrażnianie kanalizacji</h2>
+
+    <details>
+      <summary>Czy udrażnianie kanalizacji może uszkodzić rury?</summary>
+      <p>
+        Stosowane przeze mnie metody – sprężyna elektryczna i WUKO – są dobierane
+        do średnicy i materiału przewodów. Prawidłowo wykonane
+        <strong>udrażnianie kanalizacji</strong> nie powinno uszkadzać rur.
+        Ryzyko najczęściej wynika z wcześniejszych problemów instalacji:
+        pęknięć, zapadnięć lub błędów montażowych. Podczas pracy obserwuję
+        zachowanie instalacji i w razie potrzeby informuję o konieczności
+        dalszych napraw.
+      </p>
+    </details>
+  </article>
+
+  <article class="service-card">
+    <h2>Kontakt – Pogotowie Kanalizacyjne Warszawa</h2>
+    <p>
+      Masz problem z kanalizacją w Warszawie? Woda nie spływa, pion się zatyka
+      albo ścieki cofają się do mieszkania? Skontaktuj się ze mną – przyjadę,
+      sprawdzę instalację i dobiorę skuteczną metodę udrażniania.
+    </p>
+    <div class="cta-section">
+      <h3>Zadzwoń Teraz</h3>
+      <p>
+        <strong>Telefon:</strong>
+        <a
+          class="call-inline"
+          href="tel:+48510733300"
+          aria-label="Zadzwoń pod numer 510 733 300"
+        >
+          510&nbsp;733&nbsp;300
+        </a>
+      </p>
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:hydraulikwarszawanet@gmail.com"
+          >hydraulikwarszawanet@gmail.com</a
+        >
+      </p>
+    </div>
+  </article>
+</Default>

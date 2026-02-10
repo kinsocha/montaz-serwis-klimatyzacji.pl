@@ -1,0 +1,113 @@
+---
+import { Breadcrumbs } from "astro-breadcrumbs";
+import { getEntry } from "astro:content";
+import { ViewTransitions } from "astro:transitions";
+import Footer from "@components/Footer.astro";
+import Navbar from "@components/Navbar.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  keywords: string;
+  canonical?: string;
+}
+
+const nameMap: Record<string, string> = {
+  "/": "Strona główna",
+  "/udraznianie-kanalizacji-warszawa": "Udrażnianie kanalizacji Warszawa",
+  "/udraznianie-zlewu": "Udrażnianie zlewu",
+  "/udraznianie-toalety": "Udrażnianie WC",
+  "/hydraulik-warszawa": "Usługi hydrauliczne",
+  "/hydraulik-brodno": "Hydraulik Bródno",
+  "/blog-index": "Poradnik",
+  "/blog/jak-udroznic-zatkany-zlew": "Jak udrożnić zatkany zlew?",
+};
+
+const { title, description, keywords, canonical } = Astro.props;
+
+const settings = await getEntry("settings", "settings");
+---
+
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#f4f200" />
+    <title>{title}</title>
+
+    {canonical && <link rel="canonical" href={canonical} />}
+
+    <link href="/css/styles.css" rel="stylesheet" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/articles-styles-simple.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      crossorigin=""
+      defer
+      is:inline></script>
+
+    <slot name="head" />
+
+    <ViewTransitions />
+  </head>
+
+  <body>
+    <div class="container" id="main-container">
+      <div>
+        <Navbar />
+        <Breadcrumbs
+          indexText="Strona główna"
+          customizeList={{
+            style:
+              "display: flex; flex-wrap: wrap; list-style-type: none; margin: 0; padding: 0",
+          }}
+        >
+          <span slot="separator" style="margin: 0 8px">/</span>
+        </Breadcrumbs>
+        <div class="row">
+          <div class="col-md-4 layout-left position-sticky">
+            <div class="company-name">
+              <a href="/">Udrażnianie kanalizacji Warszawa i okolice</a>
+            </div>
+            <div
+              class="logo"
+              role="button"
+              aria-label="Strona główna"
+              onclick="document.location.href='/'"
+            >
+            </div>
+            <div class="phone">
+              <a
+                href={`tel:+48${settings.data.phone}`}
+                class="phone-link"
+                aria-label={`Awaria? Zadzwoń ${settings.data.phone}`}
+              >
+                <span class="sr-only"
+                  >Awaria? Zadzwoń {settings.data.phone}</span
+                >
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-8 layout-right">
+            <main>
+              <slot />
+            </main>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    </div>
+  </body>
+</html>

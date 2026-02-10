@@ -1,0 +1,142 @@
+---
+import Default from "../layouts/Default.astro";
+import Carousel from "@components/Carousel.astro";
+
+const canonical = "https://udraznianiekanalizacji.eu/hydraulik-anin";
+
+const title =
+  "Hydraulik Anin – naprawy i udrażnianie odpływów | 510 733 300";
+
+const description =
+  "Hydraulik w Aninie: naprawy, montaż armatury i udrażnianie odpływów. Szybki kontakt: 510 733 300.";
+
+const keywords =
+  "hydraulik Ain, usługi hydrauliczne Anin";
+ 
+const streets = [
+  "Kajki",
+  "Zorzy",
+  "Szoferska",
+  "Krawiecka",
+  "Trawiasta",
+  "Marysińska",
+  "Hafciarska",
+  "Pożaryskiego",
+  "Rzeźbiarska",
+  "Wydawnicza",
+  "Czecha",
+  "Poprzeczna",
+];
+
+const mapEmbedSrc = "https://www.google.com/maps?q=Anin%2C%20Warszawa&output=embed";
+---
+
+<Default
+  title={title}
+  description={description}
+  keywords={keywords}
+  canonical={canonical}
+>
+  <script
+    slot="head"
+    type="application/ld+json"
+    is:inline
+    set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: "Hydraulik Anin",
+      url: canonical,
+      telephone: "+48510733300",
+      email: "hydraulikwarszawanet@gmail.com",
+      areaServed: "Anin",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Anin",
+        addressRegion: "mazowieckie",
+        addressCountry: "PL",
+      },
+      image: ["https://udraznianiekanalizacji.eu/img/awaria.png"],
+    })}
+  />
+
+  <h1>Hydraulik Anin</h1>
+
+  <Carousel
+    slides={[
+      { src: "/img/hydraulik-anin/hydraulik-anin-1.webp", alt: "Usługi hydrauliczne w Aninie – naprawa instalacji" },
+      { src: "/img/hydraulik-anin/hydraulik-anin-2.webp", alt: "Udrażnianie odpływu w mieszkaniu – Anin" },
+      { src: "/img/hydraulik-anin/hydraulik-anin-3.webp", alt: "Wymiana baterii kuchennej – Anin" },
+      { src: "/img/hydraulik-anin/hydraulik-anin-4.webp", alt: "Montaż syfonu i uszczelnienia – Anin" },
+      { src: "/img/hydraulik-anin/hydraulik-anin-5.webp", alt: "Drobne naprawy hydrauliczne – Anin" },
+    ]}
+  />
+
+  <section class="card">
+    <p class="lead">
+      Jeżeli cieknie syfon, spłuczka nie domyka się albo odpływ przestał działać normalnie — zadzwoń:
+      <strong> 510&nbsp;733&nbsp;300</strong>. Dojeżdżam na terenie Anina i okolicy.
+    </p>
+
+    <div class="cta">
+      <a class="btn" href="tel:+48510733300" aria-label="Zadzwoń 510 733 300">
+        Zadzwoń: 510&nbsp;733&nbsp;300
+      </a>
+    </div>
+  </section>
+
+  <section class="card" id="mapa">
+    <h2>Obszar działania – Anin</h2>
+
+    <div class="street-row" aria-label="Wybrane ulice w Aninie">
+      {streets.map((s) => (
+        <a class="street-pill" href="#mapa" rel="nofollow">{s}</a>
+      ))}
+    </div>
+
+    <div class="map-wrap">
+      <iframe
+        class="map-embed"
+        src={mapEmbedSrc}
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        aria-label="Mapa – Anin, Warszawa"
+        allowfullscreen
+      />
+    </div>
+
+    <p class="note">
+      Jeśli nie widzisz swojej ulicy na liście — to nie problem. Powiedz lokalizację przez telefon i od razu potwierdzę dojazd.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Zakres prac</h2>
+    <ul>
+      <li>Udrażnianie odpływu (zlew, umywalka, brodzik, wanna) – mechanicznie.</li>
+      <li>Naprawy: spłuczka, syfon, wężyki, zawory, drobne nieszczelności.</li>
+      <li>Montaż i wymiana: bateria, syfon, podstawowa armatura.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Kontakt</h2>
+    <p>
+      Telefon: <a class="call" href="tel:+48510733300">510&nbsp;733&nbsp;300</a><br />
+      Email: <a href="mailto:hydraulikwarszawanet@gmail.com">hydraulikwarszawanet@gmail.com</a>
+    </p>
+  </section>
+
+  <style>
+    .card{max-width:980px;margin:24px auto;padding:18px 16px;background:#fff;border-radius:10px;box-shadow:0 10px 24px rgba(0,0,0,.06)}
+    .lead{font-size:1.05rem;line-height:1.6}
+    .cta{margin-top:12px;display:flex;justify-content:center}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:10px;text-decoration:none;border:1px solid rgba(0,0,0,.14);font-weight:700}
+    .street-row{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 14px;align-items:center}
+    .street-pill{display:inline-flex;padding:6px 10px;border-radius:999px;border:1px solid rgba(0,0,0,.12);text-decoration:none;font-size:.92rem;line-height:1;color:inherit;background:rgba(0,0,0,.02)}
+    .street-pill:hover{background:rgba(0,0,0,.05)}
+    .map-wrap{border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,.10)}
+    .map-embed{width:100%;height:340px;border:0;display:block}
+    .note{margin-top:12px;opacity:.9}
+    .call{text-decoration:none;font-weight:700}
+  </style>
+</Default>

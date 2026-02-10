@@ -1,0 +1,205 @@
+---
+import { getCollection, getEntry } from "astro:content";
+
+const settings = await getEntry("settings", "settings");
+
+const reviews = (await getCollection("reviews"))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .filter(({ data }) => data.date.valueOf() <= new Date().valueOf())
+  .slice(0, settings.data.reviewsLimit);
+
+const formatter = new Intl.DateTimeFormat("pl-PL", {
+  day: "2-digit",
+  month: "long",
+  year: "numeric",
+});
+---
+
+<section class="service-card opinions-section" id="opinie">
+  <h2>Opinie klientów</h2>
+  <p class="lead">
+    Kilka wybranych opinii osób, u których usuwałem zatory w kanalizacji w
+    Warszawie i okolicy.
+  </p>
+
+  {
+    reviews.length === 0 ? (
+      <p>Opinie pojawią się wkrótce.</p>
+    ) : (
+      <div class="opinions-grid">
+        {reviews.map(async (opinion) => {
+          const rating = opinion.data.rating ?? 5;
+          const dateFormatted = formatter.format(opinion.data.date);
+          const initials = opinion.data.author.trim().charAt(0).toUpperCase();
+
+          const { Content } = await opinion.render();
+          return (
+            <article class="opinion-card">
+              <div class="opinion-header">
+                <div class="opinion-avatar" aria-hidden="true">
+                  {initials}
+                </div>
+                <div class="opinion-header-text">
+                  <span class="opinion-author">{opinion.data.author}</span>
+                  {opinion.data.location && (
+                    <span class="opinion-location">
+                      {opinion.data.location}
+                    </span>
+                  )}
+                </div>
+              </div>
+
+              <div class="opinion-rating">
+                <span class="stars" aria-label={`${rating} na 5`}>
+                  ★★★★★
+                </span>
+              </div>
+
+              <p class="opinion-content">
+                <Content />
+              </p>
+
+              <p class="opinion-footer">
+                <time
+                  class="opinion-date"
+                  datetime={opinion.data.date.toISOString()}
+                >
+                  {dateFormatted}
+                </time>
+              </p>
+            </article>
+          );
+        })}
+      </div>
+    )
+  }
+
+  <div class="opinions-footer">
+    <a href="/opinie" class="opinions-more-link"> Zobacz wszystkie opinie </a>
+  </div>
+
+  <style>
+    .opinions-section {
+      margin-top: 2rem;
+    }
+
+    .opinions-section h2 {
+      font-size: 26px;
+    }
+
+    .opinions-section,
+    .opinions-section * {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .opinions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .opinion-card {
+      position: relative;
+      padding: 1.2rem 1.2rem 1rem 1.2rem;
+      border-radius: 10px;
+      background: #ffffff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      border: 1px solid #eee;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .opinion-header {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .opinion-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .opinion-header-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .opinion-author {
+      font-weight: 700;
+      color: #333;
+    }
+
+    .opinion-location {
+      color: #777;
+      font-size: 0.9em;
+    }
+
+    .opinion-rating {
+      margin: 0.2rem 0 0.5rem 0;
+      color: #ffb400;
+      font-size: 1rem;
+    }
+
+    .opinion-rating .stars {
+      letter-spacing: 1px;
+    }
+
+    .opinion-content {
+      margin: 0;
+      color: #444;
+      flex-grow: 1;
+    }
+
+    .opinion-footer {
+      margin: 0.7rem 0 0 0;
+      color: #777;
+      font-size: 0.9em;
+      display: flex;
+      justify-content: flex-end;
+      margin-top: auto;
+    }
+
+    .opinion-date {
+      white-space: nowrap;
+    }
+
+    .opinions-footer {
+      margin-top: 1.5rem;
+      text-align: right;
+    }
+
+    .opinions-more-link {
+      text-decoration: none;
+      color: #0066cc;
+      font-weight: 600;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+      transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .opinions-more-link:hover {
+      color: #004f99;
+      border-color: #004f99;
+    }
+
+    @media (max-width: 600px) {
+      .opinions-footer {
+        text-align: left;
+      }
+    }
+  </style>
+</section>

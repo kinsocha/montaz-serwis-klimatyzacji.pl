@@ -1,4 +1,8 @@
 {
+<<<<<<< HEAD
   "recommendations": ["astro-build.astro-vscode"],
+=======
+  "recommendations": ["astro-build.astro-vscode", "unifiedjs.vscode-mdx"],
+>>>>>>> 2abe60c4e209b2913fe1118f5f7e15cc8b38f3c1
   "unwantedRecommendations": []
 }
