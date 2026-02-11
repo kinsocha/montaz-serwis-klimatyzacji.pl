@@ -9,8 +9,8 @@ on:
   push:
    branches: ["main"]
 
-  schedule:
-   - cron: '0 7 * * *'
+  # schedule:
+  # - cron: '0 7 * * *'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -40,15 +40,15 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name: Random Cron
-        uses: grbnb/random-workflow-cron@v1
-        with:
-          push_switch: false
-          time_zone: "UTC+8"
-          hour_start: 1
-          hour_end: 23
-          interval_count: 7
-          cron_dmw: "* * *"
+   #   - name: Random Cron
+   #     uses: grbnb/random-workflow-cron@v1
+   #     with:
+   #       push_switch: false
+   #       time_zone: "UTC+8"
+   #       hour_start: 1
+   #       hour_end: 23
+   #       interval_count: 7
+   #       cron_dmw: "* * *"
 
       - name: Detect package manager
         id: detect-package-manager
