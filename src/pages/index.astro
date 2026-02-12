@@ -1,28 +1,11 @@
 ---
-<<<<<<< HEAD
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
----
-
-<Layout>
-	<Welcome />
-</Layout>
-=======
 import Default from "@layouts/Default.astro";
-import Carousel from "@components/Carousel.astro";
-import KameraSection from "@components/KameraSection.astro";
-import OpinionsSection from "@components/OpinionsSection.astro";
-import PoradnikSection from "@components/PoradnikSection.astro";
 
-const title =
-  "Udrażnianie kanalizacji Warszawa Hydraulik Przepychanie rur 510733300";
+const title = "Zamontuj Klimat – Montaż i Serwis Klimatyzacji | Warszawa i okolice";
 const description =
-  "Tel. 510 733 300 Pogotowie kanalizacyjne i hydrauliczne Warszawa. Szybka pomoc, nowoczesny sprzęt. Kamerujemy, czyścimy i przepychamy rur w w Warszawie i okolicy do 60km, zadzwoń - pomożemy!";
+  "Zamontuj Klimat – Profesjonalny montaż i serwis klimatyzacji w Warszawie i okolicach. Gree, LG, Kaisai, Mitsubishi, Daikin. Do 7 lat gwarancji. Darmowa wycena.";
 const keywords =
-  "udrażnianie rur Warszawa, udrażnianie kanalizacji Warszawa, przepychanie rur Warszawa, przepychanie kanalizacji Warszawa";
+  "klimatyzacja Warszawa, montaż klimatyzacji, serwis klimatyzacji, Gree, LG, Kaisai, Mitsubishi, Daikin, klimatyzator";
 const canonical = "https://montaz-serwis-klimatyzacji.pl";
 ---
 
@@ -32,506 +15,476 @@ const canonical = "https://montaz-serwis-klimatyzacji.pl";
   keywords={keywords}
   canonical={canonical}
 >
+  <Fragment slot="head">
+    <meta property="og:title" content="Zamontuj Klimat - Montaż i Serwis Klimatyzacji Warszawa" />
+    <meta property="og:description" content="Profesjonalny montaż klimatyzacji w Warszawie. 5 marek premium, do 7 lat gwarancji, darmowa wycena." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pl_PL" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://montaz-serwis-klimatyzacji.pl/img/balwanek.webp" as="image" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" /></noscript>
+    <link rel="stylesheet" href="/css/style-index.css" />
+  </Fragment>
+
   <script type="application/ld+json" is:inline>
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "@id": "https://montaz-serwis-klimatyzacji.pl#localbusiness",
-      "additionalType": "https://schema.org/Plumber",
-      "name": "Udrażnianie kanalizacji Warszawa Hydraulik Przepychanie rur 510733300",
-      "description": "Tel. 510 733 300 Pogotowie kanalizacyjne i hydrauliczne Warszawa. Szybka pomoc, nowoczesny sprzęt. Kamerowanie, czyszczenie rur i przepychanie kanalizacji w Warszawie i okolicach do 50 km. Gwarancja.",
+      "additionalType": "https://schema.org/HVACBusiness",
+      "name": "Zamontuj Klimat – Montaż i Serwis Klimatyzacji",
+      "description": "Profesjonalny montaż, serwis i sprzedaż klimatyzacji w Warszawie i okolicach. Klimatyzatory Gree, LG, Kaisai, Mitsubishi, Daikin.",
       "url": "https://montaz-serwis-klimatyzacji.pl",
-      "telephone": "+48 510 733 300",
+      "telephone": "+48 888 806 921",
+      "email": "mskplxk@gmail.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "ul. Skarbka z Gór 155",
-        "postalCode": "03-287",
         "addressLocality": "Warszawa",
         "addressCountry": "PL"
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 52.32375904437635,
-        "longitude": 21.05633518503431
-      },
-      "email": "udraznianierurkanalizacyjnych@montaz-serwis-klimatyzacji.pl",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://montaz-serwis-klimatyzacji.pl/img/awaria.png",
-        "width": 277,
-        "height": 279
-      },
-      "image": {
-        "@id": "https://montaz-serwis-klimatyzacji.pl/img/udraznianiezlewu/udraznianie-zlewu.webp"
-      },
-      "sameAs": [
-        "https://twitter.com/udraznianierury",
-        "https://share.google/KT0mjJETRJqVyyubY",
-        "https://www.facebook.com/UdraznianieKanalizacjiWarszawa",
-        "https://maps.app.goo.gl/rToBGfwbummrajfa6"
-      ],
-      "openingHours": ["Mo-Su 00:00-24:00"],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "bestRating": "5",
-        "ratingCount": "432"
-      },
-      "review": [
-        {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Pan Damian"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-          },
-          "reviewBody": "Pan Damian mówił, że odpływ w łazience regularnie się zatykał. Przyczyną było zarośnięcie żeliwnego trójnika tuż przy pionie kanalizacyjnym. Po czyszczeniu i sprawdzeniu kamerą wszystko działa bez zarzutu.",
-          "datePublished": "2025-11-23"
-        },
-        {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Pani Anna"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-          },
-          "reviewBody": "Szybka reakcja, czysto wykonana praca. Polecam hydraulika w Warszawie!",
-          "datePublished": "2025-10-15"
-        }
-      ],
+      "openingHours": ["Mo-Fr 08:00-18:00", "Sa 09:00-14:00"],
       "makesOffer": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Udrażnianie zlewu"
-          },
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "priceCurrency": "PLN",
-            "minPrice": "300",
-            "maxPrice": "450"
+            "name": "Montaż klimatyzacji"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Udrażnianie WC"
-          },
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "priceCurrency": "PLN",
-            "minPrice": "350",
-            "maxPrice": "550"
+            "name": "Serwis klimatyzacji"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Udrażnianie pionów kanalizacyjnych"
-          },
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "priceCurrency": "PLN",
-            "minPrice": "550",
-            "maxPrice": "800"
+            "name": "Sprzedaż klimatyzatorów"
           }
         }
       ]
     }
   </script>
 
-  <h1>{title}</h1>
-
-  <Carousel
-    slides={[
-      {
-        src: "/img/udraznianiezlewu/udraznianie-zlewu.webp",
-        alt: "Udrażnianie zlewu",
-      },
-      {
-        src: "/img/udraznianiezlewu/przepychanie-zlewu.webp",
-        alt: "Przepychanie zlewu",
-      },
-      {
-        src: "/img/kamerowanie-rur-kanalizacyjnych.webp",
-        alt: "Kamerowanie rur kanalizacyjnych",
-      },
-      {
-        src: "/img/udraznianie-przykanalika.webp",
-        alt: "Udrażnianie przykanalika",
-      },
-      {
-        src: "/img/udraznianie-odplywu-pralki.webp",
-        alt: "Udrażnianie odpływu pralki",
-      },
-      { src: "/img/przepychanie-pisuaru.webp", alt: "Przepychanie pisuaru" },
-      {
-        src: "/img/udraznianiezlewu/czyszczenie-rur-zlewu.webp",
-        alt: "Udrażnianie rur od zlewu",
-      },
-      {
-        src: "/img/udraznianie-pionu-kanalizacyjnego.webp",
-        alt: "Udrażnianie pionu kanalizacyjnego",
-      },
-      {
-        src: "/img/udraznianie-rury-od-szamba-przez-toalete.webp",
-        alt: "Udrażnianie rury od szamba przez toaletę",
-      },
-      {
-        src: "/img/udraznianiezlewu/udroznianiezlewu.webp",
-        alt: "Udrożnianie zlewu",
-      },
-    ]}
-  />
-
-  <article class="service-card">
-    <ul class="lead">
-      <li>
-        <a href="/udraznianie-zlewu"
-          >Skuteczne czyszczenie i udrażnianie zlewu</a
-        >
-      </li>
-      <li>
-        <a href="/hydraulik-warszawa#pogotowie-hydrauliczne"
-          >Pogotowie hydrauliczne Warszawa 24/7</a
-        >
-      </li>
-      <li>Udrażnianie rur wuko</li>
-      <li>Udrażnianie pionów i poziomów kanalizacyjnych</li>
-      <li>Przepychanie zlewu</li>
-      <li>Udrażnianie wanny</li>
-      <li>Odtykanie wc, toalety</li>
-      <li>Czyszczenie odpływu zmywarki</li>
-      <li>Kamerowanie rur kanalizacyjnych</li>
-      <li>Pogotowie kanalizacyjne Warszawa</li>
-      <li>Pogotowie hydrauliczne Warszawa</li>
-      <li>Przepychanie rur od szamba</li>
-      <li>Lokalizacja wycieków kamerą termowizyjną</li>
-      <li>Czyszczenie drenaży i rynien</li>
-    </ul>
-    <div class="cta-section">
-      <h3>Masz awarię rur kanalizacyjnych? Zadzwoń Teraz!</h3>
-      <p>
-        <strong>Telefon:</strong>
-        <a
-          class="call-inline"
-          href="tel:+48510733300"
-          aria-label="Zadzwoń pod numer 510 733 300"
-        >
-          510&nbsp;733&nbsp;300
-        </a>
-      </p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-circle-small"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1>Idealna <span>klimatyzacja</span> dla Twojego domu</h1>
+        <p>Montaż i serwis klimatyzacji w Warszawie i okolicach. Współpracujemy z najlepszymi markami: Gree, LG, Kaisai, Mitsubishi i Daikin.</p>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-wrapper">
+          <div class="hero-image-inner">
+            <div class="hero-snow">
+              <div class="hero-snowflake">❄</div>
+              <div class="hero-snowflake">❅</div>
+              <div class="hero-snowflake">❆</div>
+              <div class="hero-snowflake">❄</div>
+              <div class="hero-snowflake">❅</div>
+              <div class="hero-snowflake">❆</div>
+              <div class="hero-snowflake">❄</div>
+              <div class="hero-snowflake">❅</div>
+              <div class="hero-snowflake">❆</div>
+              <div class="hero-snowflake">❄</div>
+              <div class="hero-snowflake">❅</div>
+              <div class="hero-snowflake">❆</div>
+              <div class="hero-snowflake">❄</div>
+              <div class="hero-snowflake">❅</div>
+              <div class="hero-snowflake">❆</div>
+              <div class="hero-snowflake">❄</div>
+              <div class="hero-snowflake">❅</div>
+              <div class="hero-snowflake">❆</div>
+              <div class="hero-snowflake">❄</div>
+              <div class="hero-snowflake">❅</div>
+            </div>
+            <img src="https://montaz-serwis-klimatyzacji.pl/img/balwanek.webp" alt="Klimatyzator ścienny" width="600" height="336" fetchpriority="high" decoding="async" />
+          </div>
+        </div>
+      </div>
+      <div class="hero-badges">
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          2-7 lat gwarancji
+        </div>
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Montaż w 4-8h
+        </div>
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Certyfikowani monterzy
+        </div>
+      </div>
     </div>
-  </article>
+  </section>
 
-  <article class="service-card">
-    <h2>Poniżej opisujemy, jakimi metodami usuwamy awarie kanalizacyjne</h2>
-    <ul>
-      <li>
-        <h3>
-          <strong>Elektryczną sprężyną</strong> udrażniamy odpływy kuchenne i łazienkowe,
-          a także rury odprowadzające ścieki poza obręb budynków — do kanalizacji
-          miejskiej lub do zbiorników na szambo.
-        </h3>
-        <ul>
-          <li>
-            <b>Co to jest sprężyna elektryczna?</b> To spirala <strong
-              >napędzana silnikiem elektrycznym</strong
-            >, bezpieczna dla instalacji domowych. Radzi sobie z tłuszczem,
-            włosami, resztkami jedzenia czy osadami.
-          </li>
-          <li>
-            <b>Jak to działa?</b> Napęd wprawia spiralę w ruch, a <strong
-              >końcówka rozdrabnia i przepycha zator</strong
-            >, przywracając drożność.
-          </li>
-        </ul>
-      </li>
+  <!-- PRODUCTS -->
+  <section class="products-section" id="klimatyzatory">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Nasza oferta</span>
+        <h2 class="section-title">Ułatwiamy wybór</h2>
+        <p class="section-desc">Oszczędź czas. Wybraliśmy 3 sprawdzone klimatyzatory, które warto rozważyć.</p>
+      </div>
 
-      <li>
-        <h3>
-          <strong>Metodę WUKO (czyszczenie ciśnieniowe)</strong> stosujemy, gdy mamy
-          do czynienia z długimi odcinkami rur o średnicach powyżej 75 mm, zlokalizowanych
-          w całości lub częściowo poza budynkami.
-        </h3>
-        <ul>
-          <li>
-            <b>Co to jest WUKO?</b> To czyszczenie rur <strong
-              >wodą pod wysokim ciśnieniem</strong
-            >. Dysze jednocześnie torują drogę i myją ścianki rur.
-          </li>
-          <li>
-            <b>Jak to działa?</b> Pompa tłoczy wodę do elastycznego węża. <strong
-              >Strumienie rozbijają osady, wypłukują zanieczyszczenia</strong
-            >, a brud spływa do studzienki rewizyjnej. Efekt to drożna i czysta
-            rura.
-          </li>
-        </ul>
-      </li>
+      <div class="products-grid">
+        <!-- Gree Amber Prestige -->
+        <article class="product-card">
+          <div class="card-image">
+            <img src="https://montaz-serwis-klimatyzacji.pl/img/klimatyzatory-scienne-gree/gree-amber-prestige-gwh09yd-s6dba2a-indoor.webp" alt="Gree Amber Prestige" loading="lazy" width="467" height="297" />
+            <div class="energy-badge a-plus-plus-plus">A+++</div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Gree Amber Prestige</h3>
+            <div class="card-features-row">
+              <div class="feature-item">+8°C</div>
+              <div class="feature-item">Oszczędny</div>
+              <div class="feature-item">Sprężarka 2-stopniowa</div>
+            </div>
+            <div class="card-specs">
+              <div class="spec-row">
+                <span class="spec-label">Wydajność chłodzenia:</span>
+                <span class="spec-value">2.7 / 3.5 / 5.3 / 7.0 kW</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Wydajność grzania:</span>
+                <span class="spec-value">3.5 / 4.2 / 5.6 / 7.0 kW</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Klasa energet. chłodzenia:</span>
+                <span class="spec-value"><span class="energy-pill">A+++</span></span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Klasa energet. grzania:</span>
+                <span class="spec-value"><span class="energy-pill energy-pill-heating">A+++</span></span>
+              </div>
+            </div>
+            <div class="card-colors">
+              <div class="colors-label">Dostępne kolory:</div>
+              <div class="color-tags">
+                <span class="color-tag">Biały</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="card-price">Od: <span>Zapytaj</span></div>
+              <a href="gree-amber-prestige-3-5kw.html" class="btn-details">
+                Szczegóły
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
 
-      <li>
-        <h3>
-          <strong>Kamerowanie rur</strong> wykonujemy, aby precyzyjnie ustalić przyczynę
-          problemów i zapobiec ich nawrotom.
-        </h3>
-        <ul>
-          <li>
-            <b>W jakich sytuacjach?</b> Gdy powtarzają się zatory, podejrzewa się
-            nieszczelność, wrastanie korzeni albo złe spadki instalacji.
-          </li>
-          <li>
-            <b>Co to daje?</b> Kamera <strong
-              >rejestruje obraz w czasie rzeczywistym</strong
-            >, pozwala wskazać miejsce zatoru czy uszkodzenia. To szybka i
-            bezinwazyjna diagnoza.
-          </li>
-          <li>
-            <b>Jak to działa?</b> Do odpływu wprowadza się przewód z kamerą LED.
-            Obraz trafia na monitor, a hydraulik <strong
-              >dokładnie lokalizuje problem</strong
-            >. Nagranie może służyć jako dokumentacja.
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </article>
+        <!-- Gree Airy -->
+        <article class="product-card">
+          <div class="card-image">
+            <img src="https://montaz-serwis-klimatyzacji.pl/img/klimatyzatory-scienne-gree/klimatyzator-scienny-gree-airy-GWH09AVEXF-K6DNA1A-kolor-grafitowy-indoor.webp" alt="Gree Airy" loading="lazy" width="467" height="297" />
+            <div class="energy-badge a-plus-plus-plus">A+++</div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Gree Airy</h3>
+            <div class="card-features">
+              <div class="feature-item">Wi-Fi</div>
+              <div class="feature-item">Tryb nocny</div>
+              <div class="feature-item">Głos</div>
+              <div class="feature-item">Grzanie</div>
+            </div>
+            <div class="card-specs">
+              <div class="spec-row">
+                <span class="spec-label">Wydajność chłodzenia:</span>
+                <span class="spec-value">2.7 / 3.5 / 5.3 / 7.1 kW</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Wydajność grzania:</span>
+                <span class="spec-value">3.0 / 3.8 / 5.6 / 7.8 kW</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Klasa energet. chłodzenia:</span>
+                <span class="spec-value"><span class="energy-pill">A+++</span></span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Klasa energet. grzania:</span>
+                <span class="spec-value"><span class="energy-pill energy-pill-heating">A++</span></span>
+              </div>
+            </div>
+            <div class="card-colors">
+              <div class="colors-label">Dostępne kolory:</div>
+              <div class="color-tags">
+                <span class="color-tag">Biały</span>
+                <span class="color-tag">Czarny</span>
+                <span class="color-tag">Szampański</span>
+                <span class="color-tag">Szary</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="card-price">Od: <span>Zapytaj</span></div>
+              <a href="klimatyzatory-gree.html" class="btn-details">
+                Szczegóły
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
 
-  <article class="service-card">
-    <p class="lead">
-      Masz problem z zapchaną kanalizacją? Mogę pomóc! Moja firma specjalizuje
-      się w udrażnianiu zatorów z rur kanalizacyjnych za pomocą najlepszych
-      narzędzi i technologii. Nie trać czasu na walkę z zapchaną kanalizacją!
-      Skontaktuj się ze mną <b
-        ><a
-          class="call-inline"
-          href="tel:+48510733300"
-          aria-label="Zadzwoń pod numer 510 733 300">510&nbsp;733&nbsp;300</a
-        ></b
-      >
-    </p>
-  </article>
+        <!-- Gree Cosmo -->
+        <article class="product-card">
+          <div class="card-image">
+            <img src="https://montaz-serwis-klimatyzacji.pl/img/klimatyzatory-scienne-gree/klimatyzator-gree-cosmo-kolor-pearl-indoor.webp" alt="Gree Cosmo" loading="lazy" width="467" height="297" />
+            <div class="energy-badge a-plus-plus-plus">A+++</div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Gree Cosmo</h3>
+            <div class="card-features">
+              <div class="feature-item">Wi-Fi</div>
+              <div class="feature-item">Filtr HEPA</div>
+              <div class="feature-item">Osuszanie</div>
+            </div>
+            <div class="card-specs">
+              <div class="spec-row">
+                <span class="spec-label">Wydajność chłodzenia:</span>
+                <span class="spec-value">2.7 / 3.5 / 5.1 / 7.1 kW</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Wydajność grzania:</span>
+                <span class="spec-value">3.0 / 3.8 / 5.6 / 7.8 kW</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Klasa energet. chłodzenia:</span>
+                <span class="spec-value"><span class="energy-pill">A+++</span></span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Klasa energet. grzania:</span>
+                <span class="spec-value"><span class="energy-pill energy-pill-heating">A++</span></span>
+              </div>
+            </div>
+            <div class="card-colors">
+              <div class="colors-label">Dostępne kolory:</div>
+              <div class="color-tags">
+                <span class="color-tag">Perłowy</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="card-price">Od: <span>Zapytaj</span></div>
+              <a href="klimatyzatory-gree.html" class="btn-details">
+                Szczegóły
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-  <article>
-    <h2>Najczęstsze pytania</h2>
-    <details>
-      <summary>Czy chemia do rur jest bezpieczna?</summary>
-      <p>
-        Środki żrące często tylko przesuwają problem i potrafią uszkodzić
-        elementy instalacji. Preferujemy metody mechaniczne i ciśnieniowe —
-        skuteczne i bezpieczne.
-      </p>
-    </details>
-    <details>
-      <summary>Czy pozostawicie porządek?</summary>
-      <p>
-        Tak. Zabezpieczamy miejsce pracy i sprzątamy po sobie. To standard
-        usługi.
-      </p>
-    </details>
-    <details>
-      <summary>Na jakim obszarze działacie?</summary>
-      <p>
-        Warszawa, Wołomin, Otwock, Wyszków, Góra Kalwaria, Nadarzyn, Pruszków,
-        Jabłonna i poostałe rejony podwarszawskie.
-      </p>
-    </details>
-    <details>
-      <summary
-        >Czy kwas fosforowy z Coca Coli może udrożnić rury gdy woda nie spływa?</summary
-      >
-      <p>
-        W Internecie jest wiele śmiesznych i nieprawdziwych informacji pisanych
-        wyłącznie pod pozycjonowanie stron. Jedną z nich jest fake o
-        przepychaniu rur Colą. Przecież gdyby Coca-Cola była żrąca, tak że
-        rozpuszczałaby zatory w rurach, to nie nadawałaby się do spożycia dla
-        ludzi, bo byłaby trująca.
-      </p>
-    </details>
-  </article>
+  <!-- AREA SELECTOR -->
+  <section class="area-section">
+    <div class="snowflakes" aria-hidden="true">
+      <div class="snowflake">❄</div>
+      <div class="snowflake">❅</div>
+      <div class="snowflake">❆</div>
+      <div class="snowflake">❄</div>
+      <div class="snowflake">❅</div>
+      <div class="snowflake">❆</div>
+      <div class="snowflake">❄</div>
+      <div class="snowflake">❅</div>
+      <div class="snowflake">❆</div>
+      <div class="snowflake">❄</div>
+      <div class="snowflake">❅</div>
+      <div class="snowflake">❆</div>
+      <div class="snowflake">❄</div>
+      <div class="snowflake">❅</div>
+      <div class="snowflake">❆</div>
+      <div class="snowflake">❄</div>
+      <div class="snowflake">❅</div>
+      <div class="snowflake">❆</div>
+      <div class="snowflake">❄</div>
+      <div class="snowflake">❅</div>
+      <div class="snowflake">❆</div>
+      <div class="snowflake">❄</div>
+      <div class="snowflake">❅</div>
+      <div class="snowflake">❆</div>
+      <div class="snowflake">❄</div>
+      <div class="snowflake">❅</div>
+      <div class="snowflake">❆</div>
+      <div class="snowflake">❄</div>
+      <div class="snowflake">❅</div>
+      <div class="snowflake">❆</div>
+    </div>
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">❄️ Dobierz klimatyzator do pomieszczenia</h2>
+        <p class="section-desc">Wybierz powierzchnię, a pokażemy Ci modele o odpowiedniej mocy</p>
+      </div>
+      <div class="area-buttons">
+        <a href="klimatyzatory-do-24m2.html" class="area-btn">do 24 m²</a>
+        <a href="klimatyzatory-25-34m2.html" class="area-btn">25 – 34 m²</a>
+        <a href="klimatyzatory-35-49m2.html" class="area-btn">35 – 49 m²</a>
+        <a href="klimatyzatory-50-80m2.html" class="area-btn">50 – 80 m²</a>
+      </div>
+    </div>
+  </section>
 
-  <article class="service-card">
-    <h2>Awaria kanalizacji: 1,5 tony kociego żwirku w szambie</h2>
-    <p class="clearfix">
-      <img
-        src="img/czy-do-rur-można-wrzucac-koci-piasek-z-kuwety.webp"
-        width="926"
-        height="695"
-        class="img-responsive img-thumbnail img-center"
-        alt="Zasyfonowany pion kanalizacyjny w Falenicy w Warszawie Wawer"
-      />
-      <p>Zdjęcie przedstawia wnętrze zbiornika na szambo, a u góry widoczna jest rura wlotowa prowadząca z łazienki. Przyczyną poważnej awarii było regularne wyrzucanie kociego żwirku do toalety przez klientkę, właścicielkę trzech kotów.</p>
-      <p>Przez dwa lata rury kanalizacyjne oraz sam zbiornik wypełniały się zbitym kocim piaskiem. Zator był tak duży, że po wezwaniu szamboniarki i opróżnieniu zbiornika, okazało się, że usunięto aż 1,5 tony zbrylonego żwirku.</p>
-      <p>Po usunięciu głównej masy zanieczyszczeń przystąpiliśmy do udrażniania zatkanych rur. Zastosowaliśmy ciśnieniową metodę hydrodynamiczną (WUKO), która skutecznie usunęła pozostałości żwirku z instalacji. Dzięki temu woda w rurach znów może swobodnie spływać.</p>
-      <p>Zadowolona klientak, że pozbyła się kłopotu, zapewniła, że po tej kosztownej lekcji, kocie odchody nigdy więcej nie trafią do toalety.</p>
-  </article>
+  <!-- BRANDS -->
+  <section class="brands-section" id="producenci">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Zaufane marki</span>
+        <h2 class="section-title">❄️ Dobierz klimatyzator według marki</h2>
+        <p class="section-desc">5 światowych producentów – współpracujemy wyłącznie ze sprawdzonymi firmami, oferującymi najwyższą jakość i wieloletnią gwarancję</p>
+      </div>
+      <div class="brands-grid">
+        <a href="klimatyzatory-gree.html" class="brand-card" data-brand="gree">
+          <div class="brand-logo">GREE</div>
+          <div class="brand-name">Gree</div>
+          <div class="brand-country">🇨🇳 Chiny</div>
+        </a>
+        <a href="klimatyzatory-lg.html" class="brand-card" data-brand="lg">
+          <div class="brand-logo">LG</div>
+          <div class="brand-name">LG</div>
+          <div class="brand-country">🇰🇷 Korea Płd.</div>
+        </a>
+        <div class="brand-card" data-brand="kaisai">
+          <div class="brand-logo">KAISAI</div>
+          <div class="brand-name">Kaisai</div>
+          <div class="brand-country">🇵🇱 Polska</div>
+        </div>
+        <div class="brand-card" data-brand="mitsubishi">
+          <div class="brand-logo">三菱</div>
+          <div class="brand-name">Mitsubishi</div>
+          <div class="brand-country">🇯🇵 Japonia</div>
+        </div>
+        <div class="brand-card" data-brand="daikin">
+          <div class="brand-logo">DAIKIN</div>
+          <div class="brand-name">Daikin</div>
+          <div class="brand-country">🇯🇵 Japonia</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <article class="service-card">
-    <h2>
-      Udrażnianie Kanalizacji w Falenicy (Warszawa Wawer): autopsja błędu, który
-      zatyka rury
-    </h2>
-    <p class="clearfix">
-      <img
-        src="img/zasyfonowany-pion-kanalizacyjny-w-falenicy.webp"
-        width="926"
-        height="695"
-        class="img-responsive img-thumbnail img-center"
-        alt="Zasyfonowany pion kanalizacyjny w Falenicy w Warszawie Wawer"
-      />
-      <h2>
-        Relacja z terenu: Kiedy instalacja kanalizacyjna staje się pułapką
-      </h2>
+  <!-- WHY US -->
+  <section class="why-section" id="dlaczego-my">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Nasze atuty</span>
+        <h2 class="section-title">Dlaczego my?</h2>
+        <p class="section-desc">Jesteśmy zespołem certyfikowanych specjalistów z wieloletnim doświadczeniem</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">🛡️</div>
+          <h3>Do 7 lat gwarancji</h3>
+          <p>Oferujemy rozszerzoną gwarancję na wszystkie instalacje wykonane przez nasz zespół</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">⚡</div>
+          <h3>Montaż w 48h</h3>
+          <p>Szybka realizacja zamówień – od wyceny do działającej klimatyzacji w 2 dni</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">👨‍🔧</div>
+          <h3>Certyfikowani monterzy</h3>
+          <p>Nasi technicy posiadają certyfikaty F-GAZ oraz szkolenia producentów</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">💰</div>
+          <h3>Uczciwe ceny</h3>
+          <p>Transparentna wycena bez ukrytych kosztów. Płacisz tylko za to, co zamawiasz</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <p>
-        Jako firma specjalizująca się w udrażnianiu kanalizacji i czyszczeniu
-        rur w Warszawie, w tym w dzielnicy Wawer (Falenica), widzieliśmy już
-        niemal wszystko. Jednak niektóre przypadki, jak ten ze zdjęcia,
-        zasługują na szczególną uwagę. To nie jest zwykłe zapchanie tłuszczem
-        czy włosami. To podręcznikowy przykład błędu montażowego, który
-        gwarantuje ciągłe problemy i regularne wezwania fachowców do
-        przepychania pionów kanalizacyjnych.
-      </p>
+  <!-- STEPS -->
+  <section class="steps-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Proces</span>
+        <h2 class="section-title">Jak działamy?</h2>
+        <p class="section-desc">Trzy proste kroki do komfortowego klimatu w Twoim domu</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <span class="step-number">1</span>
+          <div class="step-icon">📞</div>
+          <h3>Bezpłatna wycena</h3>
+          <p>Skontaktuj się z nami telefonicznie lub przez formularz. Doradzimy i wycenimy montaż za darmo.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-number">2</span>
+          <div class="step-icon">🔧</div>
+          <h3>Profesjonalny montaż</h3>
+          <p>Nasi certyfikowani technicy zainstalują klimatyzację w uzgodnionym terminie, szybko i czysto.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-number">3</span>
+          <div class="step-icon">❄️</div>
+          <h3>Ciesz się komfortem</h3>
+          <p>Otrzymujesz do 7 lat gwarancji i wsparcie serwisowe. Klimatyzacja działa bezbłędnie przez lata.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <p>
-        Zdjęcie pochodzi z piwnicy w Falenicy i jest najlepszą odpowiedzią na
-        pytanie:
-        <strong
-          >„Czy zgodnie z Polską Normą może być tak wykonany pion
-          kanalizacyjny?”</strong
-        >
-      </p>
+  <!-- CONTACT -->
+  <section class="contact-section" id="kontakt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Kontakt</span>
+        <h2 class="section-title">Zamów darmową wycenę</h2>
+        <p class="section-desc">Zadzwoń – odpowiemy w ciągu 2 godzin w dni robocze</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Skontaktuj się z nami</h3>
+          <p>Jesteśmy do Twojej dyspozycji od poniedziałku do piątku w godzinach 8:00–18:00 oraz w soboty 9:00–14:00.</p>
 
-      <p><strong>Odpowiedź jest krótka: NIE.</strong></p>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <strong><a href="tel:+48888806921">+48 888 806 921</a></strong>
+              <span>Zadzwoń – doradzamy bezpłatnie</span>
+            </div>
+          </div>
 
-      <h2>Zasyfonowanie Pionów Kanalizacyjnych – Błąd, Który Musi Zatykać</h2>
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <strong><a href="mailto:mskplxk@gmail.com">mskplxk@gmail.com</a></strong>
+              <span>Napisz do nas</span>
+            </div>
+          </div>
 
-      <p>
-        Głównym i najbardziej rażącym błędem widocznym na zdjęciu jest
-        zasyfonowanie pionu kanalizacyjnego. Pion, czyli główna rura spustowa,
-        został zakończony kolanami 90 stopni tworzącymi syfon (kształt litery
-        „U”) tuż przed podłączeniem do odpływu.
-      </p>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <strong>Warszawa i okolice</strong>
+              <span>Dojazd do 50 km gratis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <h3>Dlaczego to jest katastrofa techniczna?</h3>
-
-      <ul>
-        <li>
-          <strong>Blokada przepływu:</strong> syfon zatrzymuje wodę i tworzy barierę,
-          której nie powinno być w pionie kanalizacyjnym. Spowalnia to spływ ścieków
-          z całego budynku.
-        </li>
-        <li>
-          <strong>Samo-zapychanie:</strong> woda stojąca w syfonie staje się miejscem
-          odkładania osadów, tłuszczu i stałych zanieczyszczeń — co prowadzi do szybkich
-          i regularnych zatorów.
-        </li>
-        <li>
-          <strong>Brak wentylacji:</strong> ostre kolana i zasyfonowanie zakłócają
-          wentylację instalacji. Powstające podciśnienie może wysysać wodę z syfonów
-          urządzeń sanitarnych na wyższych kondygnacjach, powodując nieprzyjemny
-          zapach w mieszkaniach.
-        </li>
-      </ul>
-
-      <h2>Co mówi Polska Norma? Prawidłowe wykonanie instalacji</h2>
-
-      <p>
-        Prawidłowe wykonanie instalacji kanalizacyjnej określa
-        <strong>PN-EN 12056-2:2002</strong> oraz
-        <strong>§ 122 Rozporządzenia Ministra Infrastruktury</strong>
-        w sprawie warunków technicznych.
-      </p>
-
-      <ul>
-        <li>Pion musi być prowadzony pionowo.</li>
-        <li>
-          Połączenie z poziomym przewodem powinno być wykonane łagodnymi łukami
-          (np. 2 × 45°).
-        </li>
-        <li>
-          Pion <strong>nie może być zasyfonowany</strong> — jest to błąd projektowy
-          i wykonawczy.
-        </li>
-        <li>
-          Należy zapewnić dostęp do czyszczenia (rewizje) w kluczowych
-          miejscach.
-        </li>
-      </ul>
-
-      <h2>Szukasz usługi udrażniania w Warszawie Wawer?</h2>
-
-      <p>
-        Jeżeli Twoja instalacja wygląda podobnie, albo zmagasz się z ciągle
-        zapychającą się kanalizacją w Falenicy, nie czekaj na kolejną awarię.
-        Nasza praca to nie tylko przepychanie rur — to diagnoza przyczyn i ich
-        trwała eliminacja.
-      </p>
-
-      <h2>Co mówią przepisy na temat budowy pionów kanalizacyjnych</h2>
-
-      <ul>
-        <li>
-          <strong>
-            <a
-              href="https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20020750690"
-              target="_blank"
-              rel="noopener"
-            >
-              Rozporządzenie Ministra Infrastruktury – § 122
-            </a>
-          </strong><br />
-          Akt prawny obligujący do stosowania Polskich Norm.
-        </li>
-        <li>
-          <strong>
-            <a
-              href="https://www.scribd.com/document/797509025/PN-en-12056-2-Systemy-Kanalizacji-Grawitacyjnej-Wewn%C4%85trz-Budynkow-Cz%C4%99%C5%9B%C4%87-2-Kanalizacja-Sanitarna"
-              target="_blank"
-              rel="noopener"
-            >
-              PN-EN 12056-2:2002
-            </a>
-          </strong><br />
-          Systemy kanalizacji grawitacyjnej wewnątrz budynków – zasady projektowania,
-          w tym zakaz zasyfonowania pionów.
-        </li>
-      </ul>
-    </p>
-  </article>  
-
-    <PoradnikSection />
-    <OpinionsSection />
-    <KameraSection />
-
-    <article class="cta-call">
-      <h2 class="cta-title">Masz zator? <strong>Zadzwoń teraz</strong></h2>
-      <p class="cta-desc">
-        <b
-          >Na miejscu szybko ocenię sytuację i dobiorę właściwą metodę. Pracuję
-          czysto i skutecznie. TEST 12</b
-        >
-      </p>
-
-      <a
-        class="cta-btn"
-        href="tel:+48510733300"
-        aria-label="Zadzwoń 510 733 300"
-      >
-        <span class="cta-btn-icon" aria-hidden="true">📞</span>
-        <span>510&nbsp;733&nbsp;300</span>
-      </a>
-    </article>
-  </article>
+  <script is:inline>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
 </Default>
->>>>>>> 2abe60c4e209b2913fe1118f5f7e15cc8b38f3c1

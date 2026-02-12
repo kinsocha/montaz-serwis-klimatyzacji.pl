@@ -1,9 +1,6 @@
 # build output
 dist/
-<<<<<<< HEAD
 
-=======
->>>>>>> 2abe60c4e209b2913fe1118f5f7e15cc8b38f3c1
 # generated types
 .astro/
 
@@ -16,10 +13,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 2abe60c4e209b2913fe1118f5f7e15cc8b38f3c1
 # environment variables
 .env
 .env.production
@@ -29,8 +22,19 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
-<<<<<<< HEAD
-=======
 
-node_modules
->>>>>>> 2abe60c4e209b2913fe1118f5f7e15cc8b38f3c1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

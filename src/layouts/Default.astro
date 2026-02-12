@@ -14,13 +14,8 @@ interface Props {
 
 const nameMap: Record<string, string> = {
   "/": "Strona główna",
-  "/udraznianie-kanalizacji-warszawa": "Udrażnianie kanalizacji Warszawa",
-  "/udraznianie-zlewu": "Udrażnianie zlewu",
-  "/udraznianie-toalety": "Udrażnianie WC",
-  "/hydraulik-warszawa": "Usługi hydrauliczne",
-  "/hydraulik-brodno": "Hydraulik Bródno",
-  "/blog-index": "Poradnik",
-  "/blog/jak-udroznic-zatkany-zlew": "Jak udrożnić zatkany zlew?",
+  "/kontakt": "Kontakt",
+  "/opinie": "Opinie",
 };
 
 const { title, description, keywords, canonical } = Astro.props;
@@ -37,25 +32,11 @@ const settings = await getEntry("settings", "settings");
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="theme-color" content="#f4f200" />
+    <meta name="theme-color" content="#1a73e8" />
     <title>{title}</title>
 
     {canonical && <link rel="canonical" href={canonical} />}
 
-    <link href="/css/styles.css" rel="stylesheet" />
-    <link href="/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="/css/articles-styles-simple.css" rel="stylesheet" />
-
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-      crossorigin=""
-    />
-    <script
-      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-      crossorigin=""
-      defer
-      is:inline></script>
 
     <slot name="head" />
 
@@ -78,7 +59,7 @@ const settings = await getEntry("settings", "settings");
         <div class="row">
           <div class="col-md-4 layout-left position-sticky">
             <div class="company-name">
-              <a href="/">Udrażnianie kanalizacji Warszawa i okolice</a>
+              <a href="/">Zamontuj Klimat – Montaż i Serwis Klimatyzacji</a>
             </div>
             <div
               class="logo"
@@ -91,10 +72,10 @@ const settings = await getEntry("settings", "settings");
               <a
                 href={`tel:+48${settings.data.phone}`}
                 class="phone-link"
-                aria-label={`Awaria? Zadzwoń ${settings.data.phone}`}
+                aria-label={`Zadzwoń ${settings.data.phone}`}
               >
                 <span class="sr-only"
-                  >Awaria? Zadzwoń {settings.data.phone}</span
+                  >Zadzwoń {settings.data.phone}</span
                 >
               </a>
             </div>
