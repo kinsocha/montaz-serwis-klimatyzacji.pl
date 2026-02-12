@@ -1,0 +1,605 @@
+---
+import Default from "@layouts/Default.astro";
+
+const title = "Klimatyzacja Warszawa – Montaż od 2800 zł | Zamontuj Klimat";
+const description =
+  "Szukasz klimatyzacji w Warszawie? Montaż w 48h, do 7 lat gwarancji, certyfikowani monterzy F-GAZ. Gree, LG, Kaisai, Mitsubishi, Daikin. Bezpłatna wycena: 888 806 921.";
+const keywords =
+  "klimatyzacja Warszawa, montaż klimatyzacji Warszawa, klimatyzacja do domu Warszawa, klimatyzacja do mieszkania Warszawa, serwis klimatyzacji Warszawa, klimatyzator ścienny Warszawa";
+const canonical = "https://montaz-serwis-klimatyzacji.pl/klimatyzacja-warszawa";
+---
+
+<Default
+  title={title}
+  description={description}
+  keywords={keywords}
+  canonical={canonical}
+>
+  <Fragment slot="head">
+    <meta property="og:title" content="Klimatyzacja Warszawa – Montaż i Serwis | Zamontuj Klimat" />
+    <meta property="og:description" content="Profesjonalny montaż klimatyzacji w Warszawie. Certyfikowani monterzy, do 7 lat gwarancji. Zadzwoń: 888 806 921." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pl_PL" />
+    <style>
+      .subpage-hero {
+        background: linear-gradient(135deg, #e8f4fd 0%, #f0f7ff 50%, #e1effc 100%);
+        padding: 5rem 0 3rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .subpage-hero::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba(26,115,232,0.06) 0%, transparent 70%);
+        border-radius: 50%;
+      }
+      .subpage-hero .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        position: relative;
+      }
+      .breadcrumb {
+        font-size: 0.9rem;
+        color: #64748b;
+        margin-bottom: 1.5rem;
+      }
+      .breadcrumb a {
+        color: #1a73e8;
+        text-decoration: none;
+      }
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+      .subpage-hero h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2rem, 5vw, 3rem);
+        color: #0f172a;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+      }
+      .subpage-hero h1 span {
+        color: #1a73e8;
+      }
+      .subpage-hero .hero-lead {
+        font-size: 1.15rem;
+        color: #475569;
+        line-height: 1.7;
+        max-width: 700px;
+      }
+      .hero-cta-row {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+      }
+      .hero-cta-row a {
+        text-decoration: none;
+      }
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #1a73e8;
+        color: #fff;
+        padding: 0.9rem 2rem;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: background 0.2s;
+      }
+      .btn-primary:hover {
+        background: #1557b0;
+      }
+      .btn-outline {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #fff;
+        color: #1a73e8;
+        padding: 0.9rem 2rem;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1rem;
+        border: 2px solid #1a73e8;
+        transition: all 0.2s;
+      }
+      .btn-outline:hover {
+        background: #1a73e8;
+        color: #fff;
+      }
+
+      /* Content sections */
+      .content-section {
+        padding: 4rem 0;
+      }
+      .content-section .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+      .content-section h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        color: #0f172a;
+        margin-bottom: 1rem;
+      }
+      .content-section h3 {
+        font-size: 1.3rem;
+        color: #0f172a;
+        margin: 2rem 0 0.8rem;
+      }
+      .content-section p {
+        color: #475569;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+        font-size: 1.05rem;
+      }
+      .content-section ul {
+        list-style: none;
+        padding: 0;
+        margin: 1rem 0 1.5rem;
+      }
+      .content-section ul li {
+        padding: 0.5rem 0 0.5rem 1.8rem;
+        position: relative;
+        color: #475569;
+        line-height: 1.6;
+      }
+      .content-section ul li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: #1a73e8;
+        font-weight: 700;
+      }
+      .content-alt {
+        background: #f8fafc;
+      }
+
+      /* Info boxes */
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+      .info-box {
+        background: #fff;
+        border-radius: 16px;
+        padding: 1.8rem;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        border: 1px solid #e2e8f0;
+      }
+      .info-box .icon {
+        font-size: 2rem;
+        margin-bottom: 0.8rem;
+      }
+      .info-box h3 {
+        margin: 0 0 0.5rem;
+        font-size: 1.15rem;
+      }
+      .info-box p {
+        font-size: 0.95rem;
+        margin: 0;
+      }
+
+      /* Price table */
+      .price-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0 2rem;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      }
+      .price-table th {
+        background: #1a73e8;
+        color: #fff;
+        padding: 1rem 1.2rem;
+        text-align: left;
+        font-weight: 600;
+      }
+      .price-table td {
+        padding: 0.9rem 1.2rem;
+        border-bottom: 1px solid #e2e8f0;
+        color: #334155;
+      }
+      .price-table tr:nth-child(even) {
+        background: #f8fafc;
+      }
+      .price-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      /* FAQ */
+      .faq-section {
+        padding: 4rem 0;
+        background: #f8fafc;
+      }
+      .faq-section .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+      .faq-section h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        color: #0f172a;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+      .faq-item {
+        background: #fff;
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+        border: 1px solid #e2e8f0;
+      }
+      .faq-item h3 {
+        font-size: 1.1rem;
+        color: #0f172a;
+        margin: 0 0 0.6rem;
+        cursor: pointer;
+      }
+      .faq-item p {
+        color: #475569;
+        line-height: 1.7;
+        margin: 0;
+        font-size: 0.98rem;
+      }
+
+      /* CTA bottom */
+      .cta-bottom {
+        background: linear-gradient(135deg, #1a73e8 0%, #1557b0 100%);
+        padding: 4rem 0;
+        text-align: center;
+        color: #fff;
+      }
+      .cta-bottom .container {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+      .cta-bottom h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #fff;
+      }
+      .cta-bottom p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        margin-bottom: 2rem;
+        color: #fff;
+      }
+      .cta-bottom .btn-white {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #fff;
+        color: #1a73e8;
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 1.1rem;
+        text-decoration: none;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .cta-bottom .btn-white:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      }
+
+      /* Districts grid */
+      .districts-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin: 1.5rem 0;
+      }
+      .districts-grid span {
+        background: #e8f4fd;
+        color: #1a73e8;
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+
+      @media (max-width: 768px) {
+        .subpage-hero {
+          padding: 3rem 0 2rem;
+        }
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+        .price-table {
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </Fragment>
+
+  <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Montaż klimatyzacji Warszawa",
+      "description": "Profesjonalny montaż i serwis klimatyzacji w Warszawie. Klimatyzatory ścienne Gree, LG, Kaisai, Mitsubishi, Daikin. Certyfikowani monterzy F-GAZ.",
+      "url": "https://montaz-serwis-klimatyzacji.pl/klimatyzacja-warszawa",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Zamontuj Klimat",
+        "telephone": "+48 888 806 921",
+        "email": "mskplxk@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Warszawa",
+          "addressCountry": "PL"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 52.2297,
+          "longitude": 21.0122
+        }
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Warszawa"
+      },
+      "serviceType": ["Montaż klimatyzacji", "Serwis klimatyzacji", "Sprzedaż klimatyzatorów"]
+    }
+  </script>
+
+  <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Ile kosztuje montaż klimatyzacji w Warszawie?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Koszt montażu klimatyzacji w Warszawie zaczyna się od ok. 1200 zł za instalację jednego urządzenia typu split. Cena zależy od długości trasy freonowej, konieczności kucia ścian i lokalizacji jednostki zewnętrznej. Bezpłatną wycenę można uzyskać pod numerem 888 806 921."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jak długo trwa montaż klimatyzacji?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standardowy montaż klimatyzacji typu split trwa od 4 do 8 godzin. Czas zależy od warunków technicznych – grubości ścian, odległości między jednostkami i dostępu do instalacji elektrycznej. Montaż wykonujemy zwykle w ciągu 48 godzin od wyceny."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy klimatyzacja może też grzać mieszkanie?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tak, większość współczesnych klimatyzatorów typu split to pompy ciepła, które działają w obu kierunkach. Modele takie jak Gree Amber Prestige grzeją efektywnie nawet przy temperaturze zewnętrznej -22°C, co czyni je ekonomicznym uzupełnieniem ogrzewania."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jaka moc klimatyzatora do mieszkania w Warszawie?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Orientacyjnie: do 24 m² wystarczy 2,5–3,5 kW, na 25–34 m² potrzeba 3,5–5,0 kW, a na 35–50 m² warto wybrać 5,0–7,0 kW. Na dokładny dobór wpływa też piętro, nasłonecznienie, izolacja i liczba okien. Doradzimy bezpłatnie."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy potrzebne są pozwolenia na montaż klimatyzacji w bloku?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "W większości przypadków wystarczy zgoda spółdzielni lub wspólnoty mieszkaniowej na zamontowanie jednostki zewnętrznej. Pozwolenie na budowę nie jest wymagane. Pomagamy w przygotowaniu wniosku do zarządcy budynku."
+          }
+        }
+      ]
+    }
+  </script>
+
+  <!-- HERO -->
+  <section class="subpage-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Strona główna</a> › <strong>Klimatyzacja Warszawa</strong>
+      </nav>
+      <h1>Klimatyzacja <span>Warszawa</span> – montaż i serwis</h1>
+      <p class="hero-lead">
+        Montujemy klimatyzacje w domach i mieszkaniach na terenie całej Warszawy. Dobieramy urządzenie do Twojego wnętrza, instalujemy w ciągu 48 godzin i zapewniamy do 7 lat gwarancji. Współpracujemy z markami Gree, LG, Kaisai, Mitsubishi i Daikin.
+      </p>
+      <div class="hero-cta-row">
+        <a href="tel:+48888806921" class="btn-primary">📞 Zadzwoń: 888 806 921</a>
+        <a href="/#klimatyzatory" class="btn-outline">Zobacz klimatyzatory</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dlaczego warto -->
+  <section class="content-section">
+    <div class="container">
+      <h2>Dlaczego warto zamontować klimatyzację w Warszawie?</h2>
+      <p>
+        Warszawskie lata bywają upalne — temperatury powyżej 30°C utrzymują się przez kilka tygodni, a nagrzane betonowe budynki oddają ciepło jeszcze nocą. Klimatyzacja to nie luksus, lecz inwestycja w komfort i zdrowie całej rodziny.
+      </p>
+      <p>
+        Nowoczesne klimatyzatory typu split to również pompy ciepła. Oznacza to, że zimą mogą dogrzewać mieszkanie znacznie taniej niż tradycyjne grzejniki elektryczne. Model Gree Amber Prestige pracuje przy temperaturze zewnętrznej nawet do -22°C.
+      </p>
+
+      <div class="info-grid">
+        <div class="info-box">
+          <div class="icon">🌡️</div>
+          <h3>Chłodzenie latem</h3>
+          <p>Przyjemna temperatura nawet w najgorętsze dni. Klimatyzator schłodzi pokój 25 m² w kilkanaście minut.</p>
+        </div>
+        <div class="info-box">
+          <div class="icon">🔥</div>
+          <h3>Ogrzewanie zimą</h3>
+          <p>Pompa ciepła zużywa 3–4× mniej prądu niż grzejnik elektryczny o tej samej mocy grzewczej.</p>
+        </div>
+        <div class="info-box">
+          <div class="icon">💨</div>
+          <h3>Filtracja powietrza</h3>
+          <p>Filtry HEPA i jonizacja usuwają kurz, pyłki i alergeny — istotne przy warszawskim smogu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ile kosztuje -->
+  <section class="content-section content-alt">
+    <div class="container">
+      <h2>Ile kosztuje klimatyzacja w Warszawie?</h2>
+      <p>
+        Koszt instalacji klimatyzacji zależy od modelu urządzenia, długości trasy freonowej i warunków technicznych w budynku. Poniżej orientacyjne ceny montażu jednego zestawu split (jednostka wewnętrzna + zewnętrzna) z uruchomieniem:
+      </p>
+
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>Powierzchnia</th>
+            <th>Moc</th>
+            <th>Montaż od</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>do 24 m²</td>
+            <td>2,5 – 3,5 kW</td>
+            <td>od 1 200 zł</td>
+          </tr>
+          <tr>
+            <td>25 – 34 m²</td>
+            <td>3,5 – 5,0 kW</td>
+            <td>od 1 400 zł</td>
+          </tr>
+          <tr>
+            <td>35 – 49 m²</td>
+            <td>5,0 – 7,0 kW</td>
+            <td>od 1 600 zł</td>
+          </tr>
+          <tr>
+            <td>50 – 80 m²</td>
+            <td>7,0 – 8,0 kW</td>
+            <td>od 1 800 zł</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        Ceny dotyczą samego montażu — urządzenie wyceniamy osobno, w zależności od wybranego modelu i marki. Wycena jest bezpłatna i niezobowiązująca. Zadzwoń pod <a href="tel:+48888806921" style="color:#1a73e8; text-decoration:none; font-weight:600;">888 806 921</a> — doradzimy, który klimatyzator sprawdzi się u Ciebie najlepiej.
+      </p>
+    </div>
+  </section>
+
+  <!-- Jak pracujemy -->
+  <section class="content-section">
+    <div class="container">
+      <h2>Jak wygląda montaż klimatyzacji?</h2>
+      <p>Cały proces — od kontaktu do działającej klimatyzacji — zamykamy zwykle w 2–3 dniach roboczych:</p>
+
+      <h3>1. Bezpłatna wycena</h3>
+      <p>
+        Po Twoim telefonie umawiamy się na wizytę lub wykonujemy wycenę zdalnie na podstawie zdjęć i planu mieszkania. Doradzamy optymalny model i moc urządzenia, uwzględniając metraż, ekspozycję okien i układ pomieszczeń.
+      </p>
+
+      <h3>2. Montaż</h3>
+      <p>
+        Nasi monterzy posiadają certyfikaty F-GAZ i przeszkolenia producentów. Instalacja jednego zestawu split trwa 4–8 godzin. Dbamy o czystość — zabezpieczamy podłogi i meble, a po montażu sprzątamy.
+      </p>
+
+      <h3>3. Uruchomienie i gwarancja</h3>
+      <p>
+        Po instalacji wykonujemy próżnię, napełniamy układ czynnikiem chłodniczym i testujemy urządzenie we wszystkich trybach. Otrzymujesz gwarancję producenta (2–5 lat) oraz naszą gwarancję na montaż — łącznie do 7 lat ochrony.
+      </p>
+    </div>
+  </section>
+
+  <!-- Dzielnice -->
+  <section class="content-section content-alt">
+    <div class="container">
+      <h2>Montaż klimatyzacji we wszystkich dzielnicach Warszawy</h2>
+      <p>Obsługujemy całą Warszawę oraz okolice w promieniu 50 km. Dojeżdżamy do klientów w każdej dzielnicy:</p>
+
+      <div class="districts-grid">
+        <span>Mokotów</span>
+        <span>Ursynów</span>
+        <span>Wola</span>
+        <span>Praga Południe</span>
+        <span>Praga Północ</span>
+        <span>Bielany</span>
+        <span>Bemowo</span>
+        <span>Żoliborz</span>
+        <span>Ochota</span>
+        <span>Śródmieście</span>
+        <span>Targówek</span>
+        <span>Białołęka</span>
+        <span>Wilanów</span>
+        <span>Wawer</span>
+        <span>Rembertów</span>
+        <span>Wesoła</span>
+        <span>Ursus</span>
+        <span>Włochy</span>
+      </div>
+
+      <p>
+        Realizujemy również zlecenia w okolicznych miejscowościach: Piaseczno, Pruszków, Grodzisk Mazowiecki, Legionowo, Wołomin, Otwock, Marki, Ząbki, Józefów, Konstancin-Jeziorna, Łomianki i Kobyłka. Dojazd w promieniu 50 km od centrum Warszawy jest wliczony w cenę montażu.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container">
+      <h2>Najczęściej zadawane pytania</h2>
+
+      <div class="faq-item">
+        <h3>Ile kosztuje montaż klimatyzacji w Warszawie?</h3>
+        <p>Koszt montażu jednego zestawu split zaczyna się od ok. 1200 zł. Ostateczna cena zależy od długości trasy freonowej, konieczności kucia ścian i lokalizacji jednostki zewnętrznej. Wycena jest bezpłatna — wystarczy zadzwonić pod 888 806 921.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Jak długo trwa montaż klimatyzacji?</h3>
+        <p>Standardowy montaż jednego zestawu split trwa 4–8 godzin. Od momentu wyceny do uruchomienia klimatyzacji mija zwykle 2–3 dni roboczych. W sezonie letnim termin może być dłuższy, dlatego warto zamawiać montaż wiosną.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Czy klimatyzacja może grzać mieszkanie zimą?</h3>
+        <p>Tak. Współczesne klimatyzatory typu split to pompy ciepła pracujące w obu kierunkach. Modele takie jak Gree Amber Prestige grzeją efektywnie nawet przy -22°C na zewnątrz. Jedna kilowatogodzina prądu daje 3–4 kWh ciepła, co jest znacznie tańsze niż grzejnik elektryczny.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Jaką moc klimatyzatora wybrać do mieszkania?</h3>
+        <p>Orientacyjnie: do pokoju 20 m² wystarczy 2,5 kW, do salonu 30 m² — ok. 3,5 kW, a do przestrzeni 40–50 m² — 5,0–7,0 kW. Na dokładny dobór wpływa piętro, nasłonecznienie, izolacja termiczna i liczba okien. Bezpłatnie doradzamy optymalną moc.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Czy potrzebuję pozwolenia na montaż w bloku?</h3>
+        <p>Pozwolenie na budowę nie jest wymagane. Zwykle wystarczy zgoda spółdzielni lub wspólnoty mieszkaniowej na zamontowanie jednostki zewnętrznej na elewacji lub balkonie. Pomagamy w przygotowaniu wniosku do zarządcy budynku.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Jak często trzeba serwisować klimatyzację?</h3>
+        <p>Zalecamy serwis co 12 miesięcy — najlepiej wiosną, przed sezonem chłodzenia. Przegląd obejmuje czyszczenie filtrów, dezynfekcję parownika, sprawdzenie ciśnienia czynnika i kontrolę elektroniki. Koszt przeglądu to ok. 250–400 zł.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Bottom -->
+  <section class="cta-bottom">
+    <div class="container">
+      <h2>Zamów klimatyzację w Warszawie</h2>
+      <p>Bezpłatna wycena, montaż w 48h, do 7 lat gwarancji. Zadzwoń i umów się na wycenę.</p>
+      <a href="tel:+48888806921" class="btn-white">📞 888 806 921</a>
+    </div>
+  </section>
+
+</Default>
