@@ -20,7 +20,9 @@ const canonical = "https://montaz-serwis-klimatyzacji.pl/klimatyzacja-warszawa";
     <meta property="og:description" content="Profesjonalny montaż klimatyzacji w Warszawie. Certyfikowani monterzy, do 7 lat gwarancji. Zadzwoń: 888 806 921." />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pl_PL" />
+    <link rel="preload" href="https://montaz-serwis-klimatyzacji.pl/img/balwanek.webp" as="image" />
     <style>
+      /* HERO - like index */
       .subpage-hero {
         background: linear-gradient(135deg, #e8f4fd 0%, #f0f7ff 50%, #e1effc 100%);
         padding: 5rem 0 3rem;
@@ -38,7 +40,7 @@ const canonical = "https://montaz-serwis-klimatyzacji.pl/klimatyzacja-warszawa";
         border-radius: 50%;
       }
       .subpage-hero .container {
-        max-width: 900px;
+        max-width: 1100px;
         margin: 0 auto;
         padding: 0 1.5rem;
         position: relative;
@@ -55,6 +57,12 @@ const canonical = "https://montaz-serwis-klimatyzacji.pl/klimatyzacja-warszawa";
       .breadcrumb a:hover {
         text-decoration: underline;
       }
+      .subpage-hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
       .subpage-hero h1 {
         font-family: 'Playfair Display', serif;
         font-size: clamp(2rem, 5vw, 3rem);
@@ -66,10 +74,9 @@ const canonical = "https://montaz-serwis-klimatyzacji.pl/klimatyzacja-warszawa";
         color: #1a73e8;
       }
       .subpage-hero .hero-lead {
-        font-size: 1.15rem;
+        font-size: 1.1rem;
         color: #475569;
         line-height: 1.7;
-        max-width: 700px;
       }
       .hero-cta-row {
         display: flex;
@@ -112,6 +119,54 @@ const canonical = "https://montaz-serwis-klimatyzacji.pl/klimatyzacja-warszawa";
         background: #1a73e8;
         color: #fff;
       }
+      .subpage-hero-image {
+        position: relative;
+      }
+      .subpage-hero-image-inner {
+        position: relative;
+        background: rgba(255,255,255,0.6);
+        border-radius: 24px;
+        padding: 1.5rem;
+        box-shadow: 0 8px 32px rgba(26,115,232,0.1);
+        overflow: hidden;
+      }
+      .subpage-hero-image-inner img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 16px;
+      }
+      .subpage-hero-snow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 2;
+      }
+      .subpage-hero-snow .sf {
+        position: absolute;
+        top: -20px;
+        color: rgba(26,115,232,0.3);
+        animation: subSnowfall linear infinite;
+        font-size: 1rem;
+      }
+      .subpage-hero-snow .sf:nth-child(1)  { left: 5%;  animation-duration: 6s;  animation-delay: 0s;   font-size: 0.8rem; }
+      .subpage-hero-snow .sf:nth-child(2)  { left: 15%; animation-duration: 8s;  animation-delay: 1s;   font-size: 1.2rem; }
+      .subpage-hero-snow .sf:nth-child(3)  { left: 25%; animation-duration: 7s;  animation-delay: 0.5s; font-size: 0.9rem; }
+      .subpage-hero-snow .sf:nth-child(4)  { left: 35%; animation-duration: 9s;  animation-delay: 2s;   font-size: 1rem; }
+      .subpage-hero-snow .sf:nth-child(5)  { left: 45%; animation-duration: 6.5s;animation-delay: 1.5s; font-size: 1.1rem; }
+      .subpage-hero-snow .sf:nth-child(6)  { left: 55%; animation-duration: 7.5s;animation-delay: 0.8s; font-size: 0.7rem; }
+      .subpage-hero-snow .sf:nth-child(7)  { left: 65%; animation-duration: 8.5s;animation-delay: 2.5s; font-size: 1.3rem; }
+      .subpage-hero-snow .sf:nth-child(8)  { left: 75%; animation-duration: 6s;  animation-delay: 1.2s; font-size: 0.9rem; }
+      .subpage-hero-snow .sf:nth-child(9)  { left: 85%; animation-duration: 7s;  animation-delay: 0.3s; font-size: 1rem; }
+      .subpage-hero-snow .sf:nth-child(10) { left: 92%; animation-duration: 9s;  animation-delay: 1.8s; font-size: 0.8rem; }
+      @keyframes subSnowfall {
+        0%   { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+        100% { transform: translateY(450px) rotate(360deg); opacity: 0.2; }
+      }
 
       /* Content sections */
       .content-section {
@@ -138,24 +193,6 @@ const canonical = "https://montaz-serwis-klimatyzacji.pl/klimatyzacja-warszawa";
         line-height: 1.8;
         margin-bottom: 1rem;
         font-size: 1.05rem;
-      }
-      .content-section ul {
-        list-style: none;
-        padding: 0;
-        margin: 1rem 0 1.5rem;
-      }
-      .content-section ul li {
-        padding: 0.5rem 0 0.5rem 1.8rem;
-        position: relative;
-        color: #475569;
-        line-height: 1.6;
-      }
-      .content-section ul li::before {
-        content: '✓';
-        position: absolute;
-        left: 0;
-        color: #1a73e8;
-        font-weight: 700;
       }
       .content-alt {
         background: #f8fafc;
@@ -245,7 +282,6 @@ const canonical = "https://montaz-serwis-klimatyzacji.pl/klimatyzacja-warszawa";
         font-size: 1.1rem;
         color: #0f172a;
         margin: 0 0 0.6rem;
-        cursor: pointer;
       }
       .faq-item p {
         color: #475569;
@@ -315,6 +351,9 @@ const canonical = "https://montaz-serwis-klimatyzacji.pl/klimatyzacja-warszawa";
       @media (max-width: 768px) {
         .subpage-hero {
           padding: 3rem 0 2rem;
+        }
+        .subpage-hero-grid {
+          grid-template-columns: 1fr;
         }
         .info-grid {
           grid-template-columns: 1fr;
@@ -412,13 +451,34 @@ const canonical = "https://montaz-serwis-klimatyzacji.pl/klimatyzacja-warszawa";
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="/">Strona główna</a> › <strong>Klimatyzacja Warszawa</strong>
       </nav>
-      <h1>Klimatyzacja <span>Warszawa</span> – montaż i serwis</h1>
-      <p class="hero-lead">
-        Montujemy klimatyzacje w domach i mieszkaniach na terenie całej Warszawy. Dobieramy urządzenie do Twojego wnętrza, instalujemy w ciągu 48 godzin i zapewniamy do 7 lat gwarancji. Współpracujemy z markami Gree, LG, Kaisai, Mitsubishi i Daikin.
-      </p>
-      <div class="hero-cta-row">
-        <a href="tel:+48888806921" class="btn-primary">📞 Zadzwoń: 888 806 921</a>
-        <a href="/#klimatyzatory" class="btn-outline">Zobacz klimatyzatory</a>
+      <div class="subpage-hero-grid">
+        <div class="subpage-hero-content">
+          <h1>Klimatyzacja <span>Warszawa</span> – montaż i serwis</h1>
+          <p class="hero-lead">
+            Montujemy klimatyzacje w domach i mieszkaniach na terenie całej Warszawy. Dobieramy urządzenie do Twojego wnętrza, instalujemy w ciągu 48 godzin i zapewniamy do 7 lat gwarancji.
+          </p>
+          <div class="hero-cta-row">
+            <a href="tel:+48888806921" class="btn-primary">📞 Zadzwoń: 888 806 921</a>
+            <a href="/#klimatyzatory" class="btn-outline">Zobacz klimatyzatory</a>
+          </div>
+        </div>
+        <div class="subpage-hero-image">
+          <div class="subpage-hero-image-inner">
+            <div class="subpage-hero-snow">
+              <div class="sf">❄</div>
+              <div class="sf">❅</div>
+              <div class="sf">❆</div>
+              <div class="sf">❄</div>
+              <div class="sf">❅</div>
+              <div class="sf">❆</div>
+              <div class="sf">❄</div>
+              <div class="sf">❅</div>
+              <div class="sf">❆</div>
+              <div class="sf">❄</div>
+            </div>
+            <img src="https://montaz-serwis-klimatyzacji.pl/img/balwanek.webp" alt="Montaż klimatyzacji Warszawa – Zamontuj Klimat" width="600" height="336" fetchpriority="high" decoding="async" />
+          </div>
+        </div>
       </div>
     </div>
   </section>
