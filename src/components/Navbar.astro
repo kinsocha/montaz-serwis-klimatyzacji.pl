@@ -2,63 +2,25 @@
 
 ---
 
-<nav class="toolbar" role="navigation" aria-label="Główna nawigacja">
-  <div class="toolbar-inner">
-    <button
-      class="menu-toggle"
-      aria-label="Menu"
-      aria-expanded="false"
-      aria-controls="main-menu"
-      onclick="
-        document.body.classList.toggle('menu-open');
-        this.setAttribute(
-          'aria-expanded',
-          document.body.classList.contains('menu-open')
-        );
-      "
-    >
-      <span class="bars" aria-hidden="true"></span>
-    </button>
-
-    <ul class="toolbar-nav" id="main-menu">
-      <li>
-        <a href="/">Strona główna</a>
-      </li>
-      <li class="has-dropdown">
-        
-          href="#"
-          class="dropdown-toggle"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          Klimatyzatory
-        </a>
-        <ul class="dropdown" role="menu" aria-label="Podmenu: Klimatyzatory">
-          <li><a href="/klimatyzatory-do-24m2.html">do 24 m²</a></li>
-          <li><a href="/klimatyzatory-25-34m2.html">25–34 m²</a></li>
-          <li><a href="/klimatyzatory-35-49m2.html">35–49 m²</a></li>
-          <li><a href="/klimatyzatory-50-80m2.html">50–80 m²</a></li>
-        </ul>
-      </li>
-      <li class="has-dropdown">
-        
-          href="#"
-          class="dropdown-toggle"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          Marki
-        </a>
-        <ul class="dropdown" role="menu" aria-label="Podmenu: Marki">
-          <li><a href="/gree-airy-2-7kw.html">Gree</a></li>
-          <li><a href="/lg-artcool-mirror-2-5kw.html">LG</a></li>
-        </ul>
-      </li>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="/" class="nav-logo" aria-label="Zamontuj Klimat - Strona główna">
+      <span class="logo-snowflake">❄️</span>
+      <span class="logo-text-new">
+        <span class="logo-text-black">Zamontuj</span> <span class="logo-text-blue">Klimat</span>
+      </span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#klimatyzatory">Polecane</a></li>
+      <li><a href="/#producenci">Marki</a></li>
       <li><a href="/kontakt">Kontakt</a></li>
-      <li>
-        <a href="tel:+48888806921" class="call"
-          >Zadzwoń 888&nbsp;806&nbsp;921</a>
-      </li>
+      <li><a href="tel:+48888806921" class="nav-cta">888 806 921</a></li>
     </ul>
+    <button class="hamburger" aria-label="Menu" onclick="
+      this.classList.toggle('active');
+      document.querySelector('.nav-links').classList.toggle('active');
+    ">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>

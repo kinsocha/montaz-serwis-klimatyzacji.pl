@@ -1,6 +1,4 @@
 ---
-import { Breadcrumbs } from "astro-breadcrumbs";
-import { getEntry } from "astro:content";
 import { ViewTransitions } from "astro:transitions";
 import Footer from "@components/Footer.astro";
 import Navbar from "@components/Navbar.astro";
@@ -12,15 +10,7 @@ interface Props {
   canonical?: string;
 }
 
-const nameMap: Record<string, string> = {
-  "/": "Strona główna",
-  "/kontakt": "Kontakt",
-  "/opinie": "Opinie",
-};
-
 const { title, description, keywords, canonical } = Astro.props;
-
-const settings = await getEntry("settings", "settings");
 ---
 
 <!doctype html>
@@ -37,6 +27,10 @@ const settings = await getEntry("settings", "settings");
 
     {canonical && <link rel="canonical" href={canonical} />}
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+    <link href="/css/style-index.css" rel="stylesheet" />
 
     <slot name="head" />
 
@@ -44,51 +38,20 @@ const settings = await getEntry("settings", "settings");
   </head>
 
   <body>
-    <div class="container" id="main-container">
-      <div>
-        <Navbar />
-        <Breadcrumbs
-          indexText="Strona główna"
-          customizeList={{
-            style:
-              "display: flex; flex-wrap: wrap; list-style-type: none; margin: 0; padding: 0",
-          }}
-        >
-          <span slot="separator" style="margin: 0 8px">/</span>
-        </Breadcrumbs>
-        <div class="row">
-          <div class="col-md-4 layout-left position-sticky">
-            <div class="company-name">
-              <a href="/">Zamontuj Klimat – Montaż i Serwis Klimatyzacji</a>
-            </div>
-            <div
-              class="logo"
-              role="button"
-              aria-label="Strona główna"
-              onclick="document.location.href='/'"
-            >
-            </div>
-            <div class="phone">
-              <a
-                href={`tel:+48${settings.data.phone}`}
-                class="phone-link"
-                aria-label={`Zadzwoń ${settings.data.phone}`}
-              >
-                <span class="sr-only"
-                  >Zadzwoń {settings.data.phone}</span
-                >
-              </a>
-            </div>
-          </div>
+    <Navbar />
+    <main>
+      <slot />
+    </main>
+    <Footer />
 
-          <div class="col-md-8 layout-right">
-            <main>
-              <slot />
-            </main>
-          </div>
-        </div>
-        <Footer />
-      </div>
-    </div>
+    <script is:inline>
+      // Navbar scroll effect
+      const navbar = document.getElementById('navbar');
+      if (navbar) {
+        window.addEventListener('scroll', () => {
+          navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+      }
+    </script>
   </body>
 </html>
