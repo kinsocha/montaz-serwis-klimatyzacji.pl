@@ -131,6 +131,26 @@ const canonical = "https://montaz-serwis-klimatyzacji.pl/klimatyzacja-warszawa";
       }
 
       /* Content sections */
+      .subpage-hero-grid {
+        overflow: visible;
+      }
+      .subpage-hero .hero-visual {
+        overflow: visible;
+      }
+      .subpage-hero .hero-image-wrapper {
+        position: relative;
+      }
+      .subpage-hero .hero-image-wrapper::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        right: -20px;
+        bottom: -20px;
+        background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, transparent 50%);
+        border-radius: 32px;
+        z-index: -1;
+      }
       .content-section {
         padding: 4rem 0;
       }
