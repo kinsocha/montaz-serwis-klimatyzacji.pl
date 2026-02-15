@@ -1186,3 +1186,256 @@
           height: 300px;
         }
       }
+
+
+
+
+
+      /* Dodatkowe style każdej z podstron pod spodem */
+
+            /* Breadcrumb + CTA - unikalne dla podstrony */
+      .breadcrumb {
+        font-size: 0.9rem;
+        color: #64748b;
+        margin-bottom: 1.5rem;
+      }
+      .breadcrumb a {
+        color: #1a73e8;
+        text-decoration: none;
+      }
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+      .hero-cta-row {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+        flex-wrap: nowrap;
+      }
+      .hero-cta-row a {
+        text-decoration: none;
+      }
+      .hero-cta-row .cta-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #1a73e8;
+        color: #fff;
+        padding: 0.9rem 2rem;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: background 0.2s;
+      }
+      .hero-cta-row .cta-primary:hover {
+        background: #1557b0;
+      }
+      .hero-cta-row .cta-outline {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #fff;
+        color: #1a73e8;
+        padding: 0.9rem 2rem;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1rem;
+        border: 2px solid #1a73e8;
+        transition: all 0.2s;
+      }
+      .hero-cta-row .cta-outline:hover {
+        background: #1a73e8;
+        color: #fff;
+      }
+
+      /* Content sections */
+      .content-section {
+        padding: 4rem 0;
+      }
+      .content-section .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+      .content-section h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        color: #0f172a;
+        margin-bottom: 1rem;
+      }
+      .content-section h3 {
+        font-size: 1.3rem;
+        color: #0f172a;
+        margin: 2rem 0 0.8rem;
+      }
+      .content-section p {
+        color: #475569;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+        font-size: 1.05rem;
+      }
+      .content-alt {
+        background: #f8fafc;
+      }
+
+      /* Info boxes */
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+      .info-box {
+        background: #fff;
+        border-radius: 16px;
+        padding: 1.8rem;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        border: 1px solid #e2e8f0;
+      }
+      .info-box .icon {
+        font-size: 2rem;
+        margin-bottom: 0.8rem;
+      }
+      .info-box h3 {
+        margin: 0 0 0.5rem;
+        font-size: 1.15rem;
+      }
+      .info-box p {
+        font-size: 0.95rem;
+        margin: 0;
+      }
+
+      /* Price table */
+      .price-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0 2rem;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      }
+      .price-table th {
+        background: #1a73e8;
+        color: #fff;
+        padding: 1rem 1.2rem;
+        text-align: left;
+        font-weight: 600;
+      }
+      .price-table td {
+        padding: 0.9rem 1.2rem;
+        border-bottom: 1px solid #e2e8f0;
+        color: #334155;
+      }
+      .price-table tr:nth-child(even) {
+        background: #f8fafc;
+      }
+      .price-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      /* FAQ */
+      .faq-section {
+        padding: 4rem 0;
+        background: #f8fafc;
+      }
+      .faq-section .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+      .faq-section h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        color: #0f172a;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+      .faq-item {
+        background: #fff;
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+        border: 1px solid #e2e8f0;
+      }
+      .faq-item h3 {
+        font-size: 1.1rem;
+        color: #0f172a;
+        margin: 0 0 0.6rem;
+      }
+      .faq-item p {
+        color: #475569;
+        line-height: 1.7;
+        margin: 0;
+        font-size: 0.98rem;
+      }
+
+      /* CTA bottom */
+      .cta-bottom {
+        background: linear-gradient(135deg, #1a73e8 0%, #1557b0 100%);
+        padding: 4rem 0;
+        text-align: center;
+        color: #fff;
+      }
+      .cta-bottom .container {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+      .cta-bottom h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #fff;
+      }
+      .cta-bottom p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        margin-bottom: 2rem;
+        color: #fff;
+      }
+      .cta-bottom .btn-white {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #fff;
+        color: #1a73e8;
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 1.1rem;
+        text-decoration: none;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .cta-bottom .btn-white:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      }
+
+      /* Districts grid */
+      .districts-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin: 1.5rem 0;
+      }
+      .districts-grid span {
+        background: #e8f4fd;
+        color: #1a73e8;
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+
+      @media (max-width: 768px) {
+        .hero-cta-row {
+          flex-wrap: wrap;
+        }
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+        .price-table {
+          font-size: 0.9rem;
+        }
+      }
