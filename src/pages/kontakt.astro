@@ -1,15 +1,12 @@
 ---
 import Default from "@layouts/Default.astro";
 
-const canonical = "https://udraznianiekanalizacji.eu/kontakt";
-
-const title = "Kontakt – Udrażnianie kanalizacji Warszawa | 510 733 300";
-
+const title = "Kontakt – Montaż klimatyzacji Warszawa | Zamontuj Klimatyzację";
 const description =
-  "Skontaktuj się z hydraulikiem – udrażnianie rur, zlewów i pionów w Warszawie. Zadzwoń 510 733 300 lub napisz na kontakt@udraznianiekanalizacji.eu.";
-
+  "Skontaktuj się z nami – bezpłatna wycena montażu klimatyzacji w Warszawie i okolicach. Zadzwoń: 888 806 921 lub napisz. Odpowiadamy w ciągu 2 godzin.";
 const keywords =
-  "kontakt hydraulik Warszawa, udrażnianie kanalizacji kontakt, telefon hydraulik Warszawa, kontakt udrażnianie rur";
+  "kontakt klimatyzacja Warszawa, montaż klimatyzacji telefon, wycena klimatyzacji Warszawa, serwis klimatyzacji kontakt";
+const canonical = "https://montaz-serwis-klimatyzacji.pl/kontakt";
 ---
 
 <Default
@@ -18,70 +15,388 @@ const keywords =
   keywords={keywords}
   canonical={canonical}
 >
-  <h1>Kontakt – Udrażnianie kanalizacji Warszawa i okolice</h1>
-
-  <p class="lead">
-    Masz problem z kanalizacją, zlewem lub odpływem? Skontaktuj się bezpośrednio
-    – odbieram lub oddzwaniam tak szybko, jak to możliwe.
-  </p>
-
-  <article class="contact-info">
-    <h2>Dane kontaktowe</h2>
-    <ul>
-      <li>
-        <strong>Telefon:</strong>
-        <a href="tel:+48510733300">510&nbsp;733&nbsp;300</a>
-      </li>
-      <li>
-        <strong>E-mail:</strong>
-        <a href="mailto:kontakt@udraznianiekanalizacji.eu">
-          kontakt@udraznianiekanalizacji.eu
-        </a>
-      </li>
-      <li><strong>Miasto:</strong> Warszawa i okolice</li>
-    </ul>
-  </article>
-
-  <article class="contact-map">
-    <h2>Obszar działania</h2>
-    <div id="map" style="height: 380px; border-radius: 12px;"></div>
-  </article>
-
-  <article class="cta-call">
-    <h2 class="cta-title">
-      Masz zator? <strong>Zadzwoń teraz</strong>
-    </h2>
-    <p class="cta-desc">
-      <b
-        >Na miejscu szybko ocenię sytuację i dobiorę właściwą metodę. Pracuję
-        czysto i skutecznie.</b
-      >
-    </p>
-
-    <a class="cta-btn" href="tel:+48510733300" aria-label="Zadzwoń 510 733 300">
-      <span class="cta-btn-icon" aria-hidden="true">📞</span>
-      <span>510&nbsp;733&nbsp;300</span>
-    </a>
-  </article>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Leaflet jest ładowany w Default.astro (defer), więc tu tylko inicjalizacja mapy
-      if (typeof globalThis.L !== "undefined") {
-        const map = globalThis.L.map("map").setView([52.2297, 21.0122], 11);
-
-        globalThis.L.tileLayer(
-          "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-          {
-            attribution: "&copy; OpenStreetMap",
-          }
-        ).addTo(map);
-
-        globalThis.L.marker([52.2297, 21.0122])
-          .addTo(map)
-          .bindPopup("Warszawa – obszar działania")
-          .openPopup();
+  <Fragment slot="head">
+    <meta property="og:title" content="Kontakt – Zamontuj Klimatyzację" />
+    <meta property="og:description" content="Bezpłatna wycena montażu klimatyzacji w Warszawie. Zadzwoń: 888 806 921." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pl_PL" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Zamontuj Klimatyzację",
+      "telephone": "+48888806921",
+      "email": "mskplxk@gmail.com",
+      "url": "https://montaz-serwis-klimatyzacji.pl",
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 52.2297, "longitude": 21.0122 },
+        "geoRadius": "50000"
+      },
+      "openingHours": ["Mo-Fr 08:00-18:00", "Sa 09:00-14:00"]
+    }
+    </script>
+    <style>
+      /* HERO */
+      .kontakt-hero {
+        background: linear-gradient(135deg, #f0f7ff 0%, #e8f4fc 100%);
+        padding: 140px 24px 60px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
       }
-    });
-  </script>
+      .kontakt-hero::before {
+        content: '';
+        position: absolute;
+        top: -100px;
+        right: -100px;
+        width: 400px;
+        height: 400px;
+        background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, transparent 100%);
+        border-radius: 50%;
+      }
+      .kontakt-hero h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(32px, 5vw, 48px);
+        color: #0f172a;
+        margin-bottom: 1rem;
+        position: relative;
+      }
+      .kontakt-hero h1 span {
+        color: #1a73e8;
+      }
+      .kontakt-hero p {
+        font-size: 1.1rem;
+        color: #475569;
+        max-width: 550px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      /* GŁÓWNA SEKCJA */
+      .kontakt-main {
+        padding: 60px 24px 80px;
+        background: #f8fafc;
+      }
+      .kontakt-main .container {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .kontakt-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        align-items: start;
+      }
+
+      /* LEWA KOLUMNA – dane */
+      .kontakt-dane h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.6rem;
+        color: #0f172a;
+        margin-bottom: 0.8rem;
+      }
+      .kontakt-dane > p {
+        color: #475569;
+        margin-bottom: 2rem;
+        line-height: 1.7;
+      }
+
+      .kontakt-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 20px;
+        background: #fff;
+        border-radius: 12px;
+        margin-bottom: 16px;
+        border: 1px solid #e2e8f0;
+        transition: box-shadow 0.2s, transform 0.2s;
+      }
+      .kontakt-item:hover {
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        transform: translateY(-2px);
+      }
+      .kontakt-item-icon {
+        width: 52px;
+        height: 52px;
+        background: #e8f4fd;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        flex-shrink: 0;
+      }
+      .kontakt-item-text strong {
+        display: block;
+        font-size: 16px;
+        color: #0f172a;
+        margin-bottom: 3px;
+      }
+      .kontakt-item-text span {
+        font-size: 14px;
+        color: #64748b;
+      }
+      .kontakt-item a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .kontakt-item a:hover strong {
+        color: #1a73e8;
+      }
+
+      /* GODZINY */
+      .kontakt-godziny {
+        background: #fff;
+        border-radius: 12px;
+        padding: 24px;
+        margin-top: 24px;
+        border: 1px solid #e2e8f0;
+      }
+      .kontakt-godziny h3 {
+        font-size: 1.1rem;
+        color: #0f172a;
+        margin-bottom: 12px;
+      }
+      .godziny-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px solid #f1f5f9;
+        font-size: 15px;
+      }
+      .godziny-row:last-child {
+        border-bottom: none;
+      }
+      .godziny-row .dzien {
+        color: #0f172a;
+        font-weight: 600;
+      }
+      .godziny-row .czas {
+        color: #475569;
+      }
+      .godziny-row .zamkniete {
+        color: #ef4444;
+        font-weight: 500;
+      }
+
+      /* PRAWA KOLUMNA – mapa */
+      .kontakt-mapa {
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        border: 1px solid #e2e8f0;
+      }
+      .kontakt-mapa iframe {
+        width: 100%;
+        height: 480px;
+        border: 0;
+        display: block;
+      }
+
+      /* SEKCJA OBSZAR */
+      .kontakt-obszar {
+        padding: 48px 24px;
+        background: #fff;
+      }
+      .kontakt-obszar .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .kontakt-obszar h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.5rem;
+        color: #0f172a;
+        margin-bottom: 0.8rem;
+      }
+      .kontakt-obszar > .container > p {
+        color: #475569;
+        margin-bottom: 1.5rem;
+      }
+      .kontakt-tagi {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+      }
+      .kontakt-tagi span {
+        background: #e8f4fd;
+        color: #1a73e8;
+        padding: 8px 16px;
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      /* CTA */
+      .kontakt-cta {
+        background: linear-gradient(135deg, #1a73e8 0%, #1557b0 100%);
+        padding: 60px 24px;
+        text-align: center;
+        color: #fff;
+      }
+      .kontakt-cta h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+      }
+      .kontakt-cta p {
+        font-size: 1.05rem;
+        opacity: 0.9;
+        margin-bottom: 1.5rem;
+      }
+      .kontakt-cta .btn-white {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #fff;
+        color: #1a73e8;
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 1.05rem;
+        text-decoration: none;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .kontakt-cta .btn-white:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      }
+
+      @media (max-width: 768px) {
+        .kontakt-grid {
+          grid-template-columns: 1fr;
+        }
+        .kontakt-mapa iframe {
+          height: 350px;
+        }
+      }
+    </style>
+  </Fragment>
+
+  <!-- HERO -->
+  <section class="kontakt-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Strona główna</a> › <strong>Kontakt</strong>
+    </nav>
+    <h1>Skontaktuj się <span>z nami</span></h1>
+    <p>Bezpłatna wycena, szybka odpowiedź. Zadzwoń lub napisz — doradzimy i dobierzemy klimatyzację do Twojego wnętrza.</p>
+  </section>
+
+  <!-- DANE + MAPA -->
+  <section class="kontakt-main">
+    <div class="container">
+      <div class="kontakt-grid">
+        <div class="kontakt-dane">
+          <h2>Zamontuj Klimatyzację</h2>
+          <p>Jesteśmy do Twojej dyspozycji. Odpowiadamy na telefony i wiadomości w ciągu 2 godzin w dni robocze. Wycena jest zawsze bezpłatna i niezobowiązująca.</p>
+
+          <div class="kontakt-item">
+            <div class="kontakt-item-icon">📞</div>
+            <div class="kontakt-item-text">
+              <a href="tel:+48888806921">
+                <strong>888 806 921</strong>
+                <span>Zadzwoń — doradzamy bezpłatnie</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="kontakt-item">
+            <div class="kontakt-item-icon">✉️</div>
+            <div class="kontakt-item-text">
+              <a href="mailto:mskplxk@gmail.com">
+                <strong>mskplxk@gmail.com</strong>
+                <span>Napisz — odpowiemy w ciągu 2h</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="kontakt-item">
+            <div class="kontakt-item-icon">📍</div>
+            <div class="kontakt-item-text">
+              <strong>Warszawa i okolice do 50 km</strong>
+              <span>Dojazd w cenie montażu</span>
+            </div>
+          </div>
+
+          <div class="kontakt-godziny">
+            <h3>🕐 Godziny pracy</h3>
+            <div class="godziny-row">
+              <span class="dzien">Poniedziałek – Piątek</span>
+              <span class="czas">8:00 – 18:00</span>
+            </div>
+            <div class="godziny-row">
+              <span class="dzien">Sobota</span>
+              <span class="czas">9:00 – 14:00</span>
+            </div>
+            <div class="godziny-row">
+              <span class="dzien">Niedziela</span>
+              <span class="zamkniete">Zamknięte</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="kontakt-mapa">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d156388.35438500757!2d20.9211124!3d52.2330653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spl!2spl!4v1707000000000!5m2!1spl!2spl"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Montaż klimatyzacji Warszawa i okolice – obszar działania"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OBSZAR DZIAŁANIA -->
+  <section class="kontakt-obszar">
+    <div class="container">
+      <h2>Obsługiwane lokalizacje</h2>
+      <p>Montujemy klimatyzacje na terenie Warszawy i okolicznych miejscowości w promieniu 50 km:</p>
+      <div class="kontakt-tagi">
+        <span>Mokotów</span>
+        <span>Ursynów</span>
+        <span>Wola</span>
+        <span>Praga Południe</span>
+        <span>Praga Północ</span>
+        <span>Bielany</span>
+        <span>Bemowo</span>
+        <span>Żoliborz</span>
+        <span>Ochota</span>
+        <span>Śródmieście</span>
+        <span>Targówek</span>
+        <span>Białołęka</span>
+        <span>Wilanów</span>
+        <span>Wawer</span>
+        <span>Rembertów</span>
+        <span>Wesoła</span>
+        <span>Ursus</span>
+        <span>Włochy</span>
+        <span>Piaseczno</span>
+        <span>Pruszków</span>
+        <span>Grodzisk Mazowiecki</span>
+        <span>Legionowo</span>
+        <span>Wołomin</span>
+        <span>Otwock</span>
+        <span>Marki</span>
+        <span>Ząbki</span>
+        <span>Józefów</span>
+        <span>Konstancin-Jeziorna</span>
+        <span>Łomianki</span>
+        <span>Kobyłka</span>
+        <span>Nadarzyn</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="kontakt-cta">
+    <h2>Gotowy na komfortowy klimat?</h2>
+    <p>Bezpłatna wycena, montaż w 48h, do 7 lat gwarancji.</p>
+    <a href="tel:+48888806921" class="btn-white">📞 Zadzwoń: 888 806 921</a>
+  </section>
+
 </Default>
