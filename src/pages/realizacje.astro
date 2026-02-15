@@ -1,0 +1,260 @@
+---
+import Default from "@layouts/Default.astro";
+
+const title = "Realizacje – Montaż klimatyzacji Warszawa | Zamontuj Klimatyzację";
+const description =
+  "Zobacz nasze realizacje montażu klimatyzacji w Warszawie i okolicach. Gree, Haier, Fuji Electric — certyfikowani monterzy, profesjonalny montaż.";
+const keywords =
+  "realizacje montaż klimatyzacji, montaż klimatyzacji Warszawa galeria, klimatyzacja montaż zdjęcia, instalacja klimatyzacji Mokotów, Wilanów, Ursynów";
+const canonical = "https://montaz-serwis-klimatyzacji.pl/realizacje";
+---
+
+<Default
+  title={title}
+  description={description}
+  keywords={keywords}
+  canonical={canonical}
+>
+  <Fragment slot="head">
+    <meta property="og:title" content="Realizacje montażu klimatyzacji – Zamontuj Klimatyzację" />
+    <meta property="og:description" content="Galeria naszych realizacji montażu klimatyzacji w Warszawie i okolicach." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pl_PL" />
+    <style>
+      .realizacje-hero {
+        background: linear-gradient(135deg, #f0f7ff 0%, #e8f4fc 100%);
+        padding: 140px 24px 60px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .realizacje-hero::before {
+        content: '';
+        position: absolute;
+        top: -100px;
+        right: -100px;
+        width: 400px;
+        height: 400px;
+        background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, transparent 100%);
+        border-radius: 50%;
+      }
+      .realizacje-hero .breadcrumb {
+        margin-bottom: 1.5rem;
+      }
+      .realizacje-hero h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(32px, 5vw, 48px);
+        color: #0f172a;
+        margin-bottom: 1rem;
+        position: relative;
+      }
+      .realizacje-hero h1 span {
+        color: #1a73e8;
+      }
+      .realizacje-hero p {
+        font-size: 1.1rem;
+        color: #475569;
+        max-width: 600px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .realizacje-page {
+        padding: 60px 24px 80px;
+        background: #f8fafc;
+      }
+      .realizacje-page .container {
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+      .realizacje-page-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+      }
+      .realizacja-card-lg {
+        background: #fff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        border: 1px solid #e2e8f0;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .realizacja-card-lg:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+      }
+      .realizacja-card-lg .realizacja-img {
+        width: 100%;
+        height: 340px;
+        overflow: hidden;
+      }
+      .realizacja-card-lg .realizacja-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s ease;
+      }
+      .realizacja-card-lg:hover .realizacja-img img {
+        transform: scale(1.03);
+      }
+      .realizacja-card-lg .realizacja-info {
+        padding: 24px;
+      }
+      .realizacja-dzielnica {
+        display: inline-block;
+        background: #e8f4fd;
+        color: #1a73e8;
+        padding: 5px 14px;
+        border-radius: 50px;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      .realizacja-card-lg .realizacja-info p {
+        font-size: 15px;
+        color: #475569;
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      .realizacje-cta {
+        text-align: center;
+        margin-top: 60px;
+        padding: 48px;
+        background: linear-gradient(135deg, #1a73e8 0%, #1557b0 100%);
+        border-radius: 20px;
+        color: #fff;
+      }
+      .realizacje-cta h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+      }
+      .realizacje-cta p {
+        font-size: 1.05rem;
+        opacity: 0.9;
+        margin-bottom: 1.5rem;
+      }
+      .realizacje-cta .btn-white {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #fff;
+        color: #1a73e8;
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 1.05rem;
+        text-decoration: none;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .realizacje-cta .btn-white:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      }
+
+      @media (max-width: 992px) {
+        .realizacje-page-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 576px) {
+        .realizacje-page-grid {
+          grid-template-columns: 1fr;
+        }
+        .realizacja-card-lg .realizacja-img {
+          height: 280px;
+        }
+      }
+    </style>
+  </Fragment>
+
+  <!-- HERO -->
+  <section class="realizacje-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Strona główna</a> › <strong>Realizacje</strong>
+    </nav>
+    <h1>Nasze <span>realizacje</span></h1>
+    <p>Montujemy klimatyzacje w Warszawie i okolicach. Oto kilka przykładów z ostatnich tygodni — każda instalacja wykonana przez certyfikowanych monterów z uprawnieniami F-GAZ.</p>
+  </section>
+
+  <!-- GALERIA -->
+  <section class="realizacje-page">
+    <div class="container">
+      <div class="realizacje-page-grid">
+
+        <div class="realizacja-card-lg">
+          <div class="realizacja-img">
+            <img src="/img/realizacja-1.webp" alt="Montaż klimatyzacji Gree – Mokotów, lokal usługowy" width="374" height="800" loading="lazy" decoding="async" />
+          </div>
+          <div class="realizacja-info">
+            <span class="realizacja-dzielnica">Mokotów</span>
+            <p>Klimatyzator Gree zamontowany nad wejściem w lokalu usługowym. Ciemna okładzina ścienna — estetyczne i praktyczne rozwiązanie chłodzenia przestrzeni handlowej.</p>
+          </div>
+        </div>
+
+        <div class="realizacja-card-lg">
+          <div class="realizacja-img">
+            <img src="/img/realizacja-2.webp" alt="Montaż klimatyzacji Gree – Wilanów, salon" width="800" height="600" loading="lazy" decoding="async" />
+          </div>
+          <div class="realizacja-info">
+            <span class="realizacja-dzielnica">Wilanów</span>
+            <p>Dyskretny montaż Gree w salonie apartamentu. Jednostka wewnętrzna umieszczona wysoko przy suficie, harmonijnie wkomponowana obok drewnianych żaluzji.</p>
+          </div>
+        </div>
+
+        <div class="realizacja-card-lg">
+          <div class="realizacja-img">
+            <img src="/img/realizacja-3.webp" alt="Montaż klimatyzacji Gree – Ursynów, sypialnia" width="600" height="800" loading="lazy" decoding="async" />
+          </div>
+          <div class="realizacja-info">
+            <span class="realizacja-dzielnica">Ursynów</span>
+            <p>Jednostka wewnętrzna Gree zamontowana w sypialni między zasłonami. Cicha praca i estetyczny montaż — idealny do wypoczynku.</p>
+          </div>
+        </div>
+
+        <div class="realizacja-card-lg">
+          <div class="realizacja-img">
+            <img src="/img/realizacja-4.webp" alt="Montaż klimatyzacji Gree Inverter – Ursynów, jednostka zewnętrzna" width="600" height="800" loading="lazy" decoding="async" />
+          </div>
+          <div class="realizacja-info">
+            <span class="realizacja-dzielnica">Ursynów</span>
+            <p>Jednostka zewnętrzna Gree Inverter z tej samej instalacji. Solidne uchwyty ścienne i schludne poprowadzenie przewodów — montaż zgodny ze sztuką.</p>
+          </div>
+        </div>
+
+        <div class="realizacja-card-lg">
+          <div class="realizacja-img">
+            <img src="/img/realizacja-5.webp" alt="Montaż klimatyzacji Haier – Marki, mieszkanie" width="600" height="800" loading="lazy" decoding="async" />
+          </div>
+          <div class="realizacja-info">
+            <span class="realizacja-dzielnica">Marki</span>
+            <p>Klimatyzator Haier w mieszkaniu w nowym budownictwie. Montaż na filarze między dużymi oknami — pełne pokrycie całego salonu bez zbędnych instalacji widocznych na ścianie.</p>
+          </div>
+        </div>
+
+        <div class="realizacja-card-lg">
+          <div class="realizacja-img">
+            <img src="/img/realizacja-6.webp" alt="Montaż klimatyzacji Fuji Electric – Wołomin, jednostka zewnętrzna" width="374" height="800" loading="lazy" decoding="async" />
+          </div>
+          <div class="realizacja-info">
+            <span class="realizacja-dzielnica">Wołomin</span>
+            <p>Jednostka zewnętrzna Fuji Electric DC Inverter z czynnikiem R32. Zamontowana na wspornikach pod zadaszeniem — ochrona przed opadami i bezpośrednim słońcem.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="realizacje-cta">
+        <h2>Chcesz mieć klimatyzację u siebie?</h2>
+        <p>Bezpłatna wycena, montaż w 48h, do 7 lat gwarancji.</p>
+        <a href="tel:+48888806921" class="btn-white">📞 Zadzwoń: 888 806 921</a>
+      </div>
+
+    </div>
+  </section>
+
+</Default>
