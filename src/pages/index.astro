@@ -21,6 +21,36 @@ const canonical = "https://montaz-serwis-klimatyzacji.pl";
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pl_PL" />
     <link rel="preload" href="https://montaz-serwis-klimatyzacji.pl/img/balwanek.webp" as="image" />
+    <style>
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: end;
+      }
+      .contact-info a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .contact-info a:hover {
+        color: #1a73e8;
+      }
+      .contact-map iframe {
+        width: 100%;
+        height: 420px;
+        border: 0;
+        border-radius: 16px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      }
+      @media (max-width: 768px) {
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+        .contact-map iframe {
+          height: 300px;
+        }
+      }
+    </style>
   </Fragment>
 
   <script type="application/ld+json" is:inline>
@@ -413,6 +443,58 @@ const canonical = "https://montaz-serwis-klimatyzacji.pl";
           <h3>Ciesz się komfortem</h3>
           <p>Otrzymujesz do 7 lat gwarancji i wsparcie serwisowe. Klimatyzacja działa bezbłędnie przez lata.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REALIZACJE -->
+  <section class="realizacje-section" id="realizacje">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Realizacje</span>
+        <h2 class="section-title">Nasze ostatnie montaże</h2>
+        <p class="section-desc">Kilka przykładów z ostatnich tygodni — każda instalacja wykonana przez certyfikowanych monterów</p>
+      </div>
+      <div class="realizacje-grid">
+        <div class="realizacja-card">
+          <div class="realizacja-img">
+            <img src="/img/realizacja-1.webp" alt="Montaż klimatyzacji Gree – Mokotów" width="374" height="800" loading="lazy" decoding="async" />
+          </div>
+          <div class="realizacja-info">
+            <span class="realizacja-dzielnica">Mokotów</span>
+            <p>Gree w lokalu usługowym — montaż nad drzwiami na ciemnej okładzinie</p>
+          </div>
+        </div>
+        <div class="realizacja-card">
+          <div class="realizacja-img">
+            <img src="/img/realizacja-2.webp" alt="Montaż klimatyzacji Gree – Wilanów" width="800" height="600" loading="lazy" decoding="async" />
+          </div>
+          <div class="realizacja-info">
+            <span class="realizacja-dzielnica">Wilanów</span>
+            <p>Gree w salonie apartamentu — dyskretny montaż obok drewnianych żaluzji</p>
+          </div>
+        </div>
+        <div class="realizacja-card">
+          <div class="realizacja-img">
+            <img src="/img/realizacja-3.webp" alt="Montaż klimatyzacji Gree – Ursynów, jednostka wewnętrzna" width="600" height="800" loading="lazy" decoding="async" />
+          </div>
+          <div class="realizacja-info">
+            <span class="realizacja-dzielnica">Ursynów</span>
+            <p>Gree w sypialni — jednostka wewnętrzna zamontowana między zasłonami</p>
+          </div>
+        </div>
+        <div class="realizacja-card">
+          <div class="realizacja-img">
+            <img src="/img/realizacja-4.webp" alt="Montaż klimatyzacji Gree – Ursynów, jednostka zewnętrzna" width="600" height="800" loading="lazy" decoding="async" />
+          </div>
+          <div class="realizacja-info">
+            <span class="realizacja-dzielnica">Ursynów</span>
+            <p>Ta sama instalacja — jednostka zewnętrzna Gree Inverter na balkonie</p>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:2rem;">
+        <a href="/realizacje" class="btn btn-outline">Zobacz więcej realizacji</a>
       </div>
     </div>
   </section>
