@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
@@ -460,7 +460,6 @@
         navToggle.setAttribute('aria-expanded', 'false'); document.body.style.overflow = '';
       }
       navToggle.addEventListener('click', toggleMenu);
-      navOverlay.addEventListener('click', closeMenu);
       navLinks.forEach(link => { link.addEventListener('click', closeMenu); });
       document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && navMenu.classList.contains('active')) closeMenu(); });
       window.addEventListener('resize', function() {

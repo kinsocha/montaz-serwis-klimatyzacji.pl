@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
@@ -376,13 +376,11 @@
   <!-- SKRYPT HAMBURGER MENU -->
   <script>
     (function() {
-      const navToggle = document.getElementById('navToggle');
-      const navMenu = document.getElementById('navMenu');
-      const navOverlay = document.getElementById('navOverlay');
-      const navLinks = document.querySelectorAll('.nav-link, .btn-nav-cta');
+      const navToggle = document.querySelector('.hamburger');
+      const navMenu = document.querySelector('.nav-links');
+      const navLinks = document.querySelectorAll('.nav-links a');
       let resizeTimeout;
-      
-      setTimeout(function() { navMenu.classList.add('menu-ready'); }, 100);
+      if (!navToggle || !navMenu) return;
       
       function toggleMenu() {
         navToggle.classList.toggle('active');
@@ -402,7 +400,6 @@
       }
       
       navToggle.addEventListener('click', toggleMenu);
-      navOverlay.addEventListener('click', closeMenu);
       navLinks.forEach(link => { link.addEventListener('click', closeMenu); });
       document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && navMenu.classList.contains('active')) closeMenu(); });
       window.addEventListener('resize', function() {
