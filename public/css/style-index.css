@@ -1,4 +1,4 @@
-    :root {
+﻿    :root {
       --primary: #1a3a5c;
       --primary-dark: #0f2840;
       --accent: #2563eb;
@@ -20,7 +20,7 @@
     html { scroll-behavior: smooth; }
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #ffffff; /* Białe tło podczas ładowania */
+      background: #ffffff; /* BiaĹ‚e tĹ‚o podczas Ĺ‚adowania */
       color: var(--text);
       line-height: 1.6;
       overflow-x: hidden;
@@ -142,16 +142,16 @@
       height: 100%;
       background: linear-gradient(135deg, #f0f7ff 0%, #e8f4fc 100%);
       z-index: 0;
-      /* Opóźnione pojawianie się tła */
+      /* OpĂłĹşnione pojawianie siÄ™ tĹ‚a */
       opacity: 0;
       animation: fadeInBg 1.5s ease-out 3s forwards;
     }
-    /* Animacja płynnego pojawiania się */
+    /* Animacja pĹ‚ynnego pojawiania siÄ™ */
     @keyframes fadeInBg {
       0% { opacity: 0; }
       100% { opacity: 1; }
     }
-    /* Dekoracyjne okręgi */
+    /* Dekoracyjne okrÄ™gi */
     .hero-bg::before {
       content: '';
       position: absolute;
@@ -181,7 +181,7 @@
       background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, transparent 100%);
       border-radius: 50%;
       z-index: 0;
-      /* Opóźnione pojawianie się */
+      /* OpĂłĹşnione pojawianie siÄ™ */
       opacity: 0;
       animation: fadeInBg 1.5s ease-out 3.5s forwards;
     }
@@ -219,6 +219,7 @@
       grid-column: 1 / -1;
       justify-content: center;
       margin-top: 30px;
+      margin-bottom: 30px;
     }
     .hero-badge {
       display: flex;
@@ -303,14 +304,14 @@
       border-radius: 12px;
     }
     
-    /* Wewnętrzny kontener dla śniegu i zdjęcia */
+    /* WewnÄ™trzny kontener dla Ĺ›niegu i zdjÄ™cia */
     .hero-image-inner {
       position: relative;
-      overflow: hidden; /* Obcina śnieg do obszaru zdjęcia */
+      overflow: hidden; /* Obcina Ĺ›nieg do obszaru zdjÄ™cia */
       border-radius: 12px;
     }
     
-    /* === ŚNIEG - TYLKO W OBSZARZE ZDJĘCIA BAŁWANKA === */
+    /* === ĹšNIEG - TYLKO W OBSZARZE ZDJÄCIA BAĹWANKA === */
     .hero-snow {
       position: absolute;
       top: 0;
@@ -340,13 +341,13 @@
       }
     }
     /* =====================================================
-       USTAWIENIA PRĘDKOŚCI ŚNIEGU
+       USTAWIENIA PRÄDKOĹšCI ĹšNIEGU
        =====================================================
-       Aby zmienić prędkość śniegu, edytuj wartości "animation-duration"
-       poniżej. Większa liczba = wolniejszy śnieg (np. 12s = wolny)
-       Mniejsza liczba = szybszy śnieg (np. 4s = szybki)
+       Aby zmieniÄ‡ prÄ™dkoĹ›Ä‡ Ĺ›niegu, edytuj wartoĹ›ci "animation-duration"
+       poniĹĽej. WiÄ™ksza liczba = wolniejszy Ĺ›nieg (np. 12s = wolny)
+       Mniejsza liczba = szybszy Ĺ›nieg (np. 4s = szybki)
        
-       Obecne ustawienia: 8-12 sekund (wolny, spokojny śnieg)
+       Obecne ustawienia: 8-12 sekund (wolny, spokojny Ĺ›nieg)
        ===================================================== */
     .hero-snowflake:nth-child(1) { left: 5%; animation-duration: 8s; animation-delay: 0s; font-size: 14px; color: #ADD8E6; text-shadow: 0 0 4px #ADD8E6; } /* Light Blue */
     .hero-snowflake:nth-child(2) { left: 12%; animation-duration: 10s; animation-delay: 0.5s; font-size: 12px; color: #87CEEB; text-shadow: 0 0 4px #87CEEB; } /* Sky Blue */
@@ -662,7 +663,7 @@
     .spec-label { color: var(--text-muted); }
     .spec-value { font-weight: 700; color: var(--primary); }
     
-    /* Pigułki klas energetycznych */
+    /* PiguĹ‚ki klas energetycznych */
     .energy-pill {
       display: inline-flex;
       align-items: center;
@@ -759,7 +760,7 @@
     }
     
     
-    /* === WHY US (niebieskie tło) === */
+    /* === WHY US (niebieskie tĹ‚o) === */
     .why-section { 
       background: linear-gradient(135deg, #2563eb 0%, #1e5fc9 100%);
       position: relative;
@@ -816,7 +817,7 @@
       color: rgba(255,255,255,0.8);
     }
     
-    /* === STEPS (białe tło) === */
+    /* === STEPS (biaĹ‚e tĹ‚o) === */
     .steps-section {
       background: white;
       position: relative;
@@ -999,7 +1000,7 @@
       color: white;
       padding: 60px 24px 24px;
     }
-    footer .logo span { color: #60a5fa; } /* Jaśniejszy niebieski dla lepszego kontrastu */
+    footer .logo span { color: #60a5fa; } /* JaĹ›niejszy niebieski dla lepszego kontrastu */
     .footer-grid {
       max-width: 1280px;
       margin: 0 auto;
@@ -1103,7 +1104,7 @@
       .area-btn { width: 100%; justify-content: center; }
     }
     
-    /* Obrazek hero na pełną szerokość od 677px w dół */
+    /* Obrazek hero na peĹ‚nÄ… szerokoĹ›Ä‡ od 677px w dĂłĹ‚ */
     @media (max-width: 677px) {
       .hero-image-wrapper {
         padding: 0;
@@ -1138,7 +1139,7 @@
       }
     }
 
-    /* === NOWE LOGO Z EMOJI ŚNIEŻYNKI === */
+    /* === NOWE LOGO Z EMOJI ĹšNIEĹ»YNKI === */
     .nav-logo {
       display: flex;
       align-items: center;
@@ -1191,7 +1192,7 @@
 
 
 
-      /* Dodatkowe style każdej z podstron pod spodem */
+      /* Dodatkowe style kaĹĽdej z podstron pod spodem */
 
             /* Breadcrumb + CTA - unikalne dla podstrony */
       .breadcrumb {
