@@ -1086,7 +1086,7 @@
       .nav-phone { display: none; }
       .hero { min-height: auto; padding: 72px 0 0; }
       .hero-container { padding: 35px 24px; }
-    /*  .hero-badges { margin-bottom: 32px; }    */
+      .hero-badges { margin-bottom: 32px; }
       .hero-image-wrapper { margin-top: -45px; }
       .brands-grid { grid-template-columns: repeat(2, 1fr); }
       .brand-card { padding: 20px 16px; }
