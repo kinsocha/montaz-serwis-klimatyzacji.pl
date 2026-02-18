@@ -89,6 +89,7 @@ jobs:
           password: ${{ secrets.REMOTE_PASSWORD }}
           local-dir: ${{ env.BUILD_PATH }}/dist/
           passive: true 
+          state-name: .ftp-deploy-sync-state-v2.json
           exclude: |
             **/.git*
             **/.git*/**
