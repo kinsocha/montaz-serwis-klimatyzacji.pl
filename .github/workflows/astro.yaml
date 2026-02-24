@@ -63,6 +63,7 @@ jobs:
           username: ${{ secrets.REMOTE_USER }}
           password: ${{ secrets.REMOTE_PASSWORD }}
           local-dir: ${{ env.BUILD_PATH }}/dist/
+          server-dir: public_html/
           security: loose
           state-name: .ftp-deploy-sync-state-v2.json
           exclude: |
