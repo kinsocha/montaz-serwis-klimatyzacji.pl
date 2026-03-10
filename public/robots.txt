@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://montazklimatyzacjiwarszawa.pl/sitemap-index.xml
