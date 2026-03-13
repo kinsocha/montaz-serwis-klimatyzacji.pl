@@ -1,0 +1,334 @@
+---
+import Default from "@layouts/Default.astro";
+import opinie from "@data/opinie.json";
+import type { GetStaticPaths } from "astro";
+
+export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
+  return paginate(opinie, { pageSize: 20 });
+};
+
+const { page } = Astro.props;
+const currentPage = page.currentPage;
+const isFirst = currentPage === 1;
+
+const canonical = isFirst
+  ? "https://montaz-serwis-klimatyzacji.pl/opinie"
+  : `https://montaz-serwis-klimatyzacji.pl/opinie/${currentPage}`;
+
+const title = isFirst
+  ? "Opinie klientów – Montaż i serwis klimatyzacji Warszawa"
+  : `Opinie klientów – strona ${currentPage} – Montaż i serwis klimatyzacji Warszawa`;
+
+const description =
+  "Przeczytaj opinie klientów, dla których montowaliśmy i serwisowaliśmy klimatyzację w Warszawie i okolicach.";
+
+const keywords =
+  "opinie montaż klimatyzacji, opinie serwis klimatyzacji Warszawa, rekomendacje klimatyzacja";
+
+const formatter = new Intl.DateTimeFormat("pl-PL", {
+  day: "2-digit",
+  month: "long",
+  year: "numeric",
+});
+
+const avgRating = (opinie.reduce((sum, o) => sum + o.ocena, 0) / opinie.length).toFixed(1);
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Montaż Klimatyzacji Warszawa",
+  "telephone": "+48888806921",
+  "url": "https://montaz-serwis-klimatyzacji.pl",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": avgRating,
+    "reviewCount": opinie.length,
+    "bestRating": 5,
+  },
+  "review": page.data.map((o) => ({
+    "@type": "Review",
+    "author": { "@type": "Person", "name": o.imie },
+    "reviewBody": o.tekst,
+    "reviewRating": { "@type": "Rating", "ratingValue": o.ocena, "bestRating": 5 },
+    "datePublished": o.data,
+  })),
+};
+---
+
+<Default
+  title={title}
+  description={description}
+  keywords={keywords}
+  canonical={canonical}
+>
+  <div class="opinions-page">
+    <div class="opinions-header">
+      <h1>Opinie klientów</h1>
+      <p class="lead">
+        Zaufali nam mieszkańcy Warszawy i okolic. Montujemy i serwisujemy
+        klimatyzację solidnie, punktualnie i bez bałaganu.
+      </p>
+      <div class="rating-summary">
+        <a
+          href="https://www.google.com/search?rlz=1C1HKFL_plPL1196PL1196&sca_esv=d087776caa853f74&cs=1&sxsrf=ANbL-n56chOQetMdWlsU7PzSML_mSfLoqg:1773421236318&q=Monta%C5%BC+serwis+klimatyzacji+Opinie&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxKytDAztjSxNDMyMDExMbUwMDfYwMj4ilHJNz-vJPHoHoXi1KLyzGKF7JzM3MSSyqrE5KxMBf-CzLzM1EWsRCgCANcaBQpjAAAA&rldimm=986394962044458070&tbm=lcl&hl=pl-PL&sa=X&ved=2ahUKEwjg0872rJ2TAxWsQvEDHdsCCGUQ9fQKegQIDxAG&biw=1536&bih=756&dpr=1.25#lkt=LocalPoiReviews"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rating-link"
+        >
+          <span class="rating-stars">★★★★★</span>
+          <span class="rating-score">{avgRating}</span>
+        </a>
+        <a
+          href="https://share.google/S4hcuGdBEruc8v89c"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rating-count"
+        >· {opinie.length} opinii</a>
+      </div>
+    </div>
+
+    <div class="opinions-grid">
+      {page.data.map((o) => (
+        <article class="opinion-card">
+          <div class="card-header">
+            <div class="card-avatar" style={`background:${o.kolor}`} aria-hidden="true">
+              {o.inicjaly}
+            </div>
+            <div class="card-author-info">
+              <span class="card-author">{o.imie}</span>
+              <span class="card-location">{o.lokalizacja}</span>
+            </div>
+            <svg class="google-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+            </svg>
+          </div>
+
+          <div class="card-rating" aria-label={`${o.ocena} na 5`}>
+            {Array.from({ length: 5 }).map((_, s) => (
+              <span class={s < o.ocena ? "star filled" : "star"}>★</span>
+            ))}
+          </div>
+
+          <p class="card-content">{o.tekst}</p>
+
+          <time class="card-date" datetime={`${o.data}T${o.godzina}`}>
+            {formatter.format(new Date(o.data))}, {o.godzina}
+          </time>
+        </article>
+      ))}
+    </div>
+
+    {page.lastPage > 1 && (
+      <nav class="pagination" aria-label="Paginacja opinii">
+        {page.url.prev ? (
+          <a href={page.url.prev} class="page-btn page-prev" aria-label="Poprzednia strona">← Poprzednia</a>
+        ) : (
+          <span class="page-btn page-prev disabled" aria-disabled="true">← Poprzednia</span>
+        )}
+
+        <div class="page-numbers">
+          {Array.from({ length: page.lastPage }).map((_, i) => {
+            const num = i + 1;
+            const href = num === 1 ? "/opinie" : `/opinie/${num}`;
+            return (
+              <a
+                href={href}
+                class={`page-num ${num === currentPage ? "active" : ""}`}
+                aria-current={num === currentPage ? "page" : undefined}
+              >
+                {num}
+              </a>
+            );
+          })}
+        </div>
+
+        {page.url.next ? (
+          <a href={page.url.next} class="page-btn page-next" aria-label="Następna strona">Następna →</a>
+        ) : (
+          <span class="page-btn page-next disabled" aria-disabled="true">Następna →</span>
+        )}
+      </nav>
+    )}
+  </div>
+
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(structuredData)}>
+  </script>
+
+  <style>
+    .opinions-page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 6rem 1rem 3rem;
+    }
+
+    .opinions-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .opinions-header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 0.6rem;
+    }
+
+    .lead {
+      font-size: 1.05rem;
+      color: #555;
+      max-width: 560px;
+      margin: 0 auto 1.2rem;
+      line-height: 1.7;
+    }
+
+    .rating-summary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 999px;
+      padding: 0.4rem 1rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    .rating-stars { color: #fbbc04; font-size: 1rem; letter-spacing: 1px; }
+    .rating-score { font-weight: 700; font-size: 1rem; color: #222; }
+
+    .rating-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      text-decoration: none;
+    }
+
+    .rating-link:hover .rating-stars,
+    .rating-link:hover .rating-score { opacity: 0.75; }
+
+    .rating-count { font-size: 0.9rem; color: #777; text-decoration: none; }
+    .rating-count:hover { text-decoration: underline; color: #1a73e8; }
+
+    .opinions-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .opinion-card {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e8e8e8;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 1.2rem 1.4rem 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .opinion-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+
+    .card-header { display: flex; align-items: center; gap: 0.75rem; }
+
+    .card-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 15px;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .card-author-info { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+    .card-author { font-weight: 600; font-size: 0.95rem; color: #1a1a1a; }
+    .card-location { font-size: 0.82rem; color: #888; }
+    .google-icon { width: 20px; height: 20px; flex-shrink: 0; opacity: 0.85; }
+    .card-rating { display: flex; gap: 1px; }
+    .star { font-size: 1rem; color: #ddd; }
+    .star.filled { color: #fbbc04; }
+
+    .card-content {
+      font-size: 0.94rem;
+      line-height: 1.7;
+      color: #444;
+      flex: 1;
+      margin: 0;
+    }
+
+    .card-date { font-size: 0.82rem; color: #aaa; margin-top: 0.2rem; }
+
+    /* Paginacja */
+    .pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .page-btn {
+      padding: 0.5rem 1rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #1a73e8;
+      text-decoration: none;
+      background: #fff;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .page-btn:hover { background: #1a73e8; color: #fff; border-color: #1a73e8; }
+
+    .page-btn.disabled {
+      color: #bbb;
+      pointer-events: none;
+      border-color: #eee;
+    }
+
+    .page-numbers {
+      display: flex;
+      gap: 0.3rem;
+    }
+
+    .page-num {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #444;
+      text-decoration: none;
+      background: #fff;
+      transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .page-num:hover { background: #e8f0fe; border-color: #1a73e8; color: #1a73e8; }
+
+    .page-num.active {
+      background: #1a73e8;
+      color: #fff;
+      border-color: #1a73e8;
+      font-weight: 700;
+      pointer-events: none;
+    }
+
+    @media (max-width: 640px) {
+      .opinions-grid { grid-template-columns: 1fr; }
+      .opinions-header h1 { font-size: 1.6rem; }
+      .page-btn { padding: 0.4rem 0.7rem; font-size: 0.85rem; }
+    }
+  </style>
+</Default>

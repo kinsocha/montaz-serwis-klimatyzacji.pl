@@ -1,12 +1,13 @@
 ---
-import { getCollection, getEntry } from "astro:content";
+import opinie from "@data/opinie.json";
 
-const settings = await getEntry("settings", "settings");
-
-const reviews = (await getCollection("reviews"))
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .filter(({ data }) => data.date.valueOf() <= new Date().valueOf())
-  .slice(0, settings.data.reviewsLimit);
+const displayed = [...opinie]
+  .sort((a, b) => {
+    const da = new Date(`${a.data}T${a.godzina}`).getTime();
+    const db = new Date(`${b.data}T${b.godzina}`).getTime();
+    return db - da;
+  })
+  .slice(0, 4);
 
 const formatter = new Intl.DateTimeFormat("pl-PL", {
   day: "2-digit",
@@ -15,191 +16,173 @@ const formatter = new Intl.DateTimeFormat("pl-PL", {
 });
 ---
 
-<section class="service-card opinions-section" id="opinie">
-  <h2>Opinie klientów</h2>
-  <p class="lead">
-    Kilka wybranych opinii osób, u których usuwałem zatory w kanalizacji w
-    Warszawie i okolicy.
-  </p>
+<section class="opinions-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Opinie</span>
+      <h2 class="section-title">Co mówią nasi klienci</h2>
+      <p class="section-desc">Zaufali nam mieszkańcy Warszawy i okolic</p>
+    </div>
 
-  {
-    reviews.length === 0 ? (
-      <p>Opinie pojawią się wkrótce.</p>
-    ) : (
-      <div class="opinions-grid">
-        {reviews.map(async (opinion) => {
-          const rating = opinion.data.rating ?? 5;
-          const dateFormatted = formatter.format(opinion.data.date);
-          const initials = opinion.data.author.trim().charAt(0).toUpperCase();
+    <div class="opinions-grid">
+      {displayed.map((o) => (
+        <article class="opinion-card">
+          <div class="card-header">
+            <div class="card-avatar" style={`background:${o.kolor}`}>
+              {o.inicjaly}
+            </div>
+            <div class="card-author-info">
+              <span class="card-author">{o.imie}</span>
+              <span class="card-location">{o.lokalizacja}</span>
+            </div>
+            <svg class="google-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+            </svg>
+          </div>
 
-          const { Content } = await opinion.render();
-          return (
-            <article class="opinion-card">
-              <div class="opinion-header">
-                <div class="opinion-avatar" aria-hidden="true">
-                  {initials}
-                </div>
-                <div class="opinion-header-text">
-                  <span class="opinion-author">{opinion.data.author}</span>
-                  {opinion.data.location && (
-                    <span class="opinion-location">
-                      {opinion.data.location}
-                    </span>
-                  )}
-                </div>
-              </div>
+          <div class="card-rating" aria-label={`${o.ocena} na 5`}>
+            {Array.from({ length: 5 }).map((_, i) => (
+              <span class={i < o.ocena ? "star filled" : "star"}>★</span>
+            ))}
+          </div>
 
-              <div class="opinion-rating">
-                <span class="stars" aria-label={`${rating} na 5`}>
-                  ★★★★★
-                </span>
-              </div>
+          <p class="card-content">{o.tekst}</p>
 
-              <p class="opinion-content">
-                <Content />
-              </p>
+          <time class="card-date" datetime={`${o.data}T${o.godzina}`}>
+            {formatter.format(new Date(o.data))}, {o.godzina}
+          </time>
+        </article>
+      ))}
+    </div>
 
-              <p class="opinion-footer">
-                <time
-                  class="opinion-date"
-                  datetime={opinion.data.date.toISOString()}
-                >
-                  {dateFormatted}
-                </time>
-              </p>
-            </article>
-          );
-        })}
-      </div>
-    )
+    <div class="opinions-cta">
+      <a href="/opinie" class="btn-all-opinions">Zobacz wszystkie opinie</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .opinions-section {
+    padding: 4rem 1rem;
+    background: #f8fafc;
   }
 
-  <div class="opinions-footer">
-    <a href="/opinie" class="opinions-more-link"> Zobacz wszystkie opinie </a>
-  </div>
+  .opinions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+  }
 
-  <style>
-    .opinions-section {
-      margin-top: 2rem;
-    }
+  .opinion-card {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 1.2rem 1.4rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    transition: box-shadow 0.2s ease;
+  }
 
-    .opinions-section h2 {
-      font-size: 26px;
-    }
+  .opinion-card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  }
 
-    .opinions-section,
-    .opinions-section * {
-      font-size: 17px;
-      line-height: 1.6;
-    }
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
 
+  .card-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
+  .card-author-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .card-author {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+  }
+
+  .card-location {
+    font-size: 0.82rem;
+    color: #888;
+  }
+
+  .google-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    opacity: 0.85;
+  }
+
+  .card-rating {
+    display: flex;
+    gap: 1px;
+  }
+
+  .star { font-size: 1rem; color: #ddd; }
+  .star.filled { color: #fbbc04; }
+
+  .card-content {
+    font-size: 0.94rem;
+    line-height: 1.7;
+    color: #444;
+    margin: 0;
+    flex: 1;
+  }
+
+  .card-date {
+    font-size: 0.82rem;
+    color: #aaa;
+  }
+
+  .opinions-cta {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .btn-all-opinions {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border: 2px solid #1a73e8;
+    border-radius: 8px;
+    color: #1a73e8;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  .btn-all-opinions:hover {
+    background: #1a73e8;
+    color: #fff;
+  }
+
+  @media (max-width: 640px) {
     .opinions-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.5rem;
+      grid-template-columns: 1fr;
     }
-
-    .opinion-card {
-      position: relative;
-      padding: 1.2rem 1.2rem 1rem 1.2rem;
-      border-radius: 10px;
-      background: #ffffff;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-      border: 1px solid #eee;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .opinion-header {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      margin-bottom: 0.4rem;
-    }
-
-    .opinion-avatar {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: #f0f0f0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 16px;
-      color: #555;
-    }
-
-    .opinion-header-text {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .opinion-author {
-      font-weight: 700;
-      color: #333;
-    }
-
-    .opinion-location {
-      color: #777;
-      font-size: 0.9em;
-    }
-
-    .opinion-rating {
-      margin: 0.2rem 0 0.5rem 0;
-      color: #ffb400;
-      font-size: 1rem;
-    }
-
-    .opinion-rating .stars {
-      letter-spacing: 1px;
-    }
-
-    .opinion-content {
-      margin: 0;
-      color: #444;
-      flex-grow: 1;
-    }
-
-    .opinion-footer {
-      margin: 0.7rem 0 0 0;
-      color: #777;
-      font-size: 0.9em;
-      display: flex;
-      justify-content: flex-end;
-      margin-top: auto;
-    }
-
-    .opinion-date {
-      white-space: nowrap;
-    }
-
-    .opinions-footer {
-      margin-top: 1.5rem;
-      text-align: right;
-    }
-
-    .opinions-more-link {
-      text-decoration: none;
-      color: #0066cc;
-      font-weight: 600;
-      border-bottom: 1px solid transparent;
-      padding-bottom: 2px;
-      transition:
-        color 0.2s ease,
-        border-color 0.2s ease;
-    }
-
-    .opinions-more-link:hover {
-      color: #004f99;
-      border-color: #004f99;
-    }
-
-    @media (max-width: 600px) {
-      .opinions-footer {
-        text-align: left;
-      }
-    }
-  </style>
-</section>
+  }
+</style>

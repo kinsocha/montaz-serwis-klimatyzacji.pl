@@ -1,0 +1,572 @@
+[
+  {
+    "imie": "Pani Beata",
+    "lokalizacja": "Warszawa, Mokotów",
+    "tekst": "Montaż klimatyzatora LG w sypialni i salonie przed świętami — strzał w dziesiątkę. Ekipa przyjechała punktualnie, pracowała sprawnie i schludnie. Wszystkie kable ukryte w korytkach, nic nie straszy. Urządzenie działa cicho i równomiernie. Bardzo polecam, profesjonalna robota.",
+    "data": "2026-12-22",
+    "godzina": "10:08:15",
+    "ocena": 5,
+    "inicjaly": "PB",
+    "kolor": "#e91e63"
+  },
+  {
+    "imie": "Pan Jacek",
+    "lokalizacja": "Sulejówek",
+    "tekst": "Coroczny przegląd serwisowy klimatyzatora przed sezonem zimowym. Technik sprawdził czynnik, wyczyścił filtry i skontrolował wszystkie połączenia. Praca wykonana rzetelnie i bez pośpiechu. Klimatyzacja znowu grzeje jak nowa. Dziękuję i do zobaczenia przy następnym serwisie.",
+    "data": "2026-12-16",
+    "godzina": "14:37:42",
+    "ocena": 5,
+    "inicjaly": "PJ",
+    "kolor": "#0288d1"
+  },
+  {
+    "imie": "Pani Renata",
+    "lokalizacja": "Warszawa, Praga-Południe",
+    "tekst": "Czyszczenie klimatyzatora po sezonie letnim — filtry i parownik były mocno zabrudzone, ale technik wyczyścił wszystko bardzo dokładnie i przeprowadził dezynfekcję. Powietrze w mieszkaniu od razu pachnie świeżością. Cena rozsądna, obsługa miła. Polecam bez zastrzeżeń.",
+    "data": "2026-12-10",
+    "godzina": "09:52:18",
+    "ocena": 5,
+    "inicjaly": "PR",
+    "kolor": "#34a853"
+  },
+  {
+    "imie": "Pan Damian",
+    "lokalizacja": "Józefów",
+    "tekst": "Montaż klimatyzatora Daikin w nowo wybudowanym domu — wszystko zorganizowane perfekcyjnie. Od wyceny do montażu upłynęło kilka dni. Technik doradził optymalne umiejscowienie jednostki zewnętrznej, trasę poprowadził estetycznie. Gwarancja i dokumentacja w porządku. Bardzo jestem zadowolony.",
+    "data": "2026-12-02",
+    "godzina": "16:24:07",
+    "ocena": 5,
+    "inicjaly": "PD",
+    "kolor": "#ff5722"
+  },
+  {
+    "imie": "Pani Halina",
+    "lokalizacja": "Warszawa, Wilanów",
+    "tekst": "Serwis klimatyzatora w dużym domu — przegląd dwóch jednostek wewnętrznych i zewnętrznej. Technik przyjechał na umówioną godzinę, wszystko sprawdził szczegółowo, uzupełnił czynnik i wymienił filtry. Profesjonalne podejście do klienta i rzetelna praca. Na pewno wrócimy przy następnym serwisie.",
+    "data": "2026-11-24",
+    "godzina": "11:45:33",
+    "ocena": 5,
+    "inicjaly": "PH",
+    "kolor": "#1a73e8"
+  },
+  {
+    "imie": "Pan Sebastian",
+    "lokalizacja": "Raszyn",
+    "tekst": "Czyszczenie klimatyzatora połączone z dezynfekcją — usługa wykonana bardzo starannie. Technik wyjaśnił co robi na każdym etapie i pokazał jak samodzielnie dbać o filtry między serwisami. Klimatyzacja pracuje teraz ciszej i wydajniej. Polecam tę firmę w okolicy Raszyna i Warszawy.",
+    "data": "2026-11-19",
+    "godzina": "08:13:56",
+    "ocena": 5,
+    "inicjaly": "PS",
+    "kolor": "#9c27b0"
+  },
+  {
+    "imie": "Pani Natalia",
+    "lokalizacja": "Warszawa, Bielany",
+    "tekst": "Montaż klimatyzatora Daikin w mieszkaniu na czwartym piętrze — technicznie wymagający montaż, ale ekipa poradziła sobie bez problemu. Jednostka zewnętrzna zamocowana bezpiecznie na elewacji, trasa ukryta w korytkach. Klimatyzacja działa bez zarzutów. Serdecznie polecam tę ekipę.",
+    "data": "2026-11-10",
+    "godzina": "15:37:22",
+    "ocena": 5,
+    "inicjaly": "PN",
+    "kolor": "#ea4335"
+  },
+  {
+    "imie": "Pan Bartosz",
+    "lokalizacja": "Ząbki",
+    "tekst": "Przegląd serwisowy klimatyzatora przed sezonem grzewczym — technik zjawił się punktualnie i skrupulatnie sprawdził cały system. Wyczyszczone filtry, skontrolowane ciśnienie, przetestowane tryby grzania. Klimatyzacja gotowa na zimę. Szybki kontakt i dobra cena — wracam co roku.",
+    "data": "2026-11-04",
+    "godzina": "13:09:48",
+    "ocena": 5,
+    "inicjaly": "PB",
+    "kolor": "#00897b"
+  },
+  {
+    "imie": "Pani Monika",
+    "lokalizacja": "Warszawa, Żoliborz",
+    "tekst": "Czyszczenie klimatyzatora po trzech sezonach użytkowania. Technik pracował dokładnie i bez pośpiechu — wyczyścił parownik, lamele i tacę ociekową, przeprowadził dezynfekcję biocydem. Różnica w jakości powietrza jest wyraźna. Teraz wiem że nie wolno zaniedbywać corocznego czyszczenia.",
+    "data": "2026-10-29",
+    "godzina": "17:22:14",
+    "ocena": 5,
+    "inicjaly": "PM",
+    "kolor": "#fbbc04"
+  },
+  {
+    "imie": "Pan Rafał",
+    "lokalizacja": "Łomianki",
+    "tekst": "Montaż klimatyzatora Gree w salonie — od pierwszego kontaktu telefonicznego do odbioru prac minął tydzień. Ekipa punktualna, pracowita i porządna. Zakryła meble folią przed kurzem przy wierceniu, po zakończeniu sprzątnęła dokładnie. Klimatyzator chłodzi i grzeje bez zarzutów. Polecam!",
+    "data": "2026-10-21",
+    "godzina": "10:48:39",
+    "ocena": 5,
+    "inicjaly": "PR",
+    "kolor": "#558b2f"
+  },
+  {
+    "imie": "Pani Teresa",
+    "lokalizacja": "Warszawa, Wola",
+    "tekst": "Serwis klimatyzatora połączony z kontrolą szczelności układu. Technik przeprowadził test elektronicznym detektorem nieszczelności — wyniki dobre, żadnych wycieków czynnika. Wymienione filtry, wyczyszczona taca, skontrolowana elektryka. Profesjonalna obsługa i dokumentacja serwisowa. Polecam.",
+    "data": "2026-10-13",
+    "godzina": "14:05:27",
+    "ocena": 5,
+    "inicjaly": "PT",
+    "kolor": "#0288d1"
+  },
+  {
+    "imie": "Pan Artur",
+    "lokalizacja": "Otwock",
+    "tekst": "Montaż klimatyzatora Rotenso w domu jednorodzinnym. Technik przyjechał na umówioną godzinę, sprawnie poprowadził trasę rurową przez ścianę zewnętrzną i zamontował obie jednostki. Instruktaż obsługi bardzo przejrzysty. Urządzenie działa cicho, polecam tę firmę z pełnym przekonaniem.",
+    "data": "2026-10-07",
+    "godzina": "09:31:53",
+    "ocena": 5,
+    "inicjaly": "PA",
+    "kolor": "#e91e63"
+  },
+  {
+    "imie": "Pani Julita",
+    "lokalizacja": "Warszawa, Ursynów",
+    "tekst": "Czyszczenie klimatyzatora po gorącym sezonie letnim — technik wyczyszczone filtry od razu mi pokazał i szczerze, widok był nieestetyczny. Po dezynfekcji i myciu klimatyzacja pachnie świeżością. Nie spieszył się i wszystko zrobił dokładnie. Cena za usługę adekwatna. Zdecydowanie wracam co sezon.",
+    "data": "2026-10-01",
+    "godzina": "16:57:08",
+    "ocena": 5,
+    "inicjaly": "PJ",
+    "kolor": "#34a853"
+  },
+  {
+    "imie": "Pan Marcin",
+    "lokalizacja": "Piaseczno",
+    "tekst": "Serwis po sezonie letnim — przegląd klimatyzatora, uzupełnienie czynnika i wymiana filtrów. Technik był dokładny i nie spieszył się. Po serwisie klimatyzacja pracuje sprawniej i ciszej niż przed wizytą. Uczciwa wycena i dobra komunikacja. Polecam mieszkańcom Piaseczna i okolicy.",
+    "data": "2026-09-24",
+    "godzina": "12:23:44",
+    "ocena": 5,
+    "inicjaly": "PM",
+    "kolor": "#1a73e8"
+  },
+  {
+    "imie": "Pani Kinga",
+    "lokalizacja": "Warszawa, Ochota",
+    "tekst": "Montaż klimatyzatora Mitsubishi Electric w mieszkaniu — jakość montażu i obsługi na najwyższym poziomie. Fachowiec doradzał przy wyborze modelu, wytłumaczył różnice między urządzeniami i pomógł podjąć decyzję. Montaż bezbłędny, estetyczny. Urządzenie pracuje cicho i wydajnie. Pięć gwiazdek w pełni zasłużone.",
+    "data": "2026-09-15",
+    "godzina": "08:49:19",
+    "ocena": 5,
+    "inicjaly": "PK",
+    "kolor": "#ff5722"
+  },
+  {
+    "imie": "Pan Paweł",
+    "lokalizacja": "Marki",
+    "tekst": "Czyszczenie klimatyzatora po trzech latach — wymyty parownik, wyczyszczone filtry i dezynfekcja biocydem. Różnica w działaniu widoczna od razu: klimatyzator chłodzi szybciej i ciszej. Technik punktualny i skrupulatny. Polecam regularne czyszczenie i tę firmę w szczególności.",
+    "data": "2026-09-10",
+    "godzina": "15:14:36",
+    "ocena": 5,
+    "inicjaly": "PP",
+    "kolor": "#9c27b0"
+  },
+  {
+    "imie": "Pani Sylwia",
+    "lokalizacja": "Warszawa, Śródmieście",
+    "tekst": "Serwis klimatyzatora w mieszkaniu w centrum Warszawy — technik przyjechał na czas mimo korków. Wykonał pełny przegląd, sprawdził ciśnienie czynnika, wyczyszczone filtry i tacę ociekową. Klimatyzacja jak nowa, a serwis zajął niespełna godzinę. Szybko, rzetelnie i w dobrej cenie. Polecam.",
+    "data": "2026-09-01",
+    "godzina": "11:40:02",
+    "ocena": 5,
+    "inicjaly": "PS",
+    "kolor": "#ea4335"
+  },
+  {
+    "imie": "Pan Wojciech",
+    "lokalizacja": "Legionowo",
+    "tekst": "Montaż klimatyzatora Gree w nowym domu — trzy jednostki wewnętrzne i jedna zewnętrzna. Ekipa pracowała przez cały dzień, sprawnie i bez zbędnych przerw. Trasy rurowe poprowadzone dyskretnie, wszystkie przejścia przez ściany idealnie uszczelnione. Efekt końcowy powyżej oczekiwań. Serdecznie polecam.",
+    "data": "2026-08-27",
+    "godzina": "17:06:47",
+    "ocena": 5,
+    "inicjaly": "PW",
+    "kolor": "#00897b"
+  },
+  {
+    "imie": "Pani Ewa",
+    "lokalizacja": "Warszawa, Bemowo",
+    "tekst": "Czyszczenie klimatyzatora w środku lata — technik przyjechał w umówionym terminie, mimo że był to gorący sierpień i zapewne miał dużo zleceń. Wyczyścił wszystko dokładnie, przeprowadził dezynfekcję i sprawdził działanie w różnych trybach. Klimatyzacja pracuje teraz ciszej. Dobra firma, polecam.",
+    "data": "2026-08-20",
+    "godzina": "09:32:13",
+    "ocena": 5,
+    "inicjaly": "PE",
+    "kolor": "#fbbc04"
+  },
+  {
+    "imie": "Pan Kamil",
+    "lokalizacja": "Wołomin",
+    "tekst": "Serwis klimatyzatora w upalne lato — klimatyzator przestał wystarczająco chłodzić, okazało się że poziom czynnika był niski. Technik zlokalizował drobną nieszczelność, naprawił i uzupełnił czynnik. Teraz chłodzi tak jak powinien. Solidna diagnoza i sprawna naprawa. Zdecydowanie polecam.",
+    "data": "2026-08-11",
+    "godzina": "13:58:28",
+    "ocena": 5,
+    "inicjaly": "PK",
+    "kolor": "#558b2f"
+  },
+  {
+    "imie": "Pani Zofia",
+    "lokalizacja": "Warszawa, Targówek",
+    "tekst": "Montaż klimatyzatora LG Dual Cool w mieszkaniu na pierwszym piętrze. Technik dobrze rozplanował montaż i sprawnie go wykonał. Jednostka zewnętrzna stoi stabilnie, trasa estetyczna. Klimatyzator działa bezgłośnie zarówno w trybie chłodzenia jak i grzania. Polecam tę firmę sąsiadom.",
+    "data": "2026-08-05",
+    "godzina": "16:24:54",
+    "ocena": 5,
+    "inicjaly": "PZ",
+    "kolor": "#0288d1"
+  },
+  {
+    "imie": "Pan Adrian",
+    "lokalizacja": "Pruszków",
+    "tekst": "Czyszczenie klimatyzatora i wymiana filtrów — usługa szybka i profesjonalna. Technik pokazał mi stan filtrów przed czyszczeniem — były naprawdę brudne mimo że sam je czyściłem. Po pełnym czyszczeniu profesjonalnym sprzętem różnica jest wyraźna. Teraz wiem że warto korzystać z usług fachowca.",
+    "data": "2026-07-29",
+    "godzina": "10:51:21",
+    "ocena": 5,
+    "inicjaly": "PA",
+    "kolor": "#e91e63"
+  },
+  {
+    "imie": "Pani Magdalena",
+    "lokalizacja": "Warszawa, Mokotów",
+    "tekst": "Serwis klimatyzatora przed wakacjami — przegląd techniczny, czyszczenie i sprawdzenie czynnika. Technik był punktualny, miły i dokładny. Wyjaśnił mi też kiedy najlepiej wykonywać serwis i jak często. Klimatyzacja gotowa na upały. Na pewno wrócę, bo obsługa na bardzo wysokim poziomie.",
+    "data": "2026-07-23",
+    "godzina": "14:17:46",
+    "ocena": 5,
+    "inicjaly": "PM",
+    "kolor": "#34a853"
+  },
+  {
+    "imie": "Pan Norbert",
+    "lokalizacja": "Grodzisk Mazowiecki",
+    "tekst": "Montaż klimatyzatora Rotenso w domu w Grodzisku — mimo odległości od Warszawy ekipa przyjechała bez problemów na umówiony termin. Montaż perfekcyjny: trasa ukryta, jednostka zewnętrzna solidnie zamocowana, wszystko uszczelnione. Instruktaż obsługi w zrozumiały sposób. Polecam bez wahania.",
+    "data": "2026-07-15",
+    "godzina": "08:43:12",
+    "ocena": 5,
+    "inicjaly": "PN",
+    "kolor": "#1a73e8"
+  },
+  {
+    "imie": "Pani Aleksandra",
+    "lokalizacja": "Warszawa, Żoliborz",
+    "tekst": "Czyszczenie klimatyzatora zamontowanego w salonie — technik pracował profesjonalnie i skrupulatnie. Mycie lameli, dezynfekcja parownika, czyszczenie drenu. Po serwisie klimatyzacja pracuje efektywniej i nie wydziela żadnego zapachu. Firma godna polecenia, stałam się stałą klientką.",
+    "data": "2026-07-08",
+    "godzina": "16:09:38",
+    "ocena": 5,
+    "inicjaly": "PA",
+    "kolor": "#ff5722"
+  },
+  {
+    "imie": "Pan Dariusz",
+    "lokalizacja": "Radzymin",
+    "tekst": "Montaż klimatyzatora Samsung WindFree w salonie — zachwycony cichą pracą tego urządzenia. Technik pomógł wybrać odpowiedni model, wytłumaczył działanie trybu bezwietrznego. Montaż staranny, bez żadnych śladów po wierceniu. Czas od kontaktu do montażu to tylko pięć dni. Polecam!",
+    "data": "2026-06-30",
+    "godzina": "11:35:04",
+    "ocena": 5,
+    "inicjaly": "PD",
+    "kolor": "#9c27b0"
+  },
+  {
+    "imie": "Pani Wioleta",
+    "lokalizacja": "Warszawa, Bielany",
+    "tekst": "Serwis klimatyzatora przed sezonem letnim — technik wyczyścił filtry, sprawdził poziom czynnika i skalibrował czujniki temperatury. Klimatyzacja prawidłowo chłodzi już od pierwszego uruchomienia po serwisie. Szybki termin, punktualna obsługa i adekwatna cena. Wracam co sezon.",
+    "data": "2026-06-25",
+    "godzina": "15:01:29",
+    "ocena": 5,
+    "inicjaly": "PW",
+    "kolor": "#ea4335"
+  },
+  {
+    "imie": "Pan Leszek",
+    "lokalizacja": "Konstancin-Jeziorna",
+    "tekst": "Czyszczenie i dezynfekcja klimatyzatora w domu w Konstancinie. Technik przyjechał punktualnie, pracował dokładnie i bez pośpiechu. Wyczyścił jednostkę wewnętrzną i zewnętrzną, sprawdził szczelność instalacji. Klimatyzacja wróciła do pełnej sprawności. Rzetelna firma, na pewno wrócę.",
+    "data": "2026-06-16",
+    "godzina": "09:27:55",
+    "ocena": 5,
+    "inicjaly": "PL",
+    "kolor": "#00897b"
+  },
+  {
+    "imie": "Pani Bożena",
+    "lokalizacja": "Warszawa, Praga",
+    "tekst": "Montaż klimatyzatora Gree w mieszkaniu na Pradze — świetna obsługa od początku do końca. Fachowiec pomógł wybrać model odpowiedni do metrażu, montaż wykonany estetycznie. Trasa rurowa poprowadzona dyskretnie, nic nie psuje wyglądu wnętrza. Klimatyzator działa cicho. Bardzo polecam.",
+    "data": "2026-06-11",
+    "godzina": "13:53:21",
+    "ocena": 5,
+    "inicjaly": "PB",
+    "kolor": "#fbbc04"
+  },
+  {
+    "imie": "Pan Mariusz",
+    "lokalizacja": "Nowy Dwór Mazowiecki",
+    "tekst": "Serwis dwóch klimatyzatorów w domu pod Warszawą — technik przyjechał mimo sporej odległości bez żadnego problemu. Przegląd gruntowny: czynnik, filtry, elektryka, szczelność. Wszystko sprawne, jeden filtr do wymiany — zamontowany od ręki. Uczciwa wycena i dobra robota. Polecam!",
+    "data": "2026-06-03",
+    "godzina": "17:19:46",
+    "ocena": 5,
+    "inicjaly": "PM",
+    "kolor": "#558b2f"
+  },
+  {
+    "imie": "Pani Joanna",
+    "lokalizacja": "Warszawa, Wola",
+    "tekst": "Czyszczenie klimatyzatora przed sezonem letnim — technik wyczyszczone filtry pokazał mi na dowód jak bardzo były zabrudzone po zimie. Kompletne czyszczenie z dezynfekcją zajęło niespełna dwie godziny. Klimatyzacja pachnie świeżością i chłodzi znacznie skuteczniej. Bardzo dobra usługa.",
+    "data": "2026-05-27",
+    "godzina": "10:46:12",
+    "ocena": 5,
+    "inicjaly": "PJ",
+    "kolor": "#0288d1"
+  },
+  {
+    "imie": "Pan Mirosław",
+    "lokalizacja": "Łomianki",
+    "tekst": "Montaż klimatyzatora Fujitsu Asyg w salonie — polecony przez sąsiada i nie żałuję. Technik doradził mi odpowiedni model do dużego salonu, wytłumaczył różnicę w klasach energetycznych. Montaż zajął pół dnia, wszystko wykonane solidnie i schludnie. Urządzenie pracuje cicho jak marzenie.",
+    "data": "2026-05-22",
+    "godzina": "14:12:38",
+    "ocena": 5,
+    "inicjaly": "PM",
+    "kolor": "#e91e63"
+  },
+  {
+    "imie": "Pani Barbara",
+    "lokalizacja": "Warszawa, Ursynów",
+    "tekst": "Serwis przed sezonem — przegląd klimatyzatora po zimie, czyszczenie filtrów i kontrola czynnika. Technik przyjechał punktualnie, wykonał przegląd sprawnie i zostawił dokumentację serwisową. Klimatyzacja gotowa na letnie upały. Stała klientka i zdecydowanie polecam tę firmę innym.",
+    "data": "2026-05-12",
+    "godzina": "08:38:03",
+    "ocena": 5,
+    "inicjaly": "PB",
+    "kolor": "#34a853"
+  },
+  {
+    "imie": "Pan Przemysław",
+    "lokalizacja": "Mińsk Mazowiecki",
+    "tekst": "Montaż klimatyzatora w domu w Mińsku Mazowieckim — firma dojechała bez problemu. Technik ocenił sytuację na miejscu, zaproponował najlepsze umiejscowienie jednostek i sprawnie przeprowadził montaż. Całość skończona w ciągu jednego dnia. Rzetelna firma, uczciwa wycena. Polecam okolicom Mińska.",
+    "data": "2026-05-07",
+    "godzina": "16:04:29",
+    "ocena": 5,
+    "inicjaly": "PP",
+    "kolor": "#1a73e8"
+  },
+  {
+    "imie": "Pani Celina",
+    "lokalizacja": "Warszawa, Ochota",
+    "tekst": "Czyszczenie klimatyzatora po sezonie zimowym — technik pracował dokładnie i bez pośpiechu. Odkrył że dren był częściowo zatkany, oczyścił go i zapobiegł ewentualnym problemom z zalaniem. Klimatyzacja po serwisie działa jak nowa. Cenię sobie tę firmę za uczciwość i dokładność.",
+    "data": "2026-04-28",
+    "godzina": "11:30:54",
+    "ocena": 5,
+    "inicjaly": "PC",
+    "kolor": "#ff5722"
+  },
+  {
+    "imie": "Pan Henryk",
+    "lokalizacja": "Piaseczno",
+    "tekst": "Serwis klimatyzatora — pełny przegląd przed sezonem letnim. Technik był punkt w punkt na umówioną godzinę, wykonał przegląd skrupulatnie: filtry, czynnik, elektryka, taca. Zostawił raport z przeglądu i wystawił kartę serwisową. Profesjonalne podejście, które doceniam. Polecam sąsiadom.",
+    "data": "2026-04-23",
+    "godzina": "15:57:20",
+    "ocena": 5,
+    "inicjaly": "PH",
+    "kolor": "#9c27b0"
+  },
+  {
+    "imie": "Pani Dominika",
+    "lokalizacja": "Warszawa, Śródmieście",
+    "tekst": "Montaż klimatyzatora Rotenso w mieszkaniu w centrum Warszawy — nie było łatwo ze względu na starą kamienicę, ale technik poradził sobie znakomicie. Poprowadził trasę dyskretnie, jednostka zewnętrzna zamocowana na elewacji zgodnie z przepisami. Klimatyzacja działa cicho. Bardzo polecam.",
+    "data": "2026-04-14",
+    "godzina": "09:23:46",
+    "ocena": 5,
+    "inicjaly": "PD",
+    "kolor": "#ea4335"
+  },
+  {
+    "imie": "Pan Zbigniew",
+    "lokalizacja": "Wołomin",
+    "tekst": "Czyszczenie klimatyzatora po zimie — technik przyjechał punktualnie, wyczyścił filtry, parownik i dreny. Przeprowadził dezynfekcję i sprawdził działanie w trybie chłodzenia. Klimatyzacja gotowa na lato. Prosta, szybka i dobrze wyceniona usługa. Polecam mieszkańcom Wołomina.",
+    "data": "2026-04-09",
+    "godzina": "13:49:11",
+    "ocena": 5,
+    "inicjaly": "PZ",
+    "kolor": "#00897b"
+  },
+  {
+    "imie": "Pani Lidia",
+    "lokalizacja": "Warszawa, Bielany",
+    "tekst": "Serwis klimatyzatora po zimie — przegląd, czyszczenie i uzupełnienie czynnika chłodniczego. Technik był skrupulatny i wyjaśnił mi na co zwrócić uwagę przy samodzielnym użytkowaniu. Klimatyzacja chłodzi teraz efektywniej niż w zeszłym roku. Dobra firma, wrócę za rok na kolejny przegląd.",
+    "data": "2026-04-01",
+    "godzina": "17:15:37",
+    "ocena": 5,
+    "inicjaly": "PL",
+    "kolor": "#fbbc04"
+  },
+  {
+    "imie": "Pan Wiktor",
+    "lokalizacja": "Marki",
+    "tekst": "Montaż klimatyzatora Gree w salonie — szybka wycena przez telefon, sprawny montaż po trzech dniach od kontaktu. Technicy przyjechali we dwóch, pracowali sprawnie i czysto. Trasa rurowa poprowadzona po zewnętrznej ścianie w korytkach, wygląda estetycznie. Klimatyzacja działa bezbłędnie. Polecam.",
+    "data": "2026-03-26",
+    "godzina": "10:42:03",
+    "ocena": 5,
+    "inicjaly": "PW",
+    "kolor": "#558b2f"
+  },
+  {
+    "imie": "Pani Aneta",
+    "lokalizacja": "Warszawa, Bemowo",
+    "tekst": "Czyszczenie klimatyzatora wiosną po sezonie grzewczym — technik przyjechał punktualnie, wyczyścił filtry i parownik, przeprowadził dezynfekcję. Poinformował mnie też że jednostka zewnętrzna wymaga doczyszczenia lameli — zrobił to od razu w ramach wizyty. Kompleksowa usługa i dobra cena. Polecam.",
+    "data": "2026-03-17",
+    "godzina": "08:19:28",
+    "ocena": 5,
+    "inicjaly": "PA",
+    "kolor": "#0288d1"
+  },
+  {
+    "imie": "Pani Elżbieta",
+    "lokalizacja": "Warszawa, Wilanów",
+    "tekst": "Montaż dwóch klimatyzatorów Gree w nowym domu. Technicy przyjechali o umówionej godzinie, wszystko wykonali w ciągu jednego dnia. Widać że znają się na robocie — trasy rurowe poprowadzone estetycznie, nic nie straszy. Bardzo polecam.",
+    "data": "2026-03-10",
+    "godzina": "10:14",
+    "ocena": 5,
+    "inicjaly": "PE",
+    "kolor": "#e91e63"
+  },
+  {
+    "imie": "Pan Grzegorz",
+    "lokalizacja": "Warszawa, Śródmieście",
+    "tekst": "Przegląd serwisowy klimatyzatora przed sezonem wiosennym. Technik dokładnie oczyścił jednostkę wewnętrzną, sprawdził ciśnienie czynnika i przetestował wszystkie tryby pracy. Klimatyzacja jak nowa. Cena adekwatna do zakresu prac.",
+    "data": "2026-03-02",
+    "godzina": "15:30",
+    "ocena": 5,
+    "inicjaly": "PG",
+    "kolor": "#0288d1"
+  },
+  {
+    "imie": "Pani Iwona",
+    "lokalizacja": "Marki",
+    "tekst": "Montaż klimatyzatora Rotenso w salonie — obsługa od początku do końca bez zarzutów. Fachowiec pomógł wybrać odpowiednią moc do powierzchni, termin uzgodniony szybko. Polecam każdemu kto szuka rzetelnej firmy.",
+    "data": "2026-02-16",
+    "godzina": "12:48",
+    "ocena": 5,
+    "inicjaly": "PI",
+    "kolor": "#558b2f"
+  },
+  {
+    "imie": "Pan Sławomir",
+    "lokalizacja": "Warszawa, Ochota",
+    "tekst": "Profesjonalne czyszczenie klimatyzacji — dezynfekcja parownika i dokładne mycie lameli. Wcześniej z klimatyzatora wydobywał się lekki zapach, teraz powietrze jest czyste i świeże. Warto robić to regularnie, zdecydowanie wracam.",
+    "data": "2026-02-04",
+    "godzina": "09:05",
+    "ocena": 5,
+    "inicjaly": "PS",
+    "kolor": "#ff5722"
+  },
+  {
+    "imie": "Pani Dorota",
+    "lokalizacja": "Wołomin",
+    "tekst": "Serwis klimatyzatora — uzupełnienie czynnika chłodniczego i kontrola szczelności instalacji. Technik przyjechał punktualnie, wyjaśnił co i dlaczego robi. Po napełnieniu klimatyzacja znowu chłodzi tak jak powinna. Dobry kontakt i uczciwa cena.",
+    "data": "2026-01-22",
+    "godzina": "16:55",
+    "ocena": 5,
+    "inicjaly": "PD",
+    "kolor": "#1a73e8"
+  },
+  {
+    "imie": "Pan Michał",
+    "lokalizacja": "Warszawa, Bielany",
+    "tekst": "Zamontowali mi klimatyzator w sypialni — od wyceny do montażu minął tydzień. Ekipa przyjechała we dwóch, pracowała sprawnie i czysto. Szczególnie doceniam że zakryli folią meble przed kurzem przy wierceniu. Polecam bez wahania.",
+    "data": "2026-01-08",
+    "godzina": "11:33",
+    "ocena": 5,
+    "inicjaly": "PM",
+    "kolor": "#34a853"
+  },
+  {
+    "imie": "Pani Agnieszka",
+    "lokalizacja": "Otwock",
+    "tekst": "Czyszczenie klimatyzatora po 3 latach użytkowania — filtry były w opłakanym stanie, ale technik wyczyścił wszystko dokładnie i przeprowadził dezynfekcję. Różnica w jakości powietrza odczuwalna od razu. Teraz wiem że takie czyszczenie warto robić co rok.",
+    "data": "2025-12-17",
+    "godzina": "14:20",
+    "ocena": 5,
+    "inicjaly": "PA",
+    "kolor": "#ea4335"
+  },
+  {
+    "imie": "Pan Łukasz",
+    "lokalizacja": "Warszawa, Żoliborz",
+    "tekst": "Montaż klimatyzatora Gree w mieszkaniu w kamienicy — nie ukrywam że byłem sceptyczny czy da się to sensownie zrobić, ale ekipa poradziła sobie znakomicie. Trasa zewnętrzna poprowadzona dyskretnie, jednostka zewnętrzna zamocowana pewnie. Bardzo dobra robota.",
+    "data": "2025-12-03",
+    "godzina": "17:08",
+    "ocena": 5,
+    "inicjaly": "PL",
+    "kolor": "#fbbc04"
+  },
+  {
+    "imie": "Pani Zofia",
+    "lokalizacja": "Legionowo",
+    "tekst": "Serwis klimatyzacji po sezonie letnim — czyszczenie, sprawdzenie czynnika i przegląd elektryki. Technik był punktualny i dokładny, nie spieszył się na odczepnego. Klimatyzacja jest już gotowa na zimowe grzanie. Polecam tę firmę znajomym.",
+    "data": "2025-11-18",
+    "godzina": "13:42",
+    "ocena": 5,
+    "inicjaly": "PZ",
+    "kolor": "#9c27b0"
+  },
+  {
+    "imie": "Pan Krzysztof",
+    "lokalizacja": "Warszawa, Bemowo",
+    "tekst": "Montaż klimatyzatora w gabinecie domowym. Świetny kontakt, szybka wycena przez telefon i sprawny montaż. Fachowiec wszystko wytłumaczył: jak obsługiwać, jak czyścić filtry i kiedy zgłosić się na serwis. Bardzo profesjonalne podejście do klienta.",
+    "data": "2025-11-05",
+    "godzina": "10:55",
+    "ocena": 5,
+    "inicjaly": "PK",
+    "kolor": "#00897b"
+  },
+  {
+    "imie": "Pan Marek",
+    "lokalizacja": "Warszawa, Mokotów",
+    "tekst": "Montaż klimatyzatora Rotenso w salonie i sypialni. Ekipa przyjechała punktualnie, pracowała sprawnie i po sobie posprzątała. Klimatyzacja działa bezgłośnie, polecam bez zastrzeżeń.",
+    "data": "2025-06-10",
+    "godzina": "11:20",
+    "ocena": 5,
+    "inicjaly": "PM",
+    "kolor": "#1a73e8"
+  },
+  {
+    "imie": "Pani Anna",
+    "lokalizacja": "Piaseczno",
+    "tekst": "Bardzo profesjonalna obsługa. Doradził mi odpowiedni model do mojego mieszkania, montaż zajął kilka godzin. Jestem bardzo zadowolona z efektu — w upały nie do wytrzymania teraz mam w domu chłód.",
+    "data": "2025-07-03",
+    "godzina": "14:35",
+    "ocena": 5,
+    "inicjaly": "PA",
+    "kolor": "#34a853"
+  },
+  {
+    "imie": "Pan Tomasz",
+    "lokalizacja": "Warszawa, Ursynów",
+    "tekst": "Serwis klimatyzacji po sezonie — czyszczenie filtrów i sprawdzenie czynnika. Solidna robota, cena uczciwa. Na pewno wrócę przed następnym sezonem.",
+    "data": "2025-08-15",
+    "godzina": "09:47",
+    "ocena": 5,
+    "inicjaly": "PT",
+    "kolor": "#ea4335"
+  },
+  {
+    "imie": "Pani Katarzyna",
+    "lokalizacja": "Pruszków",
+    "tekst": "Montaż klimatyzatora w biurze. Wszystko zorganizowane sprawnie, zero bałaganu. Pracownicy w końcu mogą pracować komfortowo nawet w środku lata. Polecam!",
+    "data": "2025-09-02",
+    "godzina": "16:10",
+    "ocena": 5,
+    "inicjaly": "PK",
+    "kolor": "#fbbc04"
+  },
+  {
+    "imie": "Pan Robert",
+    "lokalizacja": "Warszawa, Wola",
+    "tekst": "Zgłosiłem się po poleceniu znajomego. Montaż dwóch jednostek w mieszkaniu, fachowiec wytłumaczył jak obsługiwać urządzenie i jak dbać o filtry. Bardzo profesjonalne podejście.",
+    "data": "2025-09-20",
+    "godzina": "13:05",
+    "ocena": 5,
+    "inicjaly": "PR",
+    "kolor": "#9c27b0"
+  },
+  {
+    "imie": "Pani Marta",
+    "lokalizacja": "Warszawa, Praga",
+    "tekst": "Klimatyzator Gree zamontowany w dniu uzgodnionym, bez opóźnień. Ekipa miła, kompetentna. Urządzenie działa świetnie zarówno latem do chłodzenia jak i zimą do dogrzewania.",
+    "data": "2025-10-05",
+    "godzina": "18:22",
+    "ocena": 5,
+    "inicjaly": "PM",
+    "kolor": "#00897b"
+  }
+]

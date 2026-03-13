@@ -1,7 +1,9 @@
 ---
 import Default from "@layouts/Default.astro";
+import ServicesSection from "@components/ServicesSection.astro";
+import OpinionsSection from "@components/OpinionsSection.astro";
 
-const title = "Zamontuj Klimat – Montaż i Serwis Klimatyzacji | Warszawa i okolice";
+const title = "Montaż Klimatyzacji Warszawa – Montaż i Serwis Klimatyzacji | Warszawa i okolice";
 const description =
   "Zamontuj Klimat – Profesjonalny montaż i serwis klimatyzacji w Warszawie i okolicach. Gree, LG, Kaisai, Mitsubishi, Daikin. Do 7 lat gwarancji. Darmowa wycena.";
 const keywords =
@@ -16,7 +18,7 @@ const canonical = "https://montaz-serwis-klimatyzacji.pl";
   canonical={canonical}
 >
   <Fragment slot="head">
-    <meta property="og:title" content="Zamontuj Klimat - Montaż i Serwis Klimatyzacji Warszawa" />
+    <meta property="og:title" content="Montaż Klimatyzacji Warszawa - Montaż i Serwis Klimatyzacji" />
     <meta property="og:description" content="Profesjonalny montaż klimatyzacji w Warszawie. 5 marek premium, do 7 lat gwarancji, darmowa wycena." />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pl_PL" />
@@ -110,7 +112,7 @@ const canonical = "https://montaz-serwis-klimatyzacji.pl";
     <div class="hero-circle-small"></div>
     <div class="hero-container">
       <div class="hero-content">
-        <h1>Idealna <span>klimatyzacja</span> dla Twojego domu</h1>
+        <h1>Montaż klimatyzacji <span>Warszawa</span></h1>
         <p>Montaż i serwis klimatyzacji w Warszawie i okolicach. Współpracujemy z najlepszymi markami: Rotenso, Gree, Mitsubishi.</p>
       </div>
       <div class="hero-visual">
@@ -158,6 +160,8 @@ const canonical = "https://montaz-serwis-klimatyzacji.pl";
       </div>
     </div>
   </section>
+
+  <ServicesSection />
 
   <!-- PRODUCTS -->
   <section class="products-section" id="klimatyzatory">
@@ -345,7 +349,7 @@ const canonical = "https://montaz-serwis-klimatyzacji.pl";
     </div>
   </section>
 
-  <!-- BRANDS -->
+  <!-- BRANDS --9>
   <section class="brands-section" id="producenci">
     <div class="container">
       <div class="section-header">
@@ -364,39 +368,6 @@ const canonical = "https://montaz-serwis-klimatyzacji.pl";
           <div class="brand-name">Rotenso</div>
           <div class="brand-country">🇵🇱 Polska</div>
         </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY US -->
-  <section class="why-section" id="dlaczego-my">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-badge">Nasze atuty</span>
-        <h2 class="section-title">Dlaczego my?</h2>
-        <p class="section-desc">Jesteśmy zespołem certyfikowanych specjalistów z wieloletnim doświadczeniem</p>
-      </div>
-      <div class="why-grid">
-        <div class="why-card">
-          <div class="why-icon">🛡️</div>
-          <h3>Do 7 lat gwarancji</h3>
-          <p>Oferujemy rozszerzoną gwarancję na wszystkie instalacje wykonane przez nasz zespół</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">⚡</div>
-          <h3>Montaż w 48h</h3>
-          <p>Szybka realizacja zamówień – od wyceny do działającej klimatyzacji w 2 dni</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">👨‍🔧</div>
-          <h3>Certyfikowani monterzy</h3>
-          <p>Nasi technicy posiadają certyfikaty F-GAZ oraz szkolenia producentów</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">💰</div>
-          <h3>Uczciwe ceny</h3>
-          <p>Transparentna wycena bez ukrytych kosztów. Płacisz tylko za to, co zamawiasz</p>
-        </div>
       </div>
     </div>
   </section>
@@ -480,6 +451,41 @@ const canonical = "https://montaz-serwis-klimatyzacji.pl";
       </div>
       <div style="text-align:center; margin-top:2rem;">
         <a href="/realizacje" class="btn btn-outline">Zobacz więcej realizacji</a>
+      </div>
+    </div>
+  </section>
+
+  <OpinionsSection />
+
+  <!-- WHY US -->
+  <section class="why-section" id="dlaczego-my">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Nasze atuty</span>
+        <h2 class="section-title">Dlaczego my?</h2>
+        <p class="section-desc">Jesteśmy zespołem certyfikowanych specjalistów z wieloletnim doświadczeniem</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">🛡️</div>
+          <h3>Do 7 lat gwarancji</h3>
+          <p>Oferujemy rozszerzoną gwarancję na wszystkie instalacje wykonane przez nasz zespół</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">⚡</div>
+          <h3>Montaż w 48h</h3>
+          <p>Szybka realizacja zamówień – od wyceny do działającej klimatyzacji w 2 dni</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">👨‍🔧</div>
+          <h3>Certyfikowani monterzy</h3>
+          <p>Nasi technicy posiadają certyfikaty F-GAZ oraz szkolenia producentów</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">💰</div>
+          <h3>Uczciwe ceny</h3>
+          <p>Transparentna wycena bez ukrytych kosztów. Płacisz tylko za to, co zamawiasz</p>
+        </div>
       </div>
     </div>
   </section>
