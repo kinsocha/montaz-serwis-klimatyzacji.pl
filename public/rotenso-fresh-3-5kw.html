@@ -1,14 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rotenso Mirai 3,5 kW – Technologia eMOTO i grzanie do −30°C</title>
+  <title>Rotenso Fresh X 3,5 kW – Technologia Windless Premium</title>
 
   <!-- Optymalizacja połączeń sieciowych -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  
+
   <!-- Optymalizacja ładowania czcionek: display=swap oraz asynchroniczne ładowanie -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
   <noscript>
@@ -20,15 +20,19 @@
 </head>
 <body>
 
-<!-- Dekoracyjne elementy tła -->
-<div class="trapez-bg" aria-hidden="true"></div>
-<div class="trapez-bg-left" aria-hidden="true"></div>
-<div class="blue-bar" aria-hidden="true"></div>
+<!-- NIEBIESKI TRAPEZ W TLE (nie wpływa na layout) -->
+<div class="trapez-bg"></div>
 
-<!-- Kontener na śnieg -->
-<div class="snow-container" id="snowContainer" aria-hidden="true"></div>
+<!-- NIEBIESKI TRAPEZ LEWY -->
+<div class="trapez-bg-left"></div>
 
-<!-- Navbar -->
+<!-- NIEBIESKA BELKA (na wysokości kosztów eksploatacji) -->
+<div class="blue-bar"></div>
+
+<!-- KONTENER NA ŚNIEG -->
+<div class="snow-container" id="snowContainer"></div>
+
+
 <nav class="navbar" id="navbar">
   <div class="nav-container">
     <a href="index.html" class="nav-logo" aria-label="Zamontuj Klimatyzację - Strona główna">
@@ -53,18 +57,16 @@
 <main id="main-content" class="container">
   <header class="header-section">
     <div class="brand">
-      <span style="color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: 1px;">Premium A+++ / A+++</span>
-      <h1>Rotenso Mirai 3,5 kW</h1>
-      <p style="color: var(--muted); font-family: 'IBM Plex Mono';">Indeks: M35Wi / M35Wo</p>
+      <span style="color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: 1px;">Model Premium – Seria X</span>
+      <h1>Fresh X 3,5 kW</h1>
+      <p style="color: var(--muted); font-family: 'IBM Plex Mono';">Indeks: F35Wi / F35Wo</p>
     </div>
 
     <section class="selection-box" aria-labelledby="selection-title">
-      <div class="selection-header">
-        <h3 id="selection-title">Dobierz moc do pomieszczenia:</h3>
-      </div>
+      <h3 id="selection-title">Dobierz moc do pomieszczenia:</h3>
       <div class="areaButtons">
-        <a href="rotenso-mirai-2-6kw.html" class="areaBtn">do 25 m²</a>
-        <span class="areaBtn active" aria-pressed="true">25 – 35 m²</span>
+        <span class="areaBtn active" aria-pressed="true">26 – 35 m²</span>
+        <a href="rotenso-fresh-2-6kw.html" class="areaBtn">do 25 m²</a>
         <a href="klimatyzatory-rotenso.html" class="areaBtn areaBtn-full">Powrót - wszystkie Rotenso</a>
       </div>
     </section>
@@ -74,41 +76,41 @@
       <aside class="sticky-sidebar" aria-label="Zdjęcia produktu">
         <div class="img-container">
           <div class="img-main">
-            <img src="/klimatyzatory-scienne-rotenso/klimatyzator-rotenso-mirai-M35Wi-kolor-bialy-indoor.webp" 
-                 alt="Klimatyzator ścienny Rotenso Mirai - jednostka wewnętrzna" width="300" height="300" fetchpriority="high">
+            <img src="/klimatyzatory-scienne-rotenso/klimatyzator-rotenso-fresh-F35Wi-kolor-bialy-indoor.webp"
+                 alt="Klimatyzator ścienny Rotenso Fresh X - jednostka wewnętrzna" width="300" height="300" fetchpriority="high">
           </div>
           <div class="img-footer">
             <span style="font-weight: 700; color: #ffffff;">Jednostka wewn.</span>
-            <span style="background: #ffffff; color: var(--accent); padding: 3px 12px; border-radius: 5px; font-size: 12px; font-weight: 800;" aria-label="Kolor biały">Biały</span>
+            <span style="background: #ffffff; color: var(--accent); padding: 3px 12px; border-radius: 5px; font-size: 12px; font-weight: 800;" aria-label="Klasa energetyczna A+++">A+++</span>
           </div>
         </div>
         <div class="img-container">
-          <div class="img-main">
-            <img src="https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-rotenso/rotenso-mirai-M35Wo-outdoor.webp" 
-                 alt="Klimatyzator Rotenso Mirai - jednostka zewnętrzna" width="340" height="340" loading="lazy">
-          </div>
-          <div class="img-footer img-footer-outdoor">
-            <span style="font-weight: 700; color: #ffffff;">Jednostka zewnętrzna</span>
-          </div>
+            <div class="img-main">
+              <img src="/klimatyzatory-scienne-rotenso/klimatyzator-rotenso-fresh-F35Wo-outdoor.webp"
+                   alt="Agregat zewnętrzny Rotenso Fresh X" width="340" height="340" loading="lazy">
+            </div>
+            <div class="img-footer img-footer-outdoor">
+              <span style="font-weight: 700; color: #ffffff;">Jednostka zewnętrzna</span>
+            </div>
         </div>
       </aside>
 
       <article class="details-card">
         <header>
-          <h2>Technologia eMOTO i grzanie do −30°C</h2>
+          <h2>Najwyższa wydajność, bez kompromisów</h2>
         </header>
-        
+
         <section class="price-box" style="margin-top: 8px;" aria-label="Cena i gwarancja">
           <div>
             <span style="display: block; font-size: 13px; color: #2c7dfa; font-weight: 700;">Szacowany koszt z montażem (8% VAT)</span>
-            <span class="price-value">Do ustalenia</span>
+            <span class="price-value">4 999 zł</span>
           </div>
         </section>
 
         <section class="tech-params-section" aria-labelledby="tech-params-title">
           <h3 id="tech-params-title" class="tech-sub-title">Parametry techniczne</h3>
           <table class="spec-list">
-            <caption style="text-align: left !important;">Szczegółowa specyfikacja modelu Mirai 3,5 kW (M35Wi / M35Wo)</caption>
+            <caption style="text-align: left !important;">Szczegółowa specyfikacja modelu Rotenso Fresh X 3,5 kW (F35Wi / F35Wo)</caption>
             <thead>
               <tr style="display: none;">
                 <th scope="col">Parametr</th>
@@ -118,18 +120,18 @@
             <tbody>
               <tr><th scope="row" style="font-weight: normal; text-align: left;">Klasa energetyczna (chłodzenie/grzanie)</th><td class="val">A+++ / A+++</td></tr>
               <tr><th scope="row" style="font-weight: normal; text-align: left;">Moc chłodnicza</th><td class="val">3,50 kW</td></tr>
-              <tr><th scope="row" style="font-weight: normal; text-align: left;">Moc grzewcza</th><td class="val">4,25 kW</td></tr>
-              <tr><th scope="row" style="font-weight: normal; text-align: left;">SEER / SCOP</th><td class="val">9,2 / 5,3</td></tr>
-              <tr><th scope="row" style="font-weight: normal; text-align: left;">Sezonowa efektywność chłodzenia / grzania</th><td class="val">365% / 209%</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Moc grzewcza</th><td class="val">4,30 kW</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">SEER / SCOP</th><td class="val">9,3 / 5,3</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Roczne zużycie energii (chłodzenie / grzanie)</th><td class="val">125 kWh / 790 kWh</td></tr>
               <tr><td colspan="2" style="font-size: 12px; color: var(--muted); padding: 8px 0; font-style: italic;">* Są to wartości deklarowane przez producenta, liczone w warunkach laboratoryjnych.</td></tr>
-              <tr><th scope="row" style="font-weight: normal; text-align: left;">Chłodzenie (zakres pracy przy temp. zewn.)</th><td class="val">−25°C do 52°C</td></tr>
-              <tr><th scope="row" style="font-weight: normal; text-align: left;">Grzanie (zakres pracy przy temp. zewn.)</th><td class="val">−30°C do 24°C</td></tr>
-              <tr><th scope="row" style="font-weight: normal; text-align: left;">Pobór mocy - chłodzenie</th><td class="val">0,75 kW</td></tr>
-              <tr><th scope="row" style="font-weight: normal; text-align: left;">Pobór mocy - grzanie</th><td class="val">0,92 kW</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Chłodzenie (zakres pracy przy temp. zewn.)</th><td class="val">−25°C do 50°C</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Grzanie (zakres pracy przy temp. zewn.)</th><td class="val">−30°C do 30°C</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Pobór mocy - chłodzenie</th><td class="val">0,61 kW</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Pobór mocy - grzanie</th><td class="val">0,98 kW</td></tr>
               <tr><td colspan="2" style="font-size: 12px; color: var(--muted); padding: 8px 0; font-style: italic;">* Są to wartości deklarowane przez producenta, liczone w warunkach laboratoryjnych.</td></tr>
-              <tr><th scope="row" style="font-weight: normal; text-align: left;">Przepływ powietrza (j. wewn.)</th><td class="val">280 – 620 m³/h</td></tr>
-              <tr><th scope="row" style="font-weight: normal; text-align: left;">Poziom hałasu (j. wewn.)</th><td class="val">21 – 45 dB(A)</td></tr>
-              <tr><th scope="row" style="font-weight: normal; text-align: left;">Poziom hałasu (j. zewn.)</th><td class="val">57 dB(A)</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Przepływ powietrza (j. wewn.)</th><td class="val">280 – 700 m³/h</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Poziom hałasu (j. wewn.)</th><td class="val">21 – 43 dB(A)</td></tr>
+              <tr><th scope="row" style="font-weight: normal; text-align: left;">Poziom hałasu (j. zewn.)</th><td class="val">56 dB(A)</td></tr>
             </tbody>
           </table>
         </section>
@@ -138,22 +140,22 @@
         <div class="mobile-only-photos">
           <div class="img-container">
             <div class="img-main">
-              <img src="/klimatyzatory-scienne-rotenso/klimatyzator-rotenso-mirai-M35Wi-kolor-bialy-indoor.webp" 
-                   alt="Klimatyzator ścienny Rotenso Mirai - jednostka wewnętrzna" width="300" height="300" loading="lazy">
+              <img src="/klimatyzatory-scienne-rotenso/klimatyzator-rotenso-fresh-F35Wi-kolor-bialy-indoor.webp"
+                   alt="Klimatyzator ścienny Rotenso Fresh X - jednostka wewnętrzna" width="300" height="300" loading="lazy">
             </div>
             <div class="img-footer">
               <span style="font-weight: 700; color: #ffffff;">Jednostka wewn.</span>
-              <span style="background: #ffffff; color: var(--accent); padding: 3px 12px; border-radius: 5px; font-size: 12px; font-weight: 800;">Biały</span>
+              <span style="background: #ffffff; color: var(--accent); padding: 3px 12px; border-radius: 5px; font-size: 12px; font-weight: 800;">A+++</span>
             </div>
           </div>
           <div class="img-container" style="margin-top: 20px;">
-            <div class="img-main">
-              <img src="https://montaz-serwis-klimatyzacji.pl/klimatyzatory-scienne-rotenso/rotenso-mirai-M35Wo-outdoor.webp" 
-                   alt="Klimatyzator Rotenso Mirai - jednostka zewnętrzna" width="340" height="340" loading="lazy">
-            </div>
-            <div class="img-footer">
-              <span style="font-weight: 700; color: #ffffff;">Jednostka zewnętrzna</span>
-            </div>
+              <div class="img-main">
+                <img src="/klimatyzatory-scienne-rotenso/klimatyzator-rotenso-fresh-F35Wo-outdoor.webp"
+                     alt="Agregat zewnętrzny Rotenso Fresh X" width="340" height="340" loading="lazy">
+              </div>
+              <div class="img-footer">
+                <span style="font-weight: 700; color: #ffffff;">Jednostka zewnętrzna</span>
+              </div>
           </div>
         </div>
 
@@ -161,95 +163,85 @@
           <h2 class="features-title">Funkcje i zalety</h2>
           <div class="features-grid">
             <div class="feature-card">
-              <div class="feat-ico" aria-hidden="true">👁️</div>
+              <div class="feat-ico" aria-hidden="true">⭐</div>
               <div class="feat-txt">
-                <strong>Smart Eye</strong>
-                <p>Inteligentny czujnik ruchu.
-                Dostosowuje nawiew do osób w pomieszczeniu.</p>
+                <strong>Najwyższa klasa A+++</strong>
+                <p>SEER 9,3 i SCOP 5,3 – maksymalna efektywność przez cały rok.</p>
               </div>
             </div>
             <div class="feature-card">
               <div class="feat-ico" aria-hidden="true">🌬️</div>
               <div class="feat-txt">
-                <strong>Nawiew 4D eMOTO</strong>
-                <p>Sterowanie żaluzjami pionowymi i poziomymi.
-                Równomierne rozprowadzanie powietrza.</p>
-              </div>
-            </div>
-            <div class="feature-card">
-              <div class="feat-ico" aria-hidden="true">🔇</div>
-              <div class="feat-txt">
-                <strong>Cicha praca od 21 dB</strong>
-                <p>Tryb eMOTO super cichy.
-                Idealna do sypialni i biura.</p>
+                <strong>Technologia Windless</strong>
+                <p>Nawiew bez odczuwalnego przeciągu – komfort bez bezpośredniego strumienia zimnego powietrza.</p>
               </div>
             </div>
             <div class="feature-card">
               <div class="feat-ico" aria-hidden="true">❄️</div>
               <div class="feat-txt">
-                <strong>Grzanie do −30°C</strong>
-                <p>Efektywne ogrzewanie w ekstremalnych mrozach.
-                100% wydajności przy −15°C.</p>
+                <strong>Grzanie w −30°C</strong>
+                <p>100% wydajności przy −15°C – dedykowany do pracy całorocznej.</p>
               </div>
             </div>
             <div class="feature-card">
-              <div class="feat-ico" aria-hidden="true">🌿</div>
+              <div class="feat-ico" aria-hidden="true">🔥</div>
               <div class="feat-txt">
-                <strong>Filtr HEPA iAIR</strong>
-                <p>Skuteczna filtracja cząstek PM2.5.
-                Czyste powietrze dla alergików.</p>
+                <strong>Chłodzenie w 50°C</strong>
+                <p>Pracuje wydajnie nawet w ekstremalnych upałach do 50°C.</p>
               </div>
             </div>
             <div class="feature-card">
-              <div class="feat-ico" aria-hidden="true">⚡</div>
+              <div class="feat-ico" aria-hidden="true">▥</div>
               <div class="feat-txt">
-                <strong>Jonizator iAIR</strong>
-                <p>Eliminacja bakterii, wirusów i alergenów.
-                Poprawa równowagi jonowej powietrza.</p>
-              </div>
-            </div>
-            <div class="feature-card">
-              <div class="feat-ico" aria-hidden="true">🧹</div>
-              <div class="feat-txt">
-                <strong>Samooczyszczanie iAIR</strong>
-                <p>Automatyczne osuszanie i czyszczenie wymiennika.
-                Zapobiega namnażaniu bakterii.</p>
+                <strong>System filtrów iAIR</strong>
+                <p>Filtr HEPA, Silver Ion, elektrostatyczny HD – eliminacja 99,97% zanieczyszczeń.</p>
               </div>
             </div>
             <div class="feature-card">
               <div class="feat-ico" aria-hidden="true">📱</div>
               <div class="feat-txt">
-                <strong>Wi-Fi Smart</strong>
-                <p>Sterowanie przez aplikację mobilną.
-                Kompatybilny z Google Home i Alexa.</p>
+                <strong>Wi-Fi + Pilot IR</strong>
+                <p>Wbudowany modem Wi-Fi w standardzie – sterowanie aplikacją NetHome Plus.</p>
               </div>
             </div>
             <div class="feature-card">
-              <div class="feat-ico" aria-hidden="true">💧</div>
+              <div class="feat-ico" aria-hidden="true">🔇</div>
               <div class="feat-txt">
-                <strong>Osuszanie</strong>
-                <p>Inteligentne osuszanie powietrza.
-                Kontrola wilgotności w pomieszczeniu.</p>
+                <strong>Cicha praca</strong>
+                <p>Zaledwie 21 dB(A) w trybie super cichym – idealna do sypialni.</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feat-ico" aria-hidden="true">⊖</div>
+              <div class="feat-txt">
+                <strong>Jonizator iAIR</strong>
+                <p>Eliminuje wirusy, bakterie, roztocza i alergeny z powietrza.</p>
               </div>
             </div>
             <div class="feature-card">
               <div class="feat-ico" aria-hidden="true">🏠</div>
               <div class="feat-txt">
                 <strong>Utrzymanie +8°C</strong>
-                <p>Ogrzewanie pomieszczenia do 8°C.
-                Ochrona przed zamarzaniem zimą.</p>
+                <p>Funkcja SMART 8°C – zapobiega wychłodzeniu budynków sezonowych.</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feat-ico" aria-hidden="true">📊</div>
+              <div class="feat-txt">
+                <strong>Mocny przepływ</strong>
+                <p>Do 590 m³/h zapewnia błyskawiczne schłodzenie przestrzeni do 35 m².</p>
               </div>
             </div>
           </div>
           <p style="text-align: center; margin-top: 24px; font-size: 14px;">
-            <a href="https://rotenso.com/pl/wyjatkowy-klimatyzator-rotenso-mirai/" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none;">📄 Pełna specyfikacja producenta →</a>
+            <a href="https://rotenso.com/pl/produkt/fresh-x/" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none;">📄 Pełna specyfikacja producenta →</a>
           </p>
         </section>
 
         <!-- WYMIARY URZĄDZEŃ -->
         <section class="dimensions-box" aria-labelledby="dimensions-title">
           <h3 id="dimensions-title" class="tech-sub-title">Wymiary urządzeń</h3>
-          
+
           <strong style="color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;">Jednostka wewn.</strong>
           <div style="margin-top: 10px;">
             <div class="dim-row">
@@ -265,7 +257,7 @@
               <span class="dim-value">248 mm</span>
             </div>
           </div>
-          
+
           <strong style="color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-top: 25px;">Jednostka zewnętrzna</strong>
           <div style="margin-top: 10px;">
             <div class="dim-row">
@@ -297,23 +289,8 @@
 </main>
 
   <footer style="text-align: center; padding: 40px 20px; color: var(--muted); font-size: 14px;">
-    <p>&copy; 2024 Dobry Klimat. Wszelkie prawa zastrzeżone.</p>
+    <p>&copy; 2024 Rotenso Partner. Wszelkie prawa zastrzeżone.</p>
   </footer>
-
-  <!-- SKRYPT HAMBURGER MENU -->
-  <script>
-    (function() {
-      const hamburger = document.querySelector('.hamburger');
-      const navLinks = document.querySelector('.nav-links');
-      
-      if (hamburger && navLinks) {
-        hamburger.addEventListener('click', function() {
-          navLinks.classList.toggle('active');
-          hamburger.classList.toggle('active');
-        });
-      }
-    })();
-  </script>
 
   <!-- SKRYPT ŚNIEGU - Zoptymalizowany, nie blokuje ładowania strony -->
   <script>
@@ -321,7 +298,7 @@
     window.addEventListener('load', function() {
       // Użyj requestIdleCallback jeśli dostępny, inaczej setTimeout
       const scheduleSnow = window.requestIdleCallback || function(cb) { setTimeout(cb, 1); };
-      
+
       scheduleSnow(function() {
         initSnowEffect();
       });
@@ -330,33 +307,33 @@
     function initSnowEffect() {
       const snowContainer = document.getElementById('snowContainer');
       const navbar = document.getElementById('navbar');
-      
+
       let isSnowing = false;
       let snowInterval = null;
       let activeFlakes = [];
-      
+
       // Konfiguracja płatków śniegu
       const snowflakes = ['❄', '❅', '❆', '✧', '✦', '•'];
       const navbarHeight = navbar ? navbar.offsetHeight : 60;
-      
+
       // Funkcja tworząca pojedynczy płatek
       function createSnowflake() {
         if (!isSnowing) return;
-        
+
         const flake = document.createElement('div');
         flake.className = 'snowflake';
         flake.textContent = snowflakes[Math.floor(Math.random() * snowflakes.length)];
-        
+
         // Losowa pozycja startowa (z navbara)
         const startX = Math.random() * window.innerWidth;
         flake.style.left = startX + 'px';
         flake.style.top = navbarHeight + 'px';
-        
+
         // Losowy rozmiar - 2x WIĘKSZY
         const size = (Math.random() * 12 + 8) * 2;
         flake.style.fontSize = size + 'px';
         flake.style.opacity = Math.random() * 0.5 + 0.5;
-        
+
         // Oblicz wysokość całego dokumentu (do footera/końca strony)
         const documentHeight = Math.max(
           document.body.scrollHeight,
@@ -365,27 +342,27 @@
           document.documentElement.offsetHeight
         );
         const fallDistance = documentHeight - navbarHeight;
-        
+
         // Losowa prędkość - czas proporcjonalny do wysokości strony
-        const baseSpeed = 150;
-        const speedVariation = Math.random() * 50 + 100;
+        const baseSpeed = 150; // pikseli na sekundę
+        const speedVariation = Math.random() * 50 + 100; // 100-150 px/s
         const duration = fallDistance / speedVariation;
-        
+
         // Animacja CSS inline (dynamiczna wysokość)
         flake.style.animation = `none`;
-        flake.offsetHeight;
+        flake.offsetHeight; // Force reflow
         flake.style.transition = `transform ${duration}s linear, opacity ${duration}s linear`;
-        
+
         snowContainer.appendChild(flake);
         activeFlakes.push(flake);
-        
+
         // Uruchom animację po dodaniu do DOM
         requestAnimationFrame(() => {
           flake.style.transform = `translateY(${fallDistance}px) rotate(360deg)`;
           flake.style.opacity = '0.3';
         });
-        
-        // Usuń płatek po zakończeniu animacji
+
+        // Usuń płatek po zakończeniu animacji (gdy dotrze do dołu strony)
         setTimeout(() => {
           if (flake.parentNode) {
             flake.parentNode.removeChild(flake);
@@ -394,56 +371,99 @@
           if (index > -1) {
             activeFlakes.splice(index, 1);
           }
-        }, duration * 1000 + 100);
+        }, duration * 1000 + 100); // +100ms bufor
       }
-      
+
+      // Funkcja startująca śnieg
       function startSnow() {
         if (isSnowing) return;
+
         isSnowing = true;
+
+        // Twórz płatki co 100ms
         snowInterval = setInterval(createSnowflake, 100);
       }
-      
+
+      // Funkcja zatrzymująca śnieg (płatki spadają do końca strony)
       function stopSnow() {
         isSnowing = false;
+
         if (snowInterval) {
           clearInterval(snowInterval);
           snowInterval = null;
         }
+        // NIE usuwamy płatków - pozwalamy im spaść do końca strony
+        // Każdy płatek sam się usunie po zakończeniu swojej animacji
       }
-      
+
+      // Funkcja czyszcząca wszystkie płatki (do użycia tylko gdy naprawdę trzeba)
+      function clearAllFlakes() {
+        activeFlakes.forEach(flake => {
+          if (flake.parentNode) {
+            flake.parentNode.removeChild(flake);
+          }
+        });
+        activeFlakes = [];
+      }
+
+      // ============================================
+      // HARMONOGRAM ŚNIEGU
+      // ============================================
+
       function runSnowSchedule() {
+        // Faza 1: Start po 2.5 sekundach, śnieg przez 4s
         setTimeout(() => {
           startSnow();
+
           setTimeout(() => {
             stopSnow();
+
+            // Faza 2: Przerwa 30 sekund, potem śnieg 20 sekund
             setTimeout(() => {
               startSnow();
+
               setTimeout(() => {
                 stopSnow();
+
+                // Faza 3: Przerwa 1.5 minuty, potem krótki śnieg
                 setTimeout(() => {
                   startSnow();
+
                   setTimeout(() => {
                     stopSnow();
+
+                    // Faza 4: Zapętlona - co 3 minuty śnieg przez 20s
                     startRecurringSnow();
-                  }, 20 * 1000);
-                }, 30 * 1000);
-              }, 4.0 * 1000);
-            }, 2.5 * 1000);
+
+                  }, 0.10 * 1000);
+
+                }, 90 * 1000);
+
+              }, 20 * 1000);
+
+            }, 30 * 1000);
+
           }, 4.0 * 1000);
+
         }, 2.5 * 1000);
       }
-      
+
+      // Funkcja cyklicznego śniegu (co 3 minuty przez 20 sekund)
       function startRecurringSnow() {
         setInterval(() => {
           startSnow();
+
           setTimeout(() => {
             stopSnow();
           }, 20 * 1000);
+
         }, 180 * 1000);
       }
-      
+
+      // Uruchom harmonogram
       runSnowSchedule();
-      
+
+      // Optymalizacja: Pause gdy strona niewidoczna
       document.addEventListener('visibilitychange', function() {
         if (document.hidden && isSnowing) {
           stopSnow();
@@ -455,8 +475,65 @@
   <!-- SKRYPT KALKULATORA KOSZTÓW - automatycznie pobiera dane z tabeli spec-list -->
   <script src="cost-calculator.js"></script>
 
-  <!-- SKRYPT POZYCJONOWANIA BLUE-BAR -->
-  <script src="blue-bar-position.js"></script>
+  <!-- SKRYPT HAMBURGER MENU -->
+  <script>
+    (function() {
+      const navToggle = document.getElementById('navToggle');
+      const navMenu = document.getElementById('navMenu');
+      const navOverlay = document.getElementById('navOverlay');
+      const navLinks = document.querySelectorAll('.nav-link, .btn-nav-cta');
+      let resizeTimeout;
 
+      // Dodaj klasę menu-ready po krótkim opóźnieniu (zapobiega animacji przy zmianie breakpointu)
+      setTimeout(function() {
+        if (navMenu) navMenu.classList.add('menu-ready');
+      }, 100);
+
+      function toggleMenu() {
+        if (!navToggle || !navMenu) return;
+        navToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        if (navOverlay) navOverlay.classList.toggle('active');
+        const isExpanded = navToggle.classList.contains('active');
+        navToggle.setAttribute('aria-expanded', isExpanded);
+        document.body.style.overflow = isExpanded ? 'hidden' : '';
+      }
+
+      function closeMenu() {
+        if (!navToggle || !navMenu) return;
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        if (navOverlay) navOverlay.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+
+      if (navToggle) navToggle.addEventListener('click', toggleMenu);
+      if (navOverlay) navOverlay.addEventListener('click', closeMenu);
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && navMenu && navMenu.classList.contains('active')) {
+          closeMenu();
+        }
+      });
+
+      window.addEventListener('resize', function() {
+        if (navMenu) navMenu.classList.remove('menu-ready');
+        if (window.innerWidth > 1100 && navMenu && navMenu.classList.contains('active')) {
+          closeMenu();
+        }
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(function() {
+          if (navMenu) navMenu.classList.add('menu-ready');
+        }, 150);
+      });
+    })();
+  </script>
+
+<script src="blue-bar-position.js"></script>
 </body>
 </html>
