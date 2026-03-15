@@ -1,7 +1,16 @@
 {
   "permissions": {
     "allow": [
-      "Bash(xargs grep:*)"
+      "Bash(xargs grep:*)",
+      "Bash(grep -iE \"\\\\.\\(png|jpg|jpeg|webp\\)$\")",
+      "Bash(npm_package_config_libvips=\"\" node -e \":*)",
+      "Bash(node --input-type=module -e \":*)",
+      "Bash(cp klimatyzator-rotenso-mirai-M26Wo-outdoor.webp klimatyzator-rotenso-fresh-x-F26Wo-outdoor.webp)",
+      "Bash(cp klimatyzator-rotenso-mirai-M26Wo-outdoor.webp klimatyzator-rotenso-fresh-x-F35Wo-outdoor.webp)",
+      "Bash(cp klimatyzator-rotenso-mirai-M26Wo-outdoor.webp klimatyzator-rotenso-fresh-x-F53Wo-outdoor.webp)",
+      "Bash(head -10 grep -n \"img-main\\\\|F26Wo\\\\|F35Wo\\\\|F53Wo\" c:/Users/lenovo/montaz-serwis-klimatyzacji.pl/public/rotenso-fresh-5-3kw.html)",
+      "Bash(grep -iE \"\\\\.\\(png|jpg|jpeg\\)$\" ls c:/Users/lenovo/montaz-serwis-klimatyzacji.pl/public/klimatyzatory-scienne-rotenso/)",
+      "Bash(node -e \":*)"
     ]
   }
 }

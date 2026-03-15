@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Klimatyzatory 25-34 m² – Najlepsze modele do średnich pomieszczeń</title>
+  <title>Klimatyzatory do 25 m² – Najlepsze modele do małych pomieszczeń</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -56,8 +56,8 @@
   <div class="snowflakes-hero" id="snowflakesHero"></div>
   
   <div class="hero-content">
-    <h1>Klimatyzatory 25-34 m²</h1>
-    <p>Idealne rozwiązania do średnich pomieszczeń – salonu, biura czy większej sypialni. Sprawdzone modele wszystkich marek.</p>
+    <h1>Klimatyzatory do 25 m²</h1>
+    <p>Idealne rozwiązania do małych pomieszczeń – sypialni, gabinetu czy pokoju dziecięcego. Sprawdzone modele wszystkich marek.</p>
   </div>
 </section>
 
@@ -66,10 +66,10 @@
   <div class="selection-box">
     <h3>Dobierz moc do pomieszczenia:</h3>
     <div class="area-buttons">
-      <a href="klimatyzatory-do-24m2.html" class="area-btn">do 24 m²</a>
-      <span class="area-btn active">25 – 34 m²</span>
-      <a href="klimatyzatory-35-49m2.html" class="area-btn">35 – 49 m²</a>
-      <a href="klimatyzatory-50-80m2.html" class="area-btn">50 – 80 m²</a>
+      <span class="area-btn active">do 25 m²</span>
+      <a href="klimatyzatory-26-35m2.html" class="area-btn">26 – 35 m²</a>
+      <a href="klimatyzatory-36-50m2.html" class="area-btn">36 – 50 m²</a>
+      <a href="klimatyzatory-51-80m2.html" class="area-btn">51 – 80 m²</a>
     </div>
   </div>
 </section>
@@ -280,7 +280,7 @@
   ];
 
   // Stała powierzchni dla tej strony
-  const AREA_FILTER = '34';
+  const AREA_FILTER = '24';
 
   // Generowanie karty produktu
   function createProductCard(product) {
@@ -359,7 +359,7 @@
     `;
   }
 
-  // Renderowanie produktów - tylko do 25m² (area = "24")
+  // Renderowanie produktów - tylko do 24m² (area = "24")
   function renderProducts() {
     const grid = document.getElementById('productsGrid');
     const filtered = PRODUCTS.filter(p => p.areas.includes('24'));

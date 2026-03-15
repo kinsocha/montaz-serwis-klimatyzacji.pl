@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:rotenso.com)"
+      "WebFetch(domain:rotenso.com)",
+      "Bash(mv klimatyzatory-do-24m2.html klimatyzatory-do-25m2.html)",
+      "Bash(mv klimatyzatory-25-34m2.html klimatyzatory-26-35m2.html)",
+      "Bash(mv klimatyzatory-35-49m2.html klimatyzatory-36-50m2.html)",
+      "Bash(mv klimatyzatory-50-80m2.html klimatyzatory-51-80m2.html)",
+      "Bash(grep mirai.*outdoor)"
     ]
   }
 }
