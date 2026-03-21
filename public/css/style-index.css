@@ -551,9 +551,26 @@
       margin-top: 4px;
     }
     
+    .products-section .section-badge { margin-top: 0; }
+
     /* === PRODUCTS === */
-    .products-section { background: var(--bg); }
-    
+    .products-section {
+      background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 50%, #ede9fe 100%);
+      padding-top: 40px;
+      padding-bottom: 50px;
+    }
+
+    .products-section .container {
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 0 8px 40px rgba(100, 120, 200, 0.12);
+      padding: 40px 36px;
+      margin-bottom: 20px;
+    }
+
     .products-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
