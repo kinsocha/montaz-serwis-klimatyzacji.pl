@@ -6,7 +6,11 @@
       "Bash(mv klimatyzatory-25-34m2.html klimatyzatory-26-35m2.html)",
       "Bash(mv klimatyzatory-35-49m2.html klimatyzatory-36-50m2.html)",
       "Bash(mv klimatyzatory-50-80m2.html klimatyzatory-51-80m2.html)",
-      "Bash(grep mirai.*outdoor)"
+      "Bash(grep mirai.*outdoor)",
+      "Bash(magick --version)",
+      "Bash(convert --version)",
+      "Bash(ffmpeg -version)",
+      "Bash(powershell -Command \":*)"
     ]
   }
 }

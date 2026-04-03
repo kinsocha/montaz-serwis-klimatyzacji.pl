@@ -10,7 +10,21 @@
       "Bash(cp klimatyzator-rotenso-mirai-M26Wo-outdoor.webp klimatyzator-rotenso-fresh-x-F53Wo-outdoor.webp)",
       "Bash(head -10 grep -n \"img-main\\\\|F26Wo\\\\|F35Wo\\\\|F53Wo\" c:/Users/lenovo/montaz-serwis-klimatyzacji.pl/public/rotenso-fresh-5-3kw.html)",
       "Bash(grep -iE \"\\\\.\\(png|jpg|jpeg\\)$\" ls c:/Users/lenovo/montaz-serwis-klimatyzacji.pl/public/klimatyzatory-scienne-rotenso/)",
-      "Bash(node -e \":*)"
+      "Bash(node -e \":*)",
+      "Bash(powershell -Command \":*)",
+      "Bash(python -)",
+      "Bash(py --version)",
+      "Bash(python3.exe --version)",
+      "Bash(where python3:*)",
+      "Bash(where py:*)",
+      "Bash(ls /c/Python*)",
+      "Read(//c/Users/lenovo/AppData/Local/Programs/**)",
+      "Read(//c//**)",
+      "Bash(node -e \"const {execSync} = require\\('child_process'\\); try { execSync\\('python --version'\\); } catch\\(e\\) { console.log\\('no python'\\); }\")",
+      "Read(//c/Users/lenovo/Desktop/**)",
+      "Bash(rm klimatyzator-rotenso-versu-mirror-VMX26Wi-kolor-grafitowe-lustro-indoor.webp klimatyzator-rotenso-versu-mirror-VMX35Wi-kolor-grafitowe-lustro-indoor.webp klimatyzator-rotenso-versu-mirror-VMX51Wi-kolor-grafitowe-lustro-indoor.webp)",
+      "Bash(ls *teta*)",
+      "Bash(ls *revio*)"
     ]
   }
 }
