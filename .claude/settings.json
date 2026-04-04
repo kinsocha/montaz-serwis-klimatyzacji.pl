@@ -24,7 +24,8 @@
       "Read(//c/Users/lenovo/Desktop/**)",
       "Bash(rm klimatyzator-rotenso-versu-mirror-VMX26Wi-kolor-grafitowe-lustro-indoor.webp klimatyzator-rotenso-versu-mirror-VMX35Wi-kolor-grafitowe-lustro-indoor.webp klimatyzator-rotenso-versu-mirror-VMX51Wi-kolor-grafitowe-lustro-indoor.webp)",
       "Bash(ls *teta*)",
-      "Bash(ls *revio*)"
+      "Bash(ls *revio*)",
+      "Bash(ls *outdoor*)"
     ]
   }
 }
