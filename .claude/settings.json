@@ -25,7 +25,17 @@
       "Bash(rm klimatyzator-rotenso-versu-mirror-VMX26Wi-kolor-grafitowe-lustro-indoor.webp klimatyzator-rotenso-versu-mirror-VMX35Wi-kolor-grafitowe-lustro-indoor.webp klimatyzator-rotenso-versu-mirror-VMX51Wi-kolor-grafitowe-lustro-indoor.webp)",
       "Bash(ls *teta*)",
       "Bash(ls *revio*)",
-      "Bash(ls *outdoor*)"
+      "Bash(ls *outdoor*)",
+      "Bash(ls /c/Users/lenovo/montaz-serwis-klimatyzacji.pl/public/*.html)",
+      "WebSearch",
+      "WebFetch(domain:haier-ac.pl)",
+      "Bash(node -e ':*)",
+      "Bash(node fix-haier-images.cjs)",
+      "WebFetch(domain:www.)",
+      "WebFetch(domain:haierhvac.eu)",
+      "WebFetch(domain:shopklima.pl)",
+      "Bash(cp \"/c/Users/lenovo/Desktop/aawa.png\" \"public/test-expert-bm.png\")",
+      "Bash(node -e \"const sharp = require\\('sharp'\\); sharp\\('public/test-expert-bm.png'\\).metadata\\(\\).then\\(m => console.log\\(m.width+'x'+m.height, m.format\\)\\)\")"
     ]
   }
 }

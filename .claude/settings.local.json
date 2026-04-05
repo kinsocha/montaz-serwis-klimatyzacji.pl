@@ -10,7 +10,12 @@
       "Bash(magick --version)",
       "Bash(convert --version)",
       "Bash(ffmpeg -version)",
-      "Bash(powershell -Command \":*)"
+      "Bash(powershell -Command \":*)",
+      "Bash(node process-haier-images.cjs)",
+      "Bash(node -e \"const sharp = require\\('sharp'\\); sharp\\('public/test-rws2-haier_revive_white_shine_wiz.webp'\\).metadata\\(\\).then\\(m => console.log\\(JSON.stringify\\(m\\)\\)\\).catch\\(e => console.error\\(e.message\\)\\)\")",
+      "Bash(node -e \"const sharp = require\\('sharp'\\); sharp\\('public/test-revive-bs.webp'\\).metadata\\(\\).then\\(m => console.log\\(JSON.stringify\\(m\\)\\)\\).catch\\(e => console.error\\(e.message\\)\\)\")",
+      "Bash(node -e \"const sharp = require\\('sharp'\\); sharp\\('public/test-quartz.webp'\\).metadata\\(\\).then\\(m => console.log\\(JSON.stringify\\(m\\)\\)\\).catch\\(e => console.error\\(e.message\\)\\)\")",
+      "Bash(node -e ':*)"
     ]
   }
 }

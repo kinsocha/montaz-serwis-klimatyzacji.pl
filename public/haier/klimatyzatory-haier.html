@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klimatyzatory Haier – Katalog Modeli 2025</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  </noscript>
+
+  <link rel="stylesheet" href="../navbar-style.css">
+
+  <style>
+    :root {
+      --primary: #1a3a52;
+      --accent: #2c7dfa;
+      --accent-dark: #1e5fc9;
+      --accent-light: #eff6ff;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #2d3748;
+      --muted: #718096;
+      --border: #e2e8f0;
+      --shadow: 0 12px 40px rgba(0,0,0,0.12);
+      --shadow-hover: 0 20px 50px rgba(44, 125, 250, 0.25);
+      --serif: "Playfair Display", serif;
+      --sans: "Inter", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; padding-top: 60px; background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.6; overflow-x: hidden; }
+    .hero { position: relative; background: linear-gradient(135deg, #2c7dfa 0%, #1e5fc9 50%, #1a4f9e 100%); padding: 80px 20px; overflow: hidden; min-height: 380px; display: flex; align-items: center; justify-content: center; }
+    .clouds { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden; }
+    .cloud { position: absolute; background: rgba(255,255,255,0.15); border-radius: 50%; filter: blur(30px); }
+    .cloud-1 { width: 400px; height: 150px; top: 10%; left: -5%; animation: float 25s ease-in-out infinite; }
+    .cloud-2 { width: 300px; height: 120px; top: 60%; right: -3%; animation: float 20s ease-in-out infinite reverse; }
+    .cloud-3 { width: 250px; height: 100px; top: 30%; left: 50%; animation: float 30s ease-in-out infinite; }
+    .cloud-4 { width: 350px; height: 130px; bottom: 10%; left: 20%; animation: float 22s ease-in-out infinite reverse; }
+    @keyframes float { 0%, 100% { transform: translateX(0) translateY(0); } 50% { transform: translateX(30px) translateY(-20px); } }
+    .snowflakes-hero { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden; }
+    .snowflake-hero { position: absolute; color: rgba(255,255,255,0.6); font-size: 20px; animation: fall-hero linear infinite; text-shadow: 0 0 10px rgba(255,255,255,0.5); }
+    @keyframes fall-hero { 0% { transform: translateY(-20px) rotate(0deg); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(400px) rotate(360deg); opacity: 0; } }
+    .hero-content { position: relative; z-index: 2; text-align: center; color: #fff; }
+    .hero-badge { display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); padding: 8px 20px; border-radius: 5px; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.3); }
+    .hero h1 { font-family: var(--serif); font-size: 52px; font-weight: 800; margin: 0 0 15px 0; text-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+    .hero p { font-size: 18px; opacity: 0.95; max-width: 650px; margin: 0 auto; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); padding: 15px 30px; border-radius: 8px; display: inline-block; }
+    .filters-section { max-width: 1280px; margin: 0 auto; padding: 30px 20px 10px; }
+    .selection-box { background: #fff; padding: 25px 30px; border-radius: 5px; border: 1px solid var(--border); box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-align: center; max-width: 1100px; margin: 0 auto; }
+    .selection-box h3 { margin: 0 0 20px 0; font-size: 18px; font-weight: 700; color: var(--primary); }
+    .area-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .area-btn { padding: 12px 24px; border: 2px solid var(--border); border-radius: 5px; background: #fff; font-size: 14px; font-weight: 600; color: var(--accent); cursor: pointer; transition: all 0.2s ease; white-space: nowrap; box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-decoration: none; display: inline-block; }
+    .area-btn:hover { border-color: var(--accent); background: rgba(44,125,250,0.05); box-shadow: 0 4px 12px rgba(44,125,250,0.15); }
+    .area-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; box-shadow: 0 4px 12px rgba(44,125,250,0.3); cursor: default; }
+    .products-section { max-width: 1280px; margin: 0 auto; padding: 30px 20px 60px; }
+    .products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1100px; margin: 0 auto; }
+    .products-grid .product-card:last-child:nth-child(3n+1) { grid-column: 2; }
+    .product-card { background: var(--card); border-radius: 5px; overflow: hidden; box-shadow: var(--shadow); transition: all 0.4s ease; border: 1px solid var(--border); }
+    .product-card:hover { transform: translateY(-10px); }
+    .card-image { position: relative; max-height: 156%; background: #ffffff; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .card-image img { max-width: 85%; max-height: 85%; object-fit: contain; transition: transform 0.4s ease; }
+    .product-card:hover .card-image img { transform: scale(1.05); }
+    .energy-badge { position: absolute; top: 15px; right: 15px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; padding: 4px 12px; border-radius: 5px; font-size: 13px; font-weight: 800; box-shadow: 0 4px 12px rgba(59,130,246,0.3); }
+    .card-body { padding: 0 20px 18px 20px; }
+    .card-title { font-family: var(--serif); font-size: 20px; font-weight: 800; color: var(--primary); margin: 0 0 10px 0; }
+    .card-features { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; justify-content: center; }
+    .card-features-row { display: flex; flex-wrap: nowrap; gap: 8px; margin-bottom: 9px; justify-content: center; }
+    .feature-item { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--primary); font-weight: 600; background: #f8fafc; padding: 5px 10px; border-radius: 6px; border: 1px solid var(--border); box-shadow: 0 2px 4px rgba(0,0,0,0.06); }
+    .card-specs { border-top: 1px solid var(--border); padding-top: 12px; margin-bottom: 12px; }
+    .spec-row { display: flex; justify-content: space-between; align-items: center; padding: 4px 0; font-size: 13px; }
+    .spec-label { color: var(--muted); }
+    .spec-value { font-weight: 700; color: var(--primary); }
+    .energy-pill { display: inline-flex; align-items: center; justify-content: center; padding: 4px 12px; border-radius: 50px; font-size: 12px; font-weight: 700; white-space: nowrap; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1.5px solid #0ea5e9; color: #0369a1; }
+    .energy-pill-heating { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 1.5px solid #f59e0b; color: #92400e; }
+    .card-colors { margin-bottom: 14px; }
+    .colors-label { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+    .color-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .color-tag { font-size: 11px; padding: 4px 10px; background: #f1f5f9; border: 1px solid var(--border); border-radius: 5px; color: var(--primary); font-weight: 500; }
+    .card-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 12px; border-top: 1px solid var(--border); }
+    .card-price { font-size: 12px; color: var(--muted); }
+    .card-price span { display: block; font-size: 22px; font-weight: 800; color: var(--accent); }
+    .btn-details { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: var(--primary); color: #fff; text-decoration: none; font-weight: 700; font-size: 13px; border-radius: 5px; transition: all 0.3s ease; }
+    .btn-details:hover { background: var(--accent); transform: translateX(3px); }
+    .btn-details svg { width: 16px; height: 16px; transition: transform 0.3s ease; }
+    .btn-details:hover svg { transform: translateX(3px); }
+    footer { background: var(--primary); color: #fff; text-align: center; padding: 40px 20px; }
+    footer p { margin: 0; opacity: 0.8; font-size: 14px; }
+    @media (max-width: 992px) { .products-grid { grid-template-columns: repeat(2, 1fr); gap: 25px; } .products-grid .product-card:last-child:nth-child(3n+1) { grid-column: auto; } .hero h1 { font-size: 40px; } .hero { padding: 60px 20px; min-height: 300px; } }
+    @media (max-width: 640px) { .products-grid { grid-template-columns: 1fr; gap: 20px; } .hero h1 { font-size: 32px; } .hero p { font-size: 16px; } .hero { padding: 50px 20px; min-height: 280px; } .card-body { padding: 20px; } .area-buttons { gap: 8px; } .area-btn { padding: 10px 16px; font-size: 13px; } }
+    @media (max-width: 400px) { .hero h1 { font-size: 26px; } .hero-badge { font-size: 11px; padding: 6px 14px; } }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="../index.html" class="nav-logo" aria-label="Proklima - Strona główna">
+      <span class="logo-snowflake"></span>
+      <span class="logo-text-new">
+        <span class="logo-text-black">Pro</span><span class="logo-text-blue">klima</span>
+      </span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html#klimatyzatory">Polecane</a></li>
+      <li><a href="../index.html#realizacje">Realizacje</a></li>
+      <li><a href="../index.html#klimatyzatory-section">Klimatyzatory</a></li>
+      <li class="nav-dropdown">
+        <a href="#" class="nav-dropdown-toggle" onclick="return false;">Dzielnice ▾</a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="../klimatyzacja-warszawa.html">Warszawa</a></li>
+          <li><a href="../montaz-klimatyzacji-targowek.html">Targówek</a></li>
+        </ul>
+      </li>
+      <li><a href="../opinie.html">Opinie</a></li>
+      <li><a href="../kontakt.html">Kontakt</a></li>
+      <li><a href="tel:+48888806921" class="nav-cta">888 806 921</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Menu" onclick="
+      this.classList.toggle('active');
+      document.querySelector('.nav-links').classList.toggle('active');
+    ">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="clouds">
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+    <div class="cloud cloud-4"></div>
+  </div>
+  <div class="snowflakes-hero" id="snowflakesHero"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Autoryzowany partner</div>
+    <h1>Klimatyzatory Haier</h1>
+    <p>Profesjonalne rozwiązania klimatyzacyjne dla Twojego domu, mieszkania i biura. Wybierz spośród 12 modeli.</p>
+  </div>
+</section>
+
+<section class="filters-section">
+  <div class="selection-box">
+    <h3>Dobierz moc do pomieszczenia:</h3>
+    <div class="area-buttons" id="areaButtons">
+      <span class="area-btn active">Wszystkie</span>
+      <a href="klimatyzatory-do-25m2.html" class="area-btn">do 25 m²</a>
+      <a href="klimatyzatory-26-35m2.html" class="area-btn">26 – 35 m²</a>
+      <a href="klimatyzatory-36-50m2.html" class="area-btn">36 – 50 m²</a>
+      <a href="klimatyzatory-51-80m2.html" class="area-btn">51 – 80 m²</a>
+    </div>
+  </div>
+</section>
+
+<section class="products-section">
+  <div class="products-grid" id="productsGrid"></div>
+</section>
+
+<footer>
+  <p>&copy; <span id="year"></span> Proklima. Wszelkie prawa zastrzeżone.</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Dane produktów
+  const PRODUCTS = [
+    {
+      id: "jade-plus",
+      name: "Jade Plus",
+      series: ["Dom"],
+      areas: ["25", "35", "50"],
+      cooling: "2,6 kW / 3,5 kW / 5,2 kW",
+      heating: "3,2 kW / 4,2 kW / 6,0 kW",
+      energyCooling: "A+++",
+      energyHeating: "A+++",
+      colors: ["Biały"],
+      features: [["Wi-Fi", "Self Clean", "Grzanie"]],
+      img: "../klimatyzatory-scienne-haier/klimatyzator-haier-jade-plus-kolor-bialy-indoor.webp",
+      detailsPage: "haier-jade-plus-2-6kw.html"
+    },
+    {
+      id: "expert-plus",
+      name: "Expert Plus",
+      series: ["Dom"],
+      areas: ["25", "35", "50"],
+      cooling: "2,8 kW / 3,5 kW / 5,0 kW",
+      heating: "3,2 kW / 4,2 kW / 6,0 kW",
+      energyCooling: "A+++",
+      energyHeating: "A++",
+      colors: ["White Matt", "Black Matt"],
+      features: [["Wi-Fi", "UV-C", "Self Clean", "Cichy"]],
+      img: "../klimatyzatory-scienne-haier/klimatyzator-haier-expert-plus-kolor-white-matt-indoor.webp",
+      detailsPage: "haier-expert-plus-2-8kw.html"
+    },
+    {
+      id: "arctic-expert-plus",
+      name: "Arctic Expert Plus",
+      series: ["Dom"],
+      areas: ["25", "35"],
+      cooling: "2,6 kW / 3,5 kW",
+      heating: "3,2 kW / 4,2 kW",
+      energyCooling: "A+++",
+      energyHeating: "A+++",
+      colors: ["Biały"],
+      features: [["Wi-Fi", "UV-C", "Self Clean", "Cichy"]],
+      img: "../klimatyzatory-scienne-haier/klimatyzator-haier-arctic-expert-plus-kolor-bialy-indoor.webp",
+      detailsPage: "haier-arctic-expert-plus-2-6kw.html"
+    },
+    {
+      id: "flexis-plus",
+      name: "Flexis Plus",
+      series: ["Dom"],
+      areas: ["25", "35", "50", "80"],
+      cooling: "2,6 kW / 3,5 kW / 5,2 kW / 7,0 kW",
+      heating: "3,2 kW / 4,2 kW / 6,0 kW / 8,0 kW",
+      energyCooling: "A+++",
+      energyHeating: "A++",
+      colors: ["White Matt", "Black Matt", "White Shine", "Silver Shine"],
+      features: [["Wi-Fi", "UV-C", "Self Clean", "Cichy"]],
+      img: "../klimatyzatory-scienne-haier/klimatyzator-haier-flexis-plus-kolor-white-matt-indoor.webp",
+      detailsPage: "haier-flexis-plus-2-6kw.html"
+    },
+    {
+      id: "nordic-flexis-plus",
+      name: "Nordic Flexis Plus",
+      series: ["Dom"],
+      areas: ["25", "35", "50"],
+      cooling: "2,6 kW / 3,5 kW / 5,2 kW",
+      heating: "3,2 kW / 4,2 kW / 5,2 kW",
+      energyCooling: "A+++",
+      energyHeating: "A++",
+      colors: ["White Matt", "Black Matt", "White Shine", "Silver Shine"],
+      features: [["Wi-Fi", "UV-C", "Self Clean", "Cichy"]],
+      img: "../klimatyzatory-scienne-haier/klimatyzator-haier-nordic-flexis-plus-kolor-white-matt-indoor.webp",
+      detailsPage: "haier-nordic-flexis-plus-2-6kw.html"
+    },
+    {
+      id: "serene-plus",
+      name: "Serene Plus",
+      series: ["Dom"],
+      areas: ["25", "35", "50", "80"],
+      cooling: "2,6 kW / 3,5 kW / 5,3 kW / 7,1 kW",
+      heating: "3,0 kW / 3,7 kW / 5,9 kW / 7,4 kW",
+      energyCooling: "A+++",
+      energyHeating: "A++",
+      colors: ["White Matt", "Black Matt"],
+      features: [["Wi-Fi", "UV-C", "Self Clean", "Cichy"]],
+      img: "../klimatyzatory-scienne-haier/klimatyzator-haier-serene-plus-kolor-white-matt-indoor.webp",
+      detailsPage: "haier-serene-plus-2-6kw.html"
+    },
+    {
+      id: "pearl-premium-plus",
+      name: "Pearl Premium Plus",
+      series: ["Dom"],
+      areas: ["25", "35", "50", "80"],
+      cooling: "2,7 kW / 3,6 kW / 5,3 kW / 7,1 kW",
+      heating: "3,1 kW / 3,9 kW / 5,8 kW / 7,4 kW",
+      energyCooling: "A+++",
+      energyHeating: "A++",
+      colors: ["Biały"],
+      features: [["Wi-Fi", "UV-C", "Self Clean", "Cichy"]],
+      img: "../klimatyzatory-scienne-haier/klimatyzator-haier-pearl-premium-plus-kolor-bialy-indoor.webp",
+      detailsPage: "haier-pearl-premium-plus-2-7kw.html"
+    },
+    {
+      id: "pearl-neo-plus",
+      name: "Pearl Neo Plus",
+      series: ["Dom"],
+      areas: ["25", "35", "50", "70"],
+      cooling: "2,7 kW / 3,5 kW / 5,0 kW / 6,8 kW",
+      heating: "2,9 kW / 3,8 kW / 5,2 kW / 6,8 kW",
+      energyCooling: "A++",
+      energyHeating: "A+",
+      colors: ["Biały"],
+      features: [["Wi-Fi", "UV-C", "Self Clean", "Cichy"]],
+      img: "../klimatyzatory-scienne-haier/klimatyzator-haier-pearl-neo-plus-kolor-bialy-indoor.webp",
+      detailsPage: "haier-pearl-neo-plus-2-7kw.html"
+    },
+    {
+      id: "pearl-plus",
+      name: "Pearl Plus",
+      series: ["Dom"],
+      areas: ["25", "35", "50", "70"],
+      cooling: "2,6 kW / 3,5 kW / 5,0 kW / 6,8 kW",
+      heating: "2,8 kW / 3,5 kW / 5,2 kW / 6,8 kW",
+      energyCooling: "A++",
+      energyHeating: "A+",
+      colors: ["Biały"],
+      features: [["Wi-Fi", "UV-C", "Self Clean", "Cichy"]],
+      img: "../klimatyzatory-scienne-haier/klimatyzator-haier-pearl-plus-kolor-bialy-indoor.webp",
+      detailsPage: "haier-pearl-plus-2-6kw.html"
+    },
+    {
+      id: "revive-plus",
+      name: "Revive Plus",
+      series: ["Dom"],
+      areas: ["25", "35", "50", "70"],
+      cooling: "2,7 kW / 3,5 kW / 4,8 kW / 6,2 kW",
+      heating: "2,9 kW / 3,9 kW / 4,8 kW / 6,3 kW",
+      energyCooling: "A++",
+      energyHeating: "A+",
+      colors: ["White Shine", "Black Shine"],
+      features: [["Wi-Fi", "Self Clean", "Cichy"]],
+      img: "../klimatyzatory-scienne-haier/klimatyzator-haier-revive-plus-kolor-czarny-indoor.webp",
+      detailsPage: "haier-revive-plus-2-7kw.html"
+    },
+    {
+      id: "tayga-plus",
+      name: "Tayga Plus",
+      series: ["Dom"],
+      areas: ["25", "35", "50", "70"],
+      cooling: "2,6 kW / 3,2 kW / 5,0 kW / 6,8 kW",
+      heating: "2,8 kW / 3,4 kW / 5,2 kW / 6,8 kW",
+      energyCooling: "A++",
+      energyHeating: "A+",
+      colors: ["Biały"],
+      features: [["Wi-Fi", "Self Clean", "Cichy"]],
+      img: "../klimatyzatory-scienne-haier/klimatyzator-haier-tayga-plus-kolor-bialy-indoor.webp",
+      detailsPage: "haier-tayga-plus-2-6kw.html"
+    },
+    {
+      id: "quartz-plus",
+      name: "Quartz Plus",
+      series: ["Dom"],
+      areas: ["110"],
+      cooling: "9,5 kW",
+      heating: "10,8 kW",
+      energyCooling: "A++",
+      energyHeating: "A+",
+      colors: ["White Shine"],
+      features: [["Wi-Fi", "UV-C", "Grzanie"]],
+      img: "../klimatyzatory-scienne-haier/klimatyzator-haier-quartz-plus-kolor-bialy-indoor.webp",
+      detailsPage: "haier-quartz-plus-9-5kw.html"
+    }
+  ];
+
+  function createProductCard(product) {
+    const energyBadgeClass = product.energyCooling === 'A+++' ? 'a-plus-plus' : '';
+    const colorsHTML = product.colors.map(c => `<span class="color-tag">${c}</span>`).join('');
+
+    let featuresHTML = '';
+    if (product.features && product.features.length > 0) {
+      if (product.features.length > 1) {
+        featuresHTML = product.features.map(row =>
+          `<div class="card-features-row">${row.map(f => `<div class="feature-item">${f}</div>`).join('')}</div>`
+        ).join('');
+      } else {
+        featuresHTML = `<div class="card-features">${product.features[0].map(f => `<div class="feature-item">${f}</div>`).join('')}</div>`;
+      }
+    }
+
+    return `
+      <article class="product-card" data-series="${product.series.join(',')}">
+        <div class="card-image">
+          <img src="${product.img}" alt="${product.name}" loading="lazy" />
+          <div class="energy-badge ${energyBadgeClass}">${product.energyCooling}</div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">${product.name}</h3>
+
+          ${featuresHTML}
+
+          <div class="card-specs">
+            <div class="spec-row">
+              <span class="spec-label">Wydajność chłodzenia:</span>
+              <span class="spec-value">${product.cooling}</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Wydajność grzania:</span>
+              <span class="spec-value">${product.heating}</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Klasa energet. chłodzenia:</span>
+              <span class="spec-value"><span class="energy-pill">${product.energyCooling}</span></span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Klasa energet. grzania:</span>
+              <span class="spec-value"><span class="energy-pill energy-pill-heating">${product.energyHeating}</span></span>
+            </div>
+          </div>
+
+          <div class="card-colors">
+            <div class="colors-label">Dostępne kolory:</div>
+            <div class="color-tags">${colorsHTML}</div>
+          </div>
+
+          <div class="card-footer">
+            <div class="card-price">
+              Od:
+              <span>Zapytaj</span>
+            </div>
+            <a href="${product.detailsPage}" class="btn-details">
+              Szczegóły
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+    `;
+  }
+
+  // Renderowanie produktów
+  function renderProducts() {
+    const grid = document.getElementById('productsGrid');
+    grid.innerHTML = PRODUCTS.map(createProductCard).join('');
+  }
+
+  // Inicjalizacja - wyświetl wszystkie produkty
+  renderProducts();
+
+  // Śnieżynki w hero
+  function createHeroSnowflakes() {
+    const container = document.getElementById('snowflakesHero');
+    const snowflakes = ['❄', '❅', '❆', '✧', '•'];
+
+    for (let i = 0; i < 25; i++) {
+      const flake = document.createElement('div');
+      flake.className = 'snowflake-hero';
+      flake.textContent = snowflakes[Math.floor(Math.random() * snowflakes.length)];
+      flake.style.left = Math.random() * 100 + '%';
+      flake.style.fontSize = (Math.random() * 15 + 10) + 'px';
+      flake.style.animationDuration = (Math.random() * 5 + 5) + 's';
+      flake.style.animationDelay = (Math.random() * 10) + 's';
+      flake.style.opacity = Math.random() * 0.5 + 0.3;
+      container.appendChild(flake);
+    }
+  }
+  createHeroSnowflakes();
+
+</script>
+
+</body>
+</html>

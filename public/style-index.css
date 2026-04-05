@@ -551,7 +551,7 @@
     }
     
     /* === PRODUCTS === */
-    .products-section { background: var(--bg); }
+    .products-section { background: transparent; }
     
     .products-grid {
       display: grid;

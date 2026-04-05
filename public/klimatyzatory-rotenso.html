@@ -35,7 +35,7 @@
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      padding-top: 72px;
+      padding-top: 60px;
       background: var(--bg);
       color: var(--text);
       font-family: var(--sans);
@@ -480,26 +480,33 @@
 </head>
 <body>
 
-<!-- Overlay mobilne menu -->
-<div class="nav-overlay" id="navOverlay"></div>
-
-<!-- NAVBAR -->
 <nav class="navbar" id="navbar">
   <div class="nav-container">
-    <a href="index.html" class="nav-logo" aria-label="Zamontuj Klimatyzację - Strona główna">
-      <span class="logo-snowflake">❄️</span>
+    <a href="index.html" class="nav-logo" aria-label="Proklima - Strona główna">
+      <span class="logo-snowflake"></span>
       <span class="logo-text-new">
-        <span class="logo-text-black">Zamontuj</span> <span class="logo-text-blue">Klimatyzację</span>
+        <span class="logo-text-black">Pro</span><span class="logo-text-blue">klima</span>
       </span>
     </a>
-    <ul class="nav-links" id="navMenu">
+    <ul class="nav-links">
       <li><a href="index.html#klimatyzatory">Polecane</a></li>
-      <li><a href="realizacje.html">Realizacje</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="index.html#kontakt">Kontakt</a></li>
-      <li><a href="tel:+48888888888" class="nav-cta">888 888 888</a></li>
+      <li><a href="index.html#realizacje">Realizacje</a></li>
+      <li><a href="index.html#klimatyzatory-section">Klimatyzatory</a></li>
+      <li class="nav-dropdown">
+        <a href="#" class="nav-dropdown-toggle" onclick="return false;">Dzielnice ▾</a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="klimatyzacja-warszawa.html">Warszawa</a></li>
+          <li><a href="montaz-klimatyzacji-targowek.html">Targówek</a></li>
+        </ul>
+      </li>
+      <li><a href="opinie.html">Opinie</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="tel:+48888806921" class="nav-cta">888 806 921</a></li>
     </ul>
-    <button class="hamburger" id="navToggle" aria-label="Menu" aria-expanded="false">
+    <button class="hamburger" aria-label="Menu" onclick="
+      this.classList.toggle('active');
+      document.querySelector('.nav-links').classList.toggle('active');
+    ">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -869,52 +876,6 @@
   }
   createHeroSnowflakes();
 
-  // Hamburger menu
-  (function() {
-    const navToggle = document.getElementById('navToggle');
-    const navMenu = document.getElementById('navMenu');
-    const navOverlay = document.getElementById('navOverlay');
-    const navLinks = document.querySelectorAll('.nav-links a, .nav-cta');
-    let resizeTimeout;
-
-    setTimeout(function() {
-      navMenu.classList.add('menu-ready');
-    }, 100);
-
-    function toggleMenu() {
-      navToggle.classList.toggle('active');
-      navMenu.classList.toggle('active');
-      navOverlay.classList.toggle('active');
-      const isExpanded = navToggle.classList.contains('active');
-      navToggle.setAttribute('aria-expanded', isExpanded);
-      document.body.style.overflow = isExpanded ? 'hidden' : '';
-    }
-
-    function closeMenu() {
-      navToggle.classList.remove('active');
-      navMenu.classList.remove('active');
-      navOverlay.classList.remove('active');
-      navToggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    }
-
-    navToggle.addEventListener('click', toggleMenu);
-    navOverlay.addEventListener('click', closeMenu);
-    navLinks.forEach(link => link.addEventListener('click', closeMenu));
-
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && navMenu.classList.contains('active')) closeMenu();
-    });
-
-    window.addEventListener('resize', function() {
-      navMenu.classList.remove('menu-ready');
-      if (window.innerWidth > 1100 && navMenu.classList.contains('active')) closeMenu();
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(function() {
-        navMenu.classList.add('menu-ready');
-      }, 150);
-    });
-  })();
 </script>
 
 </body>
