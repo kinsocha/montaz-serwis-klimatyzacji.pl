@@ -231,7 +231,7 @@
       z-index: 1;
     }
     .hero-content h1 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Inter', sans-serif;
       font-size: clamp(36px, 5vw, 56px);
       font-weight: 700;
       color: var(--primary);
