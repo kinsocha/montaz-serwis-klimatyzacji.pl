@@ -534,9 +534,9 @@
     .brands-section { background: white; }
     .brands-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 24px;
-      max-width: 1100px;
+      max-width: 750px;
       margin: 0 auto;
     }
     .brand-card {
@@ -563,9 +563,10 @@
       align-items: center;
       justify-content: center;
       margin-bottom: 16px;
-      font-size: 28px;
+      font-size: clamp(20px, 4vw, 28px);
       font-weight: 800;
       color: var(--primary);
+      white-space: nowrap;
     }
     .brand-card[data-brand="gree"] .brand-logo { color: #00a651; }
     .brand-card[data-brand="lg"] .brand-logo { color: #a50034; }
