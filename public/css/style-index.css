@@ -690,6 +690,8 @@
       box-shadow: 0 16px 48px rgba(100, 120, 200, 0.32);
     }
 
+
+
     .products-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
