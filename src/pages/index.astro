@@ -344,7 +344,7 @@ const canonical = "https://montaz-serwis-klimatyzacji.pl";
 
 
   <!-- AREA SELECTOR -->
-  <section class="area-section" id="klimatyzatory-section" style="scroll-margin-top: calc(80px + 2vh);">
+  <section class="area-section" id="klimatyzatory-section" style="scroll-margin-top: calc(80px + 2vh - 45px);">
     <div class="snowflakes" aria-hidden="true">
       <div class="snowflake">❄</div><div class="snowflake">❅</div><div class="snowflake">❆</div>
       <div class="snowflake">❄</div><div class="snowflake">❅</div><div class="snowflake">❆</div>
@@ -357,10 +357,29 @@ const canonical = "https://montaz-serwis-klimatyzacji.pl";
       <div class="snowflake">❄</div><div class="snowflake">❅</div><div class="snowflake">❆</div>
       <div class="snowflake">❄</div><div class="snowflake">❅</div><div class="snowflake">❆</div>
     </div>
+    <div class="area-wave area-wave-top" aria-hidden="true">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,80 C240,20 480,120 720,60 C960,0 1200,100 1440,40 L1440,0 L0,0 Z" fill="white"/>
+      </svg>
+    </div>
+    <div class="area-wave area-wave-bottom" aria-hidden="true">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C240,100 480,0 720,60 C960,120 1200,20 1440,80 L1440,120 L0,120 Z" fill="white"/>
+      </svg>
+    </div>
+    <div class="area-wave area-wave-left" aria-hidden="true">
+      <svg viewBox="0 0 120 1440" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M90,0 C60,180 120,360 70,540 C60,720 110,900 65,1080 C100,1260 60,1440 90,1440 L0,1440 L0,0 Z" fill="white"/>
+      </svg>
+    </div>
+    <div class="area-wave area-wave-right" aria-hidden="true">
+      <svg viewBox="0 0 120 1440" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30,0 C60,180 0,360 50,540 C60,720 10,900 55,1080 C20,1260 60,1440 30,1440 L120,1440 L120,0 Z" fill="white"/>
+      </svg>
+    </div>
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">❄️ Dobierz klimatyzator do wielkości pomieszczenia</h2>
-
       </div>
       <div class="area-buttons">
         <a href="klimatyzatory-do-25m2.html" class="area-btn">do 25 m²</a>
@@ -375,7 +394,6 @@ const canonical = "https://montaz-serwis-klimatyzacji.pl";
   <section class="brands-section" id="producenci">
     <div class="container">
       <div class="section-header">
-        <span class="section-badge">Zaufane marki</span>
         <h2 class="section-title">❄️ Dobierz klimatyzator według marki</h2>
       </div>
       <div class="brands-grid">
