@@ -1,0 +1,295 @@
+---
+import { Picture } from "astro:assets";
+import { getCollection } from "astro:content";
+
+const articles = (await getCollection("blog"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .filter(({ data }) => data.pubDate.valueOf() <= new Date().valueOf());
+
+const formatter = new Intl.DateTimeFormat("pl-PL", {
+  day: "2-digit",
+  month: "long",
+  year: "numeric",
+});
+---
+
+<section class="poradnik-section" id="poradnik">
+  <div class="poradnik-box">
+    <div class="poradnik-header">
+      <span class="section-badge">Poradnik</span>
+      <h2>Artykuły o <span>klimatyzacji</span></h2>
+      <p>Praktyczne porady — jak wybrać klimatyzator, ile kosztuje montaż i kiedy warto zrobić serwis.</p>
+    </div>
+
+    <div class="poradnik-grid">
+      {articles.map((article) => (
+        <article class="poradnik-card" itemscope itemtype="https://schema.org/BlogPosting">
+          <meta itemprop="datePublished" content={article.data.pubDate.toISOString()} />
+          <meta itemprop="author" content="Proklima — Montaż Klimatyzacji Warszawa" />
+
+          <a href={`/blog/${article.slug}`} class="poradnik-card-image">
+            <Picture
+              loading="lazy"
+              width={400}
+              src={article.data.hero}
+              alt={article.data.heroAlt}
+              formats={["webp", "jpg"]}
+              itemprop="image"
+            />
+          </a>
+
+          <div class="poradnik-card-content">
+            <span class="poradnik-category">{article.data.category}</span>
+
+            <h3 itemprop="headline">
+              <a href={`/blog/${article.slug}`} itemprop="url">
+                {article.data.title}
+              </a>
+            </h3>
+
+            <p itemprop="description">{article.data.description}</p>
+
+            <div class="poradnik-meta">
+              <span class="poradnik-date">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                <span>{formatter.format(article.data.pubDate)}</span>
+              </span>
+              <span class="poradnik-read-time">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span>{article.data.readingTime} min</span>
+              </span>
+            </div>
+
+            <a href={`/blog/${article.slug}`} class="poradnik-link">
+              Czytaj więcej
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .poradnik-section {
+    padding: 80px 24px;
+    background: #ffffff;
+  }
+
+  .poradnik-box {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 40px;
+    border-radius: 5px;
+    border: 1px solid rgba(37, 99, 235, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    background: linear-gradient(180deg, #f8fbff 0%, #f4f8fd 100%);
+  }
+
+  .poradnik-header {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  .poradnik-header .section-badge {
+    margin-bottom: 10px;
+  }
+
+  .poradnik-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--primary);
+    margin: 10px 0;
+  }
+
+  .poradnik-header h2 span {
+    color: var(--accent);
+  }
+
+  .poradnik-header p {
+    color: var(--text-muted);
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: 640px;
+  }
+
+  .poradnik-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .poradnik-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .poradnik-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(37, 99, 235, 0.18);
+    border-color: var(--accent);
+  }
+
+  .poradnik-card-image {
+    display: block;
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+    background: #f1f5f9;
+  }
+
+  .poradnik-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .poradnik-card:hover .poradnik-card-image img {
+    transform: scale(1.05);
+  }
+
+  .poradnik-card-content {
+    padding: 20px 22px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+  }
+
+  .poradnik-category {
+    display: inline-block;
+    width: fit-content;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    background: var(--accent-glow);
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+
+  .poradnik-card-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0;
+    color: var(--primary);
+  }
+
+  .poradnik-card-content h3 a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .poradnik-card:hover .poradnik-card-content h3 a {
+    color: var(--accent);
+  }
+
+  .poradnik-card-content p[itemprop="description"] {
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--text-muted);
+    margin: 0;
+    flex: 1;
+  }
+
+  .poradnik-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 13px;
+    color: var(--text-muted);
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+
+  .poradnik-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .poradnik-meta svg {
+    width: 14px;
+    height: 14px;
+    color: var(--accent);
+  }
+
+  .poradnik-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    margin-top: 4px;
+    transition: gap 0.3s ease;
+  }
+
+  .poradnik-link svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+  }
+
+  .poradnik-card:hover .poradnik-link {
+    gap: 10px;
+  }
+
+  .poradnik-card:hover .poradnik-link svg {
+    transform: translateX(3px);
+  }
+
+  @media (max-width: 1024px) {
+    .poradnik-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .poradnik-section {
+      padding: 60px 16px;
+    }
+
+    .poradnik-box {
+      padding: 32px 20px;
+    }
+
+    .poradnik-header {
+      margin-bottom: 28px;
+    }
+
+    .poradnik-header h2 {
+      font-size: 26px;
+    }
+
+    .poradnik-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+</style>

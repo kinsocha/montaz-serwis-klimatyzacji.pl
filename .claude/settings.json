@@ -35,7 +35,10 @@
       "WebFetch(domain:haierhvac.eu)",
       "WebFetch(domain:shopklima.pl)",
       "Bash(cp \"/c/Users/lenovo/Desktop/aawa.png\" \"public/test-expert-bm.png\")",
-      "Bash(node -e \"const sharp = require\\('sharp'\\); sharp\\('public/test-expert-bm.png'\\).metadata\\(\\).then\\(m => console.log\\(m.width+'x'+m.height, m.format\\)\\)\")"
+      "Bash(node -e \"const sharp = require\\('sharp'\\); sharp\\('public/test-expert-bm.png'\\).metadata\\(\\).then\\(m => console.log\\(m.width+'x'+m.height, m.format\\)\\)\")",
+      "Bash(ls -la public/img/realizacja-*.webp)",
+      "Bash(ls -la src/assets/images/blog/*/hero.webp)",
+      "Bash(grep -rn \"background:\" src/components/*.astro)"
     ]
   }
 }

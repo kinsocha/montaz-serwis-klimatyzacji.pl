@@ -1,0 +1,190 @@
+---
+const reasons = [
+  {
+    stat: "48h",
+    statLabel: "od telefonu",
+    title: "Szybki montaż",
+    desc: "Od pierwszego kontaktu do działającej klimatyzacji zwykle dwa dni robocze. Bez tygodni czekania w upale.",
+  },
+  {
+    stat: "F-GAZ",
+    statLabel: "certyfikat",
+    title: "Certyfikowani monterzy",
+    desc: "Nasi technicy posiadają certyfikat F-GAZ i autoryzowane szkolenia Gree, Haier, Rotenso. Każdy montaż wykonuje wykwalifikowany zespół.",
+  },
+  {
+    stat: "0 zł",
+    statLabel: "ukrytych kosztów",
+    title: "Uczciwe ceny",
+    desc: "Transparentna wycena przed rozpoczęciem prac. Płacisz dokładnie tyle, ile ustalimy — z fakturą VAT i pełną gwarancją serwisową.",
+  },
+];
+---
+
+<section class="why-section" id="dlaczego-my">
+  <div class="why-box">
+    <div class="why-header">
+      <span class="section-badge">Nasze atuty</span>
+      <h2>Dlaczego <span>my</span></h2>
+      <p>Konkretne powody, dla których setki klientów w Warszawie wybiera Proklimę zamiast losowej ekipy z ogłoszenia.</p>
+    </div>
+
+    <div class="why-grid">
+      {reasons.map((r) => (
+        <article class="why-card">
+          <div class="why-stat">
+            <span class="why-stat-num">{r.stat}</span>
+            <span class="why-stat-label">{r.statLabel}</span>
+          </div>
+
+          <h3>{r.title}</h3>
+          <p>{r.desc}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .why-section {
+    padding: 80px 24px;
+    background: #ffffff;
+  }
+
+  .why-box {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 40px;
+    border-radius: 5px;
+    border: 1px solid rgba(37, 99, 235, 0.12);
+    background: #eff6ff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .why-header {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  .why-header .section-badge {
+    margin-bottom: 10px;
+  }
+
+  .why-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--primary);
+    margin: 10px 0;
+  }
+
+  .why-header h2 span {
+    color: var(--accent);
+  }
+
+  .why-header p {
+    color: var(--text-muted);
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .why-card {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--accent);
+    border-radius: var(--radius-sm);
+    padding: 28px 26px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .why-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(37, 99, 235, 0.18);
+    border-color: var(--accent);
+    border-top-color: var(--accent);
+  }
+
+  .why-stat {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 4px;
+  }
+
+  .why-stat-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .why-stat-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+
+  .why-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 0;
+    line-height: 1.25;
+  }
+
+  .why-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin: 0;
+    flex: 1;
+  }
+
+  @media (max-width: 1024px) {
+    .why-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .why-section {
+      padding: 60px 16px;
+    }
+
+    .why-box {
+      padding: 32px 20px;
+    }
+
+    .why-header {
+      margin-bottom: 28px;
+    }
+
+    .why-header h2 {
+      font-size: 26px;
+    }
+
+    .why-card {
+      padding: 26px 22px;
+    }
+  }
+</style>

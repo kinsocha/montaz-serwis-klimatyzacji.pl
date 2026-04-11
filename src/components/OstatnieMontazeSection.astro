@@ -1,0 +1,280 @@
+---
+const realizacje = [
+  {
+    img: "/img/realizacja-1.webp",
+    alt: "Montaż klimatyzacji Gree – Mokotów, lokal usługowy",
+    dzielnica: "Mokotów",
+    opis: "Klimatyzator Gree zamontowany nad wejściem w lokalu usługowym. Estetyczne chłodzenie przestrzeni handlowej.",
+    width: 374,
+    height: 800,
+  },
+  {
+    img: "/img/realizacja-2.webp",
+    alt: "Montaż klimatyzacji Gree – Wilanów, salon",
+    dzielnica: "Wilanów",
+    opis: "Dyskretny montaż Gree w salonie apartamentu. Jednostka wkomponowana wysoko przy suficie.",
+    width: 800,
+    height: 600,
+  },
+  {
+    img: "/img/realizacja-3.webp",
+    alt: "Montaż klimatyzacji Gree – Ursynów, sypialnia",
+    dzielnica: "Ursynów",
+    opis: "Jednostka Gree w sypialni. Cicha praca, estetyczny montaż między zasłonami.",
+    width: 600,
+    height: 800,
+  },
+  {
+    img: "/img/realizacja-4.webp",
+    alt: "Montaż klimatyzacji Gree Inverter – Ursynów, jednostka zewnętrzna",
+    dzielnica: "Ursynów",
+    opis: "Jednostka zewnętrzna Gree Inverter na solidnych uchwytach ściennych. Schludne poprowadzenie przewodów.",
+    width: 600,
+    height: 800,
+  },
+  {
+    img: "/img/realizacja-5.webp",
+    alt: "Montaż klimatyzacji Haier – Marki, mieszkanie",
+    dzielnica: "Marki",
+    opis: "Klimatyzator Haier na filarze między oknami. Pełne pokrycie salonu bez widocznych instalacji.",
+    width: 600,
+    height: 800,
+  },
+  {
+    img: "/img/realizacja-6.webp",
+    alt: "Montaż klimatyzacji Fuji Electric – Wołomin, jednostka zewnętrzna",
+    dzielnica: "Wołomin",
+    opis: "Jednostka zewnętrzna Fuji Electric DC Inverter pod zadaszeniem. Ochrona przed opadami i słońcem.",
+    width: 374,
+    height: 800,
+  },
+];
+---
+
+<section class="ostatnie-section" id="ostatnie-montaze">
+  <div class="ostatnie-box">
+    <div class="ostatnie-header">
+      <span class="section-badge">Realizacje</span>
+      <h2>Nasze <span>ostatnie</span> montaże</h2>
+      <p>Mokotów, Wilanów, Ursynów, Marki, Wołomin — montujemy klimatyzatory w całej Warszawie i okolicach.</p>
+    </div>
+
+    <div class="ostatnie-grid">
+      {realizacje.map((r) => (
+        <article class="ostatnie-card">
+          <div class="ostatnie-img">
+            <img
+              src={r.img}
+              alt={r.alt}
+              width={r.width}
+              height={r.height}
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="ostatnie-dzielnica">{r.dzielnica}</span>
+          </div>
+          <div class="ostatnie-info">
+            <p>{r.opis}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div class="ostatnie-cta">
+      <a href="/realizacje" class="ostatnie-link">
+        Zobacz wszystkie realizacje
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .ostatnie-section {
+    padding: 80px 24px;
+    background: #ffffff;
+  }
+
+  .ostatnie-box {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 40px;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+  }
+
+  .ostatnie-header {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  .ostatnie-header .section-badge {
+    margin-bottom: 10px;
+  }
+
+  .ostatnie-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--primary);
+    margin: 10px 0;
+  }
+
+  .ostatnie-header h2 span {
+    color: var(--accent);
+  }
+
+  .ostatnie-header p {
+    color: var(--text-muted);
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .ostatnie-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .ostatnie-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ostatnie-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(37, 99, 235, 0.18);
+    border-color: var(--accent);
+  }
+
+  .ostatnie-img {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #f1f5f9;
+  }
+
+  .ostatnie-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .ostatnie-card:hover .ostatnie-img img {
+    transform: scale(1.05);
+  }
+
+  .ostatnie-dzielnica {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(37, 99, 235, 0.95);
+    color: #ffffff;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 6px 12px;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+
+  .ostatnie-info {
+    padding: 18px 22px 22px;
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .ostatnie-info p {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .ostatnie-cta {
+    text-align: center;
+    margin-top: 48px;
+  }
+
+  .ostatnie-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--accent);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 14px 28px;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.2);
+  }
+
+  .ostatnie-link:hover {
+    transform: translateY(-3px);
+    background: var(--accent-light);
+    box-shadow: 0 10px 28px rgba(37, 99, 235, 0.32);
+  }
+
+  .ostatnie-link svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+  }
+
+  .ostatnie-link:hover svg {
+    transform: translateX(4px);
+  }
+
+  @media (max-width: 1024px) {
+    .ostatnie-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .ostatnie-section {
+      padding: 60px 16px;
+    }
+
+    .ostatnie-box {
+      padding: 32px 20px;
+    }
+
+    .ostatnie-header {
+      margin-bottom: 28px;
+    }
+
+    .ostatnie-header h2 {
+      font-size: 26px;
+    }
+
+    .ostatnie-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .ostatnie-cta {
+      margin-top: 36px;
+    }
+  }
+</style>

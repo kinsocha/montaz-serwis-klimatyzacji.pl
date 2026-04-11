@@ -2,6 +2,10 @@
 import Default from "@layouts/Default.astro";
 import ServicesSection from "@components/ServicesSection.astro";
 import OpinionsSection from "@components/OpinionsSection.astro";
+import PoradnikSection from "@components/PoradnikSection.astro";
+import MontazTimeline from "@components/MontazTimeline.astro";
+import OstatnieMontazeSection from "@components/OstatnieMontazeSection.astro";
+import WhyUsSection from "@components/WhyUsSection.astro";
 
 const title = "Montaż Klimatyzacji Warszawa – Montaż i Serwis Klimatyzacji | Warszawa i okolice";
 const description =
@@ -134,7 +138,7 @@ const canonical = "https://montaz-serwis-klimatyzacji.pl";
         <h1>Montaż klimatyzacji <span>Warszawa</span></h1>
 
         <!-- Jobs to Be Done + Present Bias -->
-        <p class="hero-subtitle">Chłód w domu już od jutra. Montujemy w 4-8h z gwarancją do 7 lat.</p>
+        <p class="hero-subtitle">Profesjonalny montaż klimatyzacji w Warszawie i okolicach. Klimatyzatory ścienne Rotenso, Daikin, Samsung — instalacja w 4-8h, serwis i przeglądy.</p>
 
         <!-- Loss Aversion + Scarcity -->
         <p class="hero-urgency">Sezon się zaczyna — wolne terminy szybko znikają</p>
@@ -392,6 +396,38 @@ const canonical = "https://montaz-serwis-klimatyzacji.pl";
 
   <!-- BRANDS -->
   <section class="brands-section" id="producenci">
+    <div class="snowflakes" aria-hidden="true">
+      <div class="snowflake">❄</div><div class="snowflake">❅</div><div class="snowflake">❆</div>
+      <div class="snowflake">❄</div><div class="snowflake">❅</div><div class="snowflake">❆</div>
+      <div class="snowflake">❄</div><div class="snowflake">❅</div><div class="snowflake">❆</div>
+      <div class="snowflake">❄</div><div class="snowflake">❅</div><div class="snowflake">❆</div>
+      <div class="snowflake">❄</div><div class="snowflake">❅</div><div class="snowflake">❆</div>
+      <div class="snowflake">❄</div><div class="snowflake">❅</div><div class="snowflake">❆</div>
+      <div class="snowflake">❄</div><div class="snowflake">❅</div><div class="snowflake">❆</div>
+      <div class="snowflake">❄</div><div class="snowflake">❅</div><div class="snowflake">❆</div>
+      <div class="snowflake">❄</div><div class="snowflake">❅</div><div class="snowflake">❆</div>
+      <div class="snowflake">❄</div><div class="snowflake">❅</div><div class="snowflake">❆</div>
+    </div>
+    <div class="brands-wave brands-wave-top" aria-hidden="true">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,80 C240,20 480,120 720,60 C960,0 1200,100 1440,40 L1440,0 L0,0 Z" fill="white"/>
+      </svg>
+    </div>
+    <div class="brands-wave brands-wave-bottom" aria-hidden="true">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C240,100 480,0 720,60 C960,120 1200,20 1440,80 L1440,120 L0,120 Z" fill="white"/>
+      </svg>
+    </div>
+    <div class="brands-wave brands-wave-left" aria-hidden="true">
+      <svg viewBox="0 0 120 1440" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M90,0 C60,180 120,360 70,540 C60,720 110,900 65,1080 C100,1260 60,1440 90,1440 L0,1440 L0,0 Z" fill="white"/>
+      </svg>
+    </div>
+    <div class="brands-wave brands-wave-right" aria-hidden="true">
+      <svg viewBox="0 0 120 1440" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30,0 C60,180 0,360 50,540 C60,720 10,900 55,1080 C20,1260 60,1440 30,1440 L120,1440 L120,0 Z" fill="white"/>
+      </svg>
+    </div>
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">❄️ Dobierz klimatyzator według marki</h2>
@@ -416,121 +452,13 @@ const canonical = "https://montaz-serwis-klimatyzacji.pl";
     </div>
   </section>
 
-  <!-- WHY US -->
-  <section class="why-section" id="dlaczego-my">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-badge">Nasze atuty</span>
-        <h2 class="section-title">Dlaczego my?</h2>
-        <p class="section-desc">Jesteśmy zespołem certyfikowanych specjalistów z wieloletnim doświadczeniem</p>
-      </div>
-      <div class="why-grid">
-        <div class="why-card">
-          <div class="why-icon">🛡️</div>
-          <h3>Do 7 lat gwarancji</h3>
-          <p>Oferujemy rozszerzoną gwarancję na wszystkie instalacje wykonane przez nasz zespół</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">⚡</div>
-          <h3>Montaż w 48h</h3>
-          <p>Szybka realizacja zamówień – od wyceny do działającej klimatyzacji w 2 dni</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">👨‍🔧</div>
-          <h3>Certyfikowani monterzy</h3>
-          <p>Nasi technicy posiadają certyfikaty F-GAZ oraz szkolenia producentów</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">💰</div>
-          <h3>Uczciwe ceny</h3>
-          <p>Transparentna wycena bez ukrytych kosztów. Płacisz tylko za to, co zamawiasz</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <MontazTimeline />
 
-  <!-- STEPS -->
-  <section class="steps-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-badge">Proces</span>
-        <h2 class="section-title">Jak działamy?</h2>
-        <p class="section-desc">Trzy proste kroki do komfortowego klimatu w Twoim domu</p>
-      </div>
-      <div class="steps-grid">
-        <div class="step-card">
-          <span class="step-number">1</span>
-          <div class="step-icon">📞</div>
-          <h3>Bezpłatna wycena</h3>
-          <p>Skontaktuj się z nami telefonicznie lub przez formularz. Doradzimy i wycenimy montaż za darmo.</p>
-        </div>
-        <div class="step-card">
-          <span class="step-number">2</span>
-          <div class="step-icon">🔧</div>
-          <h3>Profesjonalny montaż</h3>
-          <p>Nasi certyfikowani technicy zainstalują klimatyzację w uzgodnionym terminie, szybko i czysto.</p>
-        </div>
-        <div class="step-card">
-          <span class="step-number">3</span>
-          <div class="step-icon">❄️</div>
-          <h3>Ciesz się komfortem</h3>
-          <p>Otrzymujesz do 7 lat gwarancji i wsparcie serwisowe. Klimatyzacja działa bezbłędnie przez lata.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <OstatnieMontazeSection />
 
-  <!-- REALIZACJE -->
-  <section class="realizacje-section" id="realizacje">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-badge">Realizacje</span>
-        <h2 class="section-title">Nasze ostatnie montaże</h2>
-        <p class="section-desc">Kilka przykładów z ostatnich tygodni — każda instalacja wykonana przez certyfikowanych monterów</p>
-      </div>
-      <div class="realizacje-grid">
-        <div class="realizacja-card">
-          <div class="realizacja-img">
-            <img src="/img/realizacja-1.webp" alt="Montaż klimatyzacji Gree – Mokotów" width="374" height="800" loading="lazy" decoding="async" />
-          </div>
-          <div class="realizacja-info">
-            <span class="realizacja-dzielnica">Mokotów</span>
-            <p>Gree w lokalu usługowym — montaż nad drzwiami na ciemnej okładzinie</p>
-          </div>
-        </div>
-        <div class="realizacja-card">
-          <div class="realizacja-img">
-            <img src="/img/realizacja-2.webp" alt="Montaż klimatyzacji Gree – Wilanów" width="800" height="600" loading="lazy" decoding="async" />
-          </div>
-          <div class="realizacja-info">
-            <span class="realizacja-dzielnica">Wilanów</span>
-            <p>Gree w salonie apartamentu — dyskretny montaż obok drewnianych żaluzji</p>
-          </div>
-        </div>
-        <div class="realizacja-card">
-          <div class="realizacja-img">
-            <img src="/img/realizacja-3.webp" alt="Montaż klimatyzacji Gree – Ursynów, jednostka wewnętrzna" width="600" height="800" loading="lazy" decoding="async" />
-          </div>
-          <div class="realizacja-info">
-            <span class="realizacja-dzielnica">Ursynów</span>
-            <p>Gree w sypialni — jednostka wewnętrzna zamontowana między zasłonami</p>
-          </div>
-        </div>
-        <div class="realizacja-card">
-          <div class="realizacja-img">
-            <img src="/img/realizacja-4.webp" alt="Montaż klimatyzacji Gree – Ursynów, jednostka zewnętrzna" width="600" height="800" loading="lazy" decoding="async" />
-          </div>
-          <div class="realizacja-info">
-            <span class="realizacja-dzielnica">Ursynów</span>
-            <p>Ta sama instalacja — jednostka zewnętrzna Gree Inverter na balkonie</p>
-          </div>
-        </div>
-      </div>
-      <div style="text-align:center; margin-top:2rem;">
-        <a href="/realizacje" class="btn btn-outline">Zobacz więcej realizacji</a>
-      </div>
-    </div>
-  </section>
+  <WhyUsSection />
+
+  <PoradnikSection />
 
   <OpinionsSection />
 
@@ -607,6 +535,7 @@ const canonical = "https://montaz-serwis-klimatyzacji.pl";
     </div>
   </section>
 Obszar działania -->
+
   <script is:inline>
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
@@ -617,5 +546,6 @@ Obszar działania -->
         }
       });
     });
+
   </script>
 </Default>

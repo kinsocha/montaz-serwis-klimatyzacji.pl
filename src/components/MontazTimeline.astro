@@ -1,0 +1,202 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "Bezpłatna konsultacja",
+    desc: "Dzwonisz lub piszesz — ustalamy moc, model i termin. Wycena jeszcze tego samego dnia.",
+  },
+  {
+    number: "02",
+    title: "Wybór klimatyzatora",
+    desc: "Doradzamy model dopasowany do metrażu i budżetu. Klimatyzatory Rotenso, Daikin, Samsung z gwarancją producenta.",
+  },
+  {
+    number: "03",
+    title: "Montaż w 4-8h",
+    desc: "Jeden dzień, jeden zespół. Czysty montaż, zabezpieczone meble, posprzątane po zakończeniu.",
+  },
+  {
+    number: "04",
+    title: "Uruchomienie i test",
+    desc: "Próba szczelności, kontrola ciśnienia, test chłodzenia i grzania. Pokazujemy jak obsługiwać pilota.",
+  },
+  {
+    number: "05",
+    title: "Gwarancja",
+    desc: "Pełna gwarancja na montaż i urządzenie. Serwis pogwarancyjny i coroczne przeglądy w stałej cenie.",
+  },
+];
+---
+
+<section class="timeline-section" id="jak-montujemy">
+  <div class="container">
+    <div class="timeline-frame">
+      <div class="section-header">
+        <span class="section-badge">Proces</span>
+        <h2 class="section-title">Jak wygląda <span class="highlight">montaż</span> krok po kroku</h2>
+        <p class="section-desc">
+          Bez niespodzianek, bez ukrytych kosztów. Pięć prostych etapów — od pierwszego telefonu po gwarancję.
+        </p>
+      </div>
+
+      <div class="timeline-wrap">
+        <div class="timeline-line" aria-hidden="true"></div>
+        {steps.map((step) => (
+          <article class="timeline-card">
+            <div class="timeline-card-dot" aria-hidden="true"></div>
+            <span class="timeline-card-number">Krok {step.number}</span>
+            <h3 class="timeline-card-title">{step.title}</h3>
+            <p class="timeline-card-desc">{step.desc}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .timeline-section {
+    padding: 80px 24px;
+    background: #ffffff;
+  }
+
+  .timeline-frame {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: linear-gradient(180deg, #f8fbff 0%, #f4f8fd 100%);
+    border-radius: 5px;
+    padding: 72px 48px;
+    border: 1px solid rgba(37, 99, 235, 0.05);
+    box-shadow: var(--shadow);
+  }
+
+  .timeline-section .section-header {
+    margin-bottom: 56px;
+  }
+
+  .timeline-section .section-title .highlight {
+    color: var(--accent);
+  }
+
+  .timeline-wrap {
+    position: relative;
+    max-width: 760px;
+    margin: 0 auto;
+    padding-left: 56px;
+  }
+
+  .timeline-line {
+    position: absolute;
+    left: -30px;
+    top: 12px;
+    bottom: 12px;
+    width: 4px;
+    background: linear-gradient(180deg, var(--accent-light), var(--accent));
+    border-radius: 4px;
+  }
+
+  .timeline-card {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 26px 30px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .timeline-card:last-child {
+    margin-bottom: 0;
+  }
+
+  .timeline-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(37, 99, 235, 0.18);
+    border-color: var(--accent);
+  }
+
+  .timeline-card-dot {
+    position: absolute;
+    left: -93px;
+    top: 30px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 2px solid var(--border);
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    z-index: 2;
+  }
+
+  .timeline-card:hover .timeline-card-dot {
+    background: var(--accent);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 5px var(--accent-glow);
+    transform: scale(1.15);
+  }
+
+  .timeline-card-number {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .timeline-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 0 0 10px;
+    line-height: 1.25;
+  }
+
+  .timeline-card-desc {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .timeline-section {
+      padding: 60px 16px;
+    }
+
+    .timeline-frame {
+      padding: 48px 24px;
+      border-radius: 5px;
+    }
+
+    .timeline-section .section-header {
+      margin-bottom: 40px;
+    }
+
+    .timeline-wrap {
+      padding-left: 40px;
+    }
+
+    .timeline-line {
+      left: 0;
+    }
+
+    .timeline-card {
+      padding: 22px 24px;
+    }
+
+    .timeline-card-dot {
+      left: -48px;
+      top: 26px;
+    }
+
+    .timeline-card-title {
+      font-size: 20px;
+    }
+  }
+</style>
+
