@@ -38,7 +38,13 @@
       "Bash(node -e \"const sharp = require\\('sharp'\\); sharp\\('public/test-expert-bm.png'\\).metadata\\(\\).then\\(m => console.log\\(m.width+'x'+m.height, m.format\\)\\)\")",
       "Bash(ls -la public/img/realizacja-*.webp)",
       "Bash(ls -la src/assets/images/blog/*/hero.webp)",
-      "Bash(grep -rn \"background:\" src/components/*.astro)"
+      "Bash(grep -rn \"background:\" src/components/*.astro)",
+      "WebFetch(domain:aero7.pl)",
+      "Bash(curl -sL \"https://holder.pl/pdf/cennik-klimatyzacja-gree-05-2024.pdf\" -o gree-cennik.pdf)",
+      "WebFetch(domain:www.kliweko.com.pl)",
+      "Bash(curl -sL \"https://www.kliweko.com.pl/do-pobrania/\")",
+      "Bash(curl -sL \"https://www.kliweko.com.pl/wp-content/uploads/2026/03/Gree_Katalog_RAC2026_WEB_str.pdf\" -o /tmp/gree-rac-2026.pdf)",
+      "Bash(npx astro:*)"
     ]
   }
 }
